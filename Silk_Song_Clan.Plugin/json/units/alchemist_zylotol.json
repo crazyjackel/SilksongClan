@@ -1,0 +1,138 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnAlchemistZylotol",
+      "names": {
+        "english": "Alchemist Zylotol"
+      },
+      "card_art": "@AlchemistZylotolCardArt",
+      "cost": 3,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnAlchemistZylotolEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "The Plasmium, our great research... We have progressed."
+        }
+      ]
+    },
+    {
+      "id": "AlchemistZylotolAbility",
+      "names": {
+        "english": "Inject"
+      },
+      "descriptions": {
+        "english": "Gain a Damage Shield. If you have 5 or more Damage Shields, Gain 10 Permanent Imbue."
+      },
+      "card_art": "@AlchemistZylotolAbilityCardArt",
+      "is_an_ability": true,
+      "cooldown": 2,
+      "targets_room": false,
+      "targetless": false,
+      "effects": [
+        {
+          "id": "@AlchemistInjectEffect"
+        },
+        {
+          "id": "@AlchemistInjectImbueEffect"
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "AlchemistZylotol",
+      "size": 3,
+      "health": 1,
+      "attack": 40,
+      "subtypes": ["@Bug"],
+      "ability": "@AlchemistZylotolAbility"
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnAlchemistZylotolEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@AlchemistZylotol"
+    },
+    {
+      "id": "AlchemistInjectEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "damage shield",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "AlchemistInjectImbueEffect",
+      "name": "CardEffectAddStatusEffectOnStatusThreshold",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "damage shield",
+          "count": 5
+        },
+        {
+          "status": "@PermanentImbue",
+          "count": 10
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "AlchemistZylotolCardArt",
+      "path": "textures/AlchemistZylotolCardArt.png"
+    },
+    {
+      "id": "AlchemistZylotolCharacterArt",
+      "path": "textures/AlchemistZylotolCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "AlchemistZylotolCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@AlchemistZylotolCardArt"
+        }
+      }
+    },
+    {
+      "id": "AlchemistZylotolCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@AlchemistZylotolCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

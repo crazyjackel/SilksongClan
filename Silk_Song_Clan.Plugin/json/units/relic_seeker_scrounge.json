@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "RelicSeekerScrounge",
+      "name": "Relic Seeker Scrounge",
+      "description": "Equipped: Remove the Equipment. Gain 20 gold.",
+      "cost": 1,
+      "attack": 24,
+      "health": 16,
+      "size": 2,
+      "rarity": "Uncommon",
+      "traits": [],
+      "subtypes": ["Bug"],
+      "class": "Silksong",
+      "cardArt": "@RelicSeekerScrounge",
+      "cardType": "Unit"
+    }
+  ]
+}

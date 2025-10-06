@@ -1,0 +1,125 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnGrishkin",
+      "names": {
+        "english": "Grishkin",
+        "french": "Grishkin"
+      },
+      "card_art": "@GrishkinCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnGrishkinEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A small but mighty flea that grows stronger when working with the Fleamaster."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Grishkin",
+      "size": 1,
+      "health": 15,
+      "attack": 20,
+      "subtypes": ["@Flea"],
+      "triggers": [
+        {
+          "id": "@GrishkinComboTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "GrishkinComboTrigger",
+      "descriptions": {
+        "english": "Combo Fleamaster Mooshka: Shift: Fleas get +3/+3"
+      },
+      "trigger": "combo",
+      "effects": [
+        {
+          "id": "@GrishkinBuffFleasEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnGrishkinEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Grishkin"
+    },
+    {
+      "id": "GrishkinBuffFleasEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@AttackUp",
+          "count": 3
+        },
+        {
+          "status": "@HealthUp",
+          "count": 3
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "GrishkinCardArt",
+      "path": "textures/grishkin_card.png"
+    },
+    {
+      "id": "GrishkinCharacterArt",
+      "path": "textures/grishkin_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "GrishkinCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@GrishkinCardArt"
+        }
+      }
+    },
+    {
+      "id": "GrishkinCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@GrishkinCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

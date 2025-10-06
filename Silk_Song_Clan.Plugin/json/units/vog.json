@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Vog",
+      "name": "Vog",
+      "description": "Harvest: If a Flea Died, Add a random Flea to Hand.",
+      "cost": 2,
+      "attack": 30,
+      "health": 40,
+      "size": 2,
+      "rarity": "Rare",
+      "traits": [],
+      "subtypes": ["Flea"],
+      "class": "Silksong",
+      "cardArt": "@Vog",
+      "cardType": "Unit"
+    }
+  ]
+}

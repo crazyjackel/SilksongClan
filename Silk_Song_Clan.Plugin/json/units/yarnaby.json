@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Yarnaby",
+      "name": "Yarnaby",
+      "description": "Hunger: Gain Lifesteal 1. Combo Crull and Benjin: Strike: Front Unit gets Lifesteal 1.",
+      "cost": 1,
+      "attack": 8,
+      "health": 8,
+      "size": 1,
+      "rarity": "Uncommon",
+      "traits": ["Lifesteal 3"],
+      "subtypes": ["Bug"],
+      "class": "Silksong",
+      "cardArt": "@Yarnaby",
+      "cardType": "Unit"
+    }
+  ]
+}

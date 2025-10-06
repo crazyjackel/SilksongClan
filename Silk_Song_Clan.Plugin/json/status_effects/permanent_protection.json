@@ -1,0 +1,48 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "status_effects": [
+        {
+            "id": "PermanentProtection",
+            "class_name": "@StatusEffectAcrobaticState",
+            "names": {
+                "english": "Permanent Protection"
+            },
+            "stackable_names": {
+                "english": "Permanent Protection {0}"
+            },
+            "card_tooltips": {
+                "english": "At the start of each turn, permanently gain extra max health equal to your current stacks of [Silk_Song_Clan.Plugin_PermanentProtection]. All stacks are lost if you take damage or at the start of your turn."
+            },
+            "character_tooltips": {
+                "english": "At the start of the turn, this unit gains +[codeint0] max health permanently. This effect is lost if the unit takes damage."
+            },
+            "notifications": {
+                "english": "Permanently Protected"
+            },
+            "replacement_texts": {
+                "english": "<b>Permanent Protection</b>"
+            },
+            "display_category": "positive",
+            "trigger_stage": "on_monster_team_turn_begin",
+            "additional_trigger_stages": ["on_hit", "on_attacked"],
+            "is_stackable": true,
+            "remove_stack_at_end_of_turn": false,
+            "param_int": 2,
+            "param_secondary_int": 0,
+            "param_str": "max_hp",
+            "icon": "@PermanentProtection"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "PermanentProtection",
+            "path": "textures/permanent_protection_status.png"
+        }
+    ],
+    "atlas_icons": [
+        {
+            "id": "PermanentProtection",
+            "path": "textures/permanent_protection_status_tooltip.png"
+        }
+    ]
+}

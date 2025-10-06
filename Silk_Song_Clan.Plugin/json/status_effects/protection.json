@@ -1,0 +1,48 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "status_effects": [
+        {
+            "id": "Protection",
+            "class_name": "@StatusEffectAcrobaticState",
+            "names": {
+                "english": "Protection"
+            },
+            "stackable_names": {
+                "english": "Protection {0}"
+            },
+            "card_tooltips": {
+                "english": "At the start of each turn, gain extra max health equal to your current stacks of [Silk_Song_Clan.Plugin_Protection]. All stacks are lost if you take damage or at the start of your turn."
+            },
+            "character_tooltips": {
+                "english": "At the start of the turn, this unit gains +[codeint0] max health equal. This effect is lost if the unit takes damage."
+            },
+            "notifications": {
+                "english": "Protected"
+            },
+            "replacement_texts": {
+                "english": "<b>Protection</b>"
+            },
+            "display_category": "positive",
+            "trigger_stage": "on_monster_team_turn_begin",
+            "additional_trigger_stages": ["on_hit", "on_attacked"],
+            "is_stackable": true,
+            "remove_stack_at_end_of_turn": false,
+            "param_int": 1,
+            "param_secondary_int": 0,
+            "param_str": "max_hp",
+            "icon": "@Protection"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Protection",
+            "path": "textures/protection_status.png"
+        }
+    ],
+    "atlas_icons": [
+        {
+            "id": "Protection",
+            "path": "textures/protection_status_tooltip.png"
+        }
+    ]
+}

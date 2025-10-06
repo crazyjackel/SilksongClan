@@ -1,0 +1,116 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnFleamasterMooshka",
+      "names": {
+        "english": "Fleamaster Mooshka",
+        "french": "Fleamaster Mooshka"
+      },
+      "card_art": "@FleamasterMooshkaCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnFleamasterMooshkaEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Fleamaster Mooshka is a key part to assembling \"Fleatopia\""
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "FleamasterMooshka",
+      "size": 2,
+      "health": 16,
+      "attack": 8,
+      "subtypes": ["@Flea"],
+      "triggers": [
+        {
+          "id": "@FleamasterResolveTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "FleamasterResolveTrigger",
+      "descriptions": {
+        "english": "Resolve: Add a random Flea to Hand"
+      },
+      "trigger": "end_turn_pre_hand_discard",
+      "effects": [
+        {
+          "id": "@FleamasterAddFleaEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnFleamasterMooshkaEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@FleamasterMooshka"
+    },
+    {
+      "id": "FleamasterAddFleaEffect",
+      "name": "CardEffectAddCardToHand",
+      "target_mode": "hand",
+      "param_card_type": "monster",
+      "param_subtypes": ["@Flea"]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "FleamasterMooshkaCardArt",
+      "path": "textures/fleamaster_mooshka_card.png"
+    },
+    {
+      "id": "FleamasterMooshkaCharacterArt",
+      "path": "textures/fleamaster_mooshka_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "FleamasterMooshkaCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FleamasterMooshkaCardArt"
+        }
+      }
+    },
+    {
+      "id": "FleamasterMooshkaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@FleamasterMooshkaCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

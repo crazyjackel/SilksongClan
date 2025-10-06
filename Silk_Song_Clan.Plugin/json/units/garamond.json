@@ -1,0 +1,116 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnGaramond",
+      "names": {
+        "english": "Garamond",
+        "french": "Garamond"
+      },
+      "card_art": "@GaramondCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnGaramondEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A mighty warrior who fights alongside Zaza with devastating lance attacks."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Garamond",
+      "size": 2,
+      "health": 30,
+      "attack": 30,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@GaramondComboTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "GaramondComboTrigger",
+      "descriptions": {
+        "english": "Combo Zaza: Ability 2 (Lance): Attack."
+      },
+      "trigger": "combo",
+      "effects": [
+        {
+          "id": "@GaramondLanceEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnGaramondEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Garamond"
+    },
+    {
+      "id": "GaramondLanceEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "room",
+      "target_team": "enemies",
+      "param_int": 30
+    }
+  ],
+  "sprites": [
+    {
+      "id": "GaramondCardArt",
+      "path": "textures/garamond_card.png"
+    },
+    {
+      "id": "GaramondCharacterArt",
+      "path": "textures/garamond_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "GaramondCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@GaramondCardArt"
+        }
+      }
+    },
+    {
+      "id": "GaramondCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@GaramondCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

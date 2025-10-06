@@ -1,0 +1,116 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnVarga",
+      "names": {
+        "english": "Varga",
+        "french": "Varga"
+      },
+      "card_art": "@VargaCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnVargaEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A rallying flea that speeds up the cooldowns of all units when working with the Fleamaster."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Varga",
+      "size": 1,
+      "health": 20,
+      "attack": 15,
+      "subtypes": ["@Flea"],
+      "triggers": [
+        {
+          "id": "@VargaComboTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "VargaComboTrigger",
+      "descriptions": {
+        "english": "Combo Fleamaster Mooshka: Rally: If it was a flea, Reduce all Unit Cooldowns by 1."
+      },
+      "trigger": "combo",
+      "effects": [
+        {
+          "id": "@VargaReduceCooldownsEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnVargaEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Varga"
+    },
+    {
+      "id": "VargaReduceCooldownsEffect",
+      "name": "CardEffectReduceCooldowns",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 1
+    }
+  ],
+  "sprites": [
+    {
+      "id": "VargaCardArt",
+      "path": "textures/varga_card.png"
+    },
+    {
+      "id": "VargaCharacterArt",
+      "path": "textures/varga_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "VargaCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@VargaCardArt"
+        }
+      }
+    },
+    {
+      "id": "VargaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@VargaCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

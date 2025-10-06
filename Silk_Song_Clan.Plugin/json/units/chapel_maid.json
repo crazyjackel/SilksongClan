@@ -1,0 +1,157 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnChapelMaid",
+      "names": {
+        "english": "Chapel Maid",
+        "french": "Chapel Maid"
+      },
+      "card_art": "@ChapelMaidCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnChapelMaidEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A devoted snail that provides protection to allies through the Silksong connection."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "ChapelMaid",
+      "size": 2,
+      "health": 24,
+      "attack": 0,
+      "subtypes": ["@Snail"],
+      "triggers": [
+        {
+          "id": "@ChapelMaidSpawnTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "ChapelMaidSpawnTrigger",
+      "descriptions": {
+        "english": "<b>Combo [Snail]</b>: <b>Silksong</b>: Friendly Units get [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]."
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        {
+          "id": "@ChapelMaidSpawnEffect"
+        }
+      ]
+    },
+    {
+      "id": "ChapelMaidSilksongTrigger",
+      "descriptions": {
+        "english": "Friendly Units get [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]."
+      },
+      "trigger": "@Silksong",
+      "effects": [
+        {
+          "id": "@ChapelMaidProtectionStatusEffect"
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ChapelMaidProtectionUpgrade",
+      "trigger_upgrades": [
+        "@ChapelMaidSilksongTrigger"
+      ]
+    }
+  ],
+  "upgrade_masks": [
+    {
+      "id": "ChapelMaidComboSnailMask",
+      "required_subtypes": [
+        "@Snail"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnChapelMaidEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@ChapelMaid"
+    },
+    {
+      "id": "ChapelMaidSpawnEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_card_filter": "@ChapelMaidComboSnailMask",
+      "param_upgrade": "@ChapelMaidProtectionUpgrade"
+    },
+    {
+      "id": "ChapelMaidProtectionStatusEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@PermanentProtection",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ChapelMaidCardArt",
+      "path": "textures/ChapelMaidCardArt.png"
+    },
+    {
+      "id": "ChapelMaidCharacterArt",
+      "path": "textures/ChapelMaidCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ChapelMaidCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ChapelMaidCardArt"
+        }
+      }
+    },
+    {
+      "id": "ChapelMaidCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@ChapelMaidCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

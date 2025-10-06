@@ -1,0 +1,48 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "status_effects": [
+        {
+            "id": "PermanentImbue",
+            "class_name": "@StatusEffectAcrobaticState",
+            "names": {
+                "english": "Permanent Imbue"
+            },
+            "stackable_names": {
+                "english": "Permanent Imbue {0}"
+            },
+            "card_tooltips": {
+                "english": "At the start of each turn, permanently gain extra attack equal to your current stacks of [Silk_Song_Clan.Plugin_PermanentImbue]. All stacks are lost if you take damage or at the start of your turn."
+            },
+            "character_tooltips": {
+                "english": "At the start of the turn, this unit gains +[codeint0] attack permanently. This effect is lost if the unit takes damage."
+            },
+            "notifications": {
+                "english": "Permanently Imbued"
+            },
+            "replacement_texts": {
+                "english": "<b>Permanent Imbue</b>"
+            },
+            "display_category": "positive",
+            "trigger_stage": "on_monster_team_turn_begin",
+            "additional_trigger_stages": ["on_hit", "on_attacked"],
+            "is_stackable": true,
+            "remove_stack_at_end_of_turn": false,
+            "param_int": 2,
+            "param_secondary_int": 0,
+            "param_str": "damage",
+            "icon": "@PermanentImbue"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "PermanentImbue",
+            "path": "textures/permanent_imbue_status.png"
+        }
+    ],
+    "atlas_icons": [
+        {
+            "id": "PermanentImbue",
+            "path": "textures/permanent_imbue_status_tooltip.png"
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnGilly",
+      "names": {
+        "english": "Gilly",
+        "french": "Gilly"
+      },
+      "card_art": "@GillyCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnGillyEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A stealthy bug that becomes even more elusive through the Silksong connection."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Gilly",
+      "size": 2,
+      "health": 10,
+      "attack": 20,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@GillySilksongTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "GillySilksongTrigger",
+      "descriptions": {
+        "english": "Silksong: Gain Stealth 2."
+      },
+      "trigger": "silksong",
+      "effects": [
+        {
+          "id": "@GillyGainStealthEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnGillyEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Gilly"
+    },
+    {
+      "id": "GillyGainStealthEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@Stealth",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "GillyCardArt",
+      "path": "textures/gilly_card.png"
+    },
+    {
+      "id": "GillyCharacterArt",
+      "path": "textures/gilly_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "GillyCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@GillyCardArt"
+        }
+      }
+    },
+    {
+      "id": "GillyCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@GillyCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

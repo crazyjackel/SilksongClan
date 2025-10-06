@@ -1,0 +1,120 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnSeamstress",
+      "names": {
+        "english": "Seamstress",
+        "french": "Seamstress"
+      },
+      "card_art": "@SeamstressCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnSeamstressEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A skilled weaver who channels magical energy through her work with the Pinstress."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Seamstress",
+      "size": 3,
+      "health": 30,
+      "attack": 30,
+      "subtypes": ["@Pinstress"],
+      "triggers": [
+        {
+          "id": "@SeamstressComboTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "SeamstressComboTrigger",
+      "descriptions": {
+        "english": "Combo Pinstress: Conduit 10"
+      },
+      "trigger": "combo",
+      "effects": [
+        {
+          "id": "@SeamstressConduitEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnSeamstressEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Seamstress"
+    },
+    {
+      "id": "SeamstressConduitEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@Conduit",
+          "count": 10
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SeamstressCardArt",
+      "path": "textures/seamstress_card.png"
+    },
+    {
+      "id": "SeamstressCharacterArt",
+      "path": "textures/seamstress_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SeamstressCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SeamstressCardArt"
+        }
+      }
+    },
+    {
+      "id": "SeamstressCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@SeamstressCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

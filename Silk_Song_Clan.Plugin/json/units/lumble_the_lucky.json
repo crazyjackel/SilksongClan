@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "LumbleTheLucky",
+      "name": "Lumble the Lucky",
+      "description": "Incant: Gain 4 gold. Extinguish: Units get Damage Shield 1.",
+      "cost": 2,
+      "attack": 10,
+      "health": 25,
+      "size": 2,
+      "rarity": "Rare",
+      "traits": [],
+      "subtypes": ["Bug"],
+      "class": "Silksong",
+      "cardArt": "@LumbleTheLucky",
+      "cardType": "Unit"
+    }
+  ]
+}

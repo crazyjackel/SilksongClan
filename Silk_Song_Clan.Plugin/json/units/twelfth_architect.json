@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "TwelfthArchitect",
+      "name": "Twelfth Architect",
+      "description": "Celebrate: Spend 100 Gold. Gain a Relic allowing Stewards to Equip an additional Equipment.",
+      "cost": 2,
+      "attack": 40,
+      "health": 20,
+      "size": 3,
+      "rarity": "Rare",
+      "traits": [],
+      "subtypes": ["Steward"],
+      "class": "Silksong",
+      "cardArt": "@TwelfthArchitect",
+      "cardType": "Unit"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "status_effects": [
+        {
+            "id": "Imbue",
+            "class_name": "@StatusEffectAcrobaticState",
+            "names": {
+                "english": "Imbue"
+            },
+            "stackable_names": {
+                "english": "Imbue {0}"
+            },
+            "card_tooltips": {
+                "english": "At the start of each turn, gain extra attack equal to your current stacks of [Silk_Song_Clan.Plugin_Imbue]. All stacks are lost if you take damage or at the start of your turn."
+            },
+            "character_tooltips": {
+                "english": "At the start of the turn, this unit gains +[codeint0] attack. This effect is lost if the unit takes damage."
+            },
+            "notifications": {
+                "english": "Imbued"
+            },
+            "replacement_texts": {
+                "english": "<b>Imbue</b>"
+            },
+            "display_category": "positive",
+            "trigger_stage": "on_monster_team_turn_begin",
+            "additional_trigger_stages": ["on_hit", "on_attacked"],
+            "is_stackable": true,
+            "remove_stack_at_end_of_turn": false,
+            "param_int": 1,
+            "param_secondary_int": 0,
+            "param_str": "damage",
+            "icon": "@Imbue"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Imbue",
+            "path": "textures/imbue_status.png"
+        }
+    ],
+    "atlas_icons": [
+        {
+            "id": "Imbue",
+            "path": "textures/imbue_status_tooltip.png"
+        }
+    ]
+}

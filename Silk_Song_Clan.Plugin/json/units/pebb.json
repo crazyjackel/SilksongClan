@@ -1,0 +1,115 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnPebb",
+      "names": {
+        "english": "Pebb",
+        "french": "Pebb"
+      },
+      "card_art": "@PebbCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnPebbEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A small bug with the power to create powerful relics for rare units."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Pebb",
+      "size": 1,
+      "health": 8,
+      "attack": 12,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@PebbAbilityTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "PebbAbilityTrigger",
+      "descriptions": {
+        "english": "Ability 5 (Wormway Key): Spend 500 gold. Gain a Relic giving Rare Units +10/+10."
+      },
+      "trigger": "ability",
+      "effects": [
+        {
+          "id": "@PebbCreateRelicEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnPebbEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Pebb"
+    },
+    {
+      "id": "PebbCreateRelicEffect",
+      "name": "CardEffectAddRelic",
+      "target_mode": "relics",
+      "param_relic": "@WormwayKeyRelic"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PebbCardArt",
+      "path": "textures/pebb_card.png"
+    },
+    {
+      "id": "PebbCharacterArt",
+      "path": "textures/pebb_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "PebbCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PebbCardArt"
+        }
+      }
+    },
+    {
+      "id": "PebbCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@PebbCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

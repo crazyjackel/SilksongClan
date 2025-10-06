@@ -1,0 +1,21 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "character_trigger_types": [
+        {
+            "id": "Silksong",
+            "names": {
+                "english": "Silksong"
+            },
+            "descriptions": {
+                "english": "Triggers whenever a card is played that costs Silk."
+            },
+            "sprite": "@Silksong"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Silksong",
+            "path": "textures/silksong_trigger.png"
+        }
+    ]
+}

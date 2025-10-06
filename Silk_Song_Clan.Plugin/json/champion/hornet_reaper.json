@@ -1,0 +1,19 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "upgrades": [
+        {
+            "id": "HornetReaper",
+            "titles": {
+                "english": "Reaper"
+            },
+            "bonus_damage": 7,
+            "bonus_hp": 4,
+            "status_effect_upgrades": [
+                {
+                    "status": "trample",
+                    "count": 1
+                }
+            ]
+        }
+    ]
+}

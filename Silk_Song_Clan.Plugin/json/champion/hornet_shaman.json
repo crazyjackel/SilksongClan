@@ -1,0 +1,22 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "upgrades": [
+        {
+            "id": "HornetShaman",
+            "titles": {
+                "english": "Shaman"
+            },
+            "descriptions": {
+                "english": "[conduit] [status0.power]"
+            },
+            "bonus_damage": 6,
+            "bonus_hp": 14,
+            "status_effect_upgrades": [
+                {
+                    "status": "conduit",
+                    "count": 10
+                }
+            ]
+        }
+    ]
+}

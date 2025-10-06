@@ -1,0 +1,168 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnCaretaker",
+      "names": {
+        "english": "Caretaker",
+        "french": "Caretaker"
+      },
+      "card_art": "@CaretakerCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnCaretakerEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A nurturing snail that provides protective shields to allies through the Silksong connection."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Caretaker",
+      "size": 2,
+      "health": 16,
+      "attack": 8,
+      "subtypes": ["@Snail"],
+      "triggers": [
+        {
+          "id": "@CaretakerSpawnTrigger"
+        }
+      ],
+      "starting_status_effects": [
+        {
+          "status": "duality",
+          "count": 1
+        }
+      ]
+
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "CaretakerSpawnTrigger",
+      "descriptions": {
+        "english": "<b>Combo [Snail]</b>: <b>Silksong</b>: Front Unit gets [DamageShield] [effect0.status0.power] and [SpellShield] [effect0.status1.power]."
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        {
+          "id": "@CaretakerSpawnEffect"
+        }
+      ]
+    },
+    {
+      "id": "CaretakerSilksongTrigger",
+      "descriptions": {
+        "english": "Front Unit gets [DamageShield] [effect0.status0.power] and [SpellShield] [effect0.status1.power]."
+      },
+      "trigger": "@Silksong",
+      "effects": [
+        {
+          "id": "@CaretakerShieldStatusEffect"
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "CaretakerShieldUpgrade",
+      "trigger_upgrades": [
+        "@CaretakerSilksongTrigger"
+      ]
+    }
+  ],
+  "upgrade_masks": [
+    {
+      "id": "CaretakerComboSnailMask",
+      "required_subtypes": [
+        "@Snail"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnCaretakerEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Caretaker"
+    },
+    {
+      "id": "CaretakerSpawnEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_card_filter": "@CaretakerComboSnailMask",
+      "param_upgrade": "@CaretakerShieldUpgrade"
+    },
+    {
+      "id": "CaretakerShieldStatusEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "damage shield",
+          "count": 1
+        },
+        {
+          "status": "spell shield",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "CaretakerCardArt",
+      "path": "textures/caretaker_card.png"
+    },
+    {
+      "id": "CaretakerCharacterArt",
+      "path": "textures/caretaker_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "CaretakerCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@CaretakerCardArt"
+        }
+      }
+    },
+    {
+      "id": "CaretakerCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@CaretakerCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

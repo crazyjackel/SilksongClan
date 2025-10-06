@@ -1,0 +1,115 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnZaza",
+      "names": {
+        "english": "Zaza",
+        "french": "Zaza"
+      },
+      "card_art": "@ZazaCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnZazaEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A humble steed that provides equipment to those who fight alongside Garamond."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Zaza",
+      "size": 1,
+      "health": 15,
+      "attack": 15,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@ZazaComboTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "ZazaComboTrigger",
+      "descriptions": {
+        "english": "Combo Garmond: Ability (Humble Steed): Add a random Equipment to Hand."
+      },
+      "trigger": "combo",
+      "effects": [
+        {
+          "id": "@ZazaAddEquipmentEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnZazaEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Zaza"
+    },
+    {
+      "id": "ZazaAddEquipmentEffect",
+      "name": "CardEffectAddCardToHand",
+      "target_mode": "hand",
+      "param_card_type": "equipment"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ZazaCardArt",
+      "path": "textures/zaza_card.png"
+    },
+    {
+      "id": "ZazaCharacterArt",
+      "path": "textures/zaza_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ZazaCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ZazaCardArt"
+        }
+      }
+    },
+    {
+      "id": "ZazaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@ZazaCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

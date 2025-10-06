@@ -1,0 +1,115 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnGreenPrince",
+      "names": {
+        "english": "Green Prince",
+        "french": "Green Prince"
+      },
+      "card_art": "@GreenPrinceCardArt",
+      "cost": 3,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnGreenPrinceEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A royal warrior who creates frozen copies of himself through the Silksong connection."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "GreenPrince",
+      "size": 3,
+      "health": 40,
+      "attack": 60,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@GreenPrinceSilksongTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "GreenPrinceSilksongTrigger",
+      "descriptions": {
+        "english": "Silksong: Add an Frozen, Ephemeral Copy with Fragile to your hand."
+      },
+      "trigger": "silksong",
+      "effects": [
+        {
+          "id": "@GreenPrinceCreateCopyEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnGreenPrinceEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@GreenPrince"
+    },
+    {
+      "id": "GreenPrinceCreateCopyEffect",
+      "name": "CardEffectAddCardToHand",
+      "target_mode": "hand",
+      "param_card": "@GreenPrinceCopy"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "GreenPrinceCardArt",
+      "path": "textures/green_prince_card.png"
+    },
+    {
+      "id": "GreenPrinceCharacterArt",
+      "path": "textures/green_prince_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "GreenPrinceCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@GreenPrinceCardArt"
+        }
+      }
+    },
+    {
+      "id": "GreenPrinceCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@GreenPrinceCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

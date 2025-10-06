@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnFlickTheFixer",
+      "names": {
+        "english": "Flick the Fixer",
+        "french": "Flick the Fixer"
+      },
+      "card_art": "@FlickTheFixerCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnFlickTheFixerEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A skilled craftsman who can fix anything for the right price."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "FlickTheFixer",
+      "size": 2,
+      "health": 20,
+      "attack": 5,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@FlickAbilityTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "FlickAbilityTrigger",
+      "descriptions": {
+        "english": "Ability 1 (Fix It). Spend 10. Friendly Units gain 1 Permanent Protection."
+      },
+      "trigger": "ability",
+      "effects": [
+        {
+          "id": "@FlickFixItEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnFlickTheFixerEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@FlickTheFixer"
+    },
+    {
+      "id": "FlickFixItEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@Protection",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "FlickTheFixerCardArt",
+      "path": "textures/flick_the_fixer_card.png"
+    },
+    {
+      "id": "FlickTheFixerCharacterArt",
+      "path": "textures/flick_the_fixer_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "FlickTheFixerCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@FlickTheFixerCardArt"
+        }
+      }
+    },
+    {
+      "id": "FlickTheFixerCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@FlickTheFixerCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

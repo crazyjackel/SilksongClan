@@ -1,0 +1,64 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "traits": [
+        {
+            "id": "HornetHunter1Trait",
+            "name": "@CardTraitScaleDamageFullSilk",
+            "description": "Gains 25% more Attack if at Max Silk.",
+            "param_float": 0.25
+        },
+        {
+            "id": "HornetHunter2Trait",
+            "name": "@CardTraitScaleDamageFullSilk",
+            "description": "Gains 50% more Attack if at Max Silk.",
+            "param_float": 0.50
+        },
+        {
+            "id": "HornetHunter3Trait",
+            "name": "@CardTraitScaleDamageFullSilk",
+            "description": "Gains 100% more Attack if at Max Silk.",
+            "param_float": 1.00
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "HornetHunter1",
+            "titles": {
+                "english": "Hunter"
+            },
+            "bonus_damage": 8,
+            "bonus_hp": 12,
+            "trait_upgrades": [
+                "@HornetHunter1Trait"
+            ]
+        },
+        {
+            "id": "HornetHunter2",
+            "titles": {
+                "english": "Hunter II"
+            },
+            "bonus_damage": 8,
+            "bonus_hp": 12,
+            "remove_trait_upgrades": [
+                "@HornetHunter1Trait"
+            ],
+            "trait_upgrades": [
+                "@HornetHunter2Trait"
+            ]
+        },
+        {
+            "id": "HornetHunter3",
+            "titles": {
+                "english": "Hunter III"
+            },
+            "bonus_damage": 16,
+            "bonus_hp": 12,
+            "remove_trait_upgrades": [
+                "@HornetHunter2Trait"
+            ],
+            "trait_upgrades": [
+                "@HornetHunter3Trait"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+Name,Attack,Health,Trait,Effect
+Hornet,24,16,Warrior,
+Hunter 1,8,12,,Gains 25% more Attack if at Max Silk
+Hunter 2,8,12,,Gains 50% more Attack if at Max Silk
+Hunter 3,16,12,,Gains 100% more Attack if at Max Silk
+Reaper,7,4,Trample,
+Wanderer,3,3,Multistrike 1,
+Beast,0,2,,Strike: Gains Lifesteal 1.
+Cursed 1,-8,-8,Sap 10,Cannot Equip Equipment. Max Silk is 3. 
+Witch 2,8,8,Multistrike 1,Strike: Apply Melee Weakness.
+Architect,12,6,,Can Equip an additional two equipment.
+Shaman,6,14,,Conduit 10

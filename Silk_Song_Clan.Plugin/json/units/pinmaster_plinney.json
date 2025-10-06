@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnPinmasterPlinney",
+      "names": {
+        "english": "Pinmaster Plinney",
+        "french": "Pinmaster Plinney"
+      },
+      "card_art": "@PinmasterPlinneyCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnPinmasterPlinneyEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A skilled craftsman who can sharpen weapons and imbue them with magical energy."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "PinmasterPlinney",
+      "size": 2,
+      "health": 12,
+      "attack": 12,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@PinmasterAbilityTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "PinmasterAbilityTrigger",
+      "descriptions": {
+        "english": "Ability 5 (Sharpen): Spend 30 gold. Give 10 Permanent Imbue."
+      },
+      "trigger": "ability",
+      "effects": [
+        {
+          "id": "@PinmasterSharpenEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnPinmasterPlinneyEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@PinmasterPlinney"
+    },
+    {
+      "id": "PinmasterSharpenEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@Imbue",
+          "count": 10
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PinmasterPlinneyCardArt",
+      "path": "textures/pinmaster_plinney_card.png"
+    },
+    {
+      "id": "PinmasterPlinneyCharacterArt",
+      "path": "textures/pinmaster_plinney_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "PinmasterPlinneyCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PinmasterPlinneyCardArt"
+        }
+      }
+    },
+    {
+      "id": "PinmasterPlinneyCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@PinmasterPlinneyCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

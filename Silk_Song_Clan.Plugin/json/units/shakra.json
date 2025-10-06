@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnShakra",
+      "names": {
+        "english": "Shakra",
+        "french": "Shakra"
+      },
+      "card_art": "@ShakraCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnShakraEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A warrior bug that weakens enemies with each strike."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Shakra",
+      "size": 2,
+      "health": 30,
+      "attack": 30,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@ShakraStrikeTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "ShakraStrikeTrigger",
+      "descriptions": {
+        "english": "Strike: Apply Melee Weakness 1"
+      },
+      "trigger": "strike",
+      "effects": [
+        {
+          "id": "@ShakraApplyWeaknessEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnShakraEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Shakra"
+    },
+    {
+      "id": "ShakraApplyWeaknessEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "target",
+      "target_team": "enemies",
+      "param_status_effects": [
+        {
+          "status": "@MeleeWeakness",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ShakraCardArt",
+      "path": "textures/shakra_card.png"
+    },
+    {
+      "id": "ShakraCharacterArt",
+      "path": "textures/shakra_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ShakraCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ShakraCardArt"
+        }
+      }
+    },
+    {
+      "id": "ShakraCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@ShakraCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

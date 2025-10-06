@@ -1,0 +1,26 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "upgrades": [
+        {
+            "id": "HornetCursed",
+            "titles": {
+                "english": "Cursed"
+            },
+            "descriptions": {
+                "english": "Cannot Equip Equipment."
+            },
+            "bonus_damage": -8,
+            "bonus_hp": -8,
+            "bonus_equipment": -1,
+            "status_effect_upgrades": [
+                {
+                    "status": "debuff",
+                    "count": 10
+                }
+            ],
+            "trigger_upgrades": [
+                "@Cursed1SilkTrigger"
+            ]
+        }
+    ]
+}

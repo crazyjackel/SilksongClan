@@ -1,0 +1,116 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnSprintmasterSwift",
+      "names": {
+        "english": "Sprintmaster Swift",
+        "french": "Sprintmaster Swift"
+      },
+      "card_art": "@SprintmasterSwiftCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnSprintmasterSwiftEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A lightning-fast bug that speeds up all allies with its resolve."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "SprintmasterSwift",
+      "size": 2,
+      "health": 15,
+      "attack": 40,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@SprintmasterResolveTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "SprintmasterResolveTrigger",
+      "descriptions": {
+        "english": "Resolve: Reduce all Unit Cooldowns by 1."
+      },
+      "trigger": "end_turn_pre_hand_discard",
+      "effects": [
+        {
+          "id": "@SprintmasterReduceCooldownsEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnSprintmasterSwiftEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@SprintmasterSwift"
+    },
+    {
+      "id": "SprintmasterReduceCooldownsEffect",
+      "name": "CardEffectReduceCooldowns",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 1
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SprintmasterSwiftCardArt",
+      "path": "textures/sprintmaster_swift_card.png"
+    },
+    {
+      "id": "SprintmasterSwiftCharacterArt",
+      "path": "textures/sprintmaster_swift_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SprintmasterSwiftCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SprintmasterSwiftCardArt"
+        }
+      }
+    },
+    {
+      "id": "SprintmasterSwiftCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@SprintmasterSwiftCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

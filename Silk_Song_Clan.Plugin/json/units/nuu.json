@@ -1,0 +1,154 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnNuu",
+      "names": {
+        "english": "Nuu",
+        "french": "Nuu"
+      },
+      "card_art": "@NuuCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnNuuEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A mysterious bug that gains power through both harvest and hunger."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Nuu",
+      "size": 2,
+      "health": 2,
+      "attack": 2,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@NuuHarvestTrigger"
+        },
+        {
+          "id": "@NuuHungerTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "NuuHarvestTrigger",
+      "descriptions": {
+        "english": "Harvest: Gain 1 Permanent Imbue and 1 Permanent Protection."
+      },
+      "trigger": "harvest",
+      "effects": [
+        {
+          "id": "@NuuHarvestEffect"
+        }
+      ]
+    },
+    {
+      "id": "NuuHungerTrigger",
+      "descriptions": {
+        "english": "Hunger: Gain 1 Permanent Imbue and 1 Permanent Protection"
+      },
+      "trigger": "hunger",
+      "effects": [
+        {
+          "id": "@NuuHungerEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnNuuEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Nuu"
+    },
+    {
+      "id": "NuuHarvestEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@Imbue",
+          "count": 1
+        },
+        {
+          "status": "@Protection",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "NuuHungerEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@Imbue",
+          "count": 1
+        },
+        {
+          "status": "@Protection",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "NuuCardArt",
+      "path": "textures/nuu_card.png"
+    },
+    {
+      "id": "NuuCharacterArt",
+      "path": "textures/nuu_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "NuuCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@NuuCardArt"
+        }
+      }
+    },
+    {
+      "id": "NuuCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@NuuCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

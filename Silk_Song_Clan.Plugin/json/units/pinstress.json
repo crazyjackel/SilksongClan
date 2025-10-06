@@ -1,0 +1,120 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnPinstress",
+      "names": {
+        "english": "Pinstress",
+        "french": "Pinstress"
+      },
+      "card_art": "@PinstressCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnPinstressEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A master weaver who gains magical energy with each strike when working with another Pinstress."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Pinstress",
+      "size": 3,
+      "health": 50,
+      "attack": 30,
+      "subtypes": ["@Pinstress"],
+      "triggers": [
+        {
+          "id": "@PinstressComboTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "PinstressComboTrigger",
+      "descriptions": {
+        "english": "Combo Pinstress: Strike: Gain Conduit 1"
+      },
+      "trigger": "combo",
+      "effects": [
+        {
+          "id": "@PinstressStrikeEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnPinstressEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Pinstress"
+    },
+    {
+      "id": "PinstressStrikeEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@Conduit",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PinstressCardArt",
+      "path": "textures/pinstress_card.png"
+    },
+    {
+      "id": "PinstressCharacterArt",
+      "path": "textures/pinstress_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "PinstressCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PinstressCardArt"
+        }
+      }
+    },
+    {
+      "id": "PinstressCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@PinstressCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

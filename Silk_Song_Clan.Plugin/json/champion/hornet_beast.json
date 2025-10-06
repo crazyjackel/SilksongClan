@@ -1,0 +1,41 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "upgrades": [
+        {
+            "id": "upg_Beast",
+            "titles": {
+                "english": "Beast"
+            },
+            "bonus_damage": 0,
+            "bonus_hp": 2,
+            "trigger_upgrades": [
+                "@BeastStrikeTrigger"
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "BeastStrikeTrigger",
+            "trigger": "on_attacking",
+            "descriptions": {
+                "english": "Gain [lifesteal] [status0.power]."
+            },
+            "effects": [
+                "@BeastStrikeEffect"
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "BeastStrikeEffect",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "param_status_effects": [
+                {
+                    "status": "lifesteal",
+                    "count": 1
+                }
+            ]
+        }
+    ]
+}

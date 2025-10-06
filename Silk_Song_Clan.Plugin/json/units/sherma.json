@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnSherma",
+      "names": {
+        "english": "Sherma",
+        "french": "Sherma"
+      },
+      "card_art": "@ShermaCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnShermaEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Gate, gate, gate! Nicest gate I've met! Gate, gate, gate! Greatest miracle yet! Ha ha ha!"
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Sherma",
+      "size": 2,
+      "health": 10,
+      "attack": 0,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@ShermaResolveTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "ShermaResolveTrigger",
+      "descriptions": {
+        "english": "Give Friendly Units [protection] [effect0.status0.power]."
+      },
+      "trigger": "end_turn_pre_hand_discard",
+      "effects": [
+        {
+          "id": "@ShermaApplyProtection"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnShermaEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@CursedScarab"
+    },
+    {
+      "id": "ShermaApplyProtection",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@Protection",
+          "count": 5
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ShermaCardArt",
+      "path": "textures/ShermaCardArt.png"
+    },
+    {
+      "id": "ShermaCharacterArt",
+      "path": "textures/ShermaCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ShermaCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ShermaCardArt"
+        }
+      }
+    },
+    {
+      "id": "ShermaCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@ShermaCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

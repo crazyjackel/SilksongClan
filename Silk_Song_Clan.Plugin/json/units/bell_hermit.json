@@ -1,0 +1,159 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnBellHermit",
+      "names": {
+        "english": "Bell Hermit",
+        "french": "Bell Hermit"
+      },
+      "card_art": "@BellHermitCardArt",
+      "cost": 2,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnBellHermitEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A wise snail that empowers allies through the Silksong connection."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "BellHermit",
+      "size": 2,
+      "health": 16,
+      "attack": 16,
+      "subtypes": [
+        "@Snail"
+      ],
+      "triggers": [
+        {
+          "id": "@BellHermitSpawnTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "BellHermitSpawnTrigger",
+      "descriptions": {
+        "english": "<b>Combo [Snail]</b>: <b>Silksong</b>: Friendly Units get [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power]."
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        {
+          "id": "@BellHermitSpawnEffect"
+        }
+      ]
+    },
+    {
+      "id": "BellHermitSilksongTrigger",
+      "descriptions": {
+        "english": "Friendly Units get [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power]."
+      },
+      "trigger": "@Silksong",
+      "effects": [
+        {
+          "id": "@BellHermitImbueStatusEffect"
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "BellHermitImbueUpgrade",
+      "trigger_upgrades": [
+        "@BellHermitSilksongTrigger"
+      ]
+    }
+  ],
+  "upgrade_masks": [
+    {
+      "id": "BellHermitComboSnailMask",
+      "required_subtypes": [
+        "@Snail"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnBellHermitEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@BellHermit"
+    },
+    {
+      "id": "BellHermitSpawnEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_card_filter": "@BellHermitComboSnailMask",
+      "param_upgrade": "@BellHermitImbueUpgrade"
+    },
+    {
+      "id": "BellHermitImbueEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@PermanentImbue",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "BellHermitCardArt",
+      "path": "textures/bell_hermit_card.png"
+    },
+    {
+      "id": "BellHermitCharacterArt",
+      "path": "textures/bell_hermit_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "BellHermitCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@BellHermitCardArt"
+        }
+      }
+    },
+    {
+      "id": "BellHermitCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@BellHermitCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

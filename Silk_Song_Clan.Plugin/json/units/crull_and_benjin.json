@@ -1,0 +1,151 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnCrullAndBenjin",
+      "names": {
+        "english": "Crull and Benjin",
+        "french": "Crull and Benjin"
+      },
+      "card_art": "@CrullAndBenjinCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnCrullAndBenjinEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A duo of bugs that grow stronger when hungry and work together with Yarnaby for protection."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "CrullAndBenjin",
+      "size": 1,
+      "health": 8,
+      "attack": 8,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@CrullHungerTrigger"
+        },
+        {
+          "id": "@CrullComboTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "CrullHungerTrigger",
+      "descriptions": {
+        "english": "Hunger: Gain +3/+3"
+      },
+      "trigger": "hunger",
+      "effects": [
+        {
+          "id": "@CrullHungerEffect"
+        }
+      ]
+    },
+    {
+      "id": "CrullComboTrigger",
+      "descriptions": {
+        "english": "Combo Yarnaby: Spend 30 gold. Friendly Units gain 10 Permanent Protection."
+      },
+      "trigger": "combo",
+      "effects": [
+        {
+          "id": "@CrullComboEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnCrullAndBenjinEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@CrullAndBenjin"
+    },
+    {
+      "id": "CrullHungerEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "@AttackUp",
+          "count": 3
+        },
+        {
+          "status": "@HealthUp",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "CrullComboEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@Protection",
+          "count": 10
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "CrullAndBenjinCardArt",
+      "path": "textures/crull_and_benjin_card.png"
+    },
+    {
+      "id": "CrullAndBenjinCharacterArt",
+      "path": "textures/crull_and_benjin_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "CrullAndBenjinCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@CrullAndBenjinCardArt"
+        }
+      }
+    },
+    {
+      "id": "CrullAndBenjinCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@CrullAndBenjinCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

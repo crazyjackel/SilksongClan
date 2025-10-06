@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "upgrades": [
+        {
+            "id": "HornetArchitect",
+            "titles": {
+                "english": "Architect"
+            },
+            "descriptions": {
+                "english": "Can Equip an additional two equipment."
+            },
+            "bonus_damage": 12,
+            "bonus_hp": 6,
+            "bonus_equipment": 2
+        }
+    ]
+}

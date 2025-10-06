@@ -1,0 +1,115 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnGrindle",
+      "names": {
+        "english": "Grindle",
+        "french": "Grindle"
+      },
+      "card_art": "@GrindleCardArt",
+      "cost": 1,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnGrindleEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A small bug that generates gold with each strike."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Grindle",
+      "size": 1,
+      "health": 5,
+      "attack": 5,
+      "subtypes": ["@Bug"],
+      "triggers": [
+        {
+          "id": "@GrindleStrikeTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "GrindleStrikeTrigger",
+      "descriptions": {
+        "english": "Strike: Gain 10 gold."
+      },
+      "trigger": "strike",
+      "effects": [
+        {
+          "id": "@GrindleGainGoldEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnGrindleEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Grindle"
+    },
+    {
+      "id": "GrindleGainGoldEffect",
+      "name": "CardEffectAddGold",
+      "target_mode": "self",
+      "param_int": 10
+    }
+  ],
+  "sprites": [
+    {
+      "id": "GrindleCardArt",
+      "path": "textures/grindle_card.png"
+    },
+    {
+      "id": "GrindleCharacterArt",
+      "path": "textures/grindle_character.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "GrindleCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@GrindleCardArt"
+        }
+      }
+    },
+    {
+      "id": "GrindleCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@GrindleCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

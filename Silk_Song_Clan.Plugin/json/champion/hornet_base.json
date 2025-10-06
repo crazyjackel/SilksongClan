@@ -1,0 +1,128 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnHornet",
+            "names": {
+                "english": "Hornet"
+            },
+            "card_art": "@Hornet",
+            "cost": 0,
+            "card_type": "monster",
+            "rarity": "champion",
+            "class": "@ClassSilksong",
+            "unlock_level": 0,
+            "targets_room": true,
+            "targetless": false,
+            "effects": [
+                "@SpawnHornet"
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "The princess-protector of Hallownest, Hornet wields her needle with deadly precision. Her silk-based abilities make her a formidable warrior in the kingdom of Pharloom."
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "Hornet",
+            "names": {
+                "english": "Hornet"
+            },
+            "character_art": "@HornetCharacterArt",
+            "chatter": "@CTR_Hornet",
+            "size": 2,
+            "attack_damage": 24,
+            "health": 16,
+            "subtypes": [
+                "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Hornet",
+            "path": "textures/HornetCardArt.png"
+        },
+        {
+            "id": "HornetCharacterArt",
+            "path": "textures/HornetCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "Hornet",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@Hornet"
+                }
+            }
+        },
+        {
+            "id": "HornetCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@HornetCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "chatter": [
+        {
+            "id": "CTR_Hornet",
+            "gender": "female",
+            "added_expressions": [
+                {
+                    "english": "Git gud!"
+                },
+                {
+                    "english": "Shaw!"
+                },
+                {
+                    "english": "Adeedno!"
+                }
+            ],
+            "idle_expressions": [
+                {
+                    "english": "This train... it's different from the stagways."
+                },
+                {
+                    "english": "This old train... A terrible contraption. Rust, I can smell it in the air..."
+                },
+                {
+                    "english": "Again we meet little ghost... huh?"
+                },
+                {
+                    "english": "Ella!"
+                },
+                {
+                    "english": "They hunt me for my nature. For the silk produced within my shell. Not for themselves but for the one atop it all."
+                }
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnHornet",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "target_card_type": "spell",
+            "param_character": "@Hornet"
+        }
+    ]
+}
