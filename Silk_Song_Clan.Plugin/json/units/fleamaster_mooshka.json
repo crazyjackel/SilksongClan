@@ -46,9 +46,9 @@
     {
       "id": "FleamasterResolveTrigger",
       "descriptions": {
-        "english": "Resolve: Add a random Flea to Hand"
+        "english": "Add a random Flea to Hand."
       },
-      "trigger": "end_turn_pre_hand_discard",
+      "trigger": "on_turn_begin",
       "effects": [
         {
           "id": "@FleamasterAddFleaEffect"
@@ -65,20 +65,21 @@
     },
     {
       "id": "FleamasterAddFleaEffect",
-      "name": "CardEffectAddCardToHand",
-      "target_mode": "hand",
-      "param_card_type": "monster",
-      "param_subtypes": ["@Flea"]
+      "name": "CardEffectAddBattleCard",
+      "param_int": 3,
+      "param_int_2": 1,
+      "param_card_pool": "@FleaPool",
+      "param_bool": true
     }
   ],
   "sprites": [
     {
       "id": "FleamasterMooshkaCardArt",
-      "path": "textures/fleamaster_mooshka_card.png"
+      "path": "textures/FleamasterMooshkaCardArt.png"
     },
     {
       "id": "FleamasterMooshkaCharacterArt",
-      "path": "textures/fleamaster_mooshka_character.png"
+      "path": "textures/FleamasterMooshkaCharacterArt.png"
     }
   ],
   "game_objects": [
