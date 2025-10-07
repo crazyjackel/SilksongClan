@@ -1,0 +1,112 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnHugeFlea",
+            "names": {
+                "english": "Huge Flea"
+            },
+            "card_art": "@HugeFleaCardArt",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "common",
+            "class": "@Silksong",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnHugeFleaEffect"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "A larger flea that provides significant power boosts to the entire swarm."
+                }
+            ]
+        },
+        {
+            "id": "HugeFleaPetAbility",
+            "names": {
+                "english": "Pet"
+            },
+            "descriptions": {
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
+            },
+            "initial_cooldown": 2,
+            "cooldown": 2,
+            "effects": [
+                {
+                    "id": "@HugeFleaPetEffect"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "HugeFlea",
+            "size": 2,
+            "health": 15,
+            "attack": 15,
+            "subtypes": [
+                "@Flea"
+            ],
+            "ability": "@HugeFleaPetAbility"
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnHugeFleaEffect",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@HugeFlea"
+        },
+        {
+            "id": "HugeFleaPetEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@HugeFleaPetUpgrade"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "HugeFleaCardArt",
+            "path": "textures/HugeFleaCardArt.png"
+        },
+        {
+            "id": "HugeFleaCharacterArt",
+            "path": "textures/HugeFleaCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "HugeFleaCardArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@HugeFleaCardArt"
+                }
+            }
+        },
+        {
+            "id": "HugeFleaCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@HugeFleaCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 1,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 1.2,
+                            "y": 1.2,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

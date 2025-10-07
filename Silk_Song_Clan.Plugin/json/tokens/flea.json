@@ -1,0 +1,112 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnFlea",
+            "names": {
+                "english": "Flea"
+            },
+            "card_art": "@FleaCardArt",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "common",
+            "class": "@Silksong",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnFleaEffect"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "A small, agile creature that works together with other fleas to create powerful swarms."
+                }
+            ]
+        },
+        {
+            "id": "FleaPetAbility",
+            "names": {
+                "english": "Pet"
+            },
+            "descriptions": {
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
+            },
+            "initial_cooldown": 2,
+            "cooldown": 2,
+            "effects": [
+                {
+                    "id": "@FleaPetEffect"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "Flea",
+            "size": 1,
+            "health": 5,
+            "attack": 5,
+            "subtypes": [
+                "@Flea"
+            ],
+            "ability": "@FleaPetAbility"
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnFleaEffect",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@Flea"
+        },
+        {
+            "id": "FleaPetEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@FleaPetUpgrade"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "FleaCardArt",
+            "path": "textures/FleaCardArt.png"
+        },
+        {
+            "id": "FleaCharacterArt",
+            "path": "textures/FleaCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "FleaCardArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@FleaCardArt"
+                }
+            }
+        },
+        {
+            "id": "FleaCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@FleaCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0.5,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 0.8,
+                            "y": 0.8,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

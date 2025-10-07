@@ -1,0 +1,5 @@
+Name,Rarity,Traits,Effect,Type,Cost,Attack,Health,Size,Lore,Notes
+Flea,Common,,Ability 2 - Pet. Fleas get +1/+1,Flea,1,5,5,1
+Bell Flea,Common,Damage Shield 2,Ability 2 - Pet. Fleas get +1/+1,Flea,1,5,5,1
+Big Flea,Common,,Ability 2 - Pet. Fleas get +3/+3,Flea,1,15,15,2
+Brew Flea,Common,Quick,Ability 1 - Pet. Fleas get +1/+1,Flea,1,5,5,1

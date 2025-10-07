@@ -1,0 +1,118 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnBellFlea",
+            "names": {
+                "english": "Bell Flea"
+            },
+            "card_art": "@BellFleaCardArt",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "common",
+            "class": "@Silksong",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnBellFleaEffect"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "A flea with a protective bell that provides damage shields to the swarm."
+                }
+            ]
+        },
+        {
+            "id": "BellFleaPetAbility",
+            "names": {
+                "english": "Pet"
+            },
+            "descriptions": {
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
+            },
+            "initial_cooldown": 2,
+            "cooldown": 2,
+            "effects": [
+                {
+                    "id": "@BellFleaPetEffect"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "BellFlea",
+            "size": 1,
+            "health": 5,
+            "attack": 5,
+            "subtypes": [
+                "@Flea"
+            ],
+            "status_effects": [
+                {
+                    "status": "damage_shield",
+                    "count": 2
+                }
+            ],
+            "ability": "@BellFleaPetAbility"
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnBellFleaEffect",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@BellFlea"
+        },
+        {
+            "id": "BellFleaPetEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@BellFleaPetUpgrade"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "BellFleaCardArt",
+            "path": "textures/BellFleaCardArt.png"
+        },
+        {
+            "id": "BellFleaCharacterArt",
+            "path": "textures/BellFleaCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "BellFleaCardArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@BellFleaCardArt"
+                }
+            }
+        },
+        {
+            "id": "BellFleaCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@BellFleaCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0.5,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 0.8,
+                            "y": 0.8,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

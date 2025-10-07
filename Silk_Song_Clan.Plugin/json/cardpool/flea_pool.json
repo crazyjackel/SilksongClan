@@ -1,0 +1,18 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "card_pools": [
+        {
+            "id": "FleaPool",
+            "cards": [
+                "@SpawnFlea",
+                "@SpawnFlea",
+                "@SpawnFlea",
+                "@SpawnFlea",
+                "@SpawnBellFlea",
+                "@SpawnBellFlea",
+                "@SpawnHugeFlea",
+                "@SpawnBrewFlea"
+            ]
+        }
+    ]
+}

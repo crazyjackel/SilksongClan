@@ -1,0 +1,118 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "SpawnBrewFlea",
+            "names": {
+                "english": "Brew Flea"
+            },
+            "card_art": "@BrewFleaCardArt",
+            "cost": 1,
+            "card_type": "monster",
+            "rarity": "common",
+            "class": "@Silksong",
+            "targets_room": true,
+            "effects": [
+                {
+                    "id": "@SpawnBrewFleaEffect"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "A quick flea that brews up power for the swarm with its enhanced abilities."
+                }
+            ]
+        },
+        {
+            "id": "BrewFleaPetAbility",
+            "names": {
+                "english": "Pet"
+            },
+            "descriptions": {
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
+            },
+            "initial_cooldown": 1,
+            "cooldown": 1,
+            "effects": [
+                {
+                    "id": "@BrewFleaPetEffect"
+                }
+            ]
+        }
+    ],
+    "characters": [
+        {
+            "id": "BrewFlea",
+            "size": 1,
+            "health": 5,
+            "attack": 5,
+            "subtypes": [
+                "@Flea"
+            ],
+            "status_effects": [
+                {
+                    "status": "quick",
+                    "count": 1
+                }
+            ],
+            "ability": "@BrewFleaPetAbility"
+        }
+    ],
+    "effects": [
+        {
+            "id": "SpawnBrewFleaEffect",
+            "name": "CardEffectSpawnMonster",
+            "target_mode": "room",
+            "param_character": "@BrewFlea"
+        },
+        {
+            "id": "BrewFleaPetEffect",
+            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_upgrade": "@BrewFleaPetUpgrade"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "BrewFleaCardArt",
+            "path": "textures/BellFleaCardArt.png"
+        },
+        {
+            "id": "BrewFleaCharacterArt",
+            "path": "textures/BellFleaCharacterArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "BrewFleaCardArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@BrewFleaCardArt"
+                }
+            }
+        },
+        {
+            "id": "BrewFleaCharacterArt",
+            "type": "character_art",
+            "extensions": {
+                "character_art": {
+                    "sprite": "@BrewFleaCharacterArt",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0.5,
+                            "z": 0
+                        },
+                        "scale": {
+                            "x": 0.8,
+                            "y": 0.8,
+                            "z": 1
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

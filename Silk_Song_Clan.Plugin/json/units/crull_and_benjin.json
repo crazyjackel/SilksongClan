@@ -10,7 +10,7 @@
       "card_art": "@CrullAndBenjinCardArt",
       "cost": 1,
       "card_type": "monster",
-      "rarity": "common",
+      "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
         "MegaPool"
@@ -40,7 +40,7 @@
           "id": "@CrullHungerTrigger"
         },
         {
-          "id": "@CrullComboTrigger"
+          "id": "@CrullAndBenjinComboYarnabyTrigger"
         }
       ]
     }
@@ -49,9 +49,9 @@
     {
       "id": "CrullHungerTrigger",
       "descriptions": {
-        "english": "Hunger: Gain +3/+3"
+        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
       },
-      "trigger": "hunger",
+      "trigger": "on_food_spawn",
       "effects": [
         {
           "id": "@CrullHungerEffect"
@@ -59,16 +59,26 @@
       ]
     },
     {
-      "id": "CrullComboTrigger",
+      "id": "CrullAndBenjinComboYarnabyTrigger",
       "descriptions": {
-        "english": "Combo Yarnaby: Spend 30 gold. Friendly Units gain 10 Permanent Protection."
+        "english": "<b>Combo Yarnaby</b>: Spend 30 gold. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]."
       },
-      "trigger": "combo",
+      "trigger": "on_spawn",
       "effects": [
         {
-          "id": "@CrullComboEffect"
+          "id": "@CrullAndBenjinSpendGoldEffect"
+        },
+        {
+          "id": "@CrullAndBenjinProtectionEffect"
         }
       ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "CrullHungerUpgrade",
+      "bonus_damage": 3,
+      "bonus_health": 3
     }
   ],
   "effects": [
@@ -79,28 +89,26 @@
       "param_character": "@CrullAndBenjin"
     },
     {
-      "id": "CrullHungerEffect",
-      "name": "CardEffectAddStatusEffect",
+      "id": "CrullAndBenjinHungerEffect",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
-      "param_status_effects": [
-        {
-          "status": "@AttackUp",
-          "count": 3
-        },
-        {
-          "status": "@HealthUp",
-          "count": 3
-        }
-      ]
+      "target_team": "monsters",
+      "param_upgrade": "@CrullHungerUpgrade"
     },
     {
-      "id": "CrullComboEffect",
-      "name": "CardEffectAddStatusEffect",
+      "id": "CrullAndBenjinSpendGoldEffect",
+      "name": "@CardEffectRewardGoldIfLastCard",
+      "param_int": -30,
+      "param_str": "@Yarnaby"
+    },
+    {
+      "id": "CrullAndBenjinProtectionEffect",
+      "name": "@CardEffectAddStatusEffectIfGoldSpent",
       "target_mode": "room",
       "target_team": "monsters",
       "param_status_effects": [
         {
-          "status": "@Protection",
+          "status": "@PermanentProtection",
           "count": 10
         }
       ]
@@ -109,11 +117,11 @@
   "sprites": [
     {
       "id": "CrullAndBenjinCardArt",
-      "path": "textures/crull_and_benjin_card.png"
+      "path": "textures/CrullAndBenjinCardArt.png"
     },
     {
       "id": "CrullAndBenjinCharacterArt",
-      "path": "textures/crull_and_benjin_character.png"
+      "path": "textures/CrullAndBenjinCharacterArt.png"
     }
   ],
   "game_objects": [

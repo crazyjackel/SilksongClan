@@ -126,11 +126,11 @@
   "sprites": [
     {
       "id": "CaretakerCardArt",
-      "path": "textures/caretaker_card.png"
+      "path": "textures/CaretakerCardArt.png"
     },
     {
       "id": "CaretakerCharacterArt",
-      "path": "textures/caretaker_character.png"
+      "path": "textures/CaretakerCharacterArt.png"
     }
   ],
   "game_objects": [

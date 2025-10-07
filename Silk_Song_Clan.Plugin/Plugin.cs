@@ -69,6 +69,15 @@ namespace Silk_Song_Clan.Plugin
                         "json/subtypes/snail.json",
                         "json/subtypes/bug.json",
 
+                        //Cardpools
+                        "json/cardpool/flea_pool.json",
+
+                        //Tokens
+                        "json/tokens/flea.json",
+                        "json/tokens/bell_flea.json",
+                        "json/tokens/huge_flea.json",
+                        "json/tokens/brew_flea.json",
+
                         //Units
                         "json/units/alchemist_zylotol. json",
                         "json/units/ballow.json",  
@@ -76,6 +85,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/units/bell_hermit.json",
                         "json/units/caretaker.json",
                         "json/units/chapel_maid.json",
+                        "json/units/crull_and_benjin.json",
 
                         //Status Effects
                         "json/status_effects/imbue.json",
