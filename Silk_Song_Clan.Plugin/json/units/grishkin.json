@@ -37,18 +37,51 @@
       "subtypes": ["@Flea"],
       "triggers": [
         {
-          "id": "@GrishkinComboTrigger"
+          "id": "@GrishkinSpawnTrigger"
         }
       ]
     }
   ],
+  "upgrade_masks": [
+    {
+      "id": "GrishkinUpgradeMask",
+      "required_subtypes": ["@Flea"]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "GrishkinComboUpgrade",
+      "trigger_upgrades": [
+        {
+          "id": "@GrishkinShiftTrigger"
+        }
+      ]
+    },
+    {
+      "id": "GrishkinBuffFleasUpgrade",
+      "bonus_damage": 3,
+      "bonus_health": 3
+    }
+  ],
   "character_triggers": [
     {
-      "id": "GrishkinComboTrigger",
+      "id": "GrishkinSpawnTrigger",
       "descriptions": {
-        "english": "Combo Fleamaster Mooshka: Shift: Fleas get +3/+3"
+        "english": "<b>Combo Fleamaster Mooshka</b>: <b>Shift</b>: Give Friendly Fleas +3 [attack] and +3 [health]"
       },
-      "trigger": "combo",
+      "trigger": "on_spawn",
+      "effects": [
+        {
+          "id": "@GrishkinComboEffect"
+        }
+      ]
+    },
+    {
+      "id": "GrishkinShiftTrigger",
+      "descriptions": {
+        "english": "Give Friendly Fleas +[effect0.upgrade.bonusdamage] [attack] and +[effect0.upgrade.bonushealth] [health]."
+      },
+      "trigger": "on_shift",
       "effects": [
         {
           "id": "@GrishkinBuffFleasEffect"
@@ -64,30 +97,29 @@
       "param_character": "@Grishkin"
     },
     {
+      "id": "GrishkinComboEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "target_mode": "self",
+      "param_upgrade": "@GrishkinComboUpgrade",
+      "param_str": "@Grishkin"
+    },
+    {
       "id": "GrishkinBuffFleasEffect",
-      "name": "CardEffectAddStatusEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsFilter",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_status_effects": [
-        {
-          "status": "@AttackUp",
-          "count": 3
-        },
-        {
-          "status": "@HealthUp",
-          "count": 3
-        }
-      ]
+      "param_upgrade": "@GrishkinBuffFleasUpgrade",
+      "param_card_filter": "@GrishkinUpgradeMask"
     }
   ],
   "sprites": [
     {
       "id": "GrishkinCardArt",
-      "path": "textures/grishkin_card.png"
+      "path": "textures/GrishkinCardArt.png"
     },
     {
       "id": "GrishkinCharacterArt",
-      "path": "textures/grishkin_character.png"
+      "path": "textures/GrishkinCharacterArt.png"
     }
   ],
   "game_objects": [

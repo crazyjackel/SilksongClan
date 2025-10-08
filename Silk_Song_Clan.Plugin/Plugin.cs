@@ -87,6 +87,12 @@ namespace Silk_Song_Clan.Plugin
                         "json/units/chapel_maid.json",
                         "json/units/crull_and_benjin.json",
                         "json/units/fleamaster_mooshka.json",
+                        "json/units/flick_the_fixer.json",
+                        "json/units/garamond.json",
+                        "json/units/gilly.json",
+                        "json/units/green_prince.json",
+                        "json/units/grindle.json",
+                        "json/units/grishkin.json",
 
                         //Status Effects
                         "json/status_effects/imbue.json",

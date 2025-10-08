@@ -4,8 +4,7 @@
     {
       "id": "SpawnGaramond",
       "names": {
-        "english": "Garamond",
-        "french": "Garamond"
+        "english": "Garamond"
       },
       "card_art": "@GaramondCardArt",
       "cost": 2,
@@ -26,6 +25,24 @@
           "english": "A mighty warrior who fights alongside Zaza with devastating lance attacks."
         }
       ]
+    },
+    {
+      "id": "GaramondLanceAbility",
+      "names": {
+        "english": "Lance"
+      },
+      "descriptions": {
+        "english": "Attack."
+      },
+      "is_an_ability": true,
+      "cooldown": 2,
+      "targets_room": false,
+      "targetless": false,
+      "effects": [
+        {
+          "id": "@GaramondLanceEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -37,23 +54,29 @@
       "subtypes": ["@Bug"],
       "triggers": [
         {
-          "id": "@GaramondComboTrigger"
+          "id": "@GaramondSpawnTrigger"
         }
       ]
     }
   ],
   "character_triggers": [
     {
-      "id": "GaramondComboTrigger",
+      "id": "GaramondSpawnTrigger",
       "descriptions": {
-        "english": "Combo Zaza: Ability 2 (Lance): Attack."
+        "english": "<b>Combo Zaza</b>: Gain [effect0.upgrade.bonusdamage][attack] and [effect0.upgrade.bonushp][health]."
       },
-      "trigger": "combo",
+      "trigger": "on_spawn",
       "effects": [
         {
-          "id": "@GaramondLanceEffect"
+          "id": "@GaramondSpawnEffect"
         }
       ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "GaramondComboUpgrade",
+      "ability_upgrade": "@GaramondLanceAbility"
     }
   ],
   "effects": [
@@ -64,21 +87,27 @@
       "param_character": "@Garamond"
     },
     {
+      "id": "GaramondSpawnEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_upgrade": "@GaramondComboUpgrade",
+      "param_str": "@Zaza"
+    },
+    {
       "id": "GaramondLanceEffect",
-      "name": "CardEffectDamage",
-      "target_mode": "room",
-      "target_team": "enemies",
-      "param_int": 30
+      "name": "CardEffectAttackWithUnit",
+      "target_mode": "self"
     }
   ],
   "sprites": [
     {
       "id": "GaramondCardArt",
-      "path": "textures/garamond_card.png"
+      "path": "textures/GaramondCardArt.png"
     },
     {
       "id": "GaramondCharacterArt",
-      "path": "textures/garamond_character.png"
+      "path": "textures/GaramondCharacterArt.png"
     }
   ],
   "game_objects": [

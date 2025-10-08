@@ -5,7 +5,7 @@ using TrainworksReloaded.Base.Extensions;
 
 namespace Silk_Song_Clan.Plugin
 {
-    public class CardEffectRewardGoldIfLastCard : CardEffectRewardGold
+    public class CardEffectRewardGoldIfLastCardName : CardEffectRewardGold
     {
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers, ISystemManagers sysManagers)
         {

@@ -97,7 +97,7 @@
     },
     {
       "id": "CrullAndBenjinSpendGoldEffect",
-      "name": "@CardEffectRewardGoldIfLastCard",
+      "name": "@CardEffectRewardGoldIfLastCardName",
       "param_int": -30,
       "param_str": "@Yarnaby"
     },

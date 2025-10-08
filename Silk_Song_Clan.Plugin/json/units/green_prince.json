@@ -42,13 +42,38 @@
       ]
     }
   ],
+  "upgrades": [
+    {
+      "id": "GreenPrinceCopyUpgrade",
+      "status_effect_upgrades": [
+        {
+          "status": "fragile",
+          "count": 1
+        }
+      ],
+      "trait_upgrades": [
+        "@GreenPrinceFrozen",
+        "@GreenPrinceEphemeral"
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "GreenPrinceFrozen",
+      "name": "CardTraitFreeze"
+    },
+    {
+      "id": "GreenPrinceEphemeral",
+      "name": "CardTraitEphemeral"
+    }
+  ],
   "character_triggers": [
     {
       "id": "GreenPrinceSilksongTrigger",
       "descriptions": {
-        "english": "Silksong: Add an Frozen, Ephemeral Copy with Fragile to your hand."
+        "english": "Add a Frozen, Ephemeral Copy with [fragile] to your hand."
       },
-      "trigger": "silksong",
+      "trigger": "@Silksong",
       "effects": [
         {
           "id": "@GreenPrinceCreateCopyEffect"
@@ -65,19 +90,20 @@
     },
     {
       "id": "GreenPrinceCreateCopyEffect",
-      "name": "CardEffectAddCardToHand",
-      "target_mode": "hand",
-      "param_card": "@GreenPrinceCopy"
+      "name": "CardEffectAddUnitCard",
+      "param_int": 3,
+      "param_upgrade": "@GreenPrinceCopyUpgrade",
+      "copy_modifiers_from_source": true
     }
   ],
   "sprites": [
     {
       "id": "GreenPrinceCardArt",
-      "path": "textures/green_prince_card.png"
+      "path": "textures/GreenPrinceCardArt.png"
     },
     {
       "id": "GreenPrinceCharacterArt",
-      "path": "textures/green_prince_character.png"
+      "path": "textures/GreenPrinceCharacterArt.png"
     }
   ],
   "game_objects": [

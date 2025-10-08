@@ -48,7 +48,7 @@
       "descriptions": {
         "english": "Strike: Gain 10 gold."
       },
-      "trigger": "strike",
+      "trigger": "on_hit",
       "effects": [
         {
           "id": "@GrindleGainGoldEffect"
@@ -65,7 +65,7 @@
     },
     {
       "id": "GrindleGainGoldEffect",
-      "name": "CardEffectAddGold",
+      "name": "CardEffectRewardGold",
       "target_mode": "self",
       "param_int": 10
     }
@@ -73,11 +73,11 @@
   "sprites": [
     {
       "id": "GrindleCardArt",
-      "path": "textures/grindle_card.png"
+      "path": "textures/GrindleCardArt.png"
     },
     {
       "id": "GrindleCharacterArt",
-      "path": "textures/grindle_character.png"
+      "path": "textures/GrindleCharacterArt.png"
     }
   ],
   "game_objects": [

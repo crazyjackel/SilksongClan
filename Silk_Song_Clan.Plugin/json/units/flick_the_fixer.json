@@ -26,6 +26,25 @@
           "english": "A skilled craftsman who can fix anything for the right price."
         }
       ]
+    },
+    {
+      "id": "FlickTheFixerAbility",
+      "names": {
+        "english": "Fix It"
+      },
+      "descriptions": {
+        "english": "Spend 10. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]."
+      },
+      "initial_cooldown": 2,
+      "cooldown": 2,
+      "effects": [
+        {
+          "id": "@FlickTheFixerSpendGoldEffect"
+        },
+        {
+          "id": "@FlickTheFixerProtectionEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -34,26 +53,15 @@
       "size": 2,
       "health": 20,
       "attack": 5,
-      "subtypes": ["@Bug"],
+      "subtypes": [
+        "@Bug"
+      ],
       "triggers": [
         {
           "id": "@FlickAbilityTrigger"
         }
-      ]
-    }
-  ],
-  "character_triggers": [
-    {
-      "id": "FlickAbilityTrigger",
-      "descriptions": {
-        "english": "Ability 1 (Fix It). Spend 10. Friendly Units gain 1 Permanent Protection."
-      },
-      "trigger": "ability",
-      "effects": [
-        {
-          "id": "@FlickFixItEffect"
-        }
-      ]
+      ],
+      "ability": "@FlickTheFixerAbility"
     }
   ],
   "effects": [
@@ -64,13 +72,19 @@
       "param_character": "@FlickTheFixer"
     },
     {
-      "id": "FlickFixItEffect",
-      "name": "CardEffectAddStatusEffect",
+      "id": "FlickTheFixerSpendGoldEffect",
+      "name": "CardEffectRewardGold",
+      "param_int": -10
+    },
+    {
+      "id": "FlickTheFixerProtectionEffect",
+      "name": "@CardEffectAddStatusEffectIfGoldSpent",
       "target_mode": "room",
       "target_team": "monsters",
+      "param_int_2": 10,
       "param_status_effects": [
         {
-          "status": "@Protection",
+          "status": "@PermanentProtection",
           "count": 1
         }
       ]
@@ -79,11 +93,11 @@
   "sprites": [
     {
       "id": "FlickTheFixerCardArt",
-      "path": "textures/flick_the_fixer_card.png"
+      "path": "textures/FlickTheFixerCardArt.png"
     },
     {
       "id": "FlickTheFixerCharacterArt",
-      "path": "textures/flick_the_fixer_character.png"
+      "path": "textures/FlickTheFixerCharacterArt.png"
     }
   ],
   "game_objects": [
