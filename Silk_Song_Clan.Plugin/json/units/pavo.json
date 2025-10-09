@@ -2,19 +2,127 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "cards": [
     {
-      "id": "Pavo",
-      "name": "Pavo",
-      "description": "Silksong: Gain Conduit 3",
+      "id": "SpawnPavo",
+      "names": {
+        "english": "Pavo",
+        "french": "Pavo"
+      },
+      "card_art": "@PavoCardArt",
       "cost": 1,
-      "attack": 6,
-      "health": 15,
+      "card_type": "monster",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnPavoEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A bug that channels energy through its natural conduit abilities."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Pavo",
       "size": 2,
-      "rarity": "Common",
-      "traits": ["Conduit 5"],
-      "subtypes": ["Bug"],
-      "class": "Silksong",
-      "cardArt": "@Pavo",
-      "cardType": "Unit"
+      "health": 15,
+      "attack": 6,
+      "subtypes": [
+        "@Bug"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "conduit",
+          "count": 5
+        }
+      ],
+      "triggers": [
+        {
+          "id": "@PavoSilksongTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "PavoSilksongTrigger",
+      "descriptions": {
+        "english": "Silksong: Gain Conduit 3"
+      },
+      "trigger": "@Silksong",
+      "effects": [
+        {
+          "id": "@PavoSilksongEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnPavoEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Pavo"
+    },
+    {
+      "id": "PavoSilksongEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "conduit",
+          "count": 3
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PavoCardArt",
+      "path": "textures/PavoCardArt.png"
+    },
+    {
+      "id": "PavoCharacterArt",
+      "path": "textures/PavoCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "PavoCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PavoCardArt"
+        }
+      }
+    },
+    {
+      "id": "PavoCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@PavoCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
     }
   ]
 }

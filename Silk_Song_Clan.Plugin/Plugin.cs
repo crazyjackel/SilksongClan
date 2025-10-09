@@ -93,6 +93,10 @@ namespace Silk_Song_Clan.Plugin
                         "json/units/green_prince.json",
                         "json/units/grindle.json",
                         "json/units/grishkin.json",
+                        "json/units/kratt.json",
+                        "json/units/lumble_the_lucky.json",
+                        "json/units/nuu.json",
+                        "json/units/pavo.json",
 
                         //Status Effects
                         "json/status_effects/imbue.json",

@@ -26,6 +26,26 @@
           "english": "A flea that can sacrifice others to empower the entire flea swarm."
         }
       ]
+    },
+    {
+      "id": "KrattAbility",
+      "names": {
+        "english": "Send to Hot Spring"
+      },
+      "descriptions": {
+        "english": "Sacrifice a Flea. Fleas get + [effect0.upgrade.bonusdamage] [attack] and + [effect0.upgrade.bonushealth] [health] and [damage shield] [effect0.upgrade.status0.power]"
+      },
+      "initial_cooldown": 1,
+      "cooldown": 1,
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@KrattSacrificeEffect"
+        },
+        {
+          "id": "@KrattHotSpringEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -34,25 +54,30 @@
       "size": 1,
       "health": 8,
       "attack": 10,
-      "subtypes": ["@Flea"],
-      "triggers": [
+      "subtypes": [
+        "@Flea"
+      ],
+      "ability": "@KrattAbility"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "KrattHotSpringUpgrade",
+      "bonus_damage": 5,
+      "bonus_health": 5,
+      "status_effect_upgrades": [
         {
-          "id": "@KrattAbilityTrigger"
+          "status": "damage shield",
+          "count": 1
         }
       ]
     }
   ],
-  "character_triggers": [
+  "upgrade_masks": [
     {
-      "id": "KrattAbilityTrigger",
-      "descriptions": {
-        "english": "Ability 1 (Send to Hot Spring): Sacrifice a Flea. Fleas get +5/+5 and Damage Shield 1"
-      },
-      "trigger": "ability",
-      "effects": [
-        {
-          "id": "@KrattHotSpringEffect"
-        }
+      "id": "KrattUpgradeMask",
+      "required_subtypes": [
+        "@Flea"
       ]
     }
   ],
@@ -64,34 +89,28 @@
       "param_character": "@Kratt"
     },
     {
+      "id": "KrattSacrificeEffect",
+      "name": "CardEffectSacrifice",
+      "target_mode": "drop_target_character",
+      "param_subtype": "@Flea"
+    },
+    {
       "id": "KrattHotSpringEffect",
-      "name": "CardEffectAddStatusEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsFilter",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_status_effects": [
-        {
-          "status": "@AttackUp",
-          "count": 5
-        },
-        {
-          "status": "@HealthUp",
-          "count": 5
-        },
-        {
-          "status": "@DamageShield",
-          "count": 1
-        }
-      ]
+      "param_upgrade": "@KrattHotSpringUpgrade",
+      "param_card_filter": "@KrattUpgradeMask"
     }
   ],
   "sprites": [
     {
       "id": "KrattCardArt",
-      "path": "textures/kratt_card.png"
+      "path": "textures/KrattCardArt.png"
     },
     {
       "id": "KrattCharacterArt",
-      "path": "textures/kratt_character.png"
+      "path": "textures/KrattCharacterArt.png"
     }
   ],
   "game_objects": [

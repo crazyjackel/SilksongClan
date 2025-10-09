@@ -34,7 +34,9 @@
       "size": 2,
       "health": 2,
       "attack": 2,
-      "subtypes": ["@Bug"],
+      "subtypes": [
+        "@Bug"
+      ],
       "triggers": [
         {
           "id": "@NuuHarvestTrigger"
@@ -51,7 +53,7 @@
       "descriptions": {
         "english": "Harvest: Gain 1 Permanent Imbue and 1 Permanent Protection."
       },
-      "trigger": "harvest",
+      "trigger": "on_any_unit_death_on_floor",
       "effects": [
         {
           "id": "@NuuHarvestEffect"
@@ -63,7 +65,7 @@
       "descriptions": {
         "english": "Hunger: Gain 1 Permanent Imbue and 1 Permanent Protection"
       },
-      "trigger": "hunger",
+      "trigger": "on_food_spawn",
       "effects": [
         {
           "id": "@NuuHungerEffect"
@@ -84,12 +86,12 @@
       "target_mode": "self",
       "param_status_effects": [
         {
-          "status": "@Imbue",
-          "count": 1
+          "status": "@PermanentImbue",
+          "count": 2
         },
         {
-          "status": "@Protection",
-          "count": 1
+          "status": "@PermanentProtection",
+          "count": 2
         }
       ]
     },
@@ -99,12 +101,12 @@
       "target_mode": "self",
       "param_status_effects": [
         {
-          "status": "@Imbue",
-          "count": 1
+          "status": "@PermanentImbue",
+          "count": 2
         },
         {
-          "status": "@Protection",
-          "count": 1
+          "status": "@PermanentProtection",
+          "count": 2
         }
       ]
     }
@@ -112,11 +114,11 @@
   "sprites": [
     {
       "id": "NuuCardArt",
-      "path": "textures/nuu_card.png"
+      "path": "textures/NuuCardArt.png"
     },
     {
       "id": "NuuCharacterArt",
-      "path": "textures/nuu_character.png"
+      "path": "textures/NuuCharacterArt.png"
     }
   ],
   "game_objects": [

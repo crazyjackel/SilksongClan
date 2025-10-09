@@ -2,19 +2,124 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "cards": [
     {
-      "id": "LumbleTheLucky",
-      "name": "Lumble the Lucky",
-      "description": "Incant: Gain 4 gold. Extinguish: Units get Damage Shield 1.",
+      "id": "SpawnLumbleTheLucky",
+      "names": {
+        "english": "Lumble the Lucky"
+      },
       "cost": 2,
-      "attack": 10,
+      "rarity": "rare",
+      "traits": [],
+      "class": "@Silksong",
+      "card_art": "@LumbleTheLuckyCardArt",
+      "card_type": "monster",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnLumbleTheLuckyEffect"
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "LumbleTheLucky",
+      "attack_damage": 10,
       "health": 25,
       "size": 2,
-      "rarity": "Rare",
-      "traits": [],
-      "subtypes": ["Bug"],
-      "class": "Silksong",
-      "cardArt": "@LumbleTheLucky",
-      "cardType": "Unit"
+      "subtypes": [
+        "@Bug"
+      ],
+      "character_art": "@LumbleTheLuckyCharacterArt",
+      "triggers": [
+        "@LumbleTheLuckyIncantTrigger",
+        "@LumbleTheLuckyExtinguishTrigger"
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "LumbleTheLuckyIncantTrigger",
+      "trigger": "card_spell_played",
+      "effects": [
+        "@LumbleTheLuckyIncantEffect"
+      ]
+    },
+    {
+      "id": "LumbleTheLuckyExtinguishTrigger",
+      "trigger": "on_death",
+      "effects": [
+        "@LumbleTheLuckyExtinguishEffect"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "LumbleTheLuckyIncantEffect",
+      "name": "CardEffectRewardGold",
+      "target_mode": "self",
+      "param_int": 4
+    },
+    {
+      "id": "LumbleTheLuckyExtinguishEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "damage shield",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "LumbleTheLuckyCardArt",
+      "path": "textures/LumbleTheLuckyCardArt.png"
+    },
+    {
+      "id": "LumbleTheLuckyCharacterArt",
+      "path": "textures/LumbleTheLuckyCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "LumbleTheLuckyCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@LumbleTheLuckyCardArt"
+        }
+      }
+    },
+    {
+      "id": "LumbleTheLuckyCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@LumbleTheLuckyCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        }
+      }
     }
   ]
 }
