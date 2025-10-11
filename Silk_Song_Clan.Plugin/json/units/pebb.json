@@ -26,6 +26,27 @@
           "english": "A small bug with the power to create powerful relics for rare units."
         }
       ]
+    },
+    {
+      "id": "PebbAbilityTrigger",
+      "names": {
+        "english": "Purchase Wormway Key"
+      },
+      "descriptions": {
+        "english": "Spend 500 gold. Gain a Relic giving Rare Units +10/+10."
+      },
+      "is_an_ability": true,
+      "cooldown": 5,
+      "initial_cooldown": 5,
+      "targetless": true,
+      "effects": [
+        {
+          "id": "@PebbSpendGoldEffect"
+        },
+        {
+          "id": "@PebbCreateRelicEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -34,26 +55,10 @@
       "size": 1,
       "health": 8,
       "attack": 12,
-      "subtypes": ["@Bug"],
-      "triggers": [
-        {
-          "id": "@PebbAbilityTrigger"
-        }
-      ]
-    }
-  ],
-  "character_triggers": [
-    {
-      "id": "PebbAbilityTrigger",
-      "descriptions": {
-        "english": "Ability 5 (Wormway Key): Spend 500 gold. Gain a Relic giving Rare Units +10/+10."
-      },
-      "trigger": "ability",
-      "effects": [
-        {
-          "id": "@PebbCreateRelicEffect"
-        }
-      ]
+      "subtypes": [
+        "@Bug"
+      ],
+      "ability": "@PebbAbilityTrigger"
     }
   ],
   "effects": [
@@ -64,20 +69,26 @@
       "param_character": "@Pebb"
     },
     {
+      "id": "PebbSpendGoldEffect",
+      "name": "CardEffectRewardGold",
+      "target_mode": "self",
+      "param_int": -500
+    },
+    {
       "id": "PebbCreateRelicEffect",
-      "name": "CardEffectAddRelic",
-      "target_mode": "relics",
-      "param_relic": "@WormwayKeyRelic"
+      "name": "@CardEffectAddCollectableRelicIfGoldSpent",
+      "param_str": "@WormwayKeyRelic",
+      "param_int": 500
     }
   ],
   "sprites": [
     {
       "id": "PebbCardArt",
-      "path": "textures/pebb_card.png"
+      "path": "textures/PebbCardArt.png"
     },
     {
       "id": "PebbCharacterArt",
-      "path": "textures/pebb_character.png"
+      "path": "textures/PebbCharacterArt.png"
     }
   ],
   "game_objects": [

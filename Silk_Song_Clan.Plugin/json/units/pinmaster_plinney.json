@@ -26,6 +26,27 @@
           "english": "A skilled craftsman who can sharpen weapons and imbue them with magical energy."
         }
       ]
+    },
+    {
+      "id": "PinmasterAbilityTrigger",
+      "names": {
+        "english": "Sharpen"
+      },
+      "descriptions": {
+        "english": "Spend 30 gold. Give [Silk_Song_Clan.Plugin_PermanentImbue] [effect1.status0.power]."
+      },
+      "is_an_ability": true,
+      "cooldown": 5,
+      "initial_cooldown": 5,
+      "targetless": false,
+      "effects": [
+        {
+          "id": "@PinmasterSpendGoldEffect"
+        },
+        {
+          "id": "@PinmasterSharpenEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -34,26 +55,10 @@
       "size": 2,
       "health": 12,
       "attack": 12,
-      "subtypes": ["@Bug"],
-      "triggers": [
-        {
-          "id": "@PinmasterAbilityTrigger"
-        }
-      ]
-    }
-  ],
-  "character_triggers": [
-    {
-      "id": "PinmasterAbilityTrigger",
-      "descriptions": {
-        "english": "Ability 5 (Sharpen): Spend 30 gold. Give 10 Permanent Imbue."
-      },
-      "trigger": "ability",
-      "effects": [
-        {
-          "id": "@PinmasterSharpenEffect"
-        }
-      ]
+      "subtypes": [
+        "@Bug"
+      ],
+      "ability": "@PinmasterAbilityTrigger"
     }
   ],
   "effects": [
@@ -64,13 +69,19 @@
       "param_character": "@PinmasterPlinney"
     },
     {
+      "id": "PinmasterSpendGoldEffect",
+      "name": "CardEffectRewardGold",
+      "target_mode": "self",
+      "param_int": -30
+    },
+    {
       "id": "PinmasterSharpenEffect",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "room",
+      "target_mode": "drop_target_character",
       "target_team": "monsters",
       "param_status_effects": [
         {
-          "status": "@Imbue",
+          "status": "@PermanentImbue",
           "count": 10
         }
       ]
@@ -79,11 +90,11 @@
   "sprites": [
     {
       "id": "PinmasterPlinneyCardArt",
-      "path": "textures/pinmaster_plinney_card.png"
+      "path": "textures/PinmasterPlinneyCardArt.png"
     },
     {
       "id": "PinmasterPlinneyCharacterArt",
-      "path": "textures/pinmaster_plinney_character.png"
+      "path": "textures/PinmasterPlinneyCharacterArt.png"
     }
   ],
   "game_objects": [

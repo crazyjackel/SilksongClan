@@ -34,24 +34,45 @@
       "size": 3,
       "health": 30,
       "attack": 30,
-      "subtypes": ["@Pinstress"],
+      "subtypes": [
+        "@Pinstress"
+      ],
       "triggers": [
         {
-          "id": "@SeamstressComboTrigger"
+          "id": "@SeamstressSpawnTrigger"
         }
       ]
     }
   ],
   "character_triggers": [
     {
-      "id": "SeamstressComboTrigger",
+      "id": "SeamstressSpawnTrigger",
+      "trigger": "on_spawn",
       "descriptions": {
-        "english": "Combo Pinstress: Conduit 10"
+        "english": "<b>Combo Pinstress</b>: <b>Conduit</b> 10"
       },
-      "trigger": "combo",
       "effects": [
         {
-          "id": "@SeamstressConduitEffect"
+          "id": "@SeamstressSpawnEffect"
+        }
+      ]
+    }
+  ],
+  "upgrade_masks": [
+    {
+      "id": "SeamstressComboPinstressMask",
+      "required_subtypes": [
+        "@Pinstress"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "SeamstressComboUpgrade",
+      "status_effect_upgrades": [
+        {
+          "status": "conduit",
+          "count": 10
         }
       ]
     }
@@ -64,25 +85,22 @@
       "param_character": "@Seamstress"
     },
     {
-      "id": "SeamstressConduitEffect",
-      "name": "CardEffectAddStatusEffect",
+      "id": "SeamstressSpawnEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
       "target_mode": "self",
-      "param_status_effects": [
-        {
-          "status": "@Conduit",
-          "count": 10
-        }
-      ]
+      "target_team": "monsters",
+      "param_upgrade": "@SeamstressComboUpgrade",
+      "param_card_filter": "@SeamstressComboPinstressMask"
     }
   ],
   "sprites": [
     {
       "id": "SeamstressCardArt",
-      "path": "textures/seamstress_card.png"
+      "path": "textures/SeamstressCardArt.png"
     },
     {
       "id": "SeamstressCharacterArt",
-      "path": "textures/seamstress_character.png"
+      "path": "textures/SeamstressCharacterArt.png"
     }
   ],
   "game_objects": [

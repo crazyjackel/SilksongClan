@@ -34,24 +34,53 @@
       "size": 3,
       "health": 50,
       "attack": 30,
-      "subtypes": ["@Pinstress"],
+      "subtypes": [
+        "@Pinstress"
+      ],
       "triggers": [
         {
-          "id": "@PinstressComboTrigger"
+          "id": "@PinstressSpawnTrigger"
         }
       ]
     }
   ],
   "character_triggers": [
     {
-      "id": "PinstressComboTrigger",
+      "id": "PinstressSpawnTrigger",
+      "trigger": "on_spawn",
       "descriptions": {
-        "english": "Combo Pinstress: Strike: Gain Conduit 1"
+        "english": "<b>Combo Pinstress</b>: <b>Strike</b>: Gain Conduit 1"
       },
-      "trigger": "combo",
+      "effects": [
+        {
+          "id": "@PinstressSpawnEffect"
+        }
+      ]
+    },
+    {
+      "id": "PinstressStrikeTrigger",
+      "trigger": "on_hit",
       "effects": [
         {
           "id": "@PinstressStrikeEffect"
+        }
+      ]
+    }
+  ],
+  "upgrade_masks": [
+    {
+      "id": "PinstressComboPinstressMask",
+      "required_subtypes": [
+        "@Pinstress"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "PinstressComboUpgrade",
+      "trigger_upgrades": [
+        {
+          "id": "@PinstressStrikeTrigger"
         }
       ]
     }
@@ -64,12 +93,20 @@
       "param_character": "@Pinstress"
     },
     {
+      "id": "PinstressSpawnEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_upgrade": "@PinstressComboUpgrade",
+      "param_card_filter": "@PinstressComboPinstressMask"
+    },
+    {
       "id": "PinstressStrikeEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "self",
       "param_status_effects": [
         {
-          "status": "@Conduit",
+          "status": "conduit",
           "count": 1
         }
       ]
@@ -78,11 +115,11 @@
   "sprites": [
     {
       "id": "PinstressCardArt",
-      "path": "textures/pinstress_card.png"
+      "path": "textures/PinstressCardArt.png"
     },
     {
       "id": "PinstressCharacterArt",
-      "path": "textures/pinstress_character.png"
+      "path": "textures/PinstressCharacterArt.png"
     }
   ],
   "game_objects": [

@@ -2,19 +2,123 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "cards": [
     {
-      "id": "RelicSeekerScrounge",
-      "name": "Relic Seeker Scrounge",
-      "description": "Equipped: Remove the Equipment. Gain 20 gold.",
+      "id": "SpawnRelicSeekerScrounge",
+      "names": {
+        "english": "Relic Seeker Scrounge"
+      },
+      "card_art": "@RelicSeekerScroungeCardArt",
       "cost": 1,
-      "attack": 24,
-      "health": 16,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnRelicSeekerScroungeEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A resourceful bug that can dismantle equipment for gold."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "RelicSeekerScrounge",
       "size": 2,
-      "rarity": "Uncommon",
-      "traits": [],
-      "subtypes": ["Bug"],
-      "class": "Silksong",
-      "cardArt": "@RelicSeekerScrounge",
-      "cardType": "Unit"
+      "health": 16,
+      "attack": 24,
+      "subtypes": [
+        "@Bug"
+      ],
+      "triggers": [
+        {
+          "id": "@RelicSeekerScroungeEquippedTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "RelicSeekerScroungeEquippedTrigger",
+      "descriptions": {
+        "english": "Remove the Equipment. Gain 20 gold."
+      },
+      "trigger": "on_equipment_added",
+      "effects": [
+        {
+          "id": "@RelicSeekerScroungeRemoveEquipmentEffect"
+        },
+        {
+          "id": "@RelicSeekerScroungeGainGoldEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnRelicSeekerScroungeEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@RelicSeekerScrounge"
+    },
+    {
+      "id": "RelicSeekerScroungeRemoveEquipmentEffect",
+      "name": "CardEffectRemoveEquipment",
+      "target_mode": "self"
+    },
+    {
+      "id": "RelicSeekerScroungeGainGoldEffect",
+      "name": "CardEffectRewardGold",
+      "target_mode": "self",
+      "param_int": 20
+    }
+  ],
+  "sprites": [
+    {
+      "id": "RelicSeekerScroungeCardArt",
+      "path": "textures/RelicSeekerScroungeCardArt.png"
+    },
+    {
+      "id": "RelicSeekerScroungeCharacterArt",
+      "path": "textures/RelicSeekerScroungeCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "RelicSeekerScroungeCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@RelicSeekerScroungeCardArt"
+        }
+      }
+    },
+    {
+      "id": "RelicSeekerScroungeCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@RelicSeekerScroungeCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
     }
   ]
 }

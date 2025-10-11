@@ -68,6 +68,7 @@ namespace Silk_Song_Clan.Plugin
                         //Subtypes
                         "json/subtypes/snail.json",
                         "json/subtypes/bug.json",
+                        "json/subtypes/pinstress.json",
 
                         //Cardpools
                         "json/cardpool/flea_pool.json",
@@ -97,6 +98,11 @@ namespace Silk_Song_Clan.Plugin
                         "json/units/lumble_the_lucky.json",
                         "json/units/nuu.json",
                         "json/units/pavo.json",
+                        "json/units/pebb.json",
+                        "json/units/pinmaster_plinney.json",
+                        "json/units/pinstress.json",
+                        "json/units/relic_seeker_scrounge.json",
+                        "json/units/seamstress.json",
 
                         //Status Effects
                         "json/status_effects/imbue.json",
