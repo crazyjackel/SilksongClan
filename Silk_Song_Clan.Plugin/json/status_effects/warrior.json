@@ -1,0 +1,40 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "status_effects": [
+        {
+            "id": "Warrior",
+            "class_name": "@StatusEffectWarriorState",
+            "names": {
+                "english": "Warrior"
+            },
+            "card_tooltips": {
+                "english": "On hitting an enemy, gain 1 silk."
+            },
+            "character_tooltips": {
+                "english": "On hitting an enemy, gains 1 silk."
+            },
+            "notifications": {
+                "english": "Warrior"
+            },
+            "replacement_texts": {
+                "english": "<b>Warrior</b>"
+            },
+            "display_category": "persistent",
+            "trigger_stage": "on_hit",
+            "is_stackable": false,
+            "icon": "@Warrior"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "Warrior",
+            "path": "textures/warrior_status.png"
+        }
+    ],
+    "atlas_icons": [
+        {
+            "id": "Warrior",
+            "path": "textures/warrior_status_tooltip.png"
+        }
+    ]
+}

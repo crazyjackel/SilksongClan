@@ -34,7 +34,9 @@
       "size": 2,
       "health": 10,
       "attack": 0,
-      "subtypes": ["@Bug"],
+      "subtypes": [
+        "@Bug"
+      ],
       "triggers": [
         {
           "id": "@ShermaResolveTrigger"
@@ -46,7 +48,7 @@
     {
       "id": "ShermaResolveTrigger",
       "descriptions": {
-        "english": "Give Friendly Units [protection] [effect0.status0.power]."
+        "english": "Give Friendly Units [Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]."
       },
       "trigger": "end_turn_pre_hand_discard",
       "effects": [
@@ -61,7 +63,7 @@
       "id": "SpawnShermaEffect",
       "name": "CardEffectSpawnMonster",
       "target_mode": "room",
-      "param_character": "@CursedScarab"
+      "param_character": "@Sherma"
     },
     {
       "id": "ShermaApplyProtection",

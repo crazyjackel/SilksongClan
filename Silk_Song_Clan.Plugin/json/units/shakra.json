@@ -34,7 +34,15 @@
       "size": 2,
       "health": 30,
       "attack": 30,
-      "subtypes": ["@Bug"],
+      "subtypes": [
+        "@Bug"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "@Warrior",
+          "count": 1
+        }
+      ],
       "triggers": [
         {
           "id": "@ShakraStrikeTrigger"
@@ -46,9 +54,9 @@
     {
       "id": "ShakraStrikeTrigger",
       "descriptions": {
-        "english": "Strike: Apply Melee Weakness 1"
+        "english": "Apply [melee weakness] [effect0.status0.power]."
       },
-      "trigger": "strike",
+      "trigger": "on_hit",
       "effects": [
         {
           "id": "@ShakraApplyWeaknessEffect"
@@ -66,11 +74,11 @@
     {
       "id": "ShakraApplyWeaknessEffect",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "target",
-      "target_team": "enemies",
+      "target_mode": "last_attacker_character",
+      "target_team": "monsters",
       "param_status_effects": [
         {
-          "status": "@MeleeWeakness",
+          "status": "melee weakness",
           "count": 1
         }
       ]
@@ -79,11 +87,11 @@
   "sprites": [
     {
       "id": "ShakraCardArt",
-      "path": "textures/shakra_card.png"
+      "path": "textures/ShakraCardArt.png"
     },
     {
       "id": "ShakraCharacterArt",
-      "path": "textures/shakra_character.png"
+      "path": "textures/ShakraCharacterArt.png"
     }
   ],
   "game_objects": [

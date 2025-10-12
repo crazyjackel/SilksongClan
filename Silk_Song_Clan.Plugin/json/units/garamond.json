@@ -52,6 +52,12 @@
       "health": 30,
       "attack": 30,
       "subtypes": ["@Bug"],
+      "starting_status_effects": [
+        {
+          "status": "@Warrior",
+          "count": 1
+        }
+      ],
       "triggers": [
         {
           "id": "@GaramondSpawnTrigger"

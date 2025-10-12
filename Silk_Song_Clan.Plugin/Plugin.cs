@@ -103,8 +103,11 @@ namespace Silk_Song_Clan.Plugin
                         "json/units/pinstress.json",
                         "json/units/relic_seeker_scrounge.json",
                         "json/units/seamstress.json",
+                        "json/units/shakra.json",
+                        "json/units/sherma.json",
 
                         //Status Effects
+                        "json/status_effects/warrior.json",
                         "json/status_effects/imbue.json",
                         "json/status_effects/protection.json",
                         "json/status_effects/permanent_imbue.json",
