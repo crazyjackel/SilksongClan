@@ -2,19 +2,123 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "cards": [
     {
-      "id": "TwelfthArchitect",
-      "name": "Twelfth Architect",
-      "description": "Celebrate: Spend 100 Gold. Gain a Relic allowing Stewards to Equip an additional Equipment.",
+      "id": "SpawnTwelfthArchitect",
+      "names": {
+        "english": "Twelfth Architect"
+      },
+      "card_art": "@TwelfthArchitectCardArt",
       "cost": 2,
-      "attack": 40,
-      "health": 20,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnTwelfthArchitectEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A master builder who can create relics that enhance steward equipment capabilities."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "TwelfthArchitect",
       "size": 3,
-      "rarity": "Rare",
-      "traits": [],
-      "subtypes": ["Steward"],
-      "class": "Silksong",
-      "cardArt": "@TwelfthArchitect",
-      "cardType": "Unit"
+      "health": 20,
+      "attack": 40,
+      "subtypes": [
+        "@Steward"
+      ],
+      "triggers": [
+        {
+          "id": "@TwelfthArchitectCelebrateTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "TwelfthArchitectCelebrateTrigger",
+      "descriptions": {
+        "english": "Spend 100 Gold. Gain a Relic allowing Stewards to Equip an additional Equipment."
+      },
+      "trigger": "on_encounter_complete",
+      "effects": [
+        {
+          "id": "@TwelfthArchitectSpendGoldEffect"
+        },
+        {
+          "id": "@TwelfthArchitectCreateRelicEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnTwelfthArchitectEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@TwelfthArchitect"
+    },
+    {
+      "id": "TwelfthArchitectSpendGoldEffect",
+      "name": "CardEffectRewardGold",
+      "target_mode": "self",
+      "param_int": -100
+    },
+    {
+      "id": "TwelfthArchitectCreateRelicEffect",
+      "name": "@CardEffectAddCollectableRelicIfGoldSpent",
+      "param_str": "@StewardEquipmentRelic"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "TwelfthArchitectCardArt",
+      "path": "textures/TwelfthArchitectCardArt.png"
+    },
+    {
+      "id": "TwelfthArchitectCharacterArt",
+      "path": "textures/TwelfthArchitectCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "TwelfthArchitectCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@TwelfthArchitectCardArt"
+        }
+      }
+    },
+    {
+      "id": "TwelfthArchitectCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@TwelfthArchitectCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
     }
   ]
 }

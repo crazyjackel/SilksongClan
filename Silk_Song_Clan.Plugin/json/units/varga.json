@@ -34,24 +34,45 @@
       "size": 1,
       "health": 20,
       "attack": 15,
-      "subtypes": ["@Flea"],
+      "subtypes": [
+        "@Flea"
+      ],
       "triggers": [
         {
-          "id": "@VargaComboTrigger"
+          "id": "@VargaSpawnTrigger"
         }
       ]
     }
   ],
   "character_triggers": [
     {
-      "id": "VargaComboTrigger",
+      "id": "VargaSpawnTrigger",
+      "trigger": "on_spawn",
       "descriptions": {
-        "english": "Combo Fleamaster Mooshka: Rally: If it was a flea, Reduce all Unit Cooldowns by 1."
+        "english": "<b>Combo Fleamaster Mooshka</b>: <b>Rally</b>: If it was a flea, Reduce all Unit Cooldowns by 1."
       },
-      "trigger": "combo",
+      "effects": [
+        {
+          "id": "@VargaSpawnEffect"
+        }
+      ]
+    },
+    {
+      "id": "VargaRallyTrigger",
+      "trigger": "card_monster_played",
       "effects": [
         {
           "id": "@VargaReduceCooldownsEffect"
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "VargaComboUpgrade",
+      "trigger_upgrades": [
+        {
+          "id": "@VargaRallyTrigger"
         }
       ]
     }
@@ -64,21 +85,30 @@
       "param_character": "@Varga"
     },
     {
+      "id": "VargaSpawnEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_upgrade": "@VargaComboUpgrade",
+      "param_str": "@Varga"
+    },
+    {
       "id": "VargaReduceCooldownsEffect",
-      "name": "CardEffectReduceCooldowns",
+      "name": "CardEffectAdjustAbilityCooldown",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_int": 1
+      "param_int": -1,
+      "param_bool": false
     }
   ],
   "sprites": [
     {
       "id": "VargaCardArt",
-      "path": "textures/varga_card.png"
+      "path": "textures/VargaCardArt.png"
     },
     {
       "id": "VargaCharacterArt",
-      "path": "textures/varga_character.png"
+      "path": "textures/VargaCharacterArt.png"
     }
   ],
   "game_objects": [

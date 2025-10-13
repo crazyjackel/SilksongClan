@@ -2,19 +2,119 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "cards": [
     {
-      "id": "Vog",
-      "name": "Vog",
-      "description": "Harvest: If a Flea Died, Add a random Flea to Hand.",
+      "id": "SpawnVog",
+      "names": {
+        "english": "Vog",
+        "french": "Vog"
+      },
+      "card_art": "@VogCardArt",
       "cost": 2,
-      "attack": 30,
-      "health": 40,
+      "card_type": "monster",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnVogEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A flea that can summon more fleas when others fall in battle."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Vog",
       "size": 2,
-      "rarity": "Rare",
-      "traits": [],
-      "subtypes": ["Flea"],
-      "class": "Silksong",
-      "cardArt": "@Vog",
-      "cardType": "Unit"
+      "health": 40,
+      "attack": 30,
+      "subtypes": [
+        "@Flea"
+      ],
+      "triggers": [
+        {
+          "id": "@VogHarvestTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "VogHarvestTrigger",
+      "descriptions": {
+        "english": "If a Flea Died, Add a random Flea to Hand."
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        {
+          "id": "@VogAddFleaEffect"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnVogEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Vog"
+    },
+    {
+      "id": "VogAddFleaEffect",
+      "name": "@CardEffectAddBattleCardOnSubtype",
+      "target_mode": "hand",
+      "param_card_pool": "@FleaPool",
+      "param_subtype": "@Flea",
+      "param_int": 3,
+      "additional_param_int": 1
+    }
+  ],
+  "sprites": [
+    {
+      "id": "VogCardArt",
+      "path": "textures/VogCardArt.png"
+    },
+    {
+      "id": "VogCharacterArt",
+      "path": "textures/VogCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "VogCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@VogCardArt"
+        }
+      }
+    },
+    {
+      "id": "VogCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@VogCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
     }
   ]
 }

@@ -105,6 +105,10 @@ namespace Silk_Song_Clan.Plugin
                         "json/units/seamstress.json",
                         "json/units/shakra.json",
                         "json/units/sherma.json",
+                        "json/units/sprintmaster_swift.json",
+                        "json/units/twelfth_architect.json",
+                        "json/units/varga.json",
+                        "json/units/vog.json",
 
                         //Status Effects
                         "json/status_effects/warrior.json",

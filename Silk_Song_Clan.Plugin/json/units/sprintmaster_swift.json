@@ -34,7 +34,9 @@
       "size": 2,
       "health": 15,
       "attack": 40,
-      "subtypes": ["@Bug"],
+      "subtypes": [
+        "@Bug"
+      ],
       "triggers": [
         {
           "id": "@SprintmasterResolveTrigger"
@@ -46,7 +48,7 @@
     {
       "id": "SprintmasterResolveTrigger",
       "descriptions": {
-        "english": "Resolve: Reduce all Unit Cooldowns by 1."
+        "english": "Reduce all Unit Cooldowns by 1."
       },
       "trigger": "end_turn_pre_hand_discard",
       "effects": [
@@ -65,20 +67,21 @@
     },
     {
       "id": "SprintmasterReduceCooldownsEffect",
-      "name": "CardEffectReduceCooldowns",
+      "name": "CardEffectAdjustAbilityCooldown",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_int": 1
+      "param_int": -1,
+      "param_bool": false
     }
   ],
   "sprites": [
     {
       "id": "SprintmasterSwiftCardArt",
-      "path": "textures/sprintmaster_swift_card.png"
+      "path": "textures/SprintmasterSwiftCardArt.png"
     },
     {
       "id": "SprintmasterSwiftCharacterArt",
-      "path": "textures/sprintmaster_swift_character.png"
+      "path": "textures/SprintmasterSwiftCharacterArt.png"
     }
   ],
   "game_objects": [
