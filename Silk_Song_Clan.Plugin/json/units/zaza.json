@@ -26,6 +26,24 @@
           "english": "A humble steed that provides equipment to those who fight alongside Garamond."
         }
       ]
+    },
+    {
+      "id": "ZazaHumbleSteedAbility",
+      "names": {
+        "english": "Humble Steed"
+      },
+      "descriptions": {
+        "english": "Add a random Equipment to Hand."
+      },
+      "is_an_ability": true,
+      "cooldown": 1,
+      "initial_cooldown": 0,
+      "targetless": true,
+      "effects": [
+        {
+          "id": "@ZazaAddEquipmentEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -34,26 +52,34 @@
       "size": 1,
       "health": 15,
       "attack": 15,
-      "subtypes": ["@Bug"],
+      "subtypes": [
+        "@Bug"
+      ],
       "triggers": [
         {
-          "id": "@ZazaComboTrigger"
+          "id": "@ZazaSpawnTrigger"
         }
       ]
     }
   ],
   "character_triggers": [
     {
-      "id": "ZazaComboTrigger",
+      "id": "ZazaSpawnTrigger",
+      "trigger": "on_spawn",
       "descriptions": {
-        "english": "Combo Garmond: Ability (Humble Steed): Add a random Equipment to Hand."
+        "english": "<b>Combo Garamond</b>: <b>Ability (Humble Steed)</b>: Add a random Equipment to Hand."
       },
-      "trigger": "combo",
       "effects": [
         {
-          "id": "@ZazaAddEquipmentEffect"
+          "id": "@ZazaSpawnEffect"
         }
       ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ZazaComboUpgrade",
+      "ability_upgrade": "@ZazaHumbleSteedAbility"
     }
   ],
   "effects": [
@@ -64,20 +90,29 @@
       "param_character": "@Zaza"
     },
     {
+      "id": "ZazaSpawnEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_upgrade": "@ZazaComboUpgrade",
+      "param_str": "@Garamond"
+    },
+    {
       "id": "ZazaAddEquipmentEffect",
-      "name": "CardEffectAddCardToHand",
+      "name": "CardEffectAddBattleCard",
       "target_mode": "hand",
-      "param_card_type": "equipment"
+      "param_card_type": "equipment",
+      "param_card_pool": "EquipmentPool"
     }
   ],
   "sprites": [
     {
       "id": "ZazaCardArt",
-      "path": "textures/zaza_card.png"
+      "path": "textures/ZazaCardArt.png"
     },
     {
       "id": "ZazaCharacterArt",
-      "path": "textures/zaza_character.png"
+      "path": "textures/ZazaCharacterArt.png"
     }
   ],
   "game_objects": [

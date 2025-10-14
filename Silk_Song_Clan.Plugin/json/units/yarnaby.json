@@ -2,19 +2,181 @@
   "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
   "cards": [
     {
-      "id": "Yarnaby",
-      "name": "Yarnaby",
-      "description": "Hunger: Gain Lifesteal 1. Combo Crull and Benjin: Strike: Front Unit gets Lifesteal 1.",
+      "id": "SpawnYarnaby",
+      "names": {
+        "english": "Yarnaby",
+        "french": "Yarnaby"
+      },
+      "card_art": "@YarnabyCardArt",
       "cost": 1,
-      "attack": 8,
-      "health": 8,
+      "card_type": "monster",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SpawnYarnabyEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A bug that gains lifesteal through hunger and can share it with allies when working with Crull and Benjin."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Yarnaby",
       "size": 1,
-      "rarity": "Uncommon",
-      "traits": ["Lifesteal 3"],
-      "subtypes": ["Bug"],
-      "class": "Silksong",
-      "cardArt": "@Yarnaby",
-      "cardType": "Unit"
+      "health": 8,
+      "attack": 8,
+      "subtypes": [
+        "@Bug"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 3
+        }
+      ],
+      "triggers": [
+        {
+          "id": "@YarnabyHungerTrigger"
+        },
+        {
+          "id": "@YarnabySpawnTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "YarnabyHungerTrigger",
+      "descriptions": {
+        "english": "Gain [lifesteal] [effect0.status0.power]."
+      },
+      "trigger": "on_food_spawn",
+      "effects": [
+        {
+          "id": "@YarnabyHungerEffect"
+        }
+      ]
+    },
+    {
+      "id": "YarnabySpawnTrigger",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": "<b>Combo Crull and Benjin</b>: <b>Strike</b>: Front Unit gets Lifesteal 1."
+      },
+      "effects": [
+        {
+          "id": "@YarnabySpawnEffect"
+        }
+      ]
+    },
+    {
+      "id": "YarnabyStrikeTrigger",
+      "trigger": "on_hit",
+      "effects": [
+        {
+          "id": "@YarnabyStrikeEffect"
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "YarnabyComboUpgrade",
+      "trigger_upgrades": [
+        {
+          "id": "@YarnabyStrikeTrigger"
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnYarnabyEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "param_character": "@Yarnaby"
+    },
+    {
+      "id": "YarnabyHungerEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "YarnabySpawnEffect",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_upgrade": "@YarnabyComboUpgrade",
+      "param_str": "@CrullAndBenjin"
+    },
+    {
+      "id": "YarnabyStrikeEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "lifesteal",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "YarnabyCardArt",
+      "path": "textures/YarnabyCardArt.png"
+    },
+    {
+      "id": "YarnabyCharacterArt",
+      "path": "textures/YarnabyCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "YarnabyCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@YarnabyCardArt"
+        }
+      }
+    },
+    {
+      "id": "YarnabyCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@YarnabyCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        }
+      }
     }
   ]
 }
