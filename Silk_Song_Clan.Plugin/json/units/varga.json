@@ -12,6 +12,7 @@
       "card_type": "monster",
       "rarity": "common",
       "class": "@Silksong",
+      "unlock_level": 2,
       "pools": [
         "MegaPool"
       ],
@@ -67,6 +68,14 @@
       ]
     }
   ],
+  "upgrade_masks": [
+    {
+      "id": "VargaComboFleaMask",
+      "required_subtypes": [
+        "@Flea"
+      ]
+    }
+  ],
   "upgrades": [
     {
       "id": "VargaComboUpgrade",
@@ -86,11 +95,11 @@
     },
     {
       "id": "VargaSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
       "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@VargaComboUpgrade",
-      "param_str": "@Varga"
+      "param_card_filter": "@VargaComboFleaMask"
     },
     {
       "id": "VargaReduceCooldownsEffect",

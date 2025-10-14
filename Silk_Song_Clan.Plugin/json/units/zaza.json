@@ -12,6 +12,7 @@
       "card_type": "monster",
       "rarity": "uncommon",
       "class": "@Silksong",
+      "unlock_level": 5,
       "pools": [
         "MegaPool"
       ],

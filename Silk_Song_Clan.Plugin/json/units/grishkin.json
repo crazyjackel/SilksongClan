@@ -12,6 +12,7 @@
       "card_type": "monster",
       "rarity": "common",
       "class": "@Silksong",
+      "unlock_level": 2,
       "pools": [
         "MegaPool"
       ],
@@ -67,7 +68,7 @@
     {
       "id": "GrishkinSpawnTrigger",
       "descriptions": {
-        "english": "<b>Combo Fleamaster Mooshka</b>: <b>Shift</b>: Give Friendly Fleas +3 [attack] and +3 [health]"
+        "english": "<b>Combo Flea</b>: <b>Shift</b>: Give Friendly Fleas +3 [attack] and +3 [health]"
       },
       "trigger": "on_spawn",
       "effects": [
@@ -98,10 +99,10 @@
     },
     {
       "id": "GrishkinComboEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
       "target_mode": "self",
       "param_upgrade": "@GrishkinComboUpgrade",
-      "param_str": "@Grishkin"
+      "param_card_filter": "@GrishkinUpgradeMask"
     },
     {
       "id": "GrishkinBuffFleasEffect",
