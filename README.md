@@ -7,6 +7,7 @@ Hollow Knight Silksong Mod for Monster Train 2
 * [Core Mechanics](#core-mechanics)
 * [Champion: Hornet](#champion-hornet)
 * [Units](#units)
+* [Spells](#spells)
 * [Installation](#installation)
 * [Bugs and Feedback](#bugs-and-feedback)
 * [Credits](#credits)
@@ -26,6 +27,7 @@ Silk is a new resource that represents Hornet's silk-weaving abilities. Cards no
 
 **How to Gain Silk:**
 - **Warrior Trait**: Units with Warrior gain 1 silk when they strike an enemy
+- **Silk Spells**: Many spells provide silk when cast
 - **Silk Relics**: Various relics can increase your maximum silk capacity
 - **Base Capacity**: Start with 12 maximum silk
 
@@ -58,9 +60,8 @@ Certain cards gain additional abilities when played after specific card types:
 ### Subtypes
 - **Bug**: Insectoid creatures from Pharloom
 - **Snail**: Wise, spiritual beings that provide support through Silksong connections
-- **Flea**: Small, agile creatures that work together in swarms
-
-
+- **Flea**: Small, agile creatures that work together
+- **Pinstress**: Master weavers who channel magical energy through their work
 
 ## Champion: Hornet
 
@@ -73,8 +74,8 @@ Hornet, the princess-protector of Hallownest, serves as the champion for the Sil
 - **Hunter II**: Gains 50% more attack if at max silk  
 - **Hunter III**: Gains 100% more attack if at max silk
 
-**Cursed Path**: High risk, Future high reward
-- **Cursed**: Cannot equip equipment
+**Cursed Path**: High risk, high reward
+- **Cursed**: Cannot equip equipment, reduced max silk, but gains powerful abilities
 - **Witch II**: Multistrike with melee weakness application
 
 **Reaper Path**: Direct damage
@@ -103,11 +104,59 @@ Hornet, the princess-protector of Hallownest, serves as the champion for the Sil
 - **Garamond**: Warrior bug with lance ability and combo synergy with Zaza
 - **Zaza**: Humble steed that adds random equipment when combined with Garamond
 - **Sherma**: Endless unit that provides protection to friendly units
+- **Flick the Fixer**: Can spend gold to give friendly units permanent protection
+- **Ballow**: Equipped units give friendly units imbue
+- **Pavo**: Gains conduit when silk is spent
+- **Gilly**: Gains stealth when silk is spent
+- **Shakra**: Warrior bug that applies melee weakness to enemies
+- **Pebb**: Can spend gold to gain relics that boost rare units
+- **Grindle**: Gains gold when striking enemies
+- **Sprintmaster Swift**: Reduces all unit cooldowns when resolving
+- **Alchemist Zylotol**: Gains damage shields and permanent imbue through injection ability
+- **Green Prince**: Adds frozen copies to hand when silk is spent
+- **Yarnaby**: Gains lifesteal through hunger and shares it with allies when combined with Crull and Benjin
+- **Lumble the Lucky**: Gains gold on incant and provides damage shield on extinguish
+- **Pinmaster Plinney**: Can spend gold to give permanent imbue
+- **Crull and Benjin**: Gains power through hunger and provides protection when combined with Yarnaby
+- **Relic Seeker Scrounge**: Removes equipment to gain gold
+- **Nuu**: Gains permanent imbue and protection through harvest and hunger
 
 ### Flea Units
 - **Fleamaster Mooshka**: Key component for assembling "Fleatopia" - adds random fleas to hand
-- **Grishkin**: Gains power when combined with Fleamaster Mooshka
-- **Varga**: Reduces unit cooldowns when rallying with Fleamaster Mooshka
+- **Grishkin**: Gains power when combined with other Fleas
+- **Varga**: Reduces unit cooldowns when rallying with other Fleas
+- **Kratt**: Can sacrifice fleas to empower the entire flea swarm
+- **Vog**: Adds random fleas to hand when other fleas die
+
+### Pinstress Units
+- **Pinstress**: Master weaver who gains magical energy with each strike when working with another Pinstress
+- **Seamstress**: Skilled weaver who channels magical energy through her work with the Pinstress
+
+### Steward Units
+- **Twelfth Architect**: Can spend gold to gain relics that allow stewards to equip additional equipment
+
+## Spells
+
+The Silksong Clan features a diverse array of spells that utilize silk energy and Hollow Knight's signature combat techniques:
+
+### Starter Spells
+- **Nail Strike**: Gain 1 Silk. Deal Damage equal to Silk - A basic attack that channels silk energy into a devastating strike
+
+### Common Spells
+- **Swift Step**: Give a Unit Protection 10 - A quick defensive maneuver that shields allies from harm
+- **Cling Grip**: Retreat. Combo: Advance - A defensive grip that can become an offensive advance when combined with other techniques
+- **Bind**: Bind. Heal to full health (requires 6 Silk) - A binding technique that restores health while restraining enemies
+
+### Uncommon Spells
+- **Needle Strike**: Gain 1 Silk. Deal Damage to all enemies equal to 2x Silk - A precise strike that pierces through all enemies with silk-enhanced power
+- **Clawline**: Gain 1 Silk. Deal Damage to front unit equal to 2x Silk - A focused strike that channels silk energy into a devastating claw attack
+- **Needolin**: Give the Front Enemy Unit Dazed 1 - A disorienting needle strike that confuses the enemy
+
+### Rare Spells
+- **Silk Soar**: Ascend. Combo: Bind - A graceful ascent that can bind enemies when combined with other techniques
+- **Sylphsong**: Set Silk to Max (Consume) - A powerful song that restores silk to its maximum capacity
+- **Elegy of the Deep**: Give front friendly unit Dazed 1, Permanent Protection 10, Permanent Imbue 10 - A haunting melody that empowers allies with ancient magic
+
 
 ## Installation
 Using a mod manager is recommended. Alternatively, you can perform a manual installation by following the instructions below.
