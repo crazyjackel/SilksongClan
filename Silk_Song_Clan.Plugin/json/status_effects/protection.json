@@ -28,7 +28,7 @@
             "is_stackable": true,
             "remove_stack_at_end_of_turn": false,
             "param_int": 1,
-            "param_secondary_int": 0,
+            "param_int_2": 0,
             "param_str": "max_hp",
             "icon": "@Protection"
         }
@@ -36,13 +36,13 @@
     "sprites": [
         {
             "id": "Protection",
-            "path": "textures/protection_status.png"
+            "path": "textures/StatusProtection.png"
         }
     ],
     "atlas_icons": [
         {
             "id": "Protection",
-            "path": "textures/protection_status_tooltip.png"
+            "path": "textures/StatusProtectionTooltip.png"
         }
     ]
 }

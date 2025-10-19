@@ -28,7 +28,7 @@
             "is_stackable": true,
             "remove_stack_at_end_of_turn": false,
             "param_int": 2,
-            "param_secondary_int": 0,
+            "param_int_2": 0,
             "param_str": "damage",
             "icon": "@PermanentImbue"
         }
@@ -36,13 +36,13 @@
     "sprites": [
         {
             "id": "PermanentImbue",
-            "path": "textures/permanent_imbue_status.png"
+            "path": "textures/StatusPermanentImbue.png"
         }
     ],
     "atlas_icons": [
         {
             "id": "PermanentImbue",
-            "path": "textures/permanent_imbue_status_tooltip.png"
+            "path": "textures/StatusPermanentImbueTooltip.png"
         }
     ]
 }

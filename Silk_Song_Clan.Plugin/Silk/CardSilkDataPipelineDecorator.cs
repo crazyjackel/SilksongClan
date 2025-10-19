@@ -23,7 +23,7 @@ namespace Silk_Song_Clan.Plugin{
                 var configuration_extensions_silksong = configuration.GetSection("extensions")
                     .GetChildren().Where(xs => xs.GetSection("silksong").Exists())
                     .Select(xs => xs.GetSection("silksong"))
-                    .First();
+                    .FirstOrDefault();
                 if (configuration_extensions_silksong == null)
                 {
                     continue;

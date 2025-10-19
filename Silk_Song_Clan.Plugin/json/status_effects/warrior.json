@@ -28,13 +28,13 @@
     "sprites": [
         {
             "id": "Warrior",
-            "path": "textures/warrior_status.png"
+            "path": "textures/StatusWarrior.png"
         }
     ],
     "atlas_icons": [
         {
             "id": "Warrior",
-            "path": "textures/warrior_status_tooltip.png"
+            "path": "textures/StatusWarriorTooltip.png"
         }
     ]
 }

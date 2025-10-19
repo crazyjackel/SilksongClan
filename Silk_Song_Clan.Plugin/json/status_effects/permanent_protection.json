@@ -28,7 +28,7 @@
             "is_stackable": true,
             "remove_stack_at_end_of_turn": false,
             "param_int": 2,
-            "param_secondary_int": 0,
+            "param_int_2": 0,
             "param_str": "max_hp",
             "icon": "@PermanentProtection"
         }
@@ -36,13 +36,13 @@
     "sprites": [
         {
             "id": "PermanentProtection",
-            "path": "textures/permanent_protection_status.png"
+            "path": "textures/StatusPermanentProtection.png"
         }
     ],
     "atlas_icons": [
         {
             "id": "PermanentProtection",
-            "path": "textures/permanent_protection_status_tooltip.png"
+            "path": "textures/StatusPermanentProtectionTooltip.png"
         }
     ]
 }
