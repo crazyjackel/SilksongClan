@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Bind",
+      "names": {
+        "english": "Bind"
+      },
+      "descriptions": {
+        "english": "Bind. Restore [effect1.power] health."
+      },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@BindBindEffect"
+        },
+        {
+          "id": "@BindHealEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Through inserting silk deep inside a bug's shell, they are restored to fight another day."
+        }
+      ],
+      "extensions":
+      [
+        {
+          "silksong": {
+            "silk_cost": 6
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "BindBindEffect",
+      "name": "@CardEffectBind",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters"
+    },
+    {
+      "id": "BindHealEffect",
+      "name": "CardEffectHeal",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_int": 60
+    }
+  ],
+  "sprites": [
+    {
+      "id": "BindCardArt",
+      "path": "textures/BindCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "BindCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@BindCardArt"
+        }
+      }
+    }
+  ]
+}

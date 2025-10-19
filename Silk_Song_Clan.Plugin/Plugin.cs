@@ -115,6 +115,7 @@ namespace Silk_Song_Clan.Plugin
 
                         //Spells
                         "json/spells/nail_strike.json",
+                        "json/spells/bind.json",
 
                         //Status Effects
                         "json/status_effects/warrior.json",
@@ -128,7 +129,6 @@ namespace Silk_Song_Clan.Plugin
                     );
                 }
             );
-
             Railend.ConfigurePreAction(builder =>
             {
                 builder.RegisterInstance(client);

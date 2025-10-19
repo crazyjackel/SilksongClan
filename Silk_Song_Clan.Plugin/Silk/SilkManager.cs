@@ -74,6 +74,7 @@ namespace Silk_Song_Clan.Plugin
 
         public void AddSilk(int amount)
         {
+            Plugin.Logger.LogInfo("Adding Silk: " + amount);
             var silkSaveData = GetSilkSaveData();
             if (silkSaveData == null)
             {
@@ -92,6 +93,7 @@ namespace Silk_Song_Clan.Plugin
 
         public void RemoveSilk(int amount)
         {
+            Plugin.Logger.LogInfo("Removing Silk: " + amount);
             var silkSaveData = GetSilkSaveData();
             if (silkSaveData == null)
             {
@@ -180,6 +182,7 @@ namespace Silk_Song_Clan.Plugin
 
         public IEnumerator HandleSilksongTrigger()
         {
+            Plugin.Logger.LogInfo("Handling Silksong Trigger");
             if (this.heroManager != null)
             {
                 HandleSilksongTrigger(this.heroManager);
