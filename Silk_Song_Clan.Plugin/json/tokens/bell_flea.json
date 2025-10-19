@@ -58,11 +58,18 @@
             "ability": "@BellFleaPetAbility"
         }
     ],
+    "upgrades": [
+        {
+            "id": "BellFleaPetUpgrade",
+            "bonus_damage": 1,
+            "bonus_health": 1
+        }
+    ],
     "effects": [
         {
             "id": "SpawnBellFleaEffect",
             "name": "CardEffectSpawnMonster",
-            "target_mode": "room",
+            "target_mode": "drop_target_character",
             "param_character": "@BellFlea"
         },
         {

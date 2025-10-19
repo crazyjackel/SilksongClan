@@ -40,6 +40,13 @@
             ]
         }
     ],
+    "upgrades": [
+        {
+            "id": "HugeFleaPetUpgrade",
+            "bonus_damage": 3,
+            "bonus_health": 3
+        }
+    ],
     "characters": [
         {
             "id": "HugeFlea",
@@ -56,7 +63,7 @@
         {
             "id": "SpawnHugeFleaEffect",
             "name": "CardEffectSpawnMonster",
-            "target_mode": "room",
+            "target_mode": "drop_target_character",
             "param_character": "@HugeFlea"
         },
         {

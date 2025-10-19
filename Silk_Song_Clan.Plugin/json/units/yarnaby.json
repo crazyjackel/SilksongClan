@@ -103,7 +103,7 @@
     {
       "id": "SpawnYarnabyEffect",
       "name": "CardEffectSpawnMonster",
-      "target_mode": "room",
+      "target_mode": "drop_target_character",
       "param_character": "@Yarnaby"
     },
     {

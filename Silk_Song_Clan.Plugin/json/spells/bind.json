@@ -13,6 +13,7 @@
       "card_type": "spell",
       "rarity": "common",
       "class": "@Silksong",
+      "card_art": "@BindCardArt",
       "pools": [
         "MegaPool"
       ],

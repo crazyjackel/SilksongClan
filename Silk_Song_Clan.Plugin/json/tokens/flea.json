@@ -52,11 +52,18 @@
             "ability": "@FleaPetAbility"
         }
     ],
+    "upgrades": [
+        {
+            "id": "FleaPetUpgrade",
+            "bonus_damage": 1,
+            "bonus_health": 1
+        }
+    ],
     "effects": [
         {
             "id": "SpawnFleaEffect",
             "name": "CardEffectSpawnMonster",
-            "target_mode": "room",
+            "target_mode": "drop_target_character",
             "param_character": "@Flea"
         },
         {

@@ -55,7 +55,7 @@
       "trigger": "on_food_spawn",
       "effects": [
         {
-          "id": "@CrullHungerEffect"
+          "id": "@CrullAndBenjinHungerEffect"
         }
       ]
     },
@@ -86,7 +86,7 @@
     {
       "id": "SpawnCrullAndBenjinEffect",
       "name": "CardEffectSpawnMonster",
-      "target_mode": "room",
+      "target_mode": "drop_target_character",
       "param_character": "@CrullAndBenjin"
     },
     {

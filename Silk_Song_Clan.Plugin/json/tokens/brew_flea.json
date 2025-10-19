@@ -58,11 +58,18 @@
             "ability": "@BrewFleaPetAbility"
         }
     ],
+    "upgrades": [
+        {
+            "id": "BrewFleaPetUpgrade",
+            "bonus_damage": 1,
+            "bonus_health": 1
+        }
+    ],
     "effects": [
         {
             "id": "SpawnBrewFleaEffect",
             "name": "CardEffectSpawnMonster",
-            "target_mode": "room",
+            "target_mode": "drop_target_character",
             "param_character": "@BrewFlea"
         },
         {

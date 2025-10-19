@@ -57,6 +57,12 @@
   ],
   "effects": [
     {
+      "id": "SpawnLumbleTheLuckyEffect",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "drop_target_character",
+      "param_character": "@LumbleTheLucky"
+    },
+    {
       "id": "LumbleTheLuckyIncantEffect",
       "name": "CardEffectRewardGold",
       "target_mode": "self",
