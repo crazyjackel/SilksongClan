@@ -1,0 +1,91 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "map_nodes": [
+        {
+            "id": "SilksongBannerMapNode",
+            "type": "reward",
+            "map_icon": "@ClanIconSmall",
+            "minimap_icon": "@ClanIconSmall",
+            "prefab": "@SilksongBannerMapIcon",
+            "titles": {
+                "english": "Silksong Banner"
+            },
+            "descriptions": {
+                "english": "Hire a Silksong Unit"
+            },
+            "pools": [
+                "RandomChosenMainClassUnit",
+                "RandomChosenSubClassUnit"
+            ],
+            "is_banner_node": true,
+            "extensions": [
+                {
+                    "reward": {
+                        "class": "@Silksong",
+                        "rewards": [
+                            {
+                                "id": "@SilksongBannerReward"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "SilksongBannerMapIcon",
+            "type": "map_node_icon",
+            "extensions": {
+                "map_node_icon": {
+                    "disabled_sprite": "@SilksongBannerDisabled",
+                    "enabled_sprite": "@SilksongBannerEnabled",
+                    "frozen_sprite": "@SilksongBannerFrozen",
+                    "visited_sprite_disabled": "@SilksongBannerVisitedDisabled",
+                    "visited_sprite_enabled": "@SilksongBannerVisitedEnabled"
+                }
+            }
+        }
+    ],
+    "rewards": [
+        {
+            "id": "SilksongBannerReward",
+            "type": "draft",
+            "costs": [
+                100
+            ],
+            "extensions": [
+                {
+                    "draft": {
+                        "draft_pool": "@SilksongBannerPool",
+                        "class_type": "main|subclass|nonclass",
+                        "draft_options_count": 3,
+                        "rarity_floor": "common"
+                    }
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "SilksongBannerDisabled",
+            "path": "textures/SilksongBannerDisabled.png"
+        },
+        {
+            "id": "SilksongBannerEnabled",
+            "path": "textures/SilksongBannerEnabled.png"
+        },
+        {
+            "id": "SilksongBannerFrozen",
+            "path": "textures/SilksongBannerFrozen.png"
+        },
+        {
+            "id": "SilksongBannerVisitedDisabled",
+            "path": "textures/SilksongBannerVisitedDisabled.png"
+        },
+        {
+            "id": "SilksongBannerVisitedEnabled",
+            "path": "textures/SilksongBannerVisitedEnabled.png"
+        }
+    ]
+}
