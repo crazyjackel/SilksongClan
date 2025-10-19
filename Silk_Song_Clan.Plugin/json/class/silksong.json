@@ -3,9 +3,130 @@
   "classes": [
     {
       "id": "Silksong",
-      "name": "Silksong",
-      "description": "Silksong",
-      "icon": "@Silksong"
+      "titles": {
+        "english": "Silksong"
+      },
+      "descriptions": {
+        "english": "Lead Hornet and her allies to victory."
+      },
+      "subclass_descriptions": {
+        "english": "Silksong"
+      },
+      "icons": {
+        "small": "@ClanIconSmall",
+        "medium": "@ClanIconMedium",
+        "large": "@ClanIconLarge",
+        "silhouette": "@ClanIconSilhouette"
+      },
+      "card_style": "awoken",
+      "ui_color": {
+        "r": 0.925,
+        "g": 0.784,
+        "b": 0.247,
+        "a": 1
+      },
+      "ui_color_dark": {
+        "r": 0.239,
+        "g": 0.070,
+        "b": 0.121,
+        "a": 1
+      },
+      "ui_gradient": [
+        {
+          "time": 0,
+          "color": {
+            "r": 0.925,
+            "g": 0.784,
+            "b": 0.247,
+            "a": 1
+          }
+        },
+        {
+          "time": 1,
+          "color": {
+            "r": 0.239,
+            "g": 0.070,
+            "b": 0.121,
+            "a": 1
+          }
+        }
+      ],
+      "class_select_character_displays": [
+        "@HornetClassDisplay"
+      ],
+      "champions": [
+        {
+          "id": "HornetChampion",
+          "card_data": "@SpawnHornet",
+          "starter_card": "@NailStrike",
+          "upgrade_tree": [
+            [
+              "@HornetHunter1",
+              "@HornetHunter2",
+              "@HornetHunter3"
+            ],
+            [
+              "@HornetArchitect"
+            ],
+            [
+              "@HornetBeast"
+            ],
+            [
+              "@HornetCursed",
+              "@HornetWitch2"
+            ],
+            [
+              "@HornetReaper"
+            ],
+            [
+              "@HornetShaman"
+            ],
+            [
+              "@HornetWanderer"
+            ]
+          ],
+          "icon": "@HornetChampionIcon",
+          "portrait": "@HornetChampionIcon",
+          "locked_icon": "@HornetChampionIcon"
+        }
+      ]
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "HornetClassDisplay",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@HornetCharacterArt"
+        }
+      }
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ClanIconSmall",
+      "path": "textures/ClanIconSmall.png"
+    },
+    {
+      "id": "ClanIconMedium",
+      "path": "textures/ClanIconMedium.png"
+    },
+    {
+      "id": "ClanIconLarge",
+      "path": "textures/ClanIconLarge.png"
+    },
+    {
+      "id": "ClanIconSilhouette",
+      "path": "textures/ClanIconSilhouette.png"
+    },
+    {
+      "id": "ClanIconOutline",
+      "path": "textures/ClanIconOutline.png"
+    },
+    {
+      "id": "HornetChampionIcon",
+      "path": "textures/IconHornet.png"
     }
   ]
 }

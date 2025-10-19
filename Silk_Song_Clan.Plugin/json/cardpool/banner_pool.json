@@ -1,0 +1,32 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "card_pools": [
+        {
+            "id": "SilksongBannerPool",
+            "cards": [
+                "@SpawnSherma",
+                "@SpawnFlick",
+                "@SpawnFleamasterMooshka",
+                "@SpawnGrishkin",
+                "@SpawnVarga",
+                "@SpawnBallow",
+                "@SpawnPavo",
+                "@SpawnGilly",
+                "@SpawnShakra",
+                "@SpawnPebb",
+                "@SpawnGrindle",
+                "@SpawnZaza",
+                "@SpawnChapelMaid",
+                "@SpawnNuu",
+                "@SpawnPinmasterPlinney",
+                "@SpawnSeamstress",
+                "@SpawnPinstress",
+                "@SpawnCrullBenjin",
+                "@SpawnKratt",
+                "@SpawnCaretaker",
+                "@SpawnBellHermit",
+                "@SpawnScrounge"
+            ]
+        }
+    ]
+}

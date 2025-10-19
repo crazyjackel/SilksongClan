@@ -13,7 +13,7 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [

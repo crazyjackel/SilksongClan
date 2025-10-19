@@ -13,7 +13,7 @@
       "class": "@Silksong",
       "unlock_level": 4,
       "pools": [
-        "MegaPool"
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
