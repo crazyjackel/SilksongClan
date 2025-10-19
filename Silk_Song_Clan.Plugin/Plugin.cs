@@ -110,12 +110,18 @@ namespace Silk_Song_Clan.Plugin
                         "json/units/varga.json",
                         "json/units/vog.json",
 
+                        //Spells
+                        "json/spells/nail_strike.json",
+
                         //Status Effects
                         "json/status_effects/warrior.json",
                         "json/status_effects/imbue.json",
                         "json/status_effects/protection.json",
                         "json/status_effects/permanent_imbue.json",
-                        "json/status_effects/permanent_protection.json"
+                        "json/status_effects/permanent_protection.json",
+
+                        //Tracked Values
+                        "json/tracked_values/silk.json"
                     );
                 }
             );
@@ -136,6 +142,7 @@ namespace Silk_Song_Clan.Plugin
                 {
                     var manager = c.GetInstance<IRegister<CharacterTriggerData.Trigger>>();
                     var triggerManager = c.GetInstance<IRegister<CardTriggerType>>();
+                    var trackedValueManager = c.GetInstance<IRegister<CardStatistics.TrackedValueType>>();
 
                     CharacterTriggerData.Trigger GetTrigger(string id)
                     {
@@ -149,6 +156,13 @@ namespace Silk_Song_Clan.Plugin
 
                     CharacterTriggers.Combo = GetTrigger("Combo");
                     CharacterTriggers.Silksong = GetTrigger("Silksong");
+
+                    CardStatistics.TrackedValueType GetTrackedValueType(string id)
+                    {
+                        return trackedValueManager.GetValueOrDefault(MyPluginInfo.PLUGIN_GUID.GetId(TemplateConstants.TrackedValueTypeEnum, id));
+                    }
+
+                    TrackedValues.Silk = GetTrackedValueType("Silk");
                 }
             );
 

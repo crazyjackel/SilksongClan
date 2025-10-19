@@ -1,0 +1,78 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "cards": [
+        {
+            "id": "NailStrike",
+            "names": {
+                "english": "Nail Strike"
+            },
+            "descriptions": {
+                "english": "Gain 1 Silk. Deal Damage equal to Silk. [effect1.power]"
+            },
+            "cost": 1,
+            "card_type": "spell",
+            "rarity": "starter",
+            "class": "@Silksong",
+            "pools": [
+                "MegaPool"
+            ],
+            "effects": [
+                {
+                    "id": "@NailStrikeGainSilkEffect"
+                },
+                {
+                    "id": "@NailStrikeDamageEffect"
+                }
+            ],
+            "lore_tooltips": [
+                {
+                    "english": "A basic attack that channels silk energy into a devastating strike."
+                }
+            ],
+            "traits": [
+                "@NailStrikeScaleSilk"
+            ]
+        }
+    ],
+    "traits": [
+        {
+            "id": "NailStrikeScaleSilk",
+            "name": "CardTraitScalingAddDamage",
+            "param_tracked_value": "@Silk",
+            "param_float": 1.00
+        }
+    ],
+    "effects": [
+        {
+            "id": "NailStrikeGainSilkEffect",
+            "name": "@CardEffectAddSilk",
+            "target_mode": "self",
+            "param_int": 1
+        },
+        {
+            "id": "NailStrikeDamageEffect",
+            "name": "CardEffectDamage",
+            "target_mode": "room",
+            "target_team": "heroes",
+            "param_int": 0,
+            "param_silk_scaling": true
+        }
+    ],
+    "sprites": [
+        {
+            "id": "NailStrikeCardArt",
+            "path": "textures/NailStrikeCardArt.png"
+        }
+    ],
+    "game_objects": [
+        {
+            "id": "NailStrikeCardArt",
+            "type": "card_art",
+            "extensions": {
+                "card_art": {
+                    "sprite": "@NailStrikeCardArt"
+                }
+            }
+        }
+    ]
+}

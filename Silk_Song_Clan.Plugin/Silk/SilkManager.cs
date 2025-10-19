@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.Linq;
 using TrainworksReloaded.Core.Enum;
 using TrainworksReloaded.Core;
+using System.Collections;
 
 namespace Silk_Song_Clan.Plugin
 {
@@ -16,6 +17,9 @@ namespace Silk_Song_Clan.Plugin
         private SaveManager? saveManager = null;
         private RelicManager? relicManager = null;
         private CardManager? cardManager = null;
+        private CombatManager? combatManager = null;
+        private MonsterManager? monsterManager = null;
+        private HeroManager? heroManager = null;
         public SilkManager()
         {
         }
@@ -145,6 +149,18 @@ namespace Silk_Song_Clan.Plugin
             {
                 this.relicManager = relicManager;
             }
+            if (provider is CombatManager combatManager)
+            {
+                this.combatManager = combatManager;
+            }
+            if (provider is MonsterManager monsterManager)
+            {
+                this.monsterManager = monsterManager;
+            }
+            if (provider is HeroManager heroManager)
+            {
+                this.heroManager = heroManager;
+            }
             if (provider is CardManager cardManager)
             {
                 this.cardManager = cardManager;
@@ -158,9 +174,45 @@ namespace Silk_Song_Clan.Plugin
             if (silkCost != null)
             {
                 RemoveSilk(silkCost.Value);
+                HandleSilksongTrigger();
             }
         }
 
+        public IEnumerator HandleSilksongTrigger()
+        {
+            if (this.heroManager != null)
+            {
+                HandleSilksongTrigger(this.heroManager);
+            }
+            if (this.monsterManager != null)
+            {
+                HandleSilksongTrigger(this.monsterManager);
+            }
+            yield return this.combatManager?.RunTriggerQueue();
+        }
+
+        public void HandleSilksongTrigger(ICharacterManager characterManager)
+        {
+            for (int i = 0; i < characterManager.GetNumCharacters(); i++)
+            {
+                var charState = characterManager.GetCharacter(i);
+                if (charState == null)
+                {
+                    continue;
+                }
+                if (!charState.IsDestroyed && charState.IsAlive)
+                {
+                    QueueCustomTrigger(charState, CharacterTriggers.Silksong);
+                }
+            }
+        }
+
+        private void QueueCustomTrigger(CharacterState character, CharacterTriggerData.Trigger trigger)
+        {
+            this.combatManager?.QueueTrigger(character, trigger, dyingCharacter: null, canAttackOrHeal: true,
+                                       canFireTriggers: true, fireTriggersData: null, triggerCount: 1,
+                                       exclusiveTrigger: null);
+        }
         public void ProviderRemoved(IProvider provider)
         {
             if (provider is SaveManager _)
@@ -170,6 +222,18 @@ namespace Silk_Song_Clan.Plugin
             if (provider is RelicManager _)
             {
                 this.relicManager = null;
+            }
+            if (provider is CombatManager _)
+            {
+                this.combatManager = null;
+            }
+            if (provider is MonsterManager _)
+            {
+                this.monsterManager = null;
+            }
+            if (provider is HeroManager _)
+            {
+                this.heroManager = null;
             }
             if (provider is CardManager cardManager && this.cardManager != null)
             {
