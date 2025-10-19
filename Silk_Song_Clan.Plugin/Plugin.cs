@@ -85,7 +85,6 @@ namespace Silk_Song_Clan.Plugin
                         //Units
                         "json/units/alchemist_zylotol. json",
                         "json/units/ballow.json",  
-                        "json/units/sherma.json",
                         "json/units/bell_hermit.json",
                         "json/units/caretaker.json",
                         "json/units/chapel_maid.json",

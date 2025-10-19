@@ -118,11 +118,11 @@
   "sprites": [
     {
       "id": "BellHermitCardArt",
-      "path": "textures/bell_hermit_card.png"
+      "path": "textures/BellHermitCardArt.png"
     },
     {
       "id": "BellHermitCharacterArt",
-      "path": "textures/bell_hermit_character.png"
+      "path": "textures/BellHermitCharacterArt.png"
     }
   ],
   "game_objects": [
