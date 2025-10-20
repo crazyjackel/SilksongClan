@@ -52,15 +52,15 @@ namespace Silk_Song_Clan.Plugin
                         "json/class/silksong.json",
 
                         //Champions
-                        "json/champions/hornet_base.json",
-                        "json/champions/hornet_architect.json",
-                        "json/champions/hornet_beast.json",
-                        "json/champions/hornet_cursed.json",
-                        "json/champions/hornet_hunter.json",
-                        "json/champions/hornet_reaper.json",
-                        "json/champions/hornet_shaman.json",
-                        "json/champions/hornet_wanderer.json",
-                        "json/champions/hornet_witch.json",
+                        "json/champion/hornet_base.json",
+                        "json/champion/hornet_architect.json",
+                        "json/champion/hornet_beast.json",
+                        "json/champion/hornet_cursed.json",
+                        "json/champion/hornet_hunter.json",
+                        "json/champion/hornet_reaper.json",
+                        "json/champion/hornet_shaman.json",
+                        "json/champion/hornet_wanderer.json",
+                        "json/champion/hornet_witch.json",
 
                         //Triggers
                         "json/triggers/silksong.json",
