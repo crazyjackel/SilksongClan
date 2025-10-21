@@ -17,9 +17,6 @@
                     "status": "debuff",
                     "count": 10
                 }
-            ],
-            "trigger_upgrades": [
-                "@Cursed1SilkTrigger"
             ]
         }
     ]

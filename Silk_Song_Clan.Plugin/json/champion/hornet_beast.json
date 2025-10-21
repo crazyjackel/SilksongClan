@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
     "upgrades": [
         {
-            "id": "upg_Beast",
+            "id": "HornetBeast",
             "titles": {
                 "english": "Beast"
             },
