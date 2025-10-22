@@ -99,7 +99,7 @@
       "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@GaramondComboUpgrade",
-      "param_str": "@Zaza"
+      "param_str": "@SpawnZaza"
     },
     {
       "id": "GaramondLanceEffect",

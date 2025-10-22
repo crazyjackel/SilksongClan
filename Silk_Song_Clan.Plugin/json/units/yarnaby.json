@@ -123,7 +123,7 @@
       "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@YarnabyComboUpgrade",
-      "param_str": "@CrullAndBenjin"
+      "param_str": "@SpawnCrullAndBenjin"
     },
     {
       "id": "YarnabyStrikeEffect",

@@ -112,6 +112,8 @@ namespace Silk_Song_Clan.Plugin
                         "json/units/twelfth_architect.json",
                         "json/units/varga.json",
                         "json/units/vog.json",
+                        "json/units/yarnaby.json",
+                        "json/units/zaza.json",
 
                         //Spells
                         "json/spells/nail_strike.json",

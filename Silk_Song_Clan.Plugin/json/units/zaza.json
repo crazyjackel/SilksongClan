@@ -96,7 +96,7 @@
       "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@ZazaComboUpgrade",
-      "param_str": "@Garamond"
+      "param_str": "@SpawnGaramond"
     },
     {
       "id": "ZazaAddEquipmentEffect",
