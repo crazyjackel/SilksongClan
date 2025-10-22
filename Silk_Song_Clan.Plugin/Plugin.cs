@@ -72,6 +72,7 @@ namespace Silk_Song_Clan.Plugin
 
                         //Cardpools
                         "json/cardpool/flea_pool.json",
+                        "json/cardpool/banner_pool.json",
 
                         //Map Nodes
                         "json/map_nodes/banner.json",
