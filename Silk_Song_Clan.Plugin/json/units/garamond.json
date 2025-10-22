@@ -4,7 +4,8 @@
     {
       "id": "SpawnGaramond",
       "names": {
-        "english": "Garamond"
+        "english": "Garamond",
+        "chinese": "加蒙德"
       },
       "card_art": "@GaramondCardArt",
       "cost": 2,
@@ -30,7 +31,8 @@
     {
       "id": "GaramondLanceAbility",
       "names": {
-        "english": "Lance"
+        "english": "Lance",
+        "chinese": "长矛"
       },
       "descriptions": {
         "english": "Attack."

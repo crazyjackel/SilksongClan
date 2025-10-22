@@ -4,7 +4,8 @@
     {
       "id": "Bind",
       "names": {
-        "english": "Bind"
+        "english": "Bind",
+        "chinese": "聚结"
       },
       "descriptions": {
         "english": "Bind. Restore [effect1.power] health."

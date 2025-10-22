@@ -5,6 +5,7 @@
       "id": "SpawnCaretaker",
       "names": {
         "english": "Caretaker",
+        "chinese": "看护者",
         "french": "Caretaker"
       },
       "card_art": "@CaretakerCardArt",

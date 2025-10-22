@@ -5,6 +5,7 @@
       "id": "SpawnChapelMaid",
       "names": {
         "english": "Chapel Maid",
+        "chinese": "教堂侍女",
         "french": "Chapel Maid"
       },
       "card_art": "@ChapelMaidCardArt",

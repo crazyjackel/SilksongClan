@@ -5,6 +5,7 @@
       "id": "SpawnPavo",
       "names": {
         "english": "Pavo",
+        "chinese": "帕沃",
         "french": "Pavo"
       },
       "card_art": "@PavoCardArt",

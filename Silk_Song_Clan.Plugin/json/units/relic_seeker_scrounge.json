@@ -4,7 +4,8 @@
     {
       "id": "SpawnRelicSeekerScrounge",
       "names": {
-        "english": "Relic Seeker Scrounge"
+        "english": "Relic Seeker Scrounge",
+        "chinese": "古董猎手 拾荒奇"
       },
       "card_art": "@RelicSeekerScroungeCardArt",
       "cost": 1,

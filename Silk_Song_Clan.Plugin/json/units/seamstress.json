@@ -5,6 +5,7 @@
       "id": "SpawnSeamstress",
       "names": {
         "english": "Seamstress",
+        "chinese": "裁缝女士",
         "french": "Seamstress"
       },
       "card_art": "@SeamstressCardArt",

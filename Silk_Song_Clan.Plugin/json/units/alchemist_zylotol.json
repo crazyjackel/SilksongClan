@@ -4,7 +4,8 @@
     {
       "id": "SpawnAlchemistZylotol",
       "names": {
-        "english": "Alchemist Zylotol"
+        "english": "Alchemist Zylotol",
+        "chinese": "炼金术士 奇洛托"
       },
       "card_art": "@AlchemistZylotolCardArt",
       "cost": 3,

@@ -5,6 +5,7 @@
       "id": "SpawnFlickTheFixer",
       "names": {
         "english": "Flick the Fixer",
+        "chinese": "弗利克 修理工",
         "french": "Flick the Fixer"
       },
       "card_art": "@FlickTheFixerCardArt",
@@ -30,7 +31,8 @@
     {
       "id": "FlickTheFixerAbility",
       "names": {
-        "english": "Fix It"
+        "english": "Fix It",
+        "chinese": "修好它"
       },
       "descriptions": {
         "english": "Spend 10. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]."

@@ -4,7 +4,8 @@
     {
       "id": "SpawnLumbleTheLucky",
       "names": {
-        "english": "Lumble the Lucky"
+        "english": "Lumble the Lucky",
+        "chinese": "兰布尔 幸运儿"
       },
       "cost": 2,
       "rarity": "rare",

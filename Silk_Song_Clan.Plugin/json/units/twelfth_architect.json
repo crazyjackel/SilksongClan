@@ -4,7 +4,8 @@
     {
       "id": "SpawnTwelfthArchitect",
       "names": {
-        "english": "Twelfth Architect"
+        "english": "Twelfth Architect",
+        "chinese": "第十二席建筑师"
       },
       "card_art": "@TwelfthArchitectCardArt",
       "cost": 2,

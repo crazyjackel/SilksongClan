@@ -4,7 +4,8 @@
         {
             "id": "SpawnHugeFlea",
             "names": {
-                "english": "Huge Flea"
+                "english": "Huge Flea",
+                "chinese": "巨大小球蚤"
             },
             "card_art": "@HugeFleaCardArt",
             "cost": 1,
