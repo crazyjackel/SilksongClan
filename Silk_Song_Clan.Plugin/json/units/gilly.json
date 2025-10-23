@@ -14,7 +14,7 @@
       "class": "@Silksong",
       "unlock_level": 3,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -32,6 +32,11 @@
   "characters": [
     {
       "id": "Gilly",
+      "names": {
+        "english": "Gilly",
+        "french": "Gilly"
+      },
+      "character_art": "@GillyCharacterArt",
       "size": 2,
       "health": 10,
       "attack": 20,

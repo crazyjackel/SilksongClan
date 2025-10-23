@@ -14,7 +14,7 @@
       "class": "@Silksong",
       "unlock_level": 3,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -32,6 +32,11 @@
   "characters": [
     {
       "id": "Pavo",
+      "names": {
+        "english": "Pavo",
+        "french": "Pavo"
+      },
+      "character_art": "@PavoCharacterArt",
       "size": 2,
       "health": 15,
       "attack": 6,

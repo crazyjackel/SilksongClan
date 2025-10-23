@@ -98,7 +98,19 @@
       "type": "character_art",
       "extensions": {
         "character_art": {
-          "sprite": "@HornetCharacterArt"
+          "sprite": "@HornetCharacterArt",
+          "transform": {
+              "position": {
+                  "x": 2,
+                  "y": -0.2,
+                  "z": 0
+              },
+              "scale": {
+                  "x": 3.6,
+                  "y": 3.6,
+                  "z": 4
+              }
+          }
         }
       }
     }

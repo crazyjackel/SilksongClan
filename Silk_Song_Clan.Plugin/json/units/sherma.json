@@ -13,7 +13,7 @@
       "rarity": "common",
       "class": "@Silksong",
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -31,6 +31,11 @@
   "characters": [
     {
       "id": "Sherma",
+      "names": {
+        "english": "Sherma",
+        "french": "Sherma"
+      },
+      "character_art": "@ShermaCharacterArt",
       "size": 2,
       "health": 10,
       "attack": 0,

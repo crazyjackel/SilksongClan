@@ -14,7 +14,7 @@
       "class": "@Silksong",
       "unlock_level": 9,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -32,6 +32,11 @@
   "characters": [
     {
       "id": "CrullAndBenjin",
+      "names": {
+        "english": "Crull and Benjin",
+        "french": "Crull and Benjin"
+      },
+      "character_art": "@CrullAndBenjinCharacterArt",
       "size": 1,
       "health": 8,
       "attack": 8,

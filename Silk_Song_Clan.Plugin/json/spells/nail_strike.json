@@ -7,7 +7,7 @@
                 "english": "Nail Strike"
             },
             "descriptions": {
-                "english": "Gain 1 Silk. Deal Damage equal to Silk. [effect1.power]"
+                "english": "Gain 1 Silk. Deal [effect1.power] Damage. (Base Damage is equal to Silk.)"
             },
             "cost": 1,
             "card_type": "spell",

@@ -14,7 +14,7 @@
       "class": "@Silksong",
       "unlock_level": 5,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -50,6 +50,11 @@
   "characters": [
     {
       "id": "Zaza",
+      "names": {
+        "english": "Zaza",
+        "french": "Zaza"
+      },
+      "character_art": "@ZazaCharacterArt",
       "size": 1,
       "health": 15,
       "attack": 15,

@@ -13,7 +13,7 @@
       "rarity": "common",
       "class": "@Silksong",
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -31,6 +31,11 @@
   "characters": [
     {
       "id": "Shakra",
+      "names": {
+        "english": "Shakra",
+        "french": "Shakra"
+      },
+      "character_art": "@ShakraCharacterArt",
       "size": 2,
       "health": 30,
       "attack": 30,

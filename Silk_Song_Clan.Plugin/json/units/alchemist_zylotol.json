@@ -13,7 +13,8 @@
       "class": "@Silksong",
       "unlock_level": 4,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -53,6 +54,11 @@
   "characters": [
     {
       "id": "AlchemistZylotol",
+      "names": {
+        "english": "Alchemist Zylotol",
+        "french": "Alchemist Zylotol"
+      },
+      "character_art": "@AlchemistZylotolCharacterArt",
       "size": 3,
       "health": 1,
       "attack": 40,

@@ -13,7 +13,7 @@
       "rarity": "common",
       "class": "@Silksong",
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -50,6 +50,11 @@
   "characters": [
     {
       "id": "FlickTheFixer",
+      "names": {
+        "english": "Flick the Fixer",
+        "french": "Flick the Fixer"
+      },
+      "character_art": "@FlickTheFixerCharacterArt",
       "size": 2,
       "health": 20,
       "attack": 5,

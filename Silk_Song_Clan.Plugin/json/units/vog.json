@@ -14,7 +14,8 @@
       "class": "@Silksong",
       "unlock_level": 7,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -32,6 +33,11 @@
   "characters": [
     {
       "id": "Vog",
+      "names": {
+        "english": "Vog",
+        "french": "Vog"
+      },
+      "character_art": "@VogCharacterArt",
       "size": 2,
       "health": 40,
       "attack": 30,

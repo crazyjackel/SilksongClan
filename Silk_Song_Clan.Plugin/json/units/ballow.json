@@ -14,7 +14,7 @@
       "class": "@Silksong",
       "unlock_level": 4,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -32,6 +32,11 @@
   "characters": [
     {
       "id": "Ballow",
+      "names": {
+        "english": "Ballow",
+        "french": "Ballow"
+      },
+      "character_art": "@BallowCharacterArt",
       "size": 2,
       "health": 15,
       "attack": 5,

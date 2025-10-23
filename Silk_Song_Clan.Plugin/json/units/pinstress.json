@@ -31,6 +31,11 @@
   "characters": [
     {
       "id": "Pinstress",
+      "names": {
+        "english": "Pinstress",
+        "french": "Pinstress"
+      },
+      "character_art": "@PinstressCharacterArt",
       "size": 3,
       "health": 50,
       "attack": 30,
@@ -49,7 +54,7 @@
       "id": "PinstressSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "<b>Combo Pinstress</b>: <b>Strike</b>: Gain Conduit 1"
+        "english": "<b>Combo [Pinstress]</b>: <b>Strike</b>: Gain Conduit 1"
       },
       "effects": [
         {

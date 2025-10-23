@@ -13,7 +13,7 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -31,6 +31,11 @@
   "characters": [
     {
       "id": "ChapelMaid",
+      "names": {
+        "english": "Chapel Maid",
+        "french": "Chapel Maid"
+      },
+      "character_art": "@ChapelMaidCharacterArt",
       "size": 2,
       "health": 24,
       "attack": 0,

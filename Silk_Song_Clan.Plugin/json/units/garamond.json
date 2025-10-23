@@ -13,7 +13,8 @@
       "class": "@Silksong",
       "unlock_level": 5,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -49,6 +50,11 @@
   "characters": [
     {
       "id": "Garamond",
+      "names": {
+        "english": "Garamond",
+        "french": "Garamond"
+      },
+      "character_art": "@GaramondCharacterArt",
       "size": 2,
       "health": 30,
       "attack": 30,

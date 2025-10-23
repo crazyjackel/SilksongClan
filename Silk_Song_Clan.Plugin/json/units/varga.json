@@ -14,7 +14,7 @@
       "class": "@Silksong",
       "unlock_level": 2,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -32,6 +32,11 @@
   "characters": [
     {
       "id": "Varga",
+      "names": {
+        "english": "Varga",
+        "french": "Varga"
+      },
+      "character_art": "@VargaCharacterArt",
       "size": 1,
       "health": 20,
       "attack": 15,

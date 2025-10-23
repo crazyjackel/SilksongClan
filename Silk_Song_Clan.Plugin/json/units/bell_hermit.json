@@ -14,7 +14,7 @@
       "class": "@Silksong",
       "unlock_level": 3,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -32,6 +32,11 @@
   "characters": [
     {
       "id": "BellHermit",
+      "names": {
+        "english": "Bell Hermit",
+        "french": "Bell Hermit"
+      },
+      "character_art": "@BellHermitCharacterArt",
       "size": 2,
       "health": 16,
       "attack": 16,

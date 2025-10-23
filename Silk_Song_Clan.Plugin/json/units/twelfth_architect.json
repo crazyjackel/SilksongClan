@@ -12,7 +12,8 @@
       "rarity": "rare",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -30,6 +31,11 @@
   "characters": [
     {
       "id": "TwelfthArchitect",
+      "names": {
+        "english": "Twelfth Architect",
+        "french": "Twelfth Architect"
+      },
+      "character_art": "@TwelfthArchitectCharacterArt",
       "size": 3,
       "health": 20,
       "attack": 40,
