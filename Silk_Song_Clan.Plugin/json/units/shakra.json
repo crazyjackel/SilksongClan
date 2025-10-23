@@ -59,9 +59,9 @@
     {
       "id": "ShakraStrikeTrigger",
       "descriptions": {
-        "english": "Apply [melee weakness] [effect0.status0.power]."
+        "english": "Apply [melee_weakness] [effect0.status0.power]."
       },
-      "trigger": "on_hit",
+      "trigger": "on_attacking",
       "effects": [
         {
           "id": "@ShakraApplyWeaknessEffect"

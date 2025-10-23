@@ -38,7 +38,8 @@
       },
       "initial_cooldown": 1,
       "cooldown": 1,
-      "targets_room": true,
+      "is_an_ability": true,
+      "targetless": false,
       "effects": [
         {
           "id": "@KrattSacrificeEffect"

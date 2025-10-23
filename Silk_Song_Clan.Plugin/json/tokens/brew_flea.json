@@ -31,6 +31,8 @@
             "descriptions": {
                 "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
             },
+            "is_an_ability": true,
+            "targetless": true,
             "initial_cooldown": 1,
             "cooldown": 1,
             "effects": [

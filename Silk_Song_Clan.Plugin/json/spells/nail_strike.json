@@ -53,8 +53,7 @@
         {
             "id": "NailStrikeDamageEffect",
             "name": "CardEffectDamage",
-            "target_mode": "room",
-            "target_team": "heroes",
+            "target_mode": "drop_target_character",
             "param_int": 0,
             "param_silk_scaling": true
         }

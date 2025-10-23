@@ -36,6 +36,8 @@
         "english": "Spend 10. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]."
       },
       "initial_cooldown": 2,
+      "is_an_ability": true,
+      "targetless": true,
       "cooldown": 2,
       "effects": [
         {

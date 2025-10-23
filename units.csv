@@ -1,31 +1,31 @@
 Name,Rarity,Pool,Traits,Effect,Type,Cost,Attack,Health,Size,Unlock Level,Lore,Notes
-Sherma,Common,Banner,Endless,Resolve: Give Friendly Units 5 Protection.,Bug,1,0,10,2,0
-Flick the Fixer,Common,Banner,,Ability 1 (Fix It). Spend 10. Friendly Units gain 1 Permanent Protection.,Bug,1,5,20,2,0
-Fleamaster Mooshka,Common,Banner,,Resolve: Add a random Flea to Hand,Flea,2,8,16,2,2,,"Fleamaster Mooshka is a key part to assembling ""Fleatopia"""
-Grishkin,Common,Banner,,Combo Flea: Shift: Fleas get +3/+3,Flea,1,20,15,1,2
-Varga,Common,Banner,,"Combo Flea: Rally: If it was a flea, Reduce all Unit Cooldowns by 1.",Flea,1,15,20,1,2
-Ballow,Common,Banner,Damage Shield 2,Equipped: Give Friendly Units 5 Imbue.,Bug,1,5,15,2,4
-Pavo,Common,Banner,Conduit 5,Silksong: Gain Conduit 3,Bug,1,6,15,2,3
-Gilly,Common,Banner,Stealth 3,Silksong: Gain Stealth 2.,Bug,1,20,10,2,3
-Shakra,Common,Banner,Warrior,Strike: Apply Melee Weakness 1,Bug,1,30,30,2,0
-Pebb,Common,Banner,,Ability 5 (Wormway Key): Spend 500 gold. Gain a Relic giving Rare Units +10/+10.,Bug,1,12,8,1,0
-Grindle,Common,Banner,,Strike: Gain 10 gold.,Bug,1,5,5,1,0
-Garamond,Rare,Mega,Warrior,Combo Zaza: Ability 2 (Lance): Attack.,Bug,2,30,30,2,5
-Sprintmaster Swift,Rare,Mega,Quick,Resolve: Reduce all Unit Cooldowns by 1.,Bug,2,40,15,2,9
-Alchemist Zylotol,Rare,Mega,Damage Shield 2,"Ability 2 (Inject): Gain a Damage Shield. If you have 5 or more Damage Shields, Gain 10 Permanent Imbue.",Bug,3,40,1,3,4
-Green Prince,Rare,Mega,Warrior,"Silksong: Add an Frozen, Ephemeral Copy with Fragile to your hand.",Bug,3,60,40,3,6
-Yarnaby,Rare,Mega,Lifesteal 3,Hunger: Gain Lifesteal 1. Combo Crull and Benjin: Strike: Front Unit gets Lifesteal 1.,Bug,1,8,8,1,8
-Twelfth Architect,Rare,Mega,,Celebrate: Spend 100 Gold. Gain a Relic allowing Stewards to Equip an additional Equipment.,Steward,2,40,20,3,0
-Vog,Rare,Mega,,"Harvest: If a Flea Died, Add a random Flea to Hand.",Flea,2,30,40,2,7
-Lumble the Lucky,Rare,Mega,,Incant: Gain 4 gold. Extinguish: Units get Damage Shield 1.,Bug,2,10,25,2,0
-Zaza,Uncommon,Banner,,Combo Garamond: Ability (Humble Steed): Add a random Equipment to Hand.,Bug,1,15,15,1,5
-Chapel Maid,Uncommon,Banner,Dualism,Combo Snail: Silksong: Friendly Units get 2 Permanent Protection.,Snail,2,0,24,2,0
-Nuu,Uncommon,Banner,Lifesteal 2,Harvest: Gain 1 Permanent Imbue and 1 Permanent Protection. Hunger: Gain 1 Permanent Imbue and 1 Permanent Protection,Bug?,2,2,2,2,10
-Pinmaster Plinney,Uncommon,Banner,,Ability 5 (Sharpen): Spend 30 gold. Give 10 Permanent Imbue.,Bug,2,12,12,2,0
-Seamstress,Uncommon,Banner,Mageblade 2,Combo Pinstress: Conduit 10,Pinstress,2,30,30,3,0
-Pinstress,Uncommon,Banner,Mageblade 2,Combo Pinstress: Strike: Gain Conduit 1,Pinstress,2,30,50,3,0
-Crull and Benjin,Uncommon,Banner,,Hunger: Gain +3/+3. Combo Yarnaby: Spend 30 gold. Friendly Units gain 10 Permanent Protection.,Bug,1,8,8,1,8
-Kratt,Uncommon,Banner,,Ability 1 (Send to Hot Spring): Sacrifice a Flea. Fleas get +5/+5 and Damage Shield 1,Flea,1,10,8,1,7
-Caretaker,Uncommon,Banner,Dualism,Combo Snail: Silksong: Front Unit gets 1 Damage Shield and 1 Spell Shield.,Snail,2,8,16,2,6
-Bell Hermit,Uncommon,Banner,Dualism,Combo Snail: Silksong: Friendly Units get 2 Permanent Imbue.,Snail,2,16,16,2,3
-Relic Seeker Scrounge,Uncommon,Banner,,Equipped: Remove the Equipment. Gain 20 gold.,Bug,1,24,16,2,4
+Sherma,Common,Mega,Endless,Resolve: Give Friendly Units 5 Protection.,Bug,1,0,10,2,0
+Flick the Fixer,Common,Mega,,Ability 1 (Fix It). Spend 10. Friendly Units gain 1 Permanent Protection.,Bug,1,5,20,2,0
+Fleamaster Mooshka,Common,Mega,,Resolve: Add a random Flea to Hand,Flea,2,8,16,2,2,,"Fleamaster Mooshka is a key part to assembling ""Fleatopia"""
+Grishkin,Common,Mega,,Combo Flea: Shift: Fleas get +3/+3,Flea,1,20,15,1,2
+Varga,Common,Mega,,"Combo Flea: Rally: If it was a flea, Reduce all Unit Cooldowns by 1.",Flea,1,15,20,1,2
+Ballow,Common,Mega,Damage Shield 2,Equipped: Give Friendly Units 5 Imbue.,Bug,1,5,15,2,4
+Pavo,Common,Mega,Conduit 5,Silksong: Gain Conduit 3,Bug,1,6,15,2,3
+Gilly,Common,Mega,Stealth 3,Silksong: Gain Stealth 2.,Bug,1,20,10,2,3
+Shakra,Common,Mega,Warrior,Strike: Apply Melee Weakness 1,Bug,1,30,30,2,0
+Pebb,Common,Mega,,Ability 5 (Wormway Key): Spend 500 gold. Gain a Relic giving Rare Units +10/+10.,Bug,1,12,8,1,0
+Grindle,Common,Mega,,Strike: Gain 10 gold.,Bug,1,5,5,1,0
+Garamond,Rare,"Mega, Banner",Warrior,Combo Zaza: Ability 2 (Lance): Attack.,Bug,2,30,30,2,5
+Sprintmaster Swift,Rare,"Mega, Banner",Quick,Resolve: Reduce all Unit Cooldowns by 1.,Bug,2,40,15,2,9
+Alchemist Zylotol,Rare,"Mega, Banner",Damage Shield 2,"Ability 2 (Inject): Gain a Damage Shield. If you have 5 or more Damage Shields, Gain 10 Permanent Imbue.",Bug,3,40,1,3,4
+Green Prince,Rare,"Mega, Banner",Warrior,"Silksong: Add an Frozen, Ephemeral Copy with Fragile to your hand.",Bug,3,60,40,3,6
+Yarnaby,Rare,"Mega, Banner",Lifesteal 3,Hunger: Gain Lifesteal 1. Combo Crull and Benjin: Strike: Front Unit gets Lifesteal 1.,Bug,1,8,8,1,8
+Twelfth Architect,Rare,"Mega, Banner",,Celebrate: Spend 100 Gold. Gain a Relic allowing Stewards to Equip an additional Equipment.,Steward,2,40,20,3,0
+Vog,Rare,"Mega, Banner",,"Harvest: If a Flea Died, Add a random Flea to Hand.",Flea,2,30,40,2,7
+Lumble the Lucky,Rare,"Mega, Banner",,Incant: Gain 4 gold. Extinguish: Units get Damage Shield 1.,Bug,2,10,25,2,0
+Zaza,Uncommon,Mega,,Combo Garamond: Ability (Humble Steed): Add a random Equipment to Hand.,Bug,1,15,15,1,5
+Chapel Maid,Uncommon,Mega,Dualism,Combo Snail: Silksong: Friendly Units get 2 Permanent Protection.,Snail,2,0,24,2,0
+Nuu,Uncommon,Mega,Lifesteal 2,Harvest: Gain 1 Permanent Imbue and 1 Permanent Protection. Hunger: Gain 1 Permanent Imbue and 1 Permanent Protection,Bug?,2,2,2,2,10
+Pinmaster Plinney,Uncommon,Mega,,Ability 5 (Sharpen): Spend 30 gold. Give 10 Permanent Imbue.,Bug,2,12,12,2,0
+Seamstress,Uncommon,Mega,Mageblade 2,Combo Pinstress: Conduit 10,Pinstress,2,30,30,3,0
+Pinstress,Uncommon,Mega,Mageblade 2,Combo Pinstress: Strike: Gain Conduit 1,Pinstress,2,30,50,3,0
+Crull and Benjin,Uncommon,Mega,,Hunger: Gain +3/+3. Combo Yarnaby: Spend 30 gold. Friendly Units gain 10 Permanent Protection.,Bug,1,8,8,1,8
+Kratt,Uncommon,Mega,,Ability 1 (Send to Hot Spring): Sacrifice a Flea. Fleas get +5/+5 and Damage Shield 1,Flea,1,10,8,1,7
+Caretaker,Uncommon,Mega,Dualism,Combo Snail: Silksong: Front Unit gets 1 Damage Shield and 1 Spell Shield.,Snail,2,8,16,2,6
+Bell Hermit,Uncommon,Mega,Dualism,Combo Snail: Silksong: Friendly Units get 2 Permanent Imbue.,Snail,2,16,16,2,3
+Relic Seeker Scrounge,Uncommon,Mega,,Equipped: Remove the Equipment. Gain 20 gold.,Bug,1,24,16,2,4

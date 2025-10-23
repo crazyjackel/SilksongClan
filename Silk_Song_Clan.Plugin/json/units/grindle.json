@@ -51,9 +51,9 @@
     {
       "id": "GrindleStrikeTrigger",
       "descriptions": {
-        "english": "Strike: Gain 10 gold."
+        "english": "Gain 10 gold."
       },
-      "trigger": "on_hit",
+      "trigger": "on_attacking",
       "effects": [
         {
           "id": "@GrindleGainGoldEffect"
