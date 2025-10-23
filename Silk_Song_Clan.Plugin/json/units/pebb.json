@@ -59,7 +59,7 @@
       "character_art": "@PebbCharacterArt",
       "size": 1,
       "health": 8,
-      "attack": 12,
+      "attack_damage": 12,
       "subtypes": [
         "@Bug"
       ],

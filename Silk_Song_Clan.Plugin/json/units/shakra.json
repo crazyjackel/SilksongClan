@@ -38,7 +38,7 @@
       "character_art": "@ShakraCharacterArt",
       "size": 2,
       "health": 30,
-      "attack": 30,
+      "attack_damage": 30,
       "subtypes": [
         "@Bug"
       ],

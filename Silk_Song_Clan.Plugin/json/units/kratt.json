@@ -60,7 +60,7 @@
       "character_art": "@KrattCharacterArt",
       "size": 1,
       "health": 8,
-      "attack": 10,
+      "attack_damage": 10,
       "subtypes": [
         "@Flea"
       ],

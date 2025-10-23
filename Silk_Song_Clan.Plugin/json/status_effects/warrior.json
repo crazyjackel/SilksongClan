@@ -20,7 +20,7 @@
                 "english": "<b>Warrior</b>"
             },
             "display_category": "persistent",
-            "trigger_stage": "on_hit",
+            "trigger_stage": "on_post_attacking",
             "is_stackable": false,
             "icon": "@Warrior"
         }

@@ -38,7 +38,7 @@
       "character_art": "@TwelfthArchitectCharacterArt",
       "size": 3,
       "health": 20,
-      "attack": 40,
+      "attack_damage": 40,
       "subtypes": [
         "@Steward"
       ],

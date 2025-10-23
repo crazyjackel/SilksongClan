@@ -59,7 +59,7 @@
       "character_art": "@FlickTheFixerCharacterArt",
       "size": 2,
       "health": 20,
-      "attack": 5,
+      "attack_damage": 5,
       "subtypes": [
         "@Bug"
       ],

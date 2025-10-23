@@ -39,7 +39,7 @@
       "character_art": "@CaretakerCharacterArt",
       "size": 2,
       "health": 16,
-      "attack": 8,
+      "attack_damage": 8,
       "subtypes": ["@Snail"],
       "triggers": [
         {

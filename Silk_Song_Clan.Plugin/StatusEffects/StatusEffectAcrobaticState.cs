@@ -70,6 +70,12 @@ namespace Silk_Song_Clan.Plugin
         protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
         {
             var character = inputTriggerParams.associatedCharacter;
+            if (character == null)
+            {
+                Plugin.Logger.LogError("AcrobaticState: Character is null");
+                yield break;
+            }
+
             var statusId = base.GetStatusId();
             int statusEffectStacks = character.GetStatusEffectStacks(statusId);
 

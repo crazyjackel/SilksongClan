@@ -57,7 +57,7 @@
       "character_art": "@GaramondCharacterArt",
       "size": 2,
       "health": 30,
-      "attack": 30,
+      "attack_damage": 30,
       "subtypes": ["@Bug"],
       "starting_status_effects": [
         {

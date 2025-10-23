@@ -40,7 +40,7 @@
       "character_art": "@YarnabyCharacterArt",
       "size": 1,
       "health": 8,
-      "attack": 8,
+      "attack_damage": 8,
       "subtypes": [
         "@Bug"
       ],

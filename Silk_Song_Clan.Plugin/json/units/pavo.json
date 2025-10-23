@@ -39,7 +39,7 @@
       "character_art": "@PavoCharacterArt",
       "size": 2,
       "health": 15,
-      "attack": 6,
+      "attack_damage": 6,
       "subtypes": [
         "@Bug"
       ],

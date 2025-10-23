@@ -40,7 +40,7 @@
       "character_art": "@VogCharacterArt",
       "size": 2,
       "health": 40,
-      "attack": 30,
+      "attack_damage": 30,
       "subtypes": [
         "@Flea"
       ],

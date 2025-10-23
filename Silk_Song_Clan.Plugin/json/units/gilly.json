@@ -39,7 +39,7 @@
       "character_art": "@GillyCharacterArt",
       "size": 2,
       "health": 10,
-      "attack": 20,
+      "attack_damage": 20,
       "subtypes": [
         "@Bug"
       ],

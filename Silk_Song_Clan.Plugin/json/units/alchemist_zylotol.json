@@ -61,7 +61,7 @@
       "character_art": "@AlchemistZylotolCharacterArt",
       "size": 3,
       "health": 1,
-      "attack": 40,
+      "attack_damage": 40,
       "subtypes": ["@Bug"],
       "ability": "@AlchemistZylotolAbility"
     }

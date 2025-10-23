@@ -39,7 +39,7 @@
       "character_art": "@VargaCharacterArt",
       "size": 1,
       "health": 20,
-      "attack": 15,
+      "attack_damage": 15,
       "subtypes": [
         "@Flea"
       ],

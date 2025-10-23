@@ -40,7 +40,7 @@
       "character_art": "@SprintmasterSwiftCharacterArt",
       "size": 2,
       "health": 15,
-      "attack": 40,
+      "attack_damage": 40,
       "subtypes": [
         "@Bug"
       ],

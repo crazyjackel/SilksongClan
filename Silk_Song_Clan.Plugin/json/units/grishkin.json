@@ -39,7 +39,7 @@
       "character_art": "@GrishkinCharacterArt",
       "size": 1,
       "health": 15,
-      "attack": 20,
+      "attack_damage": 20,
       "subtypes": ["@Flea"],
       "triggers": [
         {

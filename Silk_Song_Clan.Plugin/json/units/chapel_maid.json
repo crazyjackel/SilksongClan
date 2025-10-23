@@ -38,7 +38,7 @@
       "character_art": "@ChapelMaidCharacterArt",
       "size": 2,
       "health": 24,
-      "attack": 0,
+      "attack_damage": 0,
       "subtypes": ["@Snail"],
       "triggers": [
         {

@@ -39,7 +39,7 @@
       "character_art": "@NuuCharacterArt",
       "size": 2,
       "health": 2,
-      "attack": 2,
+      "attack_damage": 2,
       "subtypes": [
         "@Bug"
       ],

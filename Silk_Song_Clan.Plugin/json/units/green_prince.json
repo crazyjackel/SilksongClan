@@ -40,7 +40,7 @@
       "character_art": "@GreenPrinceCharacterArt",
       "size": 3,
       "health": 40,
-      "attack": 60,
+      "attack_damage": 60,
       "subtypes": ["@Bug"],
       "starting_status_effects": [
         {

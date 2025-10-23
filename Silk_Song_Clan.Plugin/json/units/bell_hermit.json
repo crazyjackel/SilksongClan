@@ -39,7 +39,7 @@
       "character_art": "@BellHermitCharacterArt",
       "size": 2,
       "health": 16,
-      "attack": 16,
+      "attack_damage": 16,
       "subtypes": [
         "@Snail"
       ],
