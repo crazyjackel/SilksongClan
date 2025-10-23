@@ -35,7 +35,7 @@
       "descriptions": {
         "english": "Spend 10. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]."
       },
-      "initial_cooldown": 2,
+      "initial_cooldown": 0,
       "is_an_ability": true,
       "targetless": true,
       "cooldown": 2,
@@ -76,11 +76,12 @@
     {
       "id": "FlickTheFixerSpendGoldEffect",
       "name": "CardEffectRewardGold",
-      "param_int": -10
+      "param_int": -10,
+      "should_cancel_subsequent_effects_if_test_fails": true
     },
     {
       "id": "FlickTheFixerProtectionEffect",
-      "name": "@CardEffectAddStatusEffectIfGoldSpent",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "room",
       "target_team": "monsters",
       "param_int_2": 10,
@@ -121,12 +122,12 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 1.5,
+              "y": 0.3,
               "z": 0
             },
             "scale": {
-              "x": 1,
-              "y": 1,
+              "x": 1.3,
+              "y": 1.3,
               "z": 1
             }
           }

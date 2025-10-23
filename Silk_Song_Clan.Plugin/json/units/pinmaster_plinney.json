@@ -37,7 +37,7 @@
       },
       "is_an_ability": true,
       "cooldown": 5,
-      "initial_cooldown": 5,
+      "initial_cooldown": 0,
       "targetless": false,
       "effects": [
         {
@@ -77,7 +77,8 @@
       "id": "PinmasterSpendGoldEffect",
       "name": "CardEffectRewardGold",
       "target_mode": "self",
-      "param_int": -30
+      "param_int": -30,
+      "should_cancel_subsequent_effects_if_test_fails": true
     },
     {
       "id": "PinmasterSharpenEffect",
@@ -121,12 +122,12 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 1.5,
+              "y": 0.9,
               "z": 0
             },
             "scale": {
-              "x": 1,
-              "y": 1,
+              "x": 1.2,
+              "y": 1.2,
               "z": 1
             }
           }

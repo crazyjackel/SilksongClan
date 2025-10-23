@@ -55,8 +55,8 @@
             "id": "NailStrikeDamageEffect",
             "name": "CardEffectDamage",
             "target_mode": "drop_target_character",
-            "param_int": 0,
-            "param_silk_scaling": true
+            "target_team": "both",
+            "param_int": 0
         }
     ],
     "sprites": [

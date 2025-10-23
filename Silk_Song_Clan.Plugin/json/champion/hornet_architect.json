@@ -9,6 +9,7 @@
             "descriptions": {
                 "english": "Can Equip an additional two equipment."
             },
+            "show_description_on_cards": true,
             "bonus_damage": 12,
             "bonus_hp": 6,
             "bonus_equipment": 2
