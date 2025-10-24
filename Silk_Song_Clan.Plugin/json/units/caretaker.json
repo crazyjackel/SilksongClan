@@ -15,7 +15,7 @@
       "class": "@Silksong",
       "unlock_level": 6,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -33,9 +33,14 @@
   "characters": [
     {
       "id": "Caretaker",
+      "names": {
+        "english": "Caretaker",
+        "french": "Caretaker"
+      },
+      "character_art": "@CaretakerCharacterArt",
       "size": 2,
       "health": 16,
-      "attack": 8,
+      "attack_damage": 8,
       "subtypes": ["@Snail"],
       "triggers": [
         {

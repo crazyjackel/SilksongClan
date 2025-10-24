@@ -15,7 +15,7 @@
       "class": "@Silksong",
       "unlock_level": 2,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -33,9 +33,14 @@
   "characters": [
     {
       "id": "FleamasterMooshka",
+      "names": {
+        "english": "Fleamaster Mooshka",
+        "french": "Fleamaster Mooshka"
+      },
+      "character_art": "@FleamasterMooshkaCharacterArt",
       "size": 2,
       "health": 16,
-      "attack": 8,
+      "attack_damage": 8,
       "subtypes": ["@Flea"],
       "triggers": [
         {

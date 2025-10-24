@@ -7,13 +7,15 @@
                 "english": "Nail Strike"
             },
             "descriptions": {
-                "english": "Gain 1 Silk. Deal Damage equal to Silk. [effect1.power]"
+                "english": "Gain 1 Silk. Deal [effect1.power] Damage. (Base Damage is equal to Silk.)"
             },
             "cost": 1,
             "card_type": "spell",
             "rarity": "starter",
             "class": "@Silksong",
             "card_art": "@NailStrikeCardArt",
+            "targetless": false,
+            "targets_room": true,
             "pools": [
                 "MegaPool"
             ],
@@ -47,16 +49,14 @@
         {
             "id": "NailStrikeGainSilkEffect",
             "name": "@CardEffectAddSilk",
-            "target_mode": "self",
             "param_int": 1
         },
         {
             "id": "NailStrikeDamageEffect",
             "name": "CardEffectDamage",
-            "target_mode": "room",
-            "target_team": "heroes",
-            "param_int": 0,
-            "param_silk_scaling": true
+            "target_mode": "drop_target_character",
+            "target_team": "both",
+            "param_int": 0
         }
     ],
     "sprites": [

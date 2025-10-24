@@ -15,7 +15,7 @@
       "class": "@Silksong",
       "unlock_level": 10,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -33,9 +33,14 @@
   "characters": [
     {
       "id": "Nuu",
+      "names": {
+        "english": "Nuu",
+        "french": "Nuu"
+      },
+      "character_art": "@NuuCharacterArt",
       "size": 2,
       "health": 2,
-      "attack": 2,
+      "attack_damage": 2,
       "subtypes": [
         "@Bug"
       ],

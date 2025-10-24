@@ -14,7 +14,8 @@
       "card_art": "@LumbleTheLuckyCardArt",
       "card_type": "monster",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -27,6 +28,10 @@
   "characters": [
     {
       "id": "LumbleTheLucky",
+      "names": {
+        "english": "Lumble the Lucky",
+        "french": "Lumble the Lucky"
+      },
       "attack_damage": 10,
       "health": 25,
       "size": 2,

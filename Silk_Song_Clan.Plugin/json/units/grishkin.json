@@ -15,7 +15,7 @@
       "class": "@Silksong",
       "unlock_level": 2,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -33,9 +33,14 @@
   "characters": [
     {
       "id": "Grishkin",
+      "names": {
+        "english": "Grishkin",
+        "french": "Grishkin"
+      },
+      "character_art": "@GrishkinCharacterArt",
       "size": 1,
       "health": 15,
-      "attack": 20,
+      "attack_damage": 20,
       "subtypes": ["@Flea"],
       "triggers": [
         {

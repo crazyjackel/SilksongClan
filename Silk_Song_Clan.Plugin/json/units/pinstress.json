@@ -14,7 +14,7 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -32,9 +32,14 @@
   "characters": [
     {
       "id": "Pinstress",
+      "names": {
+        "english": "Pinstress",
+        "french": "Pinstress"
+      },
+      "character_art": "@PinstressCharacterArt",
       "size": 3,
       "health": 50,
-      "attack": 30,
+      "attack_damage": 30,
       "subtypes": [
         "@Pinstress"
       ],
@@ -50,7 +55,7 @@
       "id": "PinstressSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "<b>Combo Pinstress</b>: <b>Strike</b>: Gain Conduit 1"
+        "english": "<b>Combo Pinstress</b>, <b>Strike</b>: Gain [conduit] 1"
       },
       "effects": [
         {

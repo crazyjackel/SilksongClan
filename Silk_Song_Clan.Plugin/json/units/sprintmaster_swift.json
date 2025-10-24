@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 8,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -33,9 +34,14 @@
   "characters": [
     {
       "id": "SprintmasterSwift",
+      "names": {
+        "english": "Sprintmaster Swift",
+        "french": "Sprintmaster Swift"
+      },
+      "character_art": "@SprintmasterSwiftCharacterArt",
       "size": 2,
       "health": 15,
-      "attack": 40,
+      "attack_damage": 40,
       "subtypes": [
         "@Bug"
       ],

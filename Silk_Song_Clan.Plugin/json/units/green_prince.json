@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 6,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -33,9 +34,14 @@
   "characters": [
     {
       "id": "GreenPrince",
+      "names": {
+        "english": "Green Prince",
+        "french": "Green Prince"
+      },
+      "character_art": "@GreenPrinceCharacterArt",
       "size": 3,
       "health": 40,
-      "attack": 60,
+      "attack_damage": 60,
       "subtypes": ["@Bug"],
       "starting_status_effects": [
         {

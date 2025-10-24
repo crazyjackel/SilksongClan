@@ -14,7 +14,7 @@
       "class": "@Silksong",
       "unlock_level": 4,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -32,9 +32,14 @@
   "characters": [
     {
       "id": "RelicSeekerScrounge",
+      "names": {
+        "english": "Relic Seeker Scrounge",
+        "french": "Relic Seeker Scrounge"
+      },
+      "character_art": "@RelicSeekerScroungeCharacterArt",
       "size": 2,
       "health": 16,
-      "attack": 24,
+      "attack_damage": 24,
       "subtypes": [
         "@Bug"
       ],

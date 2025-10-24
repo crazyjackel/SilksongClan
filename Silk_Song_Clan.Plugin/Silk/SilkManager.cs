@@ -120,6 +120,7 @@ namespace Silk_Song_Clan.Plugin
                 var silkSaveDataJson = permanentlyDisabledAbilities.FirstOrDefault(s => s.StartsWith(SilkSaveDataKeyMagic));
                 if (silkSaveDataJson != null)
                 {
+                    silkSaveDataJson = silkSaveDataJson.Replace(SilkSaveDataKeyMagic, "");
                     var silkSaveData = JsonSerializer.Deserialize<SilkSaveData>(silkSaveDataJson);
                     return silkSaveData;
                 }

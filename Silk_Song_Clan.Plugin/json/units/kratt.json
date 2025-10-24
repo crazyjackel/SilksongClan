@@ -15,7 +15,7 @@
       "class": "@Silksong",
       "unlock_level": 7,
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -39,7 +39,8 @@
       },
       "initial_cooldown": 1,
       "cooldown": 1,
-      "targets_room": true,
+      "is_an_ability": true,
+      "targetless": false,
       "effects": [
         {
           "id": "@KrattSacrificeEffect"
@@ -53,9 +54,14 @@
   "characters": [
     {
       "id": "Kratt",
+      "names": {
+        "english": "Kratt",
+        "french": "Kratt"
+      },
+      "character_art": "@KrattCharacterArt",
       "size": 1,
       "health": 8,
-      "attack": 10,
+      "attack_damage": 10,
       "subtypes": [
         "@Flea"
       ],

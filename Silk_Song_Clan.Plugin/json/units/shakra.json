@@ -14,7 +14,7 @@
       "rarity": "common",
       "class": "@Silksong",
       "pools": [
-        "UnitsAllBanner"
+        "MegaPool"
       ],
       "targets_room": true,
       "effects": [
@@ -32,9 +32,14 @@
   "characters": [
     {
       "id": "Shakra",
+      "names": {
+        "english": "Shakra",
+        "french": "Shakra"
+      },
+      "character_art": "@ShakraCharacterArt",
       "size": 2,
       "health": 30,
-      "attack": 30,
+      "attack_damage": 30,
       "subtypes": [
         "@Bug"
       ],
@@ -55,9 +60,9 @@
     {
       "id": "ShakraStrikeTrigger",
       "descriptions": {
-        "english": "Apply [melee weakness] [effect0.status0.power]."
+        "english": "Apply [melee_weakness] [effect0.status0.power]."
       },
-      "trigger": "on_hit",
+      "trigger": "on_attacking",
       "effects": [
         {
           "id": "@ShakraApplyWeaknessEffect"

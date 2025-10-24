@@ -32,9 +32,14 @@
   "characters": [
     {
       "id": "Seamstress",
+      "names": {
+        "english": "Seamstress",
+        "french": "Seamstress"
+      },
+      "character_art": "@SeamstressCharacterArt",
       "size": 3,
       "health": 30,
-      "attack": 30,
+      "attack_damage": 30,
       "subtypes": [
         "@Pinstress"
       ],

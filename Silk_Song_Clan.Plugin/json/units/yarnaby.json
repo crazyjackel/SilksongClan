@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 9,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -33,9 +34,14 @@
   "characters": [
     {
       "id": "Yarnaby",
+      "names": {
+        "english": "Yarnaby",
+        "french": "Yarnaby"
+      },
+      "character_art": "@YarnabyCharacterArt",
       "size": 1,
       "health": 8,
-      "attack": 8,
+      "attack_damage": 8,
       "subtypes": [
         "@Bug"
       ],
