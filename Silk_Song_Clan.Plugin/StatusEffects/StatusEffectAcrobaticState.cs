@@ -69,6 +69,10 @@ namespace Silk_Song_Clan.Plugin
 
         protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
         {
+            Plugin.Logger.LogInfo("AcrobaticState: Triggered: " + inputTriggerParams.triggerType);
+            Plugin.Logger.LogInfo("AcrobaticState: Damage: " + inputTriggerParams.damage + " Attacked: " + inputTriggerParams.attacked);
+            Plugin.Logger.LogInfo("AcrobaticState: Associated Character: " + inputTriggerParams.associatedCharacter);
+            Plugin.Logger.LogInfo("AcrobaticState: Attacker: " + inputTriggerParams.attacker);
             var character = inputTriggerParams.associatedCharacter;
             if (character == null)
             {
@@ -83,6 +87,7 @@ namespace Silk_Song_Clan.Plugin
             character.RemoveStatusEffect(statusId, statusEffectStacks);
 
             // If triggered from taking damage, don't apply any buffs
+            Plugin.Logger.LogInfo("AcrobaticState: Damage: " + inputTriggerParams.damage + " Attacked: " + inputTriggerParams.attacked);
             if (inputTriggerParams.damage > 0 || inputTriggerParams.attacked != null)
             {
                 yield break;
@@ -91,11 +96,13 @@ namespace Silk_Song_Clan.Plugin
             switch (UpgradeLifetime)
             {
                 case UnitUpgradeLifetime.Permanent:
+                    Plugin.Logger.LogInfo("AcrobaticState: Permanent");
                     yield return ApplyPermanentEffect(character, statusEffectStacks);
                     break;
 
                 case UnitUpgradeLifetime.TemporaryUntilEndOfBattle:
                 case UnitUpgradeLifetime.TemporaryUntilUnitDeath:
+                    Plugin.Logger.LogInfo("AcrobaticState: Temporary");
                     yield return ApplyTemporaryEffect(character, statusEffectStacks);
                     break;
             }
