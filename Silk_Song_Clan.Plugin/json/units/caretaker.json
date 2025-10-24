@@ -35,6 +35,7 @@
       "id": "Caretaker",
       "names": {
         "english": "Caretaker",
+        "chinese": "看护者",
         "french": "Caretaker"
       },
       "character_art": "@CaretakerCharacterArt",
