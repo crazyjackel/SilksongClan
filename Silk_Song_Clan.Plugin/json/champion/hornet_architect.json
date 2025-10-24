@@ -4,7 +4,8 @@
         {
             "id": "HornetArchitect",
             "titles": {
-                "english": "Architect"
+                "english": "Architect",
+                "chinese": "建筑师纹章"
             },
             "descriptions": {
                 "english": "Can Equip an additional two equipment."

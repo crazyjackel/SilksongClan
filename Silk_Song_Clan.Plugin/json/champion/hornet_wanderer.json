@@ -4,7 +4,8 @@
         {
             "id": "HornetWanderer",
             "titles": {
-                "english": "Wanderer"
+                "english": "Wanderer",
+                "chinese": "漫游者纹章"
             },
             "descriptions": {
                 "english": "[multistrike] [status0.power]"

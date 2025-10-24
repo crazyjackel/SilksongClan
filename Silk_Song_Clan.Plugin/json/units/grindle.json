@@ -5,6 +5,7 @@
       "id": "SpawnGrindle",
       "names": {
         "english": "Grindle",
+        "chinese": "格林德尔",
         "french": "Grindle"
       },
       "card_art": "@GrindleCardArt",
@@ -33,6 +34,7 @@
       "id": "Grindle",
       "names": {
         "english": "Grindle",
+        "chinese": "格林德尔",
         "french": "Grindle"
       },
       "character_art": "@GrindleCharacterArt",

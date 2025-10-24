@@ -4,7 +4,8 @@
         {
             "id": "HornetBeast",
             "titles": {
-                "english": "Beast"
+                "english": "Beast",
+                "chinese": "野兽纹章"
             },
             "bonus_damage": 0,
             "bonus_hp": 2,

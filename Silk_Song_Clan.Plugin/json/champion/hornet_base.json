@@ -4,7 +4,8 @@
         {
             "id": "SpawnHornet",
             "names": {
-                "english": "Hornet"
+                "english": "Hornet",
+                "chinese": "大黄蜂"
             },
             "card_art": "@Hornet",
             "cost": 0,
@@ -28,7 +29,8 @@
         {
             "id": "Hornet",
             "names": {
-                "english": "Hornet"
+                "english": "Hornet",
+                "chinese": "大黄蜂"
             },
             "character_art": "@HornetCharacterArt",
             "chatter": "@CTR_Hornet",

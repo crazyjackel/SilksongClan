@@ -4,7 +4,8 @@
         {
             "id": "SpawnBrewFlea",
             "names": {
-                "english": "Brew Flea"
+                "english": "Brew Flea",
+                "chinese": "酿蚤"
             },
             "card_art": "@BrewFleaCardArt",
             "cost": 1,

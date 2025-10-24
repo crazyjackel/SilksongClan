@@ -8,10 +8,12 @@
             "minimap_icon": "@ClanIconSmall",
             "prefab": "@SilksongBannerMapIcon",
             "titles": {
-                "english": "Silksong Banner"
+                "english": "Silksong Banner",
+                "chinese": "丝之歌战旗"
             },
             "descriptions": {
-                "english": "Hire a Silksong Unit"
+                "english": "Hire a Silksong Unit",
+                "chinese": "获得一个丝之歌单位。"
             },
             "pools": [
                 "RandomChosenMainClassUnit",

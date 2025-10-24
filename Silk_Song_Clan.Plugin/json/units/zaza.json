@@ -5,6 +5,7 @@
       "id": "SpawnZaza",
       "names": {
         "english": "Zaza",
+        "chinese": "扎扎",
         "french": "Zaza"
       },
       "card_art": "@ZazaCardArt",
@@ -52,6 +53,7 @@
       "id": "Zaza",
       "names": {
         "english": "Zaza",
+        "chinese": "扎扎",
         "french": "Zaza"
       },
       "character_art": "@ZazaCharacterArt",
