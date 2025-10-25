@@ -1,0 +1,83 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Clawline",
+      "names": {
+        "english": "Clawline"
+      },
+      "descriptions": {
+        "english": "Deal damage to the front unit equal to 2x [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. "
+      },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "card_art": "@ClawlineCardArt",
+      "targetless": false,
+      "targets_room": true,
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@ClawlineDamageEffect"
+        },
+        {
+          "id": "@ClawlineGainSilkEffect"
+        }
+      ],
+      "traits": [
+        "@ClawlineScaleSilk"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A focused strike that channels silk energy into a devastating claw attack."
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "ClawlineScaleSilk",
+      "name": "CardTraitScalingAddDamage",
+      "param_tracked_value": "@Silk",
+      "param_int": 1,
+      "param_float": 2.00
+    }
+  ],
+  "effects": [
+    {
+      "id": "ClawlineGainSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "param_int": 1,
+      "additional_tooltips": [
+        "@SilkTooltip"
+      ]
+    },
+    {
+      "id": "ClawlineDamageEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "target_team": "heroes",
+      "param_int": 0
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ClawlineCardArt",
+      "path": "textures/ClawlineCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ClawlineCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ClawlineCardArt"
+        }
+      }
+    }
+  ]
+}
