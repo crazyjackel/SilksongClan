@@ -78,9 +78,12 @@
       "id": "YarnabySpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "<b>Combo Crull and Benjin</b>: <b>Strike</b>: Front Unit gets Lifesteal 1."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Crull and Benjin: [strike]: Front Unit gets [lifesteal] [effect1.upgrade0.status0.power]."
       },
       "effects": [
+        {
+          "id": "@YarnabySpawnEffectCombo"
+        },
         {
           "id": "@YarnabySpawnEffect"
         }
@@ -125,12 +128,22 @@
       ]
     },
     {
+      "id": "YarnabySpawnEffectCombo",
+      "name": "@CardEffectTestLastCardName",
+      "target_mode": "self",
+      "param_str": "@SpawnCrullAndBenjin",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "YarnabySpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_upgrade": "@YarnabyComboUpgrade",
-      "param_str": "@SpawnCrullAndBenjin"
+      "param_upgrade": "@YarnabyComboUpgrade"
     },
     {
       "id": "YarnabyStrikeEffect",

@@ -7,7 +7,7 @@
                 "english": "Nail Strike"
             },
             "descriptions": {
-                "english": "Gain [effect0.power] [Silk_Song_Clan.Plugin_Silk]. Deal damage equal to [Silk_Song_Clan.Plugin_Silk]. "
+                "english": "Deal damage equal to [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. "
             },
             "cost": 1,
             "card_type": "spell",
@@ -21,10 +21,10 @@
             ],
             "effects": [
                 {
-                    "id": "@NailStrikeGainSilkEffect"
+                    "id": "@NailStrikeDamageEffect"
                 },
                 {
-                    "id": "@NailStrikeDamageEffect"
+                    "id": "@NailStrikeGainSilkEffect"
                 }
             ],
             "lore_tooltips": [

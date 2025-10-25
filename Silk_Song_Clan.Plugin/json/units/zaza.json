@@ -74,9 +74,12 @@
       "id": "ZazaSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "<b>Combo Garamond</b>: <b>Ability (Humble Steed)</b>: Add a random Equipment to Hand."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Garamond: [ability]: Add a random Equipment to Hand."
       },
       "effects": [
+        {
+          "id": "@ZazaSpawnEffectCombo"
+        },
         {
           "id": "@ZazaSpawnEffect"
         }
@@ -97,12 +100,22 @@
       "param_character": "@Zaza"
     },
     {
+      "id": "ZazaSpawnEffectCombo",
+      "name": "@CardEffectTestLastCardName",
+      "target_mode": "self",
+      "param_str": "@SpawnGaramond",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "ZazaSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_upgrade": "@ZazaComboUpgrade",
-      "param_str": "@SpawnGaramond"
+      "param_upgrade": "@ZazaComboUpgrade"
     },
     {
       "id": "ZazaAddEquipmentEffect",

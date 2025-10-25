@@ -2,17 +2,20 @@
     "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
     "replacement_texts": [
         {
-            "key": "Bind",
+            "key": "Combo",
             "texts": {
-                "english": "<b>Bind</b>"
+                "english": "<b>Combo</b>"
             }
         }
     ],
     "additional_tooltips": [
         {
-            "id": "BindBindEffectTooltip",
+            "id": "ComboTooltip",
+            "titles": {
+                "english": "Combo"
+            },
             "descriptions": {
-                "english": "Trigger the [Silk_Song_Clan.Plugin_Imbue] and [Silk_Song_Clan.Plugin_Protection] status effects."
+                "english": "Gain additional effects if the previous card played was a specific type."
             }
         }
     ]

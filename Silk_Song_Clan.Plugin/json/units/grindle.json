@@ -51,7 +51,7 @@
     {
       "id": "GrindleStrikeTrigger",
       "descriptions": {
-        "english": "Gain [effect0.power] [gold]."
+        "english": "Gain [effect0.power] [coin]."
       },
       "trigger": "on_attacking",
       "effects": [

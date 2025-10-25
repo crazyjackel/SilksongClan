@@ -76,10 +76,13 @@
     {
       "id": "GaramondSpawnTrigger",
       "descriptions": {
-        "english": "<b>Combo Zaza</b>: Gain [effect0.upgrade.bonusdamage][attack] and [effect0.upgrade.bonushp][health]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain [effect1.upgrade.bonusdamage][attack] and [effect1.upgrade.bonushp][health]."
       },
       "trigger": "on_spawn",
       "effects": [
+        {
+          "id": "@GaramondSpawnEffectCombo"
+        },
         {
           "id": "@GaramondSpawnEffect"
         }
@@ -100,12 +103,22 @@
       "param_character": "@Garamond"
     },
     {
+      "id": "GaramondSpawnEffectCombo",
+      "name": "@CardEffectTestLastCardName",
+      "target_mode": "self",
+      "param_str": "@SpawnZaza",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "GaramondSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_upgrade": "@GaramondComboUpgrade",
-      "param_str": "@SpawnZaza"
+      "param_upgrade": "@GaramondComboUpgrade"
     },
     {
       "id": "GaramondLanceEffect",
