@@ -9,7 +9,7 @@ namespace Silk_Song_Clan.Plugin
     [HarmonyPatch(typeof(CardStatistics), "GetStatValue")]
     public static class CardStatisticsGetStatValuePatch
     {
-        static void Postfix(CardStatistics __instance,
+        static void Postfix(
             CardStatistics.StatValueData statValueData,
             ref int __result)
         {

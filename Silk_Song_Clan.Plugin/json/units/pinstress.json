@@ -40,7 +40,8 @@
       "health": 50,
       "attack_damage": 30,
       "subtypes": [
-        "@Pinstress"
+        "@Pinstress",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {

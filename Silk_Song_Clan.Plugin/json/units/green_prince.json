@@ -41,7 +41,7 @@
       "size": 3,
       "health": 40,
       "attack_damage": 60,
-      "subtypes": ["@Bug"],
+      "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "starting_status_effects": [
         {
           "status": "@Warrior",

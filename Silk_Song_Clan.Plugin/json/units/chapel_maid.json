@@ -39,7 +39,7 @@
       "size": 2,
       "health": 24,
       "attack_damage": 0,
-      "subtypes": ["@Snail"],
+      "subtypes": ["@Snail", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@ChapelMaidSpawnTrigger"

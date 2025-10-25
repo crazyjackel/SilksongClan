@@ -41,7 +41,8 @@
       "health": 20,
       "attack_damage": 15,
       "subtypes": [
-        "@Flea"
+        "@Flea",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {

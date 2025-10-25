@@ -11,7 +11,7 @@
                 "english": "Permanent Imbue {0}"
             },
             "card_tooltips": {
-                "english": "At the start of each turn, permanently gain extra attack equal to your current stacks of [Silk_Song_Clan.Plugin_PermanentImbue]. All stacks are lost if you take damage or at the start of your turn."
+                "english": "At the start of each turn, permanently gain extra attack equal to your current stacks of [Silk_Song_Clan.Plugin_PermanentImbue]. All stacks are lost if the unit takes damage or at the start of your turn."
             },
             "character_tooltips": {
                 "english": "At the start of the turn, this unit gains +[codeint0] attack permanently. This effect is lost if the unit takes damage."

@@ -42,7 +42,8 @@
       "health": 15,
       "attack_damage": 40,
       "subtypes": [
-        "@Bug"
+        "@Bug",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {

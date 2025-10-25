@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "replacement_texts": [
+        {
+            "key": "Bind",
+            "texts": {
+                "english": "<b>Bind</b>"
+            }
+        }
+    ],
+    "additional_tooltips": [
+        {
+        "id": "BindBindEffectTooltip",
+        "english": "Trigger the [Silk_Song_Clan.Plugin_Imbue] and [Silk_Song_Clan.Plugin_Protection] status effects."
+        }
+    ]
+}

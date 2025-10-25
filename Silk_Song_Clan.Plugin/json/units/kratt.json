@@ -62,7 +62,8 @@
       "health": 8,
       "attack_damage": 10,
       "subtypes": [
-        "@Flea"
+        "@Flea",
+        "SubtypesData_BannerUnit"
       ],
       "ability": "@KrattAbility"
     }

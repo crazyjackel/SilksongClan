@@ -35,7 +35,8 @@
       "health": 25,
       "size": 2,
       "subtypes": [
-        "@Bug"
+        "@Bug",
+        "SubtypesData_BannerUnit"
       ],
       "character_art": "@LumbleTheLuckyCharacterArt",
       "triggers": [

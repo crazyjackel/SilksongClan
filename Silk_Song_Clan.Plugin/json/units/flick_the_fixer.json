@@ -61,7 +61,8 @@
       "health": 20,
       "attack_damage": 5,
       "subtypes": [
-        "@Bug"
+        "@Bug",
+        "SubtypesData_BannerUnit"
       ],
       "ability": "@FlickTheFixerAbility"
     }

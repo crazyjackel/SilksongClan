@@ -127,7 +127,11 @@ namespace Silk_Song_Clan.Plugin
                         "json/status_effects/permanent_protection.json",
 
                         //Tracked Values
-                        "json/tracked_values/silk.json"
+                        "json/tracked_values/silk.json",
+
+                        //Text
+                        "json/text/silk.json",
+                        "json/text/bind.json"
                     );
                 }
             );

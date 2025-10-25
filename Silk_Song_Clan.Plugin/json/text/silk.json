@@ -1,0 +1,30 @@
+{
+    
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "sprites": [
+        {
+            "id": "Silk",
+            "path": "textures/SilkIcon.png"
+        }
+    ],
+    "atlas_icons": [
+        {
+            "id": "Silk",
+            "path": "textures/SilkIcon.png"
+        }
+    ],
+    "replacement_texts": [
+        {
+            "key": "Silk",
+            "texts": {
+                "english": "<sprite name=\"Silk_Song_Clan.Plugin-Sprite-Silk\">"
+            }
+        }
+    ],
+    "additional_tooltips": [
+        {
+            "id": "SilkTooltip",
+            "english": "[Silk_Song_Clan.Plugin_Silk] is a resource that can be used to cast spells and gain benefits."
+        }
+    ]
+}

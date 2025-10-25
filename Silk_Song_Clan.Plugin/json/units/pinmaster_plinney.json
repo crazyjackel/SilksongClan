@@ -61,7 +61,8 @@
       "health": 12,
       "attack_damage": 12,
       "subtypes": [
-        "@Bug"
+        "@Bug",
+        "SubtypesData_BannerUnit"
       ],
       "ability": "@PinmasterAbilityTrigger"
     }

@@ -40,7 +40,7 @@
       "size": 2,
       "health": 16,
       "attack_damage": 8,
-      "subtypes": ["@Flea"],
+      "subtypes": ["@Flea", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@FleamasterResolveTrigger"

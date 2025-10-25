@@ -40,7 +40,7 @@
       "size": 1,
       "health": 8,
       "attack_damage": 8,
-      "subtypes": ["@Bug"],
+      "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@CrullHungerTrigger"

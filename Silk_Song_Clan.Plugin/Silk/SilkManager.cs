@@ -7,6 +7,7 @@ using System.Linq;
 using TrainworksReloaded.Core.Enum;
 using TrainworksReloaded.Core;
 using System.Collections;
+using UnityEngine;
 
 namespace Silk_Song_Clan.Plugin
 {
@@ -17,9 +18,6 @@ namespace Silk_Song_Clan.Plugin
         private SaveManager? saveManager = null;
         private RelicManager? relicManager = null;
         private CardManager? cardManager = null;
-        private CombatManager? combatManager = null;
-        private MonsterManager? monsterManager = null;
-        private HeroManager? heroManager = null;
         public SilkManager()
         {
         }
@@ -72,41 +70,15 @@ namespace Silk_Song_Clan.Plugin
         }
 
 
-        public void AddSilk(int amount)
+        public void RewardSilk(int amount)
         {
-            Plugin.Logger.LogInfo("Adding Silk: " + amount);
-            var silkSaveData = GetSilkSaveData();
-            if (silkSaveData == null)
+            Plugin.Logger.LogInfo("Rewarding Silk: " + amount);
+            var silkSaveData = GetSilkSaveData() ?? new SilkSaveData
             {
-                silkSaveData = new SilkSaveData
-                {
-                    Silk = 0
-                };
-            }
-            silkSaveData.Silk += amount;
-            if (silkSaveData.Silk > GetMaxSilk())
-            {
-                silkSaveData.Silk = GetMaxSilk();
-            }
-            SaveSilkSaveData(silkSaveData);
-        }
-
-        public void RemoveSilk(int amount)
-        {
-            Plugin.Logger.LogInfo("Removing Silk: " + amount);
-            var silkSaveData = GetSilkSaveData();
-            if (silkSaveData == null)
-            {
-                silkSaveData = new SilkSaveData
-                {
-                    Silk = 0
-                };
-            }
-            silkSaveData.Silk -= amount;
-            if (silkSaveData.Silk < 0)
-            {
-                silkSaveData.Silk = 0;
-            }
+                Silk = 0
+            };
+            var newSilk = Mathf.Clamp(silkSaveData.Silk + amount, 0, GetMaxSilk());
+            silkSaveData.Silk = newSilk;
             SaveSilkSaveData(silkSaveData);
         }
 
@@ -152,71 +124,12 @@ namespace Silk_Song_Clan.Plugin
             {
                 this.relicManager = relicManager;
             }
-            if (provider is CombatManager combatManager)
-            {
-                this.combatManager = combatManager;
-            }
-            if (provider is MonsterManager monsterManager)
-            {
-                this.monsterManager = monsterManager;
-            }
-            if (provider is HeroManager heroManager)
-            {
-                this.heroManager = heroManager;
-            }
             if (provider is CardManager cardManager)
             {
                 this.cardManager = cardManager;
-                this.cardManager.OnCardPlayedCallback += OnCardPlayed;
             }
         }
 
-        private void OnCardPlayed(CardState cardState, int roomIndex, CharacterState selfTarget, SpawnPoint dropLocation, bool fromPlayedCard, CharacterState characterThatActivatedAbility, CombatManager.ApplyPreEffectsVfxAction onPreEffectsFiredVfx, CombatManager.ApplyEffectsAction onEffectsFired)
-        {
-            var silkCost = GetSilkCost(cardState);
-            if (silkCost != null)
-            {
-                RemoveSilk(silkCost.Value);
-                HandleSilksongTrigger();
-            }
-        }
-
-        public IEnumerator HandleSilksongTrigger()
-        {
-            Plugin.Logger.LogInfo("Handling Silksong Trigger");
-            if (this.heroManager != null)
-            {
-                HandleSilksongTrigger(this.heroManager);
-            }
-            if (this.monsterManager != null)
-            {
-                HandleSilksongTrigger(this.monsterManager);
-            }
-            yield return this.combatManager?.RunTriggerQueue();
-        }
-
-        public void HandleSilksongTrigger(ICharacterManager characterManager)
-        {
-            for (int i = 0; i < characterManager.GetNumCharacters(); i++)
-            {
-                var charState = characterManager.GetCharacter(i);
-                if (charState == null)
-                {
-                    continue;
-                }
-                if (!charState.IsDestroyed && charState.IsAlive)
-                {
-                    QueueCustomTrigger(charState, CharacterTriggers.Silksong);
-                }
-            }
-        }
-
-        private void QueueCustomTrigger(CharacterState character, CharacterTriggerData.Trigger trigger)
-        {
-            this.combatManager?.QueueTrigger(character, trigger, dyingCharacter: null, canAttackOrHeal: true,
-                                       canFireTriggers: true, fireTriggersData: null, triggerCount: 1,
-                                       exclusiveTrigger: null);
-        }
         public void ProviderRemoved(IProvider provider)
         {
             if (provider is SaveManager _)
@@ -227,21 +140,8 @@ namespace Silk_Song_Clan.Plugin
             {
                 this.relicManager = null;
             }
-            if (provider is CombatManager _)
-            {
-                this.combatManager = null;
-            }
-            if (provider is MonsterManager _)
-            {
-                this.monsterManager = null;
-            }
-            if (provider is HeroManager _)
-            {
-                this.heroManager = null;
-            }
             if (provider is CardManager cardManager && this.cardManager != null)
             {
-                this.cardManager.OnCardPlayedCallback -= OnCardPlayed;
                 this.cardManager = null;
             }
         }

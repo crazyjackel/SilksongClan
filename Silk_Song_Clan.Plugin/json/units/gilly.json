@@ -41,7 +41,8 @@
       "health": 10,
       "attack_damage": 20,
       "subtypes": [
-        "@Bug"
+        "@Bug",
+        "SubtypesData_BannerUnit"
       ],
       "starting_status_effects": [
         {

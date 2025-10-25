@@ -39,7 +39,7 @@
       "size": 1,
       "health": 5,
       "attack_damage": 5,
-      "subtypes": ["@Bug"],
+      "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@GrindleStrikeTrigger"
@@ -51,7 +51,7 @@
     {
       "id": "GrindleStrikeTrigger",
       "descriptions": {
-        "english": "Gain 10 gold."
+        "english": "Gain [effect0.power] [gold]."
       },
       "trigger": "on_attacking",
       "effects": [

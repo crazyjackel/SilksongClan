@@ -10,9 +10,15 @@
                 "english": "Can Equip an additional two equipment."
             },
             "show_description_on_cards": true,
-            "bonus_damage": 12,
+            "bonus_damage": 4,
             "bonus_hp": 6,
-            "bonus_equipment": 2
+            "bonus_equipment": 2,
+            "status_effect_upgrades": [
+                {
+                    "status": "valor",
+                    "count": 2
+                }
+            ]
         }
     ]
 }

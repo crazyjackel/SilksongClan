@@ -41,7 +41,8 @@
       "health": 16,
       "attack_damage": 16,
       "subtypes": [
-        "@Snail"
+        "@Snail",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {
