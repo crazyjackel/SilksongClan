@@ -13,7 +13,6 @@ namespace Silk_Song_Clan.Plugin
             CardStatistics.StatValueData statValueData,
             ref int __result)
         {
-            Plugin.Logger.LogInfo("GetStatValue: " + statValueData.trackedValue);
             var trackedValueType = statValueData.trackedValue;
             if (trackedValueType == TrackedValues.Silk)
             {
@@ -23,7 +22,6 @@ namespace Silk_Song_Clan.Plugin
                     return;
                 }
                 __result = silkManager.GetCurrentSilk();
-                Plugin.Logger.LogInfo("Silk: " + __result);
             }
         }
     }

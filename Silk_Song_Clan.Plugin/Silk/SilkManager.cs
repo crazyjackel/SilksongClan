@@ -51,6 +51,7 @@ namespace Silk_Song_Clan.Plugin
 
         public int? GetSilkCost(CardState cardState)
         {
+            Plugin.Logger.LogDebug("Getting silk cost for card: " + cardState.GetAssetName());
             var silkDataRegister = GetSilkDataRegister();
             if (!silkDataRegister.TryLookupIdentifier(
                 cardState.GetCardDataID(), 
