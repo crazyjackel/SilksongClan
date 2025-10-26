@@ -19,19 +19,19 @@ namespace Silk_Song_Clan.Plugin
             var lastCard = cardsPlayedThisTurn.LastOrDefault();
             if (lastCard == null)
             {
-                Plugin.Logger.LogDebug("No last card played this turn");
+                Plugin.Logger.LogInfo("No last card played this turn");
                 return false;
             }
             var cardFilter = cardEffectState.GetParamCardFilter();
             if (cardFilter == null)
             {
-                Plugin.Logger.LogDebug("No card filter provided");
+                Plugin.Logger.LogInfo("No card filter provided");
                 return false;
             }
-            Plugin.Logger.LogDebug("Testing last card: " + lastCard.GetAssetName());
-            Plugin.Logger.LogDebug("Card filter: " + cardFilter.GetName());
+            Plugin.Logger.LogInfo("Testing last card: " + lastCard.GetAssetName());
+            Plugin.Logger.LogInfo("Card filter: " + cardFilter.GetName());
             var result = cardFilter.FilterCard<CardState>(lastCard, coreGameManagers.GetRelicManager());
-            Plugin.Logger.LogDebug("Result: " + result);
+            Plugin.Logger.LogInfo("Result: " + result);
             return result;
         }
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers, ISystemManagers sysManagers)

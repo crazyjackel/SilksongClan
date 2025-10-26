@@ -20,15 +20,15 @@ namespace Silk_Song_Clan.Plugin
             var lastCard = cardsPlayedThisTurn.LastOrDefault();
             if (lastCard == null)
             {
-                Plugin.Logger.LogDebug("No last card played this turn");
+                Plugin.Logger.LogInfo("No last card played this turn");
                 return false;
             }
             var cardName = cardEffectState.GetParamStr();
             var fullCardName = cardName.ToId(MyPluginInfo.PLUGIN_GUID, TemplateConstants.Card);
-            Plugin.Logger.LogDebug("Testing last card name: " + lastCard.GetAssetName());
-            Plugin.Logger.LogDebug("Card name: " + fullCardName);
+            Plugin.Logger.LogInfo("Testing last card name: " + lastCard.GetAssetName());
+            Plugin.Logger.LogInfo("Card name: " + fullCardName);
             var result = lastCard.GetID() == fullCardName;
-            Plugin.Logger.LogDebug("Result: " + result);
+            Plugin.Logger.LogInfo("Result: " + result);
             return result;
         }
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers, ISystemManagers sysManagers)
