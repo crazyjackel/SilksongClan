@@ -10,6 +10,7 @@
         "english": "Retreat. [Silk_Song_Clan.Plugin_Combo]: Advance"
       },
       "cost": 1,
+      "unlock_level": 2,
       "card_type": "spell",
       "rarity": "common",
       "class": "@Silksong",
@@ -22,10 +23,10 @@
           "id": "@ClingGripRetreatEffect"
         },
         {
-          "id": "@ClingGripAdvanceEffect"
+          "id": "@ClingGripComboEffect"
         },
         {
-          "id": "@ClingGripComboEffect"
+          "id": "@ClingGripAdvanceEffect"
         }
       ],
       "lore_tooltips": [
