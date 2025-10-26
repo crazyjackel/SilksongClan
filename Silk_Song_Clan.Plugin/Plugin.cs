@@ -69,6 +69,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/subtypes/snail.json",
                         "json/subtypes/bug.json",
                         "json/subtypes/pinstress.json",
+                        "json/subtypes/flea.json",
 
                         //Cardpools
                         "json/cardpool/flea_pool.json",

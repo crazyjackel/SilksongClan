@@ -7,7 +7,7 @@
         "english": "Bind"
       },
       "descriptions": {
-        "english": "Channel [effect0.power] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Bind]. Restore [effect2.power] health."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Bind]. Restore [effect2.power] health."
       },
       "cost": 0,
       "card_type": "spell",
