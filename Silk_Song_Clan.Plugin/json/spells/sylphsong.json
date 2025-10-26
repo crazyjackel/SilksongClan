@@ -10,6 +10,7 @@
         "english": "Set Silk to Max."
       },
       "cost": 2,
+      "unlock_level": 7,
       "card_art": "@SylphsongCardArt",
       "card_type": "spell",
       "rarity": "rare",

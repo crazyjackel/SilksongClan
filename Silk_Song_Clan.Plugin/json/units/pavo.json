@@ -62,7 +62,7 @@
     {
       "id": "PavoSilksongTrigger",
       "descriptions": {
-        "english": "Silksong: Gain Conduit 3"
+        "english": "Gain [conduit] [effect0.status0.power]."
       },
       "trigger": "@Silksong",
       "effects": [

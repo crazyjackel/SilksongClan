@@ -18,10 +18,17 @@
       "pools": [
         "MegaPool"
       ],
+      "targetless": true,
       "targets_room": true,
       "effects": [
         {
-          "id": "@ElegyOfTheDeepEffect"
+          "id": "@ElegyOfTheDeepDazeEffect"
+        },
+        {
+          "id": "@ElegyOfTheDeepPermanentProtectionEffect"
+        },
+        {
+          "id": "@ElegyOfTheDeepPermanentImbueEffect"
         }
       ],
       "lore_tooltips": [
@@ -33,7 +40,7 @@
   ],
   "effects": [
     {
-      "id": "ElegyOfTheDeepEffect",
+      "id": "ElegyOfTheDeepDazeEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "front_in_room",
       "target_team": "monsters",
@@ -41,11 +48,27 @@
         {
           "status": "dazed",
           "count": 1
-        },
+        }
+      ]
+    },
+    {
+      "id": "ElegyOfTheDeepPermanentProtectionEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
         {
           "status": "@PermanentProtection",
           "count": 10
-        },
+        }
+      ]
+    },
+    {
+      "id": "ElegyOfTheDeepPermanentImbueEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
         {
           "status": "@PermanentImbue",
           "count": 10
