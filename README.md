@@ -20,10 +20,16 @@ The Hollow Knight Silksong Clan is a clan based on the recent release of Hollow 
 
 Mechanically, the Clan focuses on a few core new mechanics that capture the essence of Hollow Knight's combat and exploration:
 
+## Core Design
+
+- "High Variance; High Reward"
+- "Secondary Resource Management"
+- "Acrobatic Combat"
+
 ## Core Mechanics
 
 ### Silk System
-Silk is a new resource that represents Hornet's silk-weaving abilities. Cards now have both energy and silk costs, creating a dual-resource economy.
+Silk is a new resource that represents Hornet's silk-weaving abilities. Cards can channel silk in exchange for great effects.
 
 **How to Gain Silk:**
 - **Warrior Trait**: Units with Warrior gain 1 silk when they strike an enemy
@@ -32,9 +38,7 @@ Silk is a new resource that represents Hornet's silk-weaving abilities. Cards no
 - **Base Capacity**: Start with 12 maximum silk
 
 **How to Spend Silk:**
-- **Card Costs**: Many powerful cards require silk in addition to energy
-- **Automatic Deduction**: Silk is automatically spent when playing cards with silk costs
-- **Affordability**: Cards are only playable if you have enough silk
+- **Card Costs**: Many powerful cards channel silk in addition to energy
 
 ### Silksong Trigger
 **Silksong** is a special trigger that activates whenever you play a card that costs silk. This creates powerful synergies between silk-spending cards and units with Silksong abilities.
@@ -49,19 +53,19 @@ Silk is a new resource that represents Hornet's silk-weaving abilities. Cards no
 
 **Permanent Protection**: A permanent buff that increases max health. Lost when the unit takes damage.
 
-**Bind**: Gives a unit additional attack and max health equal to their current Imbue and Protection values.
+**Bind**: Activates a Unit's current Imbue and Protection values.
 
 ### Combo System
 Certain cards gain additional abilities when played after specific card types:
 
-- **Combo [Subtype]**: If a card of the specified subtype was played as the previous card, this card gains additional effects
-- **Combo [Card Name]**: If the specific named card was played as the previous card, this card gains additional effects
+- **Combo with [Subtype]**: If a card of the specified subtype was played as the previous card, this card gains additional effects
+- **Combo with [Card Name]**: If the specific named card was played as the previous card, this card gains additional effects
 
 ### Subtypes
 - **Bug**: Insectoid creatures from Pharloom
-- **Snail**: Wise, spiritual beings that provide support through Silksong connections
-- **Flea**: Small, agile creatures that work together
-- **Pinstress**: Master weavers who channel magical energy through their work
+- **Snail**: Wise, spiritual beings that provide support through soul and silk.
+- **Flea**: Little critters that have a habit of getting lost. Join them together into a caravan.
+- **Pinstress**: Mysterious masters of Combats, guilded throughout pharloom
 
 ## Champion: Hornet
 
@@ -85,7 +89,7 @@ Hornet, the princess-protector of Hallownest, serves as the champion for the Sil
 - **Wanderer**: Multistrike for multiple attacks per turn
 
 **Beast Path**: Lifesteal combat
-- **Beast**: Gains lifesteal on strike
+- **Beast**: Gains lifesteal when expending silk
 
 **Architect Path**: Equipment mastery
 - **Architect**: Can equip two additional equipment pieces
@@ -140,22 +144,22 @@ Hornet, the princess-protector of Hallownest, serves as the champion for the Sil
 The Silksong Clan features a diverse array of spells that utilize silk energy and Hollow Knight's signature combat techniques:
 
 ### Starter Spells
-- **Nail Strike**: Gain 1 Silk. Deal Damage equal to Silk - A basic attack that channels silk energy into a devastating strike
+- **Nail Strike** (1 cost): Deal damage equal to Silk. Gain 1 Silk - A basic attack that channels silk energy into a devastating strike
 
 ### Common Spells
-- **Swift Step**: Give a Unit Protection 10 - A quick defensive maneuver that shields allies from harm
-- **Cling Grip**: Retreat. Combo: Advance - A defensive grip that can become an offensive advance when combined with other techniques
-- **Bind**: Bind. Heal to full health (requires 6 Silk) - A binding technique that restores health while restraining enemies
+- **Swift Step** (1 cost): Give a Unit Protection 10 - A quick defensive maneuver that shields allies from harm
+- **Cling Grip** (1 cost): Retreat. Combo: Advance - A defensive grip that can become an offensive advance when combined with other techniques
+- **Bind** (0 cost, 6 Silk): Channel 6 Silk. Bind. Restore 60 health - A binding technique that restores health.
 
 ### Uncommon Spells
-- **Needle Strike**: Gain 1 Silk. Deal Damage to all enemies equal to 2x Silk - A precise strike that pierces through all enemies with silk-enhanced power
-- **Clawline**: Gain 1 Silk. Deal Damage to front unit equal to 2x Silk - A focused strike that channels silk energy into a devastating claw attack
-- **Needolin**: Give the Front Enemy Unit Dazed 1 - A disorienting needle strike that confuses the enemy
+- **Needle Strike** (2 cost): Deal damage to all enemies equal to Silk. Gain 1 Silk - A precise strike that pierces through all enemies with silk-enhanced power
+- **Clawline** (1 cost): Deal damage to the front unit equal to 2x Silk. Gain 1 Silk - A focused strike that channels silk energy into a devastating claw attack
+- **Needolin** (2 cost): Give the Front Enemy Unit Dazed 1 - A disorienting needle strike that confuses the enemy
 
 ### Rare Spells
-- **Silk Soar**: Ascend. Combo: Bind - A graceful ascent that can bind enemies when combined with other techniques
-- **Sylphsong**: Set Silk to Max (Consume) - A powerful song that restores silk to its maximum capacity
-- **Elegy of the Deep**: Give front friendly unit Dazed 1, Permanent Protection 10, Permanent Imbue 10 - A haunting melody that empowers allies with ancient magic
+- **Silk Soar** (1 cost): Ascend. Combo: Bind - A graceful ascent that can bind enemies when combined with other techniques
+- **Sylphsong** (2 cost, Consume): Set Silk to Max - A powerful song that restores silk to its maximum capacity
+- **Elegy of the Deep** (3 cost): Give front friendly unit Dazed 1, Permanent Protection 10, Permanent Imbue 10 - A haunting melody that empowers allies with ancient magic
 
 
 ## Installation
