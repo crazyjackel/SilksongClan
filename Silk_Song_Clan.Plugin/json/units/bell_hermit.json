@@ -55,10 +55,13 @@
     {
       "id": "BellHermitSpawnTrigger",
       "descriptions": {
-        "english": "<b>Combo [Snail]</b>: <b>Silksong</b>: Friendly Units get [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain \"<b>Silksong</b>: Friendly Units get [Silk_Song_Clan.Plugin_PermanentImbue] [effect1.upgrade.charactertrigger0.effect0.status0.power]\"."
       },
       "trigger": "on_spawn",
       "effects": [
+        {
+          "id": "@BellHermitComboEffect"
+        },
         {
           "id": "@BellHermitSpawnEffect"
         }
@@ -101,11 +104,21 @@
       "param_character": "@BellHermit"
     },
     {
+      "id": "BellHermitComboEffect",
+      "name": "@CardEffectTestLastCard",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_card_filter": "@BellHermitComboSnailMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "BellHermitSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_card_filter": "@BellHermitComboSnailMask",
       "param_upgrade": "@BellHermitImbueUpgrade"
     },
     {

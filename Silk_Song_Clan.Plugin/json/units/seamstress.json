@@ -106,7 +106,7 @@
     },
     {
       "id": "SeamstressSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@SeamstressComboUpgrade"

@@ -114,7 +114,7 @@
     },
     {
       "id": "PinstressSpawnEffect",
-      "name": "CardEffectAddCardUpgradeToUnits",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@PinstressComboUpgrade"

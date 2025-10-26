@@ -118,7 +118,7 @@
     },
     {
       "id": "GrishkinSpawnEffect",
-      "name": "CardEffectAddCardUpgradeToUnits",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "param_upgrade": "@GrishkinComboUpgrade"
     },

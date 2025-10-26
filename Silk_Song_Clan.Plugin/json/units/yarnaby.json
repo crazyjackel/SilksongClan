@@ -140,7 +140,7 @@
     },
     {
       "id": "YarnabySpawnEffect",
-      "name": "CardEffectAddCardUpgradeToUnits",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@YarnabyComboUpgrade"
