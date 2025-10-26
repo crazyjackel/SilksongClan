@@ -119,6 +119,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/spells/nail_strike.json",
                         "json/spells/bind.json",
                         "json/spells/clawline.json",
+                        "json/spells/cling_grip.json",
 
                         //Status Effects
                         "json/status_effects/warrior.json",
