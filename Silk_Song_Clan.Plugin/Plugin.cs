@@ -135,7 +135,8 @@ namespace Silk_Song_Clan.Plugin
 
                         //Text
                         "json/text/silk.json",
-                        "json/text/bind.json"
+                        "json/text/bind.json",
+                        "json/text/combo.json"
                     );
                 }
             );
