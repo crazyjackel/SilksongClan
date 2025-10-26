@@ -62,6 +62,10 @@ namespace Silk_Song_Clan.Plugin
                         "json/champion/hornet_wanderer.json",
                         "json/champion/hornet_witch.json",
 
+                        //Relics
+                        "json/relics/architect_key.json",
+                        "json/relics/wormway_key.json",
+
                         //Triggers
                         "json/triggers/silksong.json",
 

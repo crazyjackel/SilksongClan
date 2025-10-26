@@ -1,0 +1,60 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "WormwayKey",
+            "type": "collectable",
+            "names": {
+                "english": "Simple Key"
+            },
+            "icon": "@WormwayKeyIcon",
+            "icon_small": "@WormwayKeyIcon",
+            "descriptions": {
+                "english": "Rare and Champion Units gain +10 [attack] and +10 [health]."
+            },
+            "lore_tooltips": [
+                {
+                    "english": "Rusted key of common design. Can be used to open a variety of locks."
+                }
+            ],
+            "relic_effects": [
+                "@SimpleKeyEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "rare"
+                    }
+                }
+            ]
+        }
+    ],
+    "upgrade_masks": [
+        {
+            "id": "SimpleKeyMask",
+            "required_rarities": ["rare", "champion"]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "SimpleKeyEffect",
+            "name": "RelicEffectAddTempUpgrade",
+            "param_upgrade": "@SimpleKeyUpgrade"
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "SimpleKeyUpgrade",
+            "bonus_damage": 10,
+            "bonus_health": 10,
+            "filters": ["@SimpleKeyMask"]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "WormwayKeyIcon",
+            "path": "textures/WormwayKeyIcon.png"
+        }
+    ]
+}

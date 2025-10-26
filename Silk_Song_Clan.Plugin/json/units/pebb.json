@@ -84,9 +84,8 @@
     },
     {
       "id": "PebbCreateRelicEffect",
-      "name": "@CardEffectAddCollectableRelicIfGoldSpent",
-      "param_str": "@WormwayKeyRelic",
-      "param_int": 500
+      "name": "@CardEffectAddRelic",
+      "param_str": "@WormwayKey"
     }
   ],
   "sprites": [
