@@ -8,6 +8,10 @@ namespace Silk_Song_Clan.Plugin
 {
     public class StatusEffectWarriorState : StatusEffectState
     {
+        public override int GetTriggerOrder()
+        {
+            return 4; //Activate Warrior after Trample Damage
+        }
         protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
         {
             var container = Railend.GetContainer();
