@@ -49,6 +49,9 @@
     {
       "id": "LumbleTheLuckyIncantTrigger",
       "trigger": "card_spell_played",
+      "descriptions": {
+        "english": "Gain [effect0.power] [coin]."
+      },
       "effects": [
         "@LumbleTheLuckyIncantEffect"
       ]
@@ -56,6 +59,9 @@
     {
       "id": "LumbleTheLuckyExtinguishTrigger",
       "trigger": "on_death",
+      "descriptions": {
+        "english": "Friendly Units gain [damage shield] [effect0.status0.power]."
+      },
       "effects": [
         "@LumbleTheLuckyExtinguishEffect"
       ]

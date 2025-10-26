@@ -77,14 +77,6 @@
       ]
     }
   ],
-  "upgrade_masks": [
-    {
-      "id": "VargaComboFleaMask",
-      "required_subtypes": [
-        "@Flea"
-      ]
-    }
-  ],
   "upgrades": [
     {
       "id": "VargaComboUpgrade",
@@ -104,11 +96,11 @@
     },
     {
       "id": "VargaComboEffect",
-      "name": "@CardEffectTestLastCard",
+      "name": "@CardEffectTestLastCardName",
+      "param_str": "@SpawnFleamasterMooshka",
       "target_mode": "self",
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
-      "param_card_filter": "@VargaComboFleaMask",
       "additional_tooltips": [
         "@ComboTooltip"
       ]

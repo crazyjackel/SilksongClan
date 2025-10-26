@@ -111,7 +111,7 @@
       "target_mode": "self",
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
-      "param_card_filter": "@GrishkinComboMask",
+      "param_card_filter": "@GrishkinUpgradeMask",
       "additional_tooltips": [
         "@ComboTooltip"
       ]
