@@ -1,11 +1,11 @@
-Name,1,Cost,Trait,Effect
-Nail Strike,Starter,1,,Gain 1 Silk. Deal Damage equal to Silk.
-Needle Strike,Uncommon,2,,Gain 1 Silk. Deal Damage to all enemies equal to 2x Silk.
-Clawline,Uncommon,1,,Gain 1 Silk. Deal Damage to the front unit equal to 2x Silk.
-Swift Step,Common,1,,Give a Unit Protection 10.
-Cling Grip,Common,1,,Retreat. Combo: Advance
-Needolin,Uncommon,2,,Give the Front Enemy Unit Dazed 1.
-Silk Soar,Rare,1,,Ascend. Combo: Bind
-Sylphsong,Rare,3,Consume,Set Silk to Max.
-Bind,Common,0,Silk 6.,Bind. Heal to full health.
-Elegy of the Deep,Rare,3,,"Give the front friendly unit Dazed 1, Permanent Protection 10, Permanent Imbue 10."
+Name,1,Cost,Trait,Unlock Level,Effect
+Nail Strike,Starter,1,,0,Gain 1 Silk. Deal Damage equal to Silk.
+Needle Strike,Uncommon,2,,1,Gain 1 Silk. Deal Damage to all enemies equal to 2x Silk.
+Clawline,Uncommon,1,,0,Gain 1 Silk. Deal Damage to the front unit equal to 2x Silk.
+Swift Step,Common,1,,0,Give a Unit Protection 10.
+Cling Grip,Common,1,,2,Retreat. Combo: Advance
+Needolin,Uncommon,2,,0,Give the Front Enemy Unit Dazed 1.
+Silk Soar,Rare,1,,6,Ascend. Combo: Bind
+Sylphsong,Rare,3,Consume,7,Set Silk to Max.
+Bind,Common,0,Silk 6.,0,Bind. Heal to full health.
+Elegy of the Deep,Rare,3,,2,"Give the front friendly unit Dazed 1, Permanent Protection 10, Permanent Imbue 10."

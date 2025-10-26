@@ -120,6 +120,8 @@ namespace Silk_Song_Clan.Plugin
                         "json/spells/bind.json",
                         "json/spells/clawline.json",
                         "json/spells/cling_grip.json",
+                        "json/spells/elegy_of_the_deep.json",
+                        "json/spells/needle_strike.json",
 
                         //Status Effects
                         "json/status_effects/warrior.json",
