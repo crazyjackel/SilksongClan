@@ -130,6 +130,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/spells/needolin.json",
                         "json/spells/silk_soar.json",
                         "json/spells/swift_step.json",
+                        "json/spells/sylphsong.json",
 
                         //Status Effects
                         "json/status_effects/warrior.json",
