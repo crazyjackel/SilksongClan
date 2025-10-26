@@ -33,7 +33,7 @@
             },
             "is_an_ability": true,
             "targetless": true,
-            "initial_cooldown": 2,
+            "initial_cooldown": 1,
             "cooldown": 2,
             "effects": [
                 {
@@ -46,7 +46,7 @@
         {
             "id": "HugeFleaPetUpgrade",
             "bonus_damage": 3,
-            "bonus_health": 3
+            "bonus_hp": 3
         }
     ],
     "characters": [

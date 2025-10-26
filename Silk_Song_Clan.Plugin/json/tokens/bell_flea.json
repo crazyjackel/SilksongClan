@@ -33,7 +33,7 @@
             },
             "is_an_ability": true,
             "targetless": true,
-            "initial_cooldown": 2,
+            "initial_cooldown": 1,
             "cooldown": 2,
             "effects": [
                 {
@@ -68,7 +68,7 @@
         {
             "id": "BellFleaPetUpgrade",
             "bonus_damage": 1,
-            "bonus_health": 1
+            "bonus_hp": 1
         }
     ],
     "effects": [
