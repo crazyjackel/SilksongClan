@@ -29,7 +29,7 @@
                 "english": "Pet"
             },
             "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushealth][health]"
             },
             "is_an_ability": true,
             "targetless": true,
@@ -45,15 +45,19 @@
     "characters": [
         {
             "id": "BellFlea",
+            "names": {
+                "english": "Bell Flea"
+            },
+            "character_art": "@BellFleaCharacterArt",
             "size": 1,
             "health": 5,
-            "attack": 5,
+            "attack_damage": 5,
             "subtypes": [
                 "@Flea"
             ],
-            "status_effects": [
+            "starting_status_effects": [
                 {
-                    "status": "damage_shield",
+                    "status": "damage shield",
                     "count": 2
                 }
             ],

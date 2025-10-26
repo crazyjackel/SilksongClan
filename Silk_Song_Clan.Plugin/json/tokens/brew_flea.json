@@ -45,15 +45,19 @@
     "characters": [
         {
             "id": "BrewFlea",
+            "names": {
+                "english": "Brew Flea"
+            },
+            "character_art": "@BrewFleaCharacterArt",
             "size": 1,
             "health": 5,
-            "attack": 5,
+            "attack_damage": 5,
             "subtypes": [
                 "@Flea"
             ],
-            "status_effects": [
+            "starting_status_effects": [
                 {
-                    "status": "quick",
+                    "status": "ambush",
                     "count": 1
                 }
             ],

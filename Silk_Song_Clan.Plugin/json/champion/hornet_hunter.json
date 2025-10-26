@@ -4,17 +4,17 @@
         {
             "id": "HornetHunter1Trait",
             "name": "@CardTraitScaleDamageFullSilk",
-            "param_float": 0.25
+            "param_float": 1.25
         },
         {
             "id": "HornetHunter2Trait",
             "name": "@CardTraitScaleDamageFullSilk",
-            "param_float": 0.50
+            "param_float": 1.50
         },
         {
             "id": "HornetHunter3Trait",
             "name": "@CardTraitScaleDamageFullSilk",
-            "param_float": 1.00
+            "param_float": 2.00
         }
     ],
     "upgrades": [

@@ -29,7 +29,7 @@
                 "english": "Pet"
             },
             "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushealth][health]"
             },
             "is_an_ability": true,
             "targetless": true,
@@ -52,9 +52,13 @@
     "characters": [
         {
             "id": "HugeFlea",
+            "names": {
+                "english": "Huge Flea"
+            },
+            "character_art": "@HugeFleaCharacterArt",
             "size": 2,
             "health": 15,
-            "attack": 15,
+            "attack_damage": 15,
             "subtypes": [
                 "@Flea"
             ],

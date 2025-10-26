@@ -196,4 +196,5 @@ Any issues or questions, contact us on the [Monster Train 2 Discord channel](htt
 ### Special Thanks
 * The Monster Train 2 modding community for their support
 * Team Cherry for creating the incredible Hollow Knight universe
+* The Hollow Knight Wiki for providing easy access to game assets for modding
 * All playtesters and feedback providers

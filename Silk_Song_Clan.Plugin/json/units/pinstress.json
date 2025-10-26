@@ -13,7 +13,8 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -37,8 +38,8 @@
       },
       "character_art": "@PinstressCharacterArt",
       "size": 3,
-      "health": 50,
-      "attack_damage": 30,
+      "health": 20,
+      "attack_damage": 40,
       "subtypes": [
         "@Pinstress",
         "SubtypesData_BannerUnit"
@@ -68,7 +69,7 @@
     },
     {
       "id": "PinstressStrikeTrigger",
-      "trigger": "on_hit",
+      "trigger": "on_attacking",
       "effects": [
         {
           "id": "@PinstressStrikeEffect"

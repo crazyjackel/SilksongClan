@@ -11,6 +11,7 @@
       },
       "cost": 1,
       "card_type": "spell",
+      "card_art": "@SwiftStepCardArt",
       "rarity": "common",
       "class": "@Silksong",
       "pools": [

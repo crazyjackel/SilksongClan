@@ -10,6 +10,7 @@
         "english": "Set Silk to Max."
       },
       "cost": 2,
+      "card_art": "@SylphsongCardArt",
       "card_type": "spell",
       "rarity": "rare",
       "class": "@Silksong",
@@ -17,7 +18,7 @@
         "MegaPool"
       ],
       "traits": [
-        "@Consume"
+        "@SylphsongConsumeTrait"
       ],
       "effects": [
         {
@@ -29,6 +30,12 @@
           "english": "A powerful song that restores silk to its maximum capacity."
         }
       ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "SylphsongConsumeTrait",
+      "name": "CardTraitExhaustState"
     }
   ],
   "effects": [

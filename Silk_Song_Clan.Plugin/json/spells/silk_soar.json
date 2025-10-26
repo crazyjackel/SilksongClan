@@ -11,6 +11,7 @@
       },
       "cost": 1,
       "unlock_level": 6,
+      "card_art": "@SilkSoarCardArt",
       "card_type": "spell",
       "rarity": "rare",
       "class": "@Silksong",

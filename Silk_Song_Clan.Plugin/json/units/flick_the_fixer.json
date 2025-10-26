@@ -13,7 +13,8 @@
       "rarity": "common",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -33,7 +34,7 @@
         "english": "Fix It"
       },
       "descriptions": {
-        "english": "Spend 10. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]."
+        "english": "Spend [effect0.powerabs] [coin]. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]."
       },
       "initial_cooldown": 0,
       "is_an_ability": true,

@@ -12,6 +12,7 @@
       "cost": 2,
       "card_type": "spell",
       "rarity": "uncommon",
+      "card_art": "@NeedolinCardArt",
       "class": "@Silksong",
       "pools": [
         "MegaPool"
