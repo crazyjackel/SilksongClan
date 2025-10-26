@@ -55,9 +55,12 @@
       "id": "PinstressSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "<b>Combo Pinstress</b>, <b>Strike</b>: Gain [conduit] 1"
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Pinstress Subtype: Gain \"[strike]: Gain [conduit] [effect1.upgrade.charactertrigger0.effect0.status0.power]\""
       },
       "effects": [
+        {
+          "id": "@PinstressComboEffect"
+        },
         {
           "id": "@PinstressSpawnEffect"
         }
@@ -99,12 +102,22 @@
       "param_character": "@Pinstress"
     },
     {
+      "id": "PinstressComboEffect",
+      "name": "@CardEffectTestLastCard",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_card_filter": "@PinstressComboPinstressMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "PinstressSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_upgrade": "@PinstressComboUpgrade",
-      "param_card_filter": "@PinstressComboPinstressMask"
+      "param_upgrade": "@PinstressComboUpgrade"
     },
     {
       "id": "PinstressStrikeEffect",

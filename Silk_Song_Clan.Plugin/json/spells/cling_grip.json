@@ -7,7 +7,7 @@
         "english": "Cling Grip"
       },
       "descriptions": {
-        "english": "Retreat. Combo: Advance"
+        "english": "Retreat. [Silk_Song_Clan.Plugin_Combo]: Advance"
       },
       "cost": 1,
       "card_type": "spell",
@@ -60,7 +60,10 @@
       "target_mode": "self",
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
-      "param_card_filter": "@ClingGripUpgradeMask"
+      "param_card_filter": "@ClingGripUpgradeMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
     }
   ],
   "sprites": [
