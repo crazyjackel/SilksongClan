@@ -54,7 +54,8 @@
         {
             "id": "HugeFlea",
             "names": {
-                "english": "Huge Flea"
+                "english": "Huge Flea",
+                "chinese": "巨大小球蚤"
             },
             "character_art": "@HugeFleaCharacterArt",
             "size": 2,

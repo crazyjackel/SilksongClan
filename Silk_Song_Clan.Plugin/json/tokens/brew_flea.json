@@ -46,7 +46,8 @@
         {
             "id": "BrewFlea",
             "names": {
-                "english": "Brew Flea"
+                "english": "Brew Flea",
+                "chinese": "酿蚤"
             },
             "character_art": "@BrewFleaCharacterArt",
             "size": 1,

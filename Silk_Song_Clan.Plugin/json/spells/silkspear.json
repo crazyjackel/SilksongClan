@@ -4,7 +4,8 @@
     {
       "id": "Silkspear",
       "names": {
-        "english": "Silkspear"
+        "english": "Silkspear",
+        "chinese": "丝之矛"
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage."

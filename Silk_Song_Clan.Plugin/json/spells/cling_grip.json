@@ -4,7 +4,8 @@
     {
       "id": "ClingGrip",
       "names": {
-        "english": "Cling Grip"
+        "english": "Cling Grip",
+        "chinese": "攀附抓握"
       },
       "descriptions": {
         "english": "Retreat. [Silk_Song_Clan.Plugin_Combo]: Advance"

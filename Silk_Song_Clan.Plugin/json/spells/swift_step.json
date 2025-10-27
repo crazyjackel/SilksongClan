@@ -4,7 +4,8 @@
     {
       "id": "SwiftStep",
       "names": {
-        "english": "Swift Step"
+        "english": "Swift Step",
+        "chinese": "疾风步"
       },
       "descriptions": {
         "english": "Give a Unit [Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]."

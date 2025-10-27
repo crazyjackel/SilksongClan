@@ -4,7 +4,8 @@
     {
       "id": "ThreadStorm",
       "names": {
-        "english": "Thread Storm"
+        "english": "Thread Storm",
+        "chinese": "灵丝风暴"
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage to the front unit."

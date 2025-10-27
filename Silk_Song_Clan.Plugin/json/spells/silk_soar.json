@@ -4,7 +4,8 @@
     {
       "id": "SilkSoar",
       "names": {
-        "english": "Silk Soar"
+        "english": "Silk Soar",
+        "chinese": "灵丝腾跃"
       },
       "descriptions": {
         "english": "Ascend. [Silk_Song_Clan.Plugin_Combo]: Bind"

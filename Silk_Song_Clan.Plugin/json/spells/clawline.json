@@ -4,7 +4,8 @@
     {
       "id": "Clawline",
       "names": {
-        "english": "Clawline"
+        "english": "Clawline",
+        "chinese": "飞针穿梭"
       },
       "descriptions": {
         "english": "Deal damage to the front unit equal to 2x [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. "

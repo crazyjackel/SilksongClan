@@ -4,7 +4,8 @@
     {
       "id": "CrossStitch",
       "names": {
-        "english": "Cross Stitch"
+        "english": "Cross Stitch",
+        "chinese": "十字绣反击"
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a Unit [damageshield] [effect1.status0.power] and [thorns] [effect1.status1.power]."

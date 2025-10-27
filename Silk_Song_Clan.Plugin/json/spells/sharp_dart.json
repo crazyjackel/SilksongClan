@@ -4,7 +4,8 @@
     {
       "id": "SharpDart",
       "names": {
-        "english": "Sharp Dart"
+        "english": "Sharp Dart",
+        "chinese": "锐丝突击"
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Target Unit attacks."

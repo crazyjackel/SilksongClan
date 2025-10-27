@@ -47,7 +47,8 @@
         {
             "id": "Flea",
             "names": {
-                "english": "Flea"
+                "english": "Flea",
+                "chinese": "小蚤"
             },
             "character_art": "@FleaCharacterArt",
             "size": 1,

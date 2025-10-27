@@ -4,7 +4,8 @@
     {
       "id": "ElegyOfTheDeep",
       "names": {
-        "english": "Elegy of the Deep"
+        "english": "Elegy of the Deep",
+        "chinese": "记忆挽歌"
       },
       "descriptions": {
         "english": "Give the front friendly unit [dazed] [effect0.status0.power], [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status1.power], and [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status2.power]."

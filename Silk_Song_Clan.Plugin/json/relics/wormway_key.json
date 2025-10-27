@@ -5,7 +5,8 @@
             "id": "WormwayKey",
             "type": "collectable",
             "names": {
-                "english": "Simple Key"
+                "english": "Simple Key",
+                "chinese": "简单钥匙"
             },
             "icon": "@WormwayKeyIcon",
             "icon_small": "@WormwayKeyIcon",
