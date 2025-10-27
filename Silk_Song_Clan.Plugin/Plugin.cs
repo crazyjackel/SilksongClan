@@ -125,10 +125,12 @@ namespace Silk_Song_Clan.Plugin
                         "json/spells/bind.json",
                         "json/spells/clawline.json",
                         "json/spells/cling_grip.json",
+                        "json/spells/cross_stitch.json",
                         "json/spells/elegy_of_the_deep.json",
                         "json/spells/needle_strike.json",
                         "json/spells/needolin.json",
                         "json/spells/silk_soar.json",
+                        "json/spells/silkspear.json",
                         "json/spells/swift_step.json",
                         "json/spells/sylphsong.json",
 
