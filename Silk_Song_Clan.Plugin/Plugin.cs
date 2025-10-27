@@ -132,6 +132,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/spells/pale_nale.json",
                         "json/spells/pale_nales.json",
                         "json/spells/rune_rage.json",
+                        "json/spells/sharp_dart.json",
                         "json/spells/silk_soar.json",
                         "json/spells/silkspear.json",
                         "json/spells/swift_step.json",
