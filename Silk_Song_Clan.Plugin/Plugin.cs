@@ -137,6 +137,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/spells/silkspear.json",
                         "json/spells/swift_step.json",
                         "json/spells/sylphsong.json",
+                        "json/spells/thread_storm.json",
 
                         //Status Effects
                         "json/status_effects/warrior.json",
