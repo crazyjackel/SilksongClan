@@ -1,0 +1,86 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "PaleNale",
+      "names": {
+        "english": "Pale Nale"
+      },
+      "descriptions": {
+        "english": "Deal Damage equal to [Silk_Song_Clan.Plugin_Silk] to the front enemy, then All Enemies."
+      },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "card_art": "@PaleNaleCardArt",
+      "targetless": true,
+      "traits": [
+        "@PaleNaleConsumeTrait",
+        "@PaleNaleScaleSilk"
+      ],
+      "effects": [
+        {
+          "id": "@PaleNaleFrontDamageEffect"
+        },
+        {
+          "id": "@PaleNaleAllDamageEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A pale needle of immense power, forged from ancient silk."
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "PaleNaleConsumeTrait",
+      "name": "CardTraitExhaustState"
+    },
+    {
+      "id": "PaleNaleScaleSilk",
+      "name": "CardTraitScalingAddDamage",
+      "param_tracked_value": "@Silk",
+      "param_int": 1,
+      "param_float": 1.00
+    }
+  ],
+  "effects": [
+    {
+      "id": "PaleNaleFrontDamageEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "target_team": "heroes",
+      "param_int": 0,
+      "param_track_silk": true
+    },
+    {
+      "id": "PaleNaleAllDamageEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 0,
+      "param_track_silk": true
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PaleNaleCardArt",
+      "path": "textures/PaleNaleCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "PaleNaleCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PaleNaleCardArt"
+        }
+      }
+    }
+  ]
+}
+
