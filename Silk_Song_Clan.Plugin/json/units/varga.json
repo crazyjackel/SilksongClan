@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 2,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -43,7 +44,8 @@
       "health": 20,
       "attack_damage": 15,
       "subtypes": [
-        "@Flea"
+        "@Flea",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {
@@ -57,9 +59,12 @@
       "id": "VargaSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "<b>Combo Fleamaster Mooshka</b>: <b>Rally</b>: If it was a flea, Reduce all Unit Cooldowns by 1."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Fleamaster Mooshka: Gain \"[rally]: Reduce all Unit Cooldowns by 1.\""
       },
       "effects": [
+        {
+          "id": "@VargaComboEffect"
+        },
         {
           "id": "@VargaSpawnEffect"
         }
@@ -75,22 +80,10 @@
       ]
     }
   ],
-  "upgrade_masks": [
-    {
-      "id": "VargaComboFleaMask",
-      "required_subtypes": [
-        "@Flea"
-      ]
-    }
-  ],
   "upgrades": [
     {
       "id": "VargaComboUpgrade",
-      "trigger_upgrades": [
-        {
-          "id": "@VargaRallyTrigger"
-        }
-      ]
+      "trigger_upgrades": ["@VargaRallyTrigger"]
     }
   ],
   "effects": [
@@ -101,12 +94,22 @@
       "param_character": "@Varga"
     },
     {
+      "id": "VargaComboEffect",
+      "name": "@CardEffectTestLastCardName",
+      "param_str": "@SpawnFleamasterMooshka",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "VargaSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_upgrade": "@VargaComboUpgrade",
-      "param_card_filter": "@VargaComboFleaMask"
+      "param_upgrade": "@VargaComboUpgrade"
     },
     {
       "id": "VargaReduceCooldownsEffect",
@@ -146,12 +149,12 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 1.5,
+              "y": 0.5,
               "z": 0
             },
             "scale": {
-              "x": 1,
-              "y": 1,
+              "x": 1.1,
+              "y": 1.1,
               "z": 1
             }
           }

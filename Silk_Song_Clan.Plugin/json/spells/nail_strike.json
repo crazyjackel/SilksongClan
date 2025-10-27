@@ -7,7 +7,7 @@
                 "english": "Nail Strike"
             },
             "descriptions": {
-                "english": "Gain 1 Silk. Deal [effect1.power] Damage. (Base Damage is equal to Silk.)"
+                "english": "Deal damage equal to [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. "
             },
             "cost": 1,
             "card_type": "spell",
@@ -21,10 +21,10 @@
             ],
             "effects": [
                 {
-                    "id": "@NailStrikeGainSilkEffect"
+                    "id": "@NailStrikeDamageEffect"
                 },
                 {
-                    "id": "@NailStrikeDamageEffect"
+                    "id": "@NailStrikeGainSilkEffect"
                 }
             ],
             "lore_tooltips": [
@@ -42,14 +42,18 @@
             "id": "NailStrikeScaleSilk",
             "name": "CardTraitScalingAddDamage",
             "param_tracked_value": "@Silk",
+            "param_int": 1,
             "param_float": 1.00
         }
     ],
     "effects": [
         {
             "id": "NailStrikeGainSilkEffect",
-            "name": "@CardEffectAddSilk",
-            "param_int": 1
+            "name": "@CardEffectRewardSilk",
+            "param_int": 1,
+            "additional_tooltips": [
+                "@SilkTooltip"
+            ]
         },
         {
             "id": "NailStrikeDamageEffect",

@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 2,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -42,7 +43,7 @@
       "size": 1,
       "health": 15,
       "attack_damage": 20,
-      "subtypes": ["@Flea"],
+      "subtypes": ["@Flea", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@GrishkinSpawnTrigger"
@@ -75,12 +76,15 @@
     {
       "id": "GrishkinSpawnTrigger",
       "descriptions": {
-        "english": "<b>Combo Flea</b>: <b>Shift</b>: Give Friendly Fleas +3 [attack] and +3 [health]"
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Flea Subtype: Gain \"[shift]: Give Friendly Fleas +[effect1.upgrade.charactertrigger0.effect0.status0.upgrade.bonusdamage] [attack] and +[effect1.upgrade.charactertrigger0.effect0.status0.upgrade.bonushealth] [health]\""
       },
       "trigger": "on_spawn",
       "effects": [
         {
           "id": "@GrishkinComboEffect"
+        },
+        {
+          "id": "@GrishkinSpawnEffect"
         }
       ]
     },
@@ -106,10 +110,20 @@
     },
     {
       "id": "GrishkinComboEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "name": "@CardEffectTestLastCard",
       "target_mode": "self",
-      "param_upgrade": "@GrishkinComboUpgrade",
-      "param_card_filter": "@GrishkinUpgradeMask"
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_card_filter": "@GrishkinUpgradeMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
+      "id": "GrishkinSpawnEffect",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@GrishkinComboUpgrade"
     },
     {
       "id": "GrishkinBuffFleasEffect",

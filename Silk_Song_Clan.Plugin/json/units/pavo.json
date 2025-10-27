@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 3,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -43,7 +44,8 @@
       "health": 15,
       "attack_damage": 6,
       "subtypes": [
-        "@Bug"
+        "@Bug",
+        "SubtypesData_BannerUnit"
       ],
       "starting_status_effects": [
         {
@@ -62,7 +64,7 @@
     {
       "id": "PavoSilksongTrigger",
       "descriptions": {
-        "english": "Silksong: Gain Conduit 3"
+        "english": "Gain [conduit] [effect0.status0.power]."
       },
       "trigger": "@Silksong",
       "effects": [

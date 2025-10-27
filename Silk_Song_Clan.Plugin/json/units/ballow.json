@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 4,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -42,7 +43,7 @@
       "size": 2,
       "health": 15,
       "attack_damage": 5,
-      "subtypes": ["@Bug"],
+      "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@BallowEquippedTrigger"

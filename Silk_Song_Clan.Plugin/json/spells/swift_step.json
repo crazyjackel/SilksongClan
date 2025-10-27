@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SwiftStep",
+      "names": {
+        "english": "Swift Step"
+      },
+      "descriptions": {
+        "english": "Give a Unit [Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]."
+      },
+      "cost": 1,
+      "card_type": "spell",
+      "card_art": "@SwiftStepCardArt",
+      "rarity": "common",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@SwiftStepProtectionEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A quick defensive maneuver that shields allies from harm."
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SwiftStepProtectionEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@Protection",
+          "count": 10
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SwiftStepCardArt",
+      "path": "textures/SwiftStepCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SwiftStepCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SwiftStepCardArt"
+        }
+      }
+    }
+  ]
+}

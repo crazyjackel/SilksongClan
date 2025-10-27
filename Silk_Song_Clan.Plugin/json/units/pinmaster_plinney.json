@@ -14,7 +14,8 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -64,7 +65,8 @@
       "health": 12,
       "attack_damage": 12,
       "subtypes": [
-        "@Bug"
+        "@Bug",
+        "SubtypesData_BannerUnit"
       ],
       "ability": "@PinmasterAbilityTrigger"
     }

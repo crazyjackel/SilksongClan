@@ -61,7 +61,7 @@
       "size": 2,
       "health": 30,
       "attack_damage": 30,
-      "subtypes": ["@Bug"],
+      "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "starting_status_effects": [
         {
           "status": "@Warrior",
@@ -79,20 +79,31 @@
     {
       "id": "GaramondSpawnTrigger",
       "descriptions": {
-        "english": "<b>Combo Zaza</b>: Gain [effect0.upgrade.bonusdamage][attack] and [effect0.upgrade.bonushp][health]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain an Ability to \"Attack\" and +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushealth][health] permanently."
       },
       "trigger": "on_spawn",
       "effects": [
         {
+          "id": "@GaramondSpawnEffectCombo"
+        },
+        {
           "id": "@GaramondSpawnEffect"
+        },
+        {
+          "id": "@GaramondAbilitySpawnEffect"
         }
       ]
     }
   ],
   "upgrades": [
     {
-      "id": "GaramondComboUpgrade",
+      "id": "GaramondAbilityComboUpgrade",
       "ability_upgrade": "@GaramondLanceAbility"
+    },
+    {
+      "id": "GaramondComboUpgrade",
+      "bonus_damage": 10,
+      "bonus_hp": 10
     }
   ],
   "effects": [
@@ -103,12 +114,30 @@
       "param_character": "@Garamond"
     },
     {
+      "id": "GaramondSpawnEffectCombo",
+      "name": "@CardEffectTestLastCardName",
+      "target_mode": "self",
+      "param_str": "@SpawnZaza",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "GaramondSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
       "param_upgrade": "@GaramondComboUpgrade",
-      "param_str": "@SpawnZaza"
+      "param_int_2": 2
+    },
+    {
+      "id": "GaramondAbilitySpawnEffect",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_upgrade": "@GaramondAbilityComboUpgrade"
     },
     {
       "id": "GaramondLanceEffect",

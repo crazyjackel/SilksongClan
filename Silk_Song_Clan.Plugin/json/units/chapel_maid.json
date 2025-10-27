@@ -14,7 +14,8 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -41,7 +42,7 @@
       "size": 2,
       "health": 24,
       "attack_damage": 0,
-      "subtypes": ["@Snail"],
+      "subtypes": ["@Snail", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@ChapelMaidSpawnTrigger"
@@ -53,10 +54,13 @@
     {
       "id": "ChapelMaidSpawnTrigger",
       "descriptions": {
-        "english": "<b>Combo [Snail]</b>: <b>Silksong</b>: Friendly Units get [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain \"<b>Silksong</b>: Friendly Units get [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.upgrade.charactertrigger0.effect0.status0.power]\"."
       },
       "trigger": "on_spawn",
       "effects": [
+        {
+          "id": "@ChapelMaidComboEffect"
+        },
         {
           "id": "@ChapelMaidSpawnEffect"
         }
@@ -99,11 +103,21 @@
       "param_character": "@ChapelMaid"
     },
     {
+      "id": "ChapelMaidComboEffect",
+      "name": "@CardEffectTestLastCard",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_card_filter": "@ChapelMaidComboSnailMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "ChapelMaidSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_card_filter": "@ChapelMaidComboSnailMask",
       "param_upgrade": "@ChapelMaidProtectionUpgrade"
     },
     {
@@ -148,12 +162,12 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 1.5,
+              "y": 0.9,
               "z": 0
             },
             "scale": {
-              "x": 1,
-              "y": 1,
+              "x": 1.2,
+              "y": 1.2,
               "z": 1
             }
           }

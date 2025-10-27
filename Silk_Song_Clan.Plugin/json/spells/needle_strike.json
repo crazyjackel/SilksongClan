@@ -1,0 +1,83 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "NeedleStrike",
+      "names": {
+        "english": "Needle Strike"
+      },
+      "descriptions": {
+        "english": "Deal damage to all enemies equal to [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. "
+      },
+      "cost": 2,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "card_art": "@NeedleStrikeCardArt",
+      "targetless": false,
+      "targets_room": true,
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@NeedleStrikeDamageEffect"
+        },
+        {
+          "id": "@NeedleStrikeGainSilkEffect"
+        }
+      ],
+      "traits": [
+        "@NeedleStrikeScaleSilk"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A precise strike that pierces through all enemies with silk-enhanced power."
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "NeedleStrikeScaleSilk",
+      "name": "CardTraitScalingAddDamage",
+      "param_tracked_value": "@Silk",
+      "param_int": 1,
+      "param_float": 1.00
+    }
+  ],
+  "effects": [
+    {
+      "id": "NeedleStrikeGainSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "param_int": 1,
+      "additional_tooltips": [
+        "@SilkTooltip"
+      ]
+    },
+    {
+      "id": "NeedleStrikeDamageEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 0
+    }
+  ],
+  "sprites": [
+    {
+      "id": "NeedleStrikeCardArt",
+      "path": "textures/NeedleStrikeCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "NeedleStrikeCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@NeedleStrikeCardArt"
+        }
+      }
+    }
+  ]
+}

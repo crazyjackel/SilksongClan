@@ -14,7 +14,8 @@
       "rarity": "common",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -42,7 +43,8 @@
       "health": 10,
       "attack_damage": 0,
       "subtypes": [
-        "@Bug"
+        "@Bug",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {
@@ -54,10 +56,10 @@
   "character_triggers": [
     {
       "id": "ShermaResolveTrigger",
+      "trigger": "post_combat",
       "descriptions": {
         "english": "Give Friendly Units [Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]."
       },
-      "trigger": "end_turn_pre_hand_discard",
       "effects": [
         {
           "id": "@ShermaApplyProtection"
@@ -80,7 +82,7 @@
       "param_status_effects": [
         {
           "status": "@Protection",
-          "count": 5
+          "count": 6
         }
       ]
     }

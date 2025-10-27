@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "ClingGrip",
+      "names": {
+        "english": "Cling Grip"
+      },
+      "descriptions": {
+        "english": "Retreat. [Silk_Song_Clan.Plugin_Combo]: Advance"
+      },
+      "cost": 1,
+      "unlock_level": 2,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Silksong",
+      "card_art": "@ClingGripCardArt",
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@ClingGripRetreatEffect"
+        },
+        {
+          "id": "@ClingGripComboEffect"
+        },
+        {
+          "id": "@ClingGripAdvanceEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A defensive grip that can become an offensive advance when combined with other techniques."
+        }
+      ]
+    }
+  ],
+  "upgrade_masks": [
+    {
+      "id": "ClingGripUpgradeMask"
+    }
+  ],
+  "effects": [
+    {
+      "id": "ClingGripRetreatEffect",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": 1
+    },
+    {
+      "id": "ClingGripAdvanceEffect",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": 0
+    },
+    {
+      "id": "ClingGripComboEffect",
+      "name": "@CardEffectTestLastCard",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_card_filter": "@ClingGripUpgradeMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ClingGripCardArt",
+      "path": "textures/ClingGripCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ClingGripCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ClingGripCardArt"
+        }
+      }
+    }
+  ]
+}

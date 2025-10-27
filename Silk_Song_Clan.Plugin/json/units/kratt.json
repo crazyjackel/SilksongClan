@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 7,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -64,7 +65,8 @@
       "health": 8,
       "attack_damage": 10,
       "subtypes": [
-        "@Flea"
+        "@Flea",
+        "SubtypesData_BannerUnit"
       ],
       "ability": "@KrattAbility"
     }

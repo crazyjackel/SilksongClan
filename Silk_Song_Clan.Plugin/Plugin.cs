@@ -62,6 +62,10 @@ namespace Silk_Song_Clan.Plugin
                         "json/champion/hornet_wanderer.json",
                         "json/champion/hornet_witch.json",
 
+                        //Relics
+                        "json/relics/architect_key.json",
+                        "json/relics/wormway_key.json",
+
                         //Triggers
                         "json/triggers/silksong.json",
 
@@ -69,6 +73,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/subtypes/snail.json",
                         "json/subtypes/bug.json",
                         "json/subtypes/pinstress.json",
+                        "json/subtypes/flea.json",
 
                         //Cardpools
                         "json/cardpool/flea_pool.json",
@@ -118,6 +123,21 @@ namespace Silk_Song_Clan.Plugin
                         //Spells
                         "json/spells/nail_strike.json",
                         "json/spells/bind.json",
+                        "json/spells/clawline.json",
+                        "json/spells/cling_grip.json",
+                        "json/spells/cross_stitch.json",
+                        "json/spells/elegy_of_the_deep.json",
+                        "json/spells/needle_strike.json",
+                        "json/spells/needolin.json",
+                        "json/spells/pale_nale.json",
+                        "json/spells/pale_nales.json",
+                        "json/spells/rune_rage.json",
+                        "json/spells/sharp_dart.json",
+                        "json/spells/silk_soar.json",
+                        "json/spells/silkspear.json",
+                        "json/spells/swift_step.json",
+                        "json/spells/sylphsong.json",
+                        "json/spells/thread_storm.json",
 
                         //Status Effects
                         "json/status_effects/warrior.json",
@@ -127,7 +147,12 @@ namespace Silk_Song_Clan.Plugin
                         "json/status_effects/permanent_protection.json",
 
                         //Tracked Values
-                        "json/tracked_values/silk.json"
+                        "json/tracked_values/silk.json",
+
+                        //Text
+                        "json/text/silk.json",
+                        "json/text/bind.json",
+                        "json/text/combo.json"
                     );
                 }
             );

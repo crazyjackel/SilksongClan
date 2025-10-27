@@ -17,9 +17,9 @@
     "character_triggers": [
         {
             "id": "BeastStrikeTrigger",
-            "trigger": "on_attacking",
+            "trigger": "@Silksong",
             "descriptions": {
-                "english": "Gain [lifesteal] [status0.power]."
+                "english": "Gain [lifesteal] [effect0.status0.power]."
             },
             "effects": [
                 "@BeastStrikeEffect"

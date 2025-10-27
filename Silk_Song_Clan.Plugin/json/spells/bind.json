@@ -8,7 +8,7 @@
         "chinese": "聚结"
       },
       "descriptions": {
-        "english": "Bind. Restore [effect1.power] health."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Bind]. Restore [effect2.power] health."
       },
       "cost": 0,
       "card_type": "spell",
@@ -19,6 +19,9 @@
         "MegaPool"
       ],
       "effects": [
+        {
+          "id": "@BindRewardSilkEffect"
+        },
         {
           "id": "@BindBindEffect"
         },
@@ -43,10 +46,23 @@
   ],
   "effects": [
     {
+      "id": "BindRewardSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": -6,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true
+    },
+    {
       "id": "BindBindEffect",
       "name": "@CardEffectBind",
       "target_mode": "drop_target_character",
-      "target_team": "monsters"
+      "target_team": "monsters",
+      "additional_tooltips": [
+        {
+          "id": "@BindBindEffectTooltip"
+        }
+      ]
     },
     {
       "id": "BindHealEffect",

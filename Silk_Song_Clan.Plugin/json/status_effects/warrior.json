@@ -8,10 +8,10 @@
                 "english": "Warrior"
             },
             "card_tooltips": {
-                "english": "On hitting an enemy, gain 1 silk."
+                "english": "On hitting an enemy, gain 1 [Silk_Song_Clan.Plugin_Silk]."
             },
             "character_tooltips": {
-                "english": "On hitting an enemy, gains 1 silk."
+                "english": "On hitting an enemy, gains 1 [Silk_Song_Clan.Plugin_Silk]."
             },
             "notifications": {
                 "english": "Warrior"

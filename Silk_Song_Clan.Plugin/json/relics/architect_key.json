@@ -1,0 +1,46 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "ArchitectKey",
+            "type": "collectable",
+            "names": {
+                "english": "Architect's Key"
+            },
+            "descriptions": {
+                "english": "Stewards can equip an additional piece of Equipment."
+            },
+            "icon": "@ArchitectKeyIcon",
+            "icon_small": "@ArchitectKeyIcon",
+            "lore_tooltips": [
+                {
+                    "english": "Rotary key of the Architects. Opens their Chapel in the Underworks."
+                }
+            ],
+            "relic_effects": [
+                "@ArchitectKeyEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "rare"
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "ArchitectKeyEffect",
+            "name": "RelicEffectAddEquipmentLimit",
+            "param_subtype": "SubtypesData_TrainSteward"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "ArchitectKeyIcon",
+            "path": "textures/ArchitectKeyIcon.png"
+        }
+    ]
+}

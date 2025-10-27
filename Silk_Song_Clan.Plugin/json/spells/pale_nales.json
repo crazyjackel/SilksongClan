@@ -1,0 +1,91 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "PaleNales",
+      "names": {
+        "english": "Pale Nales"
+      },
+      "descriptions": {
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Add [effect1.power] Pale Nales to Hand."
+      },
+      "cost": 2,
+      "card_type": "spell",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "card_art": "@PaleNalesCardArt",
+      "targetless": false,
+      "targets_room": true,
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@PaleNalesChannelSilkEffect"
+        },
+        {
+          "id": "@PaleNalesAddNaleEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Ancient pale needles with devastating power."
+        }
+      ],
+      "extensions": [
+        {
+          "silksong": {
+            "silk_cost": 12
+          }
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "PaleNalesChannelSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": -12,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true,
+      "additional_tooltips": [
+        "@SilkTooltip"
+      ]
+    },
+    {
+      "id": "PaleNalesAddNaleEffect",
+      "name": "CardEffectAddBattleCard",
+      "target_mode": "self",
+      "param_int": 3,
+      "param_int_2": 3,
+      "param_card_pool": "@PaleNalesPool"
+    }
+  ],
+  "card_pools": [
+    {
+      "id": "PaleNalesPool",
+      "cards": [
+        "@PaleNale"
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PaleNalesCardArt",
+      "path": "textures/PaleNalesCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "PaleNalesCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@PaleNalesCardArt"
+        }
+      }
+    }
+  ]
+}
+

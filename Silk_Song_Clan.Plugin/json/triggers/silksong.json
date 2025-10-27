@@ -9,6 +9,9 @@
             "descriptions": {
                 "english": "Triggers whenever a card is played that costs Silk."
             },
+            "notifications": {
+                "english": "Silksong"
+            },
             "sprite": "@Silksong"
         }
     ],

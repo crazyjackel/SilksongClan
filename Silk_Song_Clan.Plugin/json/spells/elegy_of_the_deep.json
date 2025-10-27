@@ -1,0 +1,96 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "ElegyOfTheDeep",
+      "names": {
+        "english": "Elegy of the Deep"
+      },
+      "descriptions": {
+        "english": "Give the front friendly unit [dazed] [effect0.status0.power], [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status1.power], and [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status2.power]."
+      },
+      "unlock_level": 2,
+      "card_art": "@ElegyOfTheDeepCardArt",
+      "cost": 3,
+      "card_type": "spell",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "targetless": true,
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@ElegyOfTheDeepDazeEffect"
+        },
+        {
+          "id": "@ElegyOfTheDeepPermanentProtectionEffect"
+        },
+        {
+          "id": "@ElegyOfTheDeepPermanentImbueEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A haunting melody that empowers allies with ancient magic."
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "ElegyOfTheDeepDazeEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "dazed",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "ElegyOfTheDeepPermanentProtectionEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@PermanentProtection",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "id": "ElegyOfTheDeepPermanentImbueEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "front_in_room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@PermanentImbue",
+          "count": 10
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "ElegyOfTheDeepCardArt",
+      "path": "textures/ElegyOfTheDeepCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "ElegyOfTheDeepCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@ElegyOfTheDeepCardArt"
+        }
+      }
+    }
+  ]
+}

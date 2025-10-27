@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SharpDart",
+      "names": {
+        "english": "Sharp Dart"
+      },
+      "descriptions": {
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Target Unit attacks."
+      },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "card_art": "@SharpDartCardArt",
+      "targetless": false,
+      "targets_room": true,
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@SharpDartChannelSilkEffect"
+        },
+        {
+          "id": "@SharpDartStrikeEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A sharp dart that energizes a unit to strike."
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SharpDartChannelSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": -5,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true,
+      "additional_tooltips": [
+        "@SilkTooltip"
+      ]
+    },
+    {
+      "id": "SharpDartStrikeEffect",
+      "name": "CardEffectAttackWithUnit",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SharpDartCardArt",
+      "path": "textures/SharpDartCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SharpDartCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SharpDartCardArt"
+        }
+      }
+    }
+  ]
+}
+

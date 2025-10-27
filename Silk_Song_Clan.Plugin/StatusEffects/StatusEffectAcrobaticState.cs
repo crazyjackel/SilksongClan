@@ -68,11 +68,20 @@ namespace Silk_Song_Clan.Plugin
         }
 
         protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
-        {
-            Plugin.Logger.LogInfo("AcrobaticState: Triggered: " + inputTriggerParams.triggerType);
-            Plugin.Logger.LogInfo("AcrobaticState: Damage: " + inputTriggerParams.damage + " Attacked: " + inputTriggerParams.attacked);
-            Plugin.Logger.LogInfo("AcrobaticState: Associated Character: " + inputTriggerParams.associatedCharacter);
-            Plugin.Logger.LogInfo("AcrobaticState: Attacker: " + inputTriggerParams.attacker);
+        {                
+            var statusId = base.GetStatusId();
+            if(inputTriggerParams.attacked != null)
+            {
+                var attacked = inputTriggerParams.attacked;
+                Plugin.Logger.LogInfo("AcrobaticState: Attacked: " + inputTriggerParams.attacked.name);
+
+                int statusEffectStacksAttacked = attacked.GetStatusEffectStacks(statusId);
+                attacked.RemoveStatusEffect(statusId, statusEffectStacksAttacked);
+                Plugin.Logger.LogInfo("AcrobaticState: Removed status effect stacks: " + statusEffectStacksAttacked);
+                yield break;
+            }
+
+            
             var character = inputTriggerParams.associatedCharacter;
             if (character == null)
             {
@@ -80,7 +89,6 @@ namespace Silk_Song_Clan.Plugin
                 yield break;
             }
 
-            var statusId = base.GetStatusId();
             int statusEffectStacks = character.GetStatusEffectStacks(statusId);
 
             // Remove all stacks of this status effect

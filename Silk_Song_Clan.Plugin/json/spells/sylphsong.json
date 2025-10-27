@@ -1,0 +1,70 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Sylphsong",
+      "names": {
+        "english": "Sylphsong"
+      },
+      "descriptions": {
+        "english": "Set Silk to Max."
+      },
+      "cost": 2,
+      "unlock_level": 7,
+      "card_art": "@SylphsongCardArt",
+      "card_type": "spell",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "traits": [
+        "@SylphsongConsumeTrait"
+      ],
+      "effects": [
+        {
+          "id": "@SylphsongSetSilkEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A powerful song that restores silk to its maximum capacity."
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "SylphsongConsumeTrait",
+      "name": "CardTraitExhaustState"
+    }
+  ],
+  "effects": [
+    {
+      "id": "SylphsongSetSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": 99,
+      "additional_tooltips": [
+        "@SilkTooltip"
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SylphsongCardArt",
+      "path": "textures/SylphsongCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SylphsongCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SylphsongCardArt"
+        }
+      }
+    }
+  ]
+}

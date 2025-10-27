@@ -14,7 +14,8 @@
       "rarity": "common",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -41,7 +42,7 @@
       "size": 1,
       "health": 5,
       "attack_damage": 5,
-      "subtypes": ["@Bug"],
+      "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@GrindleStrikeTrigger"
@@ -53,7 +54,7 @@
     {
       "id": "GrindleStrikeTrigger",
       "descriptions": {
-        "english": "Gain 10 gold."
+        "english": "Gain [effect0.power] [coin]."
       },
       "trigger": "on_attacking",
       "effects": [

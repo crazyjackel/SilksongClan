@@ -14,7 +14,8 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -42,7 +43,8 @@
       "health": 30,
       "attack_damage": 30,
       "subtypes": [
-        "@Pinstress"
+        "@Pinstress",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {
@@ -56,9 +58,12 @@
       "id": "SeamstressSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "<b>Combo Pinstress</b>: <b>Conduit</b> 10"
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Pinstress Subtype: Gain \"[conduit]: [effect1.upgrade.status0.power]\""
       },
       "effects": [
+        {
+          "id": "@SeamstressComboEffect"
+        },
         {
           "id": "@SeamstressSpawnEffect"
         }
@@ -92,12 +97,22 @@
       "param_character": "@Seamstress"
     },
     {
+      "id": "SeamstressComboEffect",
+      "name": "@CardEffectTestLastCard",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_card_filter": "@SeamstressComboPinstressMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "SeamstressSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_upgrade": "@SeamstressComboUpgrade",
-      "param_card_filter": "@SeamstressComboPinstressMask"
+      "param_upgrade": "@SeamstressComboUpgrade"
     }
   ],
   "sprites": [
@@ -129,12 +144,12 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 1.5,
+              "y": 0.2,
               "z": 0
             },
             "scale": {
-              "x": 1,
-              "y": 1,
+              "x": 1.3,
+              "y": 1.3,
               "z": 1
             }
           }

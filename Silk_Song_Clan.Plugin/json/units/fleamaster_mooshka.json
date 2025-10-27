@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 2,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -42,7 +43,7 @@
       "size": 2,
       "health": 16,
       "attack_damage": 8,
-      "subtypes": ["@Flea"],
+      "subtypes": ["@Flea", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@FleamasterResolveTrigger"
@@ -109,12 +110,12 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 1.5,
+              "y": 0.5,
               "z": 0
             },
             "scale": {
-              "x": 1,
-              "y": 1,
+              "x": 1.2,
+              "y": 1.2,
               "z": 1
             }
           }

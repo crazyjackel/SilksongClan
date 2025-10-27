@@ -1,4 +1,5 @@
 using System.Collections;
+using HarmonyLib;
 using TrainworksReloaded.Base;
 using TrainworksReloaded.Base.Extensions;
 using TrainworksReloaded.Core;
@@ -7,27 +8,25 @@ using UnityEngine;
 
 namespace Silk_Song_Clan.Plugin
 {
-    public class CardEffectAddSilk : CardEffectBase
+    public class CardEffectAddRelic : CardEffectBase
     {
         public override PropDescriptions CreateEditorInspectorDescriptions()
         {
             PropDescriptions propDescriptions = new PropDescriptions();
-            string fieldName = CardEffectFieldNames.ParamInt.GetFieldName();
-            propDescriptions[fieldName] = new PropDescription("Silk Amount", "", typeof(int), false);
+            string fieldName = CardEffectFieldNames.ParamStr.GetFieldName();
+            propDescriptions[fieldName] = new PropDescription("Relic", "", null, false);
             return propDescriptions;
         }
-
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers, ISystemManagers sysManagers)
         {
-            var silkAmount = cardEffectState.GetParamInt();
+            var relic = cardEffectState.GetParamStr().ToId(MyPluginInfo.PLUGIN_GUID, TemplateConstants.RelicData);
             var container = Railend.GetContainer();
-            var silkManager = container.GetInstance<SilkManager>();
-            
-            if (silkManager != null)
+            var relicDataRegister = container.GetInstance<IRegister<RelicData>>();
+            if (!relicDataRegister.TryLookupIdentifier(relic, TrainworksReloaded.Core.Enum.RegisterIdentifierType.ReadableID, out RelicData? relicData, out bool? _))
             {
-                silkManager.AddSilk(silkAmount);
+                yield break;
             }
-            
+            coreGameManagers.GetSaveManager().AddRelic(relicData);
             yield break;
         }
     }

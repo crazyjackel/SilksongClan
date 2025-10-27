@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "Silkspear",
+      "names": {
+        "english": "Silkspear"
+      },
+      "descriptions": {
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage."
+      },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Silksong",
+      "card_art": "@SilkspearCardArt",
+      "targetless": false,
+      "targets_room": true,
+      "pools": [
+        "MegaPool"
+      ],
+      "traits": [
+        "@SilkspearAttunedTrait",
+        "@SilkspearPiercingTrait"
+      ],
+      "effects": [
+        {
+          "id": "@SilkspearChannelSilkEffect"
+        },
+        {
+          "id": "@SilkspearDamageEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Deadly Weaver technique. Throw the needle forward with force amplified by coiled Silk."
+        }
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "SilkspearAttunedTrait",
+      "name": "CardTraitStrongerMagicPower"
+    },
+    {
+      "id": "SilkspearPiercingTrait",
+      "name": "CardTraitDamageOverflow"
+    }
+  ],
+  "effects": [
+    {
+      "id": "SilkspearChannelSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": -4,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true,
+      "additional_tooltips": [
+        "@SilkTooltip"
+      ]
+    },
+    {
+      "id": "SilkspearDamageEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": 12
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SilkspearCardArt",
+      "path": "textures/SilkspearCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SilkspearCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SilkspearCardArt"
+        }
+      }
+    }
+  ]
+}
+

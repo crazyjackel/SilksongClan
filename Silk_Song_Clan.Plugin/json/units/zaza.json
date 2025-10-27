@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 5,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -61,7 +62,8 @@
       "health": 15,
       "attack_damage": 15,
       "subtypes": [
-        "@Bug"
+        "@Bug",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {
@@ -75,9 +77,12 @@
       "id": "ZazaSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "<b>Combo Garamond</b>: <b>Ability (Humble Steed)</b>: Add a random Equipment to Hand."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Garamond: Gain \"[ability]: Add a random Equipment to Hand\"."
       },
       "effects": [
+        {
+          "id": "@ZazaSpawnEffectCombo"
+        },
         {
           "id": "@ZazaSpawnEffect"
         }
@@ -98,12 +103,22 @@
       "param_character": "@Zaza"
     },
     {
+      "id": "ZazaSpawnEffectCombo",
+      "name": "@CardEffectTestLastCardName",
+      "target_mode": "self",
+      "param_str": "@SpawnGaramond",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "ZazaSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCardName",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_upgrade": "@ZazaComboUpgrade",
-      "param_str": "@SpawnGaramond"
+      "param_upgrade": "@ZazaComboUpgrade"
     },
     {
       "id": "ZazaAddEquipmentEffect",

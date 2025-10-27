@@ -64,7 +64,7 @@
       "size": 3,
       "health": 1,
       "attack_damage": 40,
-      "subtypes": ["@Bug"],
+      "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "ability": "@AlchemistZylotolAbility"
     }
   ],

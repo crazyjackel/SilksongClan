@@ -44,7 +44,8 @@
       "health": 40,
       "attack_damage": 30,
       "subtypes": [
-        "@Flea"
+        "@Flea",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {
@@ -62,6 +63,9 @@
       "trigger": "on_any_unit_death_on_floor",
       "effects": [
         {
+          "id": "@VogDyingFleaEffect"
+        },
+        {
           "id": "@VogAddFleaEffect"
         }
       ]
@@ -75,11 +79,17 @@
       "param_character": "@Vog"
     },
     {
+      "id": "VogDyingFleaEffect",
+      "name": "@CardEffectTestDyingSubtype",
+      "param_subtype": "@Flea",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true
+    },
+    {
       "id": "VogAddFleaEffect",
-      "name": "@CardEffectAddBattleCardOnSubtype",
+      "name": "CardEffectAddBattleCard",
       "target_mode": "hand",
       "param_card_pool": "@FleaPool",
-      "param_subtype": "@Flea",
       "param_int": 3,
       "additional_param_int": 1
     }

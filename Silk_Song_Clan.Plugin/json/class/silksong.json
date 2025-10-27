@@ -19,7 +19,7 @@
         "large": "@ClanIconLarge",
         "silhouette": "@ClanIconSilhouette"
       },
-      "card_style": "awoken",
+      "card_style": "@Silksong",
       "ui_color": {
         "r": 0.925,
         "g": 0.784,
@@ -140,6 +140,21 @@
     {
       "id": "HornetChampionIcon",
       "path": "textures/IconHornet.png"
+    },
+    {
+      "id": "SilksongUnitCardFrame",
+      "path": "textures/UnitCardFrame.png"
+    },
+    {
+      "id": "SilksongSpellCardFrame",
+      "path": "textures/SpellCardFrame.png"
+    }
+  ],
+  "class_card_styles": [
+    {
+      "id": "Silksong",
+      "unit_card_frame_sprite": "@SilksongUnitCardFrame",
+      "spell_card_frame_sprite": "@SilksongSpellCardFrame"
     }
   ]
 }

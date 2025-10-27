@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "RuneRage",
+      "names": {
+        "english": "Rune Rage"
+      },
+      "descriptions": {
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give Friendly Units [buff] [effect1.status0.power] and Enemies [poison] [effect1.status1.power]."
+      },
+      "cost": 1,
+      "card_type": "spell",
+      "rarity": "uncommon",
+      "class": "@Silksong",
+      "card_art": "@RuneRageCardArt",
+      "targetless": false,
+      "targets_room": true,
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@RuneRageChannelSilkEffect"
+        },
+        {
+          "id": "@RuneRageRageEffect"
+        },
+        {
+          "id": "@RuneRagePoisonEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A powerful rune that enrages allies and freezes enemies."
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "RuneRageChannelSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": -6,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true,
+      "additional_tooltips": [
+        "@SilkTooltip"
+      ]
+    },
+    {
+      "id": "RuneRageRageEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "id": "RuneRagePoisonEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "poison",
+          "count": 9
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "id": "RuneRageCardArt",
+      "path": "textures/RuneRageCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "RuneRageCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@RuneRageCardArt"
+        }
+      }
+    }
+  ]
+}
+

@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 9,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -42,7 +43,7 @@
       "size": 1,
       "health": 8,
       "attack_damage": 8,
-      "subtypes": ["@Bug"],
+      "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@CrullHungerTrigger"
@@ -69,10 +70,13 @@
     {
       "id": "CrullAndBenjinComboYarnabyTrigger",
       "descriptions": {
-        "english": "<b>Combo Yarnaby</b>: Spend 30 gold. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Yarnaby: Spend [effect1.powerabs] [coin]. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect2.status0.power]."
       },
       "trigger": "on_spawn",
       "effects": [
+        {
+          "id": "@CrullAndBenjinYarnabyEffect"
+        },
         {
           "id": "@CrullAndBenjinSpendGoldEffect"
         },
@@ -104,14 +108,23 @@
       "param_upgrade": "@CrullHungerUpgrade"
     },
     {
+      "id": "CrullAndBenjinYarnabyEffect",
+      "name": "@CardEffectTestLastCardName",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_str": "@SpawnYarnaby"
+    },
+    {
       "id": "CrullAndBenjinSpendGoldEffect",
-      "name": "@CardEffectRewardGoldIfLastCardName",
+      "name": "CardEffectRewardGold",
       "param_int": -30,
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
       "param_str": "@SpawnYarnaby"
     },
     {
       "id": "CrullAndBenjinProtectionEffect",
-      "name": "@CardEffectAddStatusEffectIfGoldSpent",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "room",
       "target_team": "monsters",
       "param_status_effects": [

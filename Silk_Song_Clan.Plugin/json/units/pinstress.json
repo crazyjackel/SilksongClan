@@ -14,7 +14,8 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -39,10 +40,11 @@
       },
       "character_art": "@PinstressCharacterArt",
       "size": 3,
-      "health": 50,
-      "attack_damage": 30,
+      "health": 20,
+      "attack_damage": 40,
       "subtypes": [
-        "@Pinstress"
+        "@Pinstress",
+        "SubtypesData_BannerUnit"
       ],
       "triggers": [
         {
@@ -56,9 +58,12 @@
       "id": "PinstressSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "<b>Combo Pinstress</b>, <b>Strike</b>: Gain [conduit] 1"
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Pinstress Subtype: Gain \"[strike]: Gain [conduit] [effect1.upgrade.charactertrigger0.effect0.status0.power]\""
       },
       "effects": [
+        {
+          "id": "@PinstressComboEffect"
+        },
         {
           "id": "@PinstressSpawnEffect"
         }
@@ -66,7 +71,10 @@
     },
     {
       "id": "PinstressStrikeTrigger",
-      "trigger": "on_hit",
+      "trigger": "on_attacking",
+      "descriptions": {
+        "english": "Gain [conduit] [effect0.status0.power]."
+      },
       "effects": [
         {
           "id": "@PinstressStrikeEffect"
@@ -100,12 +108,22 @@
       "param_character": "@Pinstress"
     },
     {
+      "id": "PinstressComboEffect",
+      "name": "@CardEffectTestLastCard",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_card_filter": "@PinstressComboPinstressMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "PinstressSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_upgrade": "@PinstressComboUpgrade",
-      "param_card_filter": "@PinstressComboPinstressMask"
+      "param_upgrade": "@PinstressComboUpgrade"
     },
     {
       "id": "PinstressStrikeEffect",
@@ -148,7 +166,7 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 1.5,
+              "y": 1.3,
               "z": 0
             },
             "scale": {

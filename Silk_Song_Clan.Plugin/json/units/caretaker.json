@@ -15,7 +15,8 @@
       "class": "@Silksong",
       "unlock_level": 6,
       "pools": [
-        "MegaPool"
+        "MegaPool",
+        "UnitsAllBanner"
       ],
       "targets_room": true,
       "effects": [
@@ -42,7 +43,7 @@
       "size": 2,
       "health": 16,
       "attack_damage": 8,
-      "subtypes": ["@Snail"],
+      "subtypes": ["@Snail", "SubtypesData_BannerUnit"],
       "triggers": [
         {
           "id": "@CaretakerSpawnTrigger"
@@ -61,10 +62,13 @@
     {
       "id": "CaretakerSpawnTrigger",
       "descriptions": {
-        "english": "<b>Combo [Snail]</b>: <b>Silksong</b>: Front Unit gets [DamageShield] [effect0.status0.power] and [SpellShield] [effect0.status1.power]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain \"<b>Silksong</b>: Front Unit gets [damageshield] [effect1.upgrade.charactertrigger0.effect0.status0.power] and [spellshield] [effect1.upgrade.charactertrigger0.effect0.status1.power]\"."
       },
       "trigger": "on_spawn",
       "effects": [
+        {
+          "id": "@CaretakerComboEffect"
+        },
         {
           "id": "@CaretakerSpawnEffect"
         }
@@ -73,7 +77,7 @@
     {
       "id": "CaretakerSilksongTrigger",
       "descriptions": {
-        "english": "Front Unit gets [DamageShield] [effect0.status0.power] and [SpellShield] [effect0.status1.power]."
+        "english": "Front Unit gets [damageshield] [effect0.status0.power] and [spellshield] [effect0.status1.power]."
       },
       "trigger": "@Silksong",
       "effects": [
@@ -107,11 +111,21 @@
       "param_character": "@Caretaker"
     },
     {
+      "id": "CaretakerComboEffect",
+      "name": "@CardEffectTestLastCard",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_card_filter": "@CaretakerComboSnailMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
       "id": "CaretakerSpawnEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsOnLastCard",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_card_filter": "@CaretakerComboSnailMask",
       "param_upgrade": "@CaretakerShieldUpgrade"
     },
     {

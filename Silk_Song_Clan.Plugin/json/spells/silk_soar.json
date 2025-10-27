@@ -1,0 +1,87 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SilkSoar",
+      "names": {
+        "english": "Silk Soar"
+      },
+      "descriptions": {
+        "english": "Ascend. [Silk_Song_Clan.Plugin_Combo]: Bind"
+      },
+      "cost": 1,
+      "unlock_level": 6,
+      "card_art": "@SilkSoarCardArt",
+      "card_type": "spell",
+      "rarity": "rare",
+      "class": "@Silksong",
+      "pools": [
+        "MegaPool"
+      ],
+      "effects": [
+        {
+          "id": "@SilkSoarAscendEffect"
+        },
+        {
+          "id": "@SilkSoarComboEffect"
+        },
+        {
+          "id": "@SilkSoarBindEffect"
+        }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "A graceful ascent that can bind enemies when combined with other techniques."
+        }
+      ]
+    }
+  ],
+  "upgrade_masks": [
+    {
+      "id": "SilkSoarUpgradeMask"
+    }
+  ],
+  "effects": [
+    {
+      "id": "SilkSoarAscendEffect",
+      "name": "CardEffectBump",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_int": 1
+    },
+    {
+      "id": "SilkSoarComboEffect",
+      "name": "@CardEffectTestLastCard",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "param_card_filter": "@SilkSoarUpgradeMask",
+      "additional_tooltips": [
+        "@ComboTooltip"
+      ]
+    },
+    {
+      "id": "SilkSoarBindEffect",
+      "name": "@CardEffectBind",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "SilkSoarCardArt",
+      "path": "textures/SilkSoarCardArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "SilkSoarCardArt",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@SilkSoarCardArt"
+        }
+      }
+    }
+  ]
+}
