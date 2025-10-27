@@ -7,7 +7,7 @@
         "english": "Cross Stitch"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a Unit [damageshield] [effect1.status0.power] and [thorns] [effect1.status1.power]."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a Unit [damageshield] [effect1.status0.power] and [spikes] [effect2.status1.power]."
       },
       "cost": 0,
       "card_type": "spell",

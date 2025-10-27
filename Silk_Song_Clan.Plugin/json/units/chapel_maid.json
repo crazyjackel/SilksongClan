@@ -38,9 +38,15 @@
       },
       "character_art": "@ChapelMaidCharacterArt",
       "size": 2,
-      "health": 24,
-      "attack_damage": 0,
+      "health": 16,
+      "attack_damage": 8,
       "subtypes": ["@Snail", "SubtypesData_BannerUnit"],
+      "starting_status_effects": [
+        {
+          "status": "duality",
+          "count": 1
+        }
+      ],
       "triggers": [
         {
           "id": "@ChapelMaidSpawnTrigger"

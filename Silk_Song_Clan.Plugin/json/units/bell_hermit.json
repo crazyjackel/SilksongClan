@@ -41,6 +41,12 @@
       "size": 2,
       "health": 16,
       "attack_damage": 16,
+      "starting_status_effects": [
+        {
+          "status": "duality",
+          "count": 1
+        }
+      ],
       "subtypes": [
         "@Snail",
         "SubtypesData_BannerUnit"

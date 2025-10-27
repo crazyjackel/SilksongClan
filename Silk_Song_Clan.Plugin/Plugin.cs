@@ -159,11 +159,6 @@ namespace Silk_Song_Clan.Plugin
             Railend.ConfigurePreAction(builder =>
             {
                 builder.RegisterInstance(client);
-                builder.RegisterSingleton<IRegister<SilkData>, SilkDataRegister>();
-                builder.RegisterDecorator<
-                    IDataPipeline<IRegister<CardData>, CardData>,
-                    CardSilkDataPipelineDecorator
-                >();
             });
 
 
