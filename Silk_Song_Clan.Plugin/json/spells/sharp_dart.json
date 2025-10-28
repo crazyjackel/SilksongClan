@@ -7,7 +7,7 @@
         "english": "Sharp Dart"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Target Unit attacks."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Target friendly unit attacks."
       },
       "cost": 0,
       "card_type": "spell",
@@ -43,7 +43,8 @@
       "should_test": true,
       "should_fail_to_cast_if_test_fails": true,
       "additional_tooltips": [
-        "@SilkTooltip"
+        "@SilkTooltip",
+        "@SilkChannelTooltip"
       ]
     },
     {

@@ -29,6 +29,15 @@
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Silk] is a resource that can be used to cast spells and gain benefits."
             }
+        },
+        {
+            "id": "SilkChannelTooltip",
+            "titles": {
+                "english": "Channel"
+            },
+            "descriptions": {
+                "english": "This spell channels [Silk_Song_Clan.Plugin_Silk] to gain benefits."
+            }
         }
     ]
 }
