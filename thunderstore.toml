@@ -3,7 +3,7 @@ schemaVersion = "0.0.1"
 
 [package]
 namespace = "crazy_MT2"
-name = "Silk Song Clan"
+name = "Silk_Song_Clan"
 versionNumber = "0.0.1"
 description = "Hollow Knight Silksong Mod for Monster Train 2"
 websiteUrl = "https://thunderstore.io"
