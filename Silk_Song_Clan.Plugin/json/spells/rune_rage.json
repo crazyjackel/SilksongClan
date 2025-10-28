@@ -7,7 +7,7 @@
         "english": "Rune Rage"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give Friendly Units [buff] [effect1.status0.power] and Enemies [poison] [effect1.status1.power]."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give Friendly Units [rage] [effect1.status0.power] and Enemies [frostbite] [effect2.status0.power]."
       },
       "cost": 1,
       "card_type": "spell",

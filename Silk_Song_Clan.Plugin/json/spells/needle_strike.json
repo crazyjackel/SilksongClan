@@ -59,7 +59,7 @@
       "id": "NeedleStrikeDamageEffect",
       "name": "CardEffectDamage",
       "target_mode": "room",
-      "target_team": "monsters",
+      "target_team": "heroes",
       "param_int": 0
     }
   ],

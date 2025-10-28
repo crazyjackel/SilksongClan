@@ -55,7 +55,7 @@
     {
       "id": "RelicSeekerScroungeEquippedTrigger",
       "descriptions": {
-        "english": "Remove the Equipment. Gain 20 gold."
+        "english": "Remove the Equipment. Gain 20 [coin]."
       },
       "trigger": "on_equipment_added",
       "effects": [
