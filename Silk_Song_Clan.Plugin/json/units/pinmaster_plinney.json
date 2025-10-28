@@ -80,6 +80,7 @@
       "name": "CardEffectRewardGold",
       "target_mode": "self",
       "param_int": -30,
+      "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true
     },
     {

@@ -9,6 +9,7 @@
             "descriptions": {
                 "english": "Cannot Equip Equipment."
             },
+            "show_description_on_cards": true,
             "bonus_damage": -8,
             "bonus_hp": -8,
             "bonus_equipment": -1,
