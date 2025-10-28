@@ -27,10 +27,12 @@
         {
             "id": "BrewFleaPetAbility",
             "names": {
-                "english": "Pet"
+                "english": "Pet",
+                "chinese": "摸摸"
             },
             "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]",
+                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
             },
             "is_an_ability": true,
             "targetless": true,
