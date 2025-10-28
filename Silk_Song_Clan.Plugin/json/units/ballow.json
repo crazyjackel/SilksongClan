@@ -55,7 +55,7 @@
     {
       "id": "BallowEquippedTrigger",
       "descriptions": {
-        "english": "Give Friendly Units [imbue] [effect0.status0.power]."
+        "english": "Give Friendly Units [Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power]."
       },
       "trigger": "on_equipment_added_to_ally",
       "effects": [
@@ -80,7 +80,7 @@
       "param_status_effects": [
         {
           "status": "@Imbue",
-          "count": 5
+          "count": 7
         }
       ]
     }

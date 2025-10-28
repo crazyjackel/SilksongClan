@@ -80,7 +80,7 @@
       "id": "LumbleTheLuckyIncantEffect",
       "name": "CardEffectRewardGold",
       "target_mode": "self",
-      "param_int": 4
+      "param_int": 5
     },
     {
       "id": "LumbleTheLuckyExtinguishEffect",
@@ -124,7 +124,7 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 0.8,
+              "y": 0.7,
               "z": 0
             },
             "scale": {

@@ -15,6 +15,12 @@
             "sprite": "@Silksong"
         }
     ],
+    "atlas_icons": [
+        {
+            "id": "Silksong",
+            "path": "textures/SilksongTrigger.png"
+        }
+    ],
     "sprites": [
         {
             "id": "Silksong",

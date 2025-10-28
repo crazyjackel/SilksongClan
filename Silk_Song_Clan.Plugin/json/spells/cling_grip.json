@@ -65,7 +65,7 @@
       "should_cancel_subsequent_effects_if_test_fails": true,
       "param_card_filter": "@ClingGripUpgradeMask",
       "additional_tooltips": [
-        "@ComboTooltip"
+        "@ComboPreviousTooltip"
       ]
     }
   ],

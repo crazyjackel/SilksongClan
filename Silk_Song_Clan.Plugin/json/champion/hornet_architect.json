@@ -8,7 +8,7 @@
                 "chinese": "建筑师纹章"
             },
             "descriptions": {
-                "english": "Can Equip an additional two equipment."
+                "english": "Can equip up to two additional equipment."
             },
             "show_description_on_cards": true,
             "bonus_damage": 4,

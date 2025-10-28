@@ -26,7 +26,7 @@
             "id": "HornetWitchStrikeTrigger",
             "trigger": "on_attacking",
             "descriptions": {
-                "english": "Apply [melee_weakness] [effect0.status0.power]."
+                "english": "Apply [meleeweakness] [effect0.status0.power]."
             },
             "effects": [
                 "@HornetWitchStrikeEffect"

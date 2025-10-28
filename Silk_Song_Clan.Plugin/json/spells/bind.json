@@ -33,14 +33,6 @@
         {
           "english": "Through inserting silk deep inside a bug's shell, they are restored to fight another day."
         }
-      ],
-      "extensions":
-      [
-        {
-          "silksong": {
-            "silk_cost": 6
-          }
-        }
       ]
     }
   ],

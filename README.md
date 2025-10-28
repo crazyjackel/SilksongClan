@@ -177,7 +177,7 @@ For each dependency, follow the installation instructions listed there.
 Once you've installed all the dependencies, copy this mod (unzipped) into your plugins directory. The file path should look something like `C:\Program Files (x86)\Steam\steamapps\common\Monster Train 2\BepInEx\plugins`.
 
 ## Bugs and Feedback
-This mod is in active development. As such, you may come across bugs or balance issues. If you do, please report them on the [GitHub Issues page](https://github.com/SilksongClan/MT2_SilksongClan/issues).
+This mod is in active development. As such, you may come across bugs or balance issues. If you do, please report them on the [GitHub Issues page](https://github.com/crazyjackel/SilksongClan/issues).
 
 If you would like to give feedback on the mod (please do!), we'd love to hear your thoughts on:
 - Balance and gameplay mechanics

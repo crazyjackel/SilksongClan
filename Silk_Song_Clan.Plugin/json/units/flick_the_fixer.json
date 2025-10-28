@@ -94,7 +94,7 @@
       "param_status_effects": [
         {
           "status": "@PermanentProtection",
-          "count": 1
+          "count": 2
         }
       ]
     }

@@ -27,7 +27,7 @@
             "bonus_damage": 8,
             "bonus_hp": 12,
             "descriptions": {
-                "english": "Gains 25% more Attack if at Max Silk."
+                "english": "Deals 25% more Damage if at Max Silk."
             },
             "trait_upgrades": [
                 "@HornetHunter1Trait"
@@ -40,14 +40,12 @@
                 "english": "Hunter II",
                 "chinese": "猎人纹章 II"
             },
-            "bonus_damage": 8,
-            "bonus_hp": 12,
+            "bonus_damage": 16,
+            "bonus_hp": 24,
             "descriptions": {
-                "english": "Gains 50% more Attack if at Max Silk."
+                "english": "Deals 50% more Damage if at Max Silk."
             },
-            "remove_trait_upgrades": [
-                "@CardTraitScaleDamageFullSilk"
-            ],
+            "remove_upgrades": ["@HornetHunter1"],
             "trait_upgrades": [
                 "@HornetHunter2Trait"
             ],
@@ -59,14 +57,12 @@
                 "english": "Hunter III",
                 "chinese": "猎人纹章 III"
             },
-            "bonus_damage": 16,
-            "bonus_hp": 12,
+            "bonus_damage": 30,
+            "bonus_hp": 48,
             "descriptions": {
-                "english": "Gains 100% more Attack if at Max Silk."
+                "english": "Deals 100% more Damage if at Max Silk."
             },
-            "remove_trait_upgrades": [
-                "@CardTraitScaleDamageFullSilk"
-            ],
+            "remove_upgrades": ["@HornetHunter2"],
             "trait_upgrades": [
                 "@HornetHunter3Trait"
             ],

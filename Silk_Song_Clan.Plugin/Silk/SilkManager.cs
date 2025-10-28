@@ -49,21 +49,6 @@ namespace Silk_Song_Clan.Plugin
             return num;
         }
 
-        public int? GetSilkCost(CardState cardState)
-        {
-            Plugin.Logger.LogInfo("Getting silk cost for card: " + cardState.GetAssetName());
-            var silkDataRegister = GetSilkDataRegister();
-            if (!silkDataRegister.TryLookupIdentifier(
-                cardState.GetCardDataID(), 
-                RegisterIdentifierType.ReadableID,
-                out SilkData? silkData, 
-                out bool? IsModded))
-            {
-                return null;
-            }
-            return silkData.Silk;
-        }
-
         public int GetCurrentSilk()
         {
             var silkSaveData = GetSilkSaveData();

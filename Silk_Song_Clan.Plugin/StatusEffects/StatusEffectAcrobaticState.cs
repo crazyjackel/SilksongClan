@@ -174,13 +174,16 @@ namespace Silk_Song_Clan.Plugin
 
         private IEnumerator ApplyTemporaryStatBuff(CharacterState character, StatBuffType statBuffType, int stacks)
         {
+            CardState? spawnerCard = character.GetSpawnerCard();
             switch (statBuffType)
             {
                 case StatBuffType.MaxHP:
+                    spawnerCard?.GetTemporaryCardStateModifiers().IncrementAdditionalHP(stacks);
                     yield return character.BuffMaxHP(stacks, false, null, true);
                     break;
 
                 case StatBuffType.Damage:
+                    spawnerCard?.GetTemporaryCardStateModifiers().IncrementAdditionalDamage(stacks);
                     character.BuffDamage(stacks, null, false);
                     break;
             }

@@ -43,7 +43,8 @@
     {
       "id": "ThreadStormScaleEffectApplications",
       "name": "CardTraitScalingAddEffectApplications",
-      "param_int": 5
+      "param_int": 5,
+      "param_tracked_value": "any_character"
     },
     {
         "id": "ThreadStormAttunedTrait",
@@ -59,7 +60,8 @@
       "should_test": true,
       "should_fail_to_cast_if_test_fails": true,
       "additional_tooltips": [
-        "@SilkTooltip"
+        "@SilkTooltip",
+        "@SilkChannelTooltip"
       ]
     },
     {
