@@ -42,7 +42,8 @@
     {
       "id": "ThreadStormScaleEffectApplications",
       "name": "CardTraitScalingAddEffectApplications",
-      "param_int": 5
+      "param_int": 5,
+      "param_tracked_value": "any_character"
     },
     {
         "id": "ThreadStormAttunedTrait",
