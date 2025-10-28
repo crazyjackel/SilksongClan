@@ -7,9 +7,6 @@
                 "english": "Shaman",
                 "chinese": "萨满纹章"
             },
-            "descriptions": {
-                "english": "[conduit] [status0.power]"
-            },
             "bonus_damage": 6,
             "bonus_hp": 14,
             "status_effect_upgrades": [

@@ -7,9 +7,6 @@
                 "english": "Wanderer",
                 "chinese": "漫游者纹章"
             },
-            "descriptions": {
-                "english": "[multistrike] [status0.power]"
-            },
             "bonus_damage": 3,
             "bonus_hp": 3,
             "status_effect_upgrades": [

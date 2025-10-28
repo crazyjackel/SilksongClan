@@ -11,7 +11,8 @@
             "icon": "@WormwayKeyIcon",
             "icon_small": "@WormwayKeyIcon",
             "descriptions": {
-                "english": "Rare and Champion Units gain +10 [attack] and +10 [health]."
+                "english": "Rare and Champion Units gain +10 [attack] and +10 [health].",
+                "chinese": "稀有和勇者单位获得 +10[attack]，+10[health]。"
             },
             "lore_tooltips": [
                 {

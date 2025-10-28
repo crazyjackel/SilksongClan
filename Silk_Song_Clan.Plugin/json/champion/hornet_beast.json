@@ -19,7 +19,8 @@
             "id": "BeastStrikeTrigger",
             "trigger": "@Silksong",
             "descriptions": {
-                "english": "Gain [lifesteal] [effect0.status0.power]."
+                "english": "Gain [lifesteal] [effect0.status0.power].",
+                "chinese": "获得[lifesteal] [effect0.status0.power]。"
             },
             "effects": [
                 "@BeastStrikeEffect"

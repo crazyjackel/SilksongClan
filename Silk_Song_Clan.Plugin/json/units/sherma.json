@@ -25,7 +25,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Gate, gate, gate! Nicest gate I've met! Gate, gate, gate! Greatest miracle yet! Ha ha ha!"
+          "english": "Gate, gate, gate! Nicest gate I've met! Gate, gate, gate! Greatest miracle yet! Ha ha ha!",
+          "chinese": "门，门，门！最漂亮的大门！<br>门，门，门！伟大奇迹如神！哈哈哈！"
         }
       ]
     }
