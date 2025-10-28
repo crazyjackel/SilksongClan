@@ -98,6 +98,7 @@
   "upgrade_masks": [
     {
       "id": "BellHermitComboSnailMask",
+      "card_type": "monster",
       "required_subtypes": [
         "@Snail"
       ]

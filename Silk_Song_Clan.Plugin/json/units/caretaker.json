@@ -96,6 +96,7 @@
   "upgrade_masks": [
     {
       "id": "CaretakerComboSnailMask",
+      "card_type": "monster",
       "required_subtypes": [
         "@Snail"
       ]

@@ -94,6 +94,7 @@
   "upgrade_masks": [
     {
       "id": "ChapelMaidComboSnailMask",
+      "card_type": "monster",
       "required_subtypes": [
         "@Snail"
       ]
