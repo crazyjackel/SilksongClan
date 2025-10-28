@@ -123,7 +123,7 @@
       "name": "CardEffectAddBattleCard",
       "target_mode": "hand",
       "param_card_type": "equipment",
-      "param_card_pool": "EquipmentPool"
+      "param_card_pool": "RoomAndEquipmentMerchant_EquipmentPool"
     }
   ],
   "sprites": [

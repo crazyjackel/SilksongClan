@@ -17,6 +17,15 @@
             "descriptions": {
                 "english": "Gain additional effects if the previous card played was a specific type."
             }
+        },
+        {
+            "id": "ComboPreviousTooltip",
+            "titles": {
+                "english": "Combo"
+            },
+            "descriptions": {
+                "english": "Gain additional effects if a previous card was played."
+            }
         }
     ]
 }
