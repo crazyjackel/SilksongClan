@@ -49,6 +49,15 @@
             "bonus_hp": 3
         }
     ],
+    "upgrade_masks": [
+        {
+            "id": "HugeFleaPetUpgradeMask",
+            "card_type": "monster",
+            "required_subtypes": [
+                "@Flea"
+            ]
+        }
+    ],
     "characters": [
         {
             "id": "HugeFlea",
@@ -74,10 +83,11 @@
         },
         {
             "id": "HugeFleaPetEffect",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "name": "@CardEffectAddCardUpgradeToUnitsFilter",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@HugeFleaPetUpgrade"
+            "param_upgrade": "@HugeFleaPetUpgrade",
+            "param_card_filter": "@HugeFleaPetUpgradeMask"
         }
     ],
     "sprites": [

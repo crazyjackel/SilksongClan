@@ -58,6 +58,15 @@
             "ability": "@FleaPetAbility"
         }
     ],
+    "upgrade_masks": [
+        {
+            "id": "FleaPetUpgradeMask",
+            "card_type": "monster",
+            "required_subtypes": [
+                "@Flea"
+            ]
+        }
+    ],
     "upgrades": [
         {
             "id": "FleaPetUpgrade",
@@ -74,10 +83,11 @@
         },
         {
             "id": "FleaPetEffect",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "name": "@CardEffectAddCardUpgradeToUnitsFilter",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@FleaPetUpgrade"
+            "param_upgrade": "@FleaPetUpgrade",
+            "param_card_filter": "@FleaPetUpgradeMask"
         }
     ],
     "sprites": [

@@ -63,7 +63,7 @@
     {
       "id": "SilkSoarBindEffect",
       "name": "@CardEffectBind",
-      "target_mode": "drop_target_character",
+      "target_mode": "last_targeted_characters",
       "target_team": "monsters"
     }
   ],

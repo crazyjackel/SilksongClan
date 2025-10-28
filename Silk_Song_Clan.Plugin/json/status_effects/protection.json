@@ -23,7 +23,7 @@
                 "english": "<b>Protection</b>"
             },
             "display_category": "positive",
-            "trigger_stage": "on_monster_team_turn_begin",
+            "trigger_stage": "on_post_room_combat",
             "additional_trigger_stages": ["on_hit", "on_attacked"],
             "is_stackable": true,
             "remove_stack_at_end_of_turn": false,
