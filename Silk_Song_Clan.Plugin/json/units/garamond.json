@@ -80,7 +80,7 @@
     {
       "id": "GaramondSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain an Ability to \"Attack\" and +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushealth][health] permanently."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain an Ability to \"Attack\" and +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] permanently."
       },
       "trigger": "on_spawn",
       "effects": [

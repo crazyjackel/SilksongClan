@@ -91,7 +91,7 @@
     {
       "id": "CrullHungerUpgrade",
       "bonus_damage": 3,
-      "bonus_health": 3
+      "bonus_hp": 3
     }
   ],
   "effects": [
