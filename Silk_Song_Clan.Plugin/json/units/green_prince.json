@@ -5,6 +5,7 @@
       "id": "SpawnGreenPrince",
       "names": {
         "english": "Green Prince",
+        "chinese": "翠绿王子",
         "french": "Green Prince"
       },
       "card_art": "@GreenPrinceCardArt",
@@ -35,6 +36,7 @@
       "id": "GreenPrince",
       "names": {
         "english": "Green Prince",
+        "chinese": "翠绿王子",
         "french": "Green Prince"
       },
       "character_art": "@GreenPrinceCharacterArt",
@@ -84,7 +86,8 @@
     {
       "id": "GreenPrinceSilksongTrigger",
       "descriptions": {
-        "english": "Add a Frozen, Ephemeral Copy with [fragile] to your hand."
+        "english": "Add a [freeze], [ephemeral] Copy with [fragile] to your hand.",
+        "chinese": "将这个单位带有[freeze]和[ephemeral]的复制品加入你的手牌，并使其获得[fragile]。"
       },
       "trigger": "@Silksong",
       "effects": [

@@ -4,7 +4,8 @@
     {
       "id": "Bind",
       "names": {
-        "english": "Bind"
+        "english": "Bind",
+        "chinese": "聚结"
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Bind]. Restore [effect2.power] health."

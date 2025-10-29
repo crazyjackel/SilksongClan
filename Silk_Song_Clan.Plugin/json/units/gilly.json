@@ -5,6 +5,7 @@
       "id": "SpawnGilly",
       "names": {
         "english": "Gilly",
+        "chinese": "吉莉",
         "french": "Gilly"
       },
       "card_art": "@GillyCardArt",
@@ -35,6 +36,7 @@
       "id": "Gilly",
       "names": {
         "english": "Gilly",
+        "chinese": "吉莉",
         "french": "Gilly"
       },
       "character_art": "@GillyCharacterArt",
@@ -62,7 +64,8 @@
     {
       "id": "GillySilksongTrigger",
       "descriptions": {
-        "english": "Gain [stealth] [effect0.status0.power]."
+        "english": "Gain [stealth] [effect0.status0.power].",
+        "chinese": "获得[stealth] [effect0.status0.power]。"
       },
       "trigger": "@Silksong",
       "effects": [

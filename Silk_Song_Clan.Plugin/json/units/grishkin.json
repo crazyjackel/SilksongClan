@@ -5,6 +5,7 @@
       "id": "SpawnGrishkin",
       "names": {
         "english": "Grishkin",
+        "chinese": "格里希金",
         "french": "Grishkin"
       },
       "card_art": "@GrishkinCardArt",
@@ -35,6 +36,7 @@
       "id": "Grishkin",
       "names": {
         "english": "Grishkin",
+        "chinese": "格里希金",
         "french": "Grishkin"
       },
       "character_art": "@GrishkinCharacterArt",
@@ -67,14 +69,14 @@
     {
       "id": "GrishkinBuffFleasUpgrade",
       "bonus_damage": 3,
-      "bonus_health": 3
+      "bonus_hp": 3
     }
   ],
   "character_triggers": [
     {
       "id": "GrishkinSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Flea Subtype: Gain \"[shift]: Give Friendly Fleas +[effect1.upgrade.charactertrigger0.effect0.status0.upgrade.bonusdamage] [attack] and +[effect1.upgrade.charactertrigger0.effect0.status0.upgrade.bonushealth] [health]\""
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Flea Subtype: Gain \"[shift]: Give Friendly Fleas +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonusdamage] [attack] and +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonushp] [health].\""
       },
       "trigger": "on_spawn",
       "effects": [

@@ -4,7 +4,8 @@
     {
       "id": "SpawnTwelfthArchitect",
       "names": {
-        "english": "Twelfth Architect"
+        "english": "Twelfth Architect",
+        "chinese": "第十二席建筑师"
       },
       "card_art": "@TwelfthArchitectCardArt",
       "cost": 2,
@@ -33,6 +34,7 @@
       "id": "TwelfthArchitect",
       "names": {
         "english": "Twelfth Architect",
+        "chinese": "第十二席建筑师",
         "french": "Twelfth Architect"
       },
       "character_art": "@TwelfthArchitectCharacterArt",
@@ -54,7 +56,7 @@
     {
       "id": "TwelfthArchitectCelebrateTrigger",
       "descriptions": {
-        "english": "Spend 100 [coin]. Gain a Relic allowing Stewards to Equip an additional Equipment."
+        "english": "Spend [effect0.powerabs] [coin]. Gain a Artifact allowing Stewards to Equip an additional Equipment."
       },
       "trigger": "on_encounter_complete",
       "effects": [

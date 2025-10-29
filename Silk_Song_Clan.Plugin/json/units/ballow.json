@@ -5,6 +5,7 @@
       "id": "SpawnBallow",
       "names": {
         "english": "Ballow",
+        "chinese": "巴洛",
         "french": "Ballow"
       },
       "card_art": "@BallowCardArt",
@@ -35,6 +36,7 @@
       "id": "Ballow",
       "names": {
         "english": "Ballow",
+        "chinese": "巴洛",
         "french": "Ballow"
       },
       "character_art": "@BallowCharacterArt",
@@ -53,7 +55,8 @@
     {
       "id": "BallowEquippedTrigger",
       "descriptions": {
-        "english": "Give Friendly Units [Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power]."
+        "english": "Give Friendly Units [Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power].",
+        "chinese": "友方单位获得[Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power]。"
       },
       "trigger": "on_equipment_added_to_ally",
       "effects": [

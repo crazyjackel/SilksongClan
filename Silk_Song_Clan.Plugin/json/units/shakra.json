@@ -5,6 +5,7 @@
       "id": "SpawnShakra",
       "names": {
         "english": "Shakra",
+        "chinese": "沙克拉",
         "french": "Shakra"
       },
       "card_art": "@ShakraCardArt",
@@ -34,6 +35,7 @@
       "id": "Shakra",
       "names": {
         "english": "Shakra",
+        "chinese": "沙克拉",
         "french": "Shakra"
       },
       "character_art": "@ShakraCharacterArt",
@@ -61,7 +63,8 @@
     {
       "id": "ShakraStrikeTrigger",
       "descriptions": {
-        "english": "Apply [meleeweakness] [effect0.status0.power]."
+        "english": "Apply [meleeweakness] [effect0.status0.power].",
+        "chinese": "施加[meleeweakness] [effect0.status0.power]。"
       },
       "trigger": "on_attacking",
       "effects": [

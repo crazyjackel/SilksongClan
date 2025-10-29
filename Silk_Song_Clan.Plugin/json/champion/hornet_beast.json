@@ -4,7 +4,8 @@
         {
             "id": "HornetBeast",
             "titles": {
-                "english": "Beast"
+                "english": "Beast",
+                "chinese": "野兽纹章"
             },
             "bonus_damage": 0,
             "bonus_hp": 2,
@@ -18,7 +19,8 @@
             "id": "BeastStrikeTrigger",
             "trigger": "@Silksong",
             "descriptions": {
-                "english": "Gain [lifesteal] [effect0.status0.power]."
+                "english": "Gain [lifesteal] [effect0.status0.power].",
+                "chinese": "获得[lifesteal] [effect0.status0.power]。"
             },
             "effects": [
                 "@BeastStrikeEffect"

@@ -5,6 +5,7 @@
       "id": "SpawnFleamasterMooshka",
       "names": {
         "english": "Fleamaster Mooshka",
+        "chinese": "蚤大师 穆什卡",
         "french": "Fleamaster Mooshka"
       },
       "card_art": "@FleamasterMooshkaCardArt",
@@ -35,6 +36,7 @@
       "id": "FleamasterMooshka",
       "names": {
         "english": "Fleamaster Mooshka",
+        "chinese": "蚤大师 穆什卡",
         "french": "Fleamaster Mooshka"
       },
       "character_art": "@FleamasterMooshkaCharacterArt",
@@ -53,7 +55,8 @@
     {
       "id": "FleamasterResolveTrigger",
       "descriptions": {
-        "english": "Add a random Flea to Hand."
+        "english": "Add a random Flea to Hand.",
+        "chinese": "将一个随机蚤民单位加入你的手牌。"
       },
       "trigger": "on_team_turn_begin",
       "effects": [

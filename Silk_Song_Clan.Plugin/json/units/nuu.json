@@ -5,6 +5,7 @@
       "id": "SpawnNuu",
       "names": {
         "english": "Nuu",
+        "chinese": "努努",
         "french": "Nuu"
       },
       "card_art": "@NuuCardArt",
@@ -35,6 +36,7 @@
       "id": "Nuu",
       "names": {
         "english": "Nuu",
+        "chinese": "努努",
         "french": "Nuu"
       },
       "character_art": "@NuuCharacterArt",
@@ -59,7 +61,8 @@
     {
       "id": "NuuHarvestTrigger",
       "descriptions": {
-        "english": "Harvest: Gain 1 Permanent Imbue and 1 Permanent Protection."
+        "english": "Gain [effect0.status0.power] [Silk_Song_Clan.Plugin_PermanentImbue] and [effect0.status1.power] [Silk_Song_Clan.Plugin_PermanentProtection].",
+        "chinese": "获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] 和[Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status1.power]。"
       },
       "trigger": "on_any_unit_death_on_floor",
       "effects": [
@@ -71,7 +74,8 @@
     {
       "id": "NuuHungerTrigger",
       "descriptions": {
-        "english": "Hunger: Gain 1 Permanent Imbue and 1 Permanent Protection"
+        "english": "Gain [effect0.status0.power] [Silk_Song_Clan.Plugin_PermanentImbue] and [effect0.status1.power] [Silk_Song_Clan.Plugin_PermanentProtection].",
+        "chinese": "获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] 和[Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status1.power]。"
       },
       "trigger": "on_food_spawn",
       "effects": [

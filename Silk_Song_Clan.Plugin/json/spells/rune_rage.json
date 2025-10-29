@@ -4,7 +4,8 @@
     {
       "id": "RuneRage",
       "names": {
-        "english": "Rune Rage"
+        "english": "Rune Rage",
+        "chinese": "符文之怒"
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give Friendly Units [rage] [effect1.status0.power] and Enemies [frostbite] [effect2.status0.power]."

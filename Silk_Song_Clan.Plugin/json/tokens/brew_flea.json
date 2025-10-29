@@ -4,7 +4,8 @@
         {
             "id": "SpawnBrewFlea",
             "names": {
-                "english": "Brew Flea"
+                "english": "Brew Flea",
+                "chinese": "酿蚤"
             },
             "card_art": "@BrewFleaCardArt",
             "cost": 1,
@@ -26,10 +27,12 @@
         {
             "id": "BrewFleaPetAbility",
             "names": {
-                "english": "Pet Faster"
+                "english": "Pet Faster",
+                "chinese": "摸摸"
             },
             "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
             },
             "is_an_ability": true,
             "targetless": true,
@@ -45,7 +48,8 @@
         {
             "id": "BrewFlea",
             "names": {
-                "english": "Brew Flea"
+                "english": "Brew Flea",
+                "chinese": "酿蚤"
             },
             "character_art": "@BrewFleaCharacterArt",
             "size": 1,
