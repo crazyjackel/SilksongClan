@@ -57,7 +57,7 @@
       "descriptions": {
         "english": "Add a random Flea to Hand."
       },
-      "trigger": "on_turn_begin",
+      "trigger": "on_team_turn_begin",
       "effects": [
         {
           "id": "@FleamasterAddFleaEffect"

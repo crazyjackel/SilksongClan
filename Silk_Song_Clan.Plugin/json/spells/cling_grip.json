@@ -53,14 +53,13 @@
     {
       "id": "ClingGripAdvanceEffect",
       "name": "CardEffectFloorRearrange",
-      "target_mode": "drop_target_character",
+      "target_mode": "last_targeted_characters",
       "target_team": "both",
       "param_int": 0
     },
     {
       "id": "ClingGripComboEffect",
       "name": "@CardEffectTestLastCard",
-      "target_mode": "self",
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
       "param_card_filter": "@ClingGripUpgradeMask",

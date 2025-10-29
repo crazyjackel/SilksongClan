@@ -4,20 +4,83 @@
         {
             "id": "HornetHunter1Trait",
             "name": "@CardTraitScaleDamageFullSilk",
+            "tooltip_suppressed": false,
             "param_float": 1.25
         },
         {
             "id": "HornetHunter2Trait",
             "name": "@CardTraitScaleDamageFullSilk",
+            "tooltip_suppressed": false,
             "param_float": 1.50
         },
         {
             "id": "HornetHunter3Trait",
             "name": "@CardTraitScaleDamageFullSilk",
+            "tooltip_suppressed": false,
             "param_float": 2.00
         }
     ],
+    "effects": [
+        {
+            "id": "HornetHunter1Effect",
+            "name": "CardEffectAddCardUpgradeToUnits",
+            "param_upgrade": "@HornetHunter1Upgrade",
+            "param_int_2": 2
+        },
+        {
+            "id": "HornetHunter2Effect",
+            "name": "CardEffectAddCardUpgradeToUnits",
+            "param_upgrade": "@HornetHunter2Upgrade",
+            "param_int_2": 2
+        },
+        {
+            "id": "HornetHunter3Effect",
+            "name": "CardEffectAddCardUpgradeToUnits",
+            "param_upgrade": "@HornetHunter3Upgrade",
+            "param_int_2": 2
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "HornetHunter1Trigger",
+            "trigger": "@Silksong",
+            "descriptions": {
+                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] permanently."
+            },
+            "effects": ["@HornetHunter1Effect"]
+        },
+        {
+            "id": "HornetHunter2Trigger",
+            "trigger": "@Silksong",
+            "descriptions": {
+                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently."
+            },
+            "effects": ["@HornetHunter2Effect"]
+        },
+        {
+            "id": "HornetHunter3Trigger",
+            "trigger": "@Silksong",
+            "descriptions": {
+                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently."
+            },
+            "effects": ["@HornetHunter3Effect"]
+        }
+    ],
     "upgrades": [
+        {
+            "id": "HornetHunter1Upgrade",
+            "bonus_damage": 1
+        },
+        {
+            "id": "HornetHunter2Upgrade",
+            "bonus_damage": 1,
+            "bonus_hp": 1
+        },
+        {
+            "id": "HornetHunter3Upgrade",
+            "bonus_damage": 2,
+            "bonus_hp": 2
+        },
         {
             "id": "HornetHunter1",
             "titles": {
@@ -29,6 +92,9 @@
             "descriptions": {
                 "english": "Deals 25% more Damage if at Max Silk."
             },
+            "trigger_upgrades": [
+                "@HornetHunter1Trigger"
+            ],
             "trait_upgrades": [
                 "@HornetHunter1Trait"
             ],
@@ -46,6 +112,9 @@
                 "english": "Deals 50% more Damage if at Max Silk."
             },
             "remove_upgrades": ["@HornetHunter1"],
+            "trigger_upgrades": [
+                "@HornetHunter2Trigger"
+            ],
             "trait_upgrades": [
                 "@HornetHunter2Trait"
             ],
@@ -63,6 +132,9 @@
                 "english": "Deals 100% more Damage if at Max Silk."
             },
             "remove_upgrades": ["@HornetHunter2"],
+            "trigger_upgrades": [
+                "@HornetHunter3Trigger"
+            ],
             "trait_upgrades": [
                 "@HornetHunter3Trait"
             ],

@@ -31,7 +31,7 @@
                 "chinese": "摸摸"
             },
             "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushealth][health]",
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushealth][health].",
                 "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushealth][health]。战斗开始时处于冷却中。"
             },
             "is_an_ability": true,
@@ -75,6 +75,15 @@
             "bonus_hp": 1
         }
     ],
+    "upgrade_masks": [
+        {
+            "id": "BellFleaPetUpgradeMask",
+            "card_type": "monster",
+            "required_subtypes": [
+                "@Flea"
+            ]
+        }
+    ],
     "effects": [
         {
             "id": "SpawnBellFleaEffect",
@@ -84,10 +93,11 @@
         },
         {
             "id": "BellFleaPetEffect",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "name": "@CardEffectAddCardUpgradeToUnitsFilter",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@BellFleaPetUpgrade"
+            "param_upgrade": "@BellFleaPetUpgrade",
+            "param_card_filter": "@BellFleaPetUpgradeMask"
         }
     ],
     "sprites": [

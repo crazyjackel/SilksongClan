@@ -27,7 +27,7 @@
         {
             "id": "BrewFleaPetAbility",
             "names": {
-                "english": "Pet",
+                "english": "Pet Faster",
                 "chinese": "摸摸"
             },
             "descriptions": {
@@ -67,6 +67,15 @@
             "ability": "@BrewFleaPetAbility"
         }
     ],
+    "upgrade_masks": [
+        {
+            "id": "BrewFleaPetUpgradeMask",
+            "card_type": "monster",
+            "required_subtypes": [
+                "@Flea"
+            ]
+        }
+    ],
     "upgrades": [
         {
             "id": "BrewFleaPetUpgrade",
@@ -83,10 +92,11 @@
         },
         {
             "id": "BrewFleaPetEffect",
-            "name": "CardEffectAddTempCardUpgradeToUnits",
+            "name": "@CardEffectAddCardUpgradeToUnitsFilter",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@BrewFleaPetUpgrade"
+            "param_upgrade": "@BrewFleaPetUpgrade",
+            "param_card_filter": "@BrewFleaPetUpgradeMask"
         }
     ],
     "sprites": [
