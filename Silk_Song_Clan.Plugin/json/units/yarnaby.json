@@ -67,7 +67,8 @@
     {
       "id": "YarnabyHungerTrigger",
       "descriptions": {
-        "english": "Gain [lifesteal] [effect0.status0.power]."
+        "english": "Gain [lifesteal] [effect0.status0.power].",
+        "chinese": "获得[lifesteal] [effect0.status0.power]。"
       },
       "trigger": "on_food_spawn",
       "effects": [
@@ -80,7 +81,7 @@
       "id": "YarnabySpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Crull and Benjin: [strike]: Front Unit gets [lifesteal] [effect1.upgrade0.status0.power]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Crull and Benjin: [strike]: Front Friendly Unit gets [lifesteal] [effect1.upgrade0.status0.power]."
       },
       "effects": [
         {

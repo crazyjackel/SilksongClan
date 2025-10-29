@@ -36,7 +36,8 @@
         "english": "Send to Hot Spring"
       },
       "descriptions": {
-        "english": "Sacrifice a Flea. Fleas get + [effect0.upgrade.bonusdamage] [attack] and + [effect0.upgrade.bonushealth] [health] and [damage shield] [effect0.upgrade.status0.power]"
+        "english": "Fleas get +[effect1.upgrade.bonusdamage] [attack] and +[effect1.upgrade.bonushp] [health] and [damageshield] [effect1.upgrade.status0.power].",
+        "chinese": "蚤民单位获得 +[effect1.upgrade.bonusdamage][attack]，+[effect1.upgrade.bonushp][health] 和[damageshield] [effect1.upgrade.status0.power]。战斗开始时处于冷却中。"
       },
       "initial_cooldown": 1,
       "cooldown": 1,
@@ -75,7 +76,7 @@
     {
       "id": "KrattHotSpringUpgrade",
       "bonus_damage": 5,
-      "bonus_health": 5,
+      "bonus_hp": 5,
       "status_effect_upgrades": [
         {
           "status": "damage shield",

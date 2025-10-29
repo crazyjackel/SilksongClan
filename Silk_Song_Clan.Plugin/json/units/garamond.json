@@ -36,7 +36,8 @@
         "chinese": "长矛"
       },
       "descriptions": {
-        "english": "Attack."
+        "english": "Attack.",
+        "chinese": "立即攻击。"
       },
       "is_an_ability": true,
       "cooldown": 2,

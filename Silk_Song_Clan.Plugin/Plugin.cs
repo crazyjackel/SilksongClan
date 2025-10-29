@@ -93,7 +93,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/tokens/brew_flea.json",
 
                         //Units
-                        "json/units/alchemist_zylotol. json",
+                        "json/units/alchemist_zylotol.json",
                         "json/units/ballow.json",  
                         "json/units/bell_hermit.json",
                         "json/units/caretaker.json",

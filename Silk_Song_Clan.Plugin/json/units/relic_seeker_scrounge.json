@@ -57,7 +57,8 @@
     {
       "id": "RelicSeekerScroungeEquippedTrigger",
       "descriptions": {
-        "english": "Remove the Equipment. Gain 20 [coin]."
+        "english": "Remove the Equipment. Gain [effect1.power] [coin].",
+        "chinese": "移除自身的装备。获得 [effect1.power][coin]。"
       },
       "trigger": "on_equipment_added",
       "effects": [

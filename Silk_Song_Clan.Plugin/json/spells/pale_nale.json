@@ -7,7 +7,8 @@
         "english": "Pale Nale"
       },
       "descriptions": {
-        "english": "Deal Damage equal to [Silk_Song_Clan.Plugin_Silk] to the front enemy, then All Enemies."
+        "english": "Deal Damage equal to [Silk_Song_Clan.Plugin_Silk] to the front enemy, then All Enemies.",
+        "chinese": "对前排敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 1 倍。然后对所有敌方单位造成同等伤害。"
       },
       "cost": 0,
       "card_type": "spell",

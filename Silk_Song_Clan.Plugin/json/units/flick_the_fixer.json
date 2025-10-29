@@ -36,7 +36,8 @@
         "chinese": "修好它"
       },
       "descriptions": {
-        "english": "Spend [effect0.powerabs] [coin]. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]."
+        "english": "Spend [effect0.powerabs] [coin]. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power].",
+        "chinese": "花费 [effect0.powerabs][coin]。友方单位获得[Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]。"
       },
       "initial_cooldown": 0,
       "is_an_ability": true,

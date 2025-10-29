@@ -45,7 +45,8 @@
             "id": "HornetHunter1Trigger",
             "trigger": "@Silksong",
             "descriptions": {
-                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] permanently."
+                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] permanently.",
+                "chinese": "永久获得 +[effect0.upgrade0.bonusdamage][attack]。"
             },
             "effects": ["@HornetHunter1Effect"]
         },
@@ -53,7 +54,8 @@
             "id": "HornetHunter2Trigger",
             "trigger": "@Silksong",
             "descriptions": {
-                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently."
+                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently.",
+                "chinese": "永久获得 +[effect0.upgrade0.bonusdamage][attack]，+[effect0.upgrade0.bonushp][health]。"
             },
             "effects": ["@HornetHunter2Effect"]
         },
@@ -61,7 +63,8 @@
             "id": "HornetHunter3Trigger",
             "trigger": "@Silksong",
             "descriptions": {
-                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently."
+                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently.",
+                "chinese": "永久获得 +[effect0.upgrade0.bonusdamage][attack]，+[effect0.upgrade0.bonushp][health]。"
             },
             "effects": ["@HornetHunter3Effect"]
         }

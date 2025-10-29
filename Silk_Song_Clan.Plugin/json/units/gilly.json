@@ -64,7 +64,8 @@
     {
       "id": "GillySilksongTrigger",
       "descriptions": {
-        "english": "Gain [stealth] [effect0.status0.power]."
+        "english": "Gain [stealth] [effect0.status0.power].",
+        "chinese": "获得[stealth] [effect0.status0.power]。"
       },
       "trigger": "@Silksong",
       "effects": [

@@ -54,7 +54,8 @@
     {
       "id": "GrindleStrikeTrigger",
       "descriptions": {
-        "english": "Gain [effect0.power] [coin]."
+        "english": "Gain [effect0.power] [coin].",
+        "chinese": "获得 [effect0.power][coin]。"
       },
       "trigger": "on_attacking",
       "effects": [

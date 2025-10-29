@@ -8,7 +8,8 @@
         "chinese": "飞针穿梭"
       },
       "descriptions": {
-        "english": "Deal damage to the front unit equal to 2x [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. "
+        "english": "Deal damage to the front enemy unit equal to 2x [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. ",
+        "chinese": "对前排敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 2 倍。获得 [effect1.power][Silk_Song_Clan.Plugin_Silk]。"
       },
       "cost": 1,
       "card_type": "spell",

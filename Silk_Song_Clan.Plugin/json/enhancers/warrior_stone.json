@@ -8,7 +8,8 @@
                 "english": "Warrior Stone"
             },
             "descriptions": {
-                "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack], +[effect0.upgrade0.bonushp][health], and [Silk_Song_Clan.Plugin_Warrior]."
+                "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack], +[effect0.upgrade0.bonushp][health], and [Silk_Song_Clan.Plugin_Warrior].",
+                "chinese": "升级一个单位，使其获得[Silk_Song_Clan.Plugin_Warrior]，+[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
             },
             "relic_effects": [
                 "@WarriorStoneEnhancer"

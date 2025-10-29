@@ -35,7 +35,8 @@
         "english": "Inject"
       },
       "descriptions": {
-        "english": "Gain a Damage Shield. If you have 5 or more Damage Shields, Gain 10 Permanent Imbue."
+        "english": "Gain [effect0.status0.power] [damageshield]. If you have [effect1.status0.power] or more [damageshield], Gain [effect1.status1.power] [Silk_Song_Clan.Plugin_PermanentImbue].",
+        "chinese": "获得[damageshield] [effect0.status0.power]。如果有[damageshield] [effect1.status0.power]，则获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect1.status1.power]。"
       },
       "card_art": "@AlchemistZylotolAbilityCardArt",
       "is_an_ability": true,
