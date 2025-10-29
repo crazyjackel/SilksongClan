@@ -26,7 +26,7 @@
         {
             "id": "HugeFleaPetAbility",
             "names": {
-                "english": "Pet"
+                "english": "Pet Bigger"
             },
             "descriptions": {
                 "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushealth][health]"

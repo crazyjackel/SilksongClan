@@ -26,7 +26,7 @@
         {
             "id": "BrewFleaPetAbility",
             "names": {
-                "english": "Pet"
+                "english": "Pet Faster"
             },
             "descriptions": {
                 "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"

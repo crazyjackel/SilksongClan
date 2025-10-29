@@ -82,6 +82,10 @@ namespace Silk_Song_Clan.Plugin
                         //Map Nodes
                         "json/map_nodes/banner.json",
 
+                        //Enhancers
+                        "json/enhancers/acrobat_stone.json",
+                        "json/enhancers/warrior_stone.json",
+
                         //Tokens
                         "json/tokens/flea.json",
                         "json/tokens/bell_flea.json",

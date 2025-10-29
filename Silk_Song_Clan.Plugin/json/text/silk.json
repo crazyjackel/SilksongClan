@@ -38,6 +38,24 @@
             "descriptions": {
                 "english": "This spell channels [Silk_Song_Clan.Plugin_Silk] to gain benefits."
             }
+        },
+        {
+            "id": "FullSilkDamageTooltip",
+            "titles": {
+                "english": "Full Silk"
+            },
+            "descriptions": {
+                "english": "If at Max Silk, deal {0}x more Damage."
+            }
+        },
+        {
+            "id": "FullSilkDamageTooltipMax",
+            "titles": {
+                "english": "Full Silk"
+            },
+            "descriptions": {
+                "english": "Deal {0}x more Damage."
+            }
         }
     ]
 }

@@ -1,0 +1,68 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "WarriorStone",
+            "type": "enhancer",
+            "names": {
+                "english": "Warrior Stone"
+            },
+            "descriptions": {
+                "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack], +[effect0.upgrade0.bonushp][health], and [Silk_Song_Clan.Plugin_Warrior]."
+            },
+            "relic_effects": [
+                "@WarriorStoneEnhancer"
+            ],
+            "icon": "@WarriorStoneIcon",
+            "extensions": [
+                {
+                    "enhancer": {
+                        "class": "@Silksong",
+                        "pools": [
+                            "UnitUpgradePoolCommon"
+                        ],
+                        "rarity": "common"
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "WarriorStoneEnhancer",
+            "name": "RelicEffectCardUpgrade",
+            "param_card_type": "monster",
+            "param_upgrade": "@WarriorStoneUpgrade"
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "WarriorStoneUpgrade",
+            "titles": {
+                "english": "Warrior Stone"
+            },
+            "icon": "@WarriorStoneIcon",
+            "bonus_damage": 5,
+            "bonus_hp": 5,
+            "status_effect_upgrades": [
+                {
+                    "status": "@Warrior",
+                    "count": 1
+                }
+            ],
+            "use_upgrade_hightlight_tags": true
+        }
+    ],
+    "sprites": [
+        {
+            "id": "WarriorStoneIcon",
+            "path": "textures/WarriorStoneIcon.png"
+        }
+    ],
+    "atlas_icons": [
+        {
+            "id": "WarriorStoneIcon",
+            "path": "textures/WarriorStoneIcon.png"
+        }
+    ]
+}

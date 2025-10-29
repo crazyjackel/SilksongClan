@@ -6,11 +6,14 @@ using TrainworksReloaded.Core.Enum;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
+using TrainworksReloaded.Base.Extensions;
+using TrainworksReloaded.Base;
 
 namespace Silk_Song_Clan.Plugin
 {
 	public class CardTraitScaleDamageFullSilk : CardTraitState
 	{
+		private string tooltipDescription = string.Empty;
 		public override PropDescriptions CreateEditorInspectorDescriptions()
 		{
 			PropDescriptions propDescriptions = new PropDescriptions();
@@ -24,8 +27,8 @@ namespace Silk_Song_Clan.Plugin
 			return container.GetInstance<SilkManager>();
 		}
 
-        public override int OnApplyingDamage(ApplyingDamageParameters damageParams, ICoreGameManagers coreGameManagers)
-        {
+		public override int OnApplyingDamage(ApplyingDamageParameters damageParams, ICoreGameManagers coreGameManagers)
+		{
 			int num = damageParams.damage;
 			var silkManager = GetSilkManager();
 			if (silkManager != null && silkManager.GetCurrentSilk() == silkManager.GetMaxSilk())
@@ -33,6 +36,19 @@ namespace Silk_Song_Clan.Plugin
 				num = (int)(num * this.GetParamFloat());
 			}
 			return num;
-        }
+		}
+
+		public override string GetCardTooltipText()
+		{
+			var silkManager = GetSilkManager();
+			if (silkManager != null && silkManager.GetCurrentSilk() == silkManager.GetMaxSilk())
+			{
+				return string.Format("@FullSilkDamageTooltipMax".ToId(MyPluginInfo.PLUGIN_GUID, TemplateConstants.AdditionalTooltip).Localize(null), this.GetParamFloat());
+			}
+			else
+			{
+				return string.Format("@FullSilkDamageTooltip".ToId(MyPluginInfo.PLUGIN_GUID, TemplateConstants.AdditionalTooltip).Localize(null), this.GetParamFloat());
+			}
+		}
 	}
 }
