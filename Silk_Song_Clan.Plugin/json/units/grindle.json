@@ -5,6 +5,7 @@
       "id": "SpawnGrindle",
       "names": {
         "english": "Grindle",
+        "chinese": "格林德尔",
         "french": "Grindle"
       },
       "card_art": "@GrindleCardArt",
@@ -34,6 +35,7 @@
       "id": "Grindle",
       "names": {
         "english": "Grindle",
+        "chinese": "格林德尔",
         "french": "Grindle"
       },
       "character_art": "@GrindleCharacterArt",
@@ -52,7 +54,8 @@
     {
       "id": "GrindleStrikeTrigger",
       "descriptions": {
-        "english": "Gain [effect0.power] [coin]."
+        "english": "Gain [effect0.power] [coin].",
+        "chinese": "获得 [effect0.power][coin]。"
       },
       "trigger": "on_attacking",
       "effects": [

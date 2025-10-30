@@ -5,6 +5,7 @@
       "id": "SpawnVarga",
       "names": {
         "english": "Varga",
+        "chinese": "瓦尔加",
         "french": "Varga"
       },
       "card_art": "@VargaCardArt",
@@ -35,6 +36,7 @@
       "id": "Varga",
       "names": {
         "english": "Varga",
+        "chinese": "瓦尔加",
         "french": "Varga"
       },
       "character_art": "@VargaCharacterArt",

@@ -5,6 +5,7 @@
       "id": "SpawnPinstress",
       "names": {
         "english": "Pinstress",
+        "chinese": "珠针女士",
         "french": "Pinstress"
       },
       "card_art": "@PinstressCardArt",
@@ -34,6 +35,7 @@
       "id": "Pinstress",
       "names": {
         "english": "Pinstress",
+        "chinese": "珠针女士",
         "french": "Pinstress"
       },
       "character_art": "@PinstressCharacterArt",
@@ -56,7 +58,7 @@
       "id": "PinstressSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Pinstress Subtype: Gain \"[strike]: Gain [conduit] [effect1.upgrade.charactertrigger0.effect0.status0.power]\""
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Pinstress Subtype: Gain \"[strike]: Gain [conduit] [effect1.upgrade.charactertrigger0.effect0.status0.power].\""
       },
       "effects": [
         {

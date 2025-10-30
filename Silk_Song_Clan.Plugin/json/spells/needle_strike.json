@@ -4,10 +4,12 @@
     {
       "id": "NeedleStrike",
       "names": {
-        "english": "Needle Strike"
+        "english": "Needle Strike",
+        "chinese": "针刺"
       },
       "descriptions": {
-        "english": "Deal damage to all enemies equal to [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. "
+        "english": "Deal damage to all enemies equal to [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. ",
+        "chinese": "对所有敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 1 倍。获得 [effect1.power][Silk_Song_Clan.Plugin_Silk]。"
       },
       "cost": 2,
       "card_type": "spell",

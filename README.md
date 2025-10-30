@@ -192,6 +192,7 @@ Any issues or questions, contact us on the [Monster Train 2 Discord channel](htt
 * **Hollow Knight**: Team Cherry
 * **Monster Train 2**: Shiny Shoe
 * **Trainworks Reloaded**: Monster Train 2 Modding Group
+* **Simplified Chinese Translation**: lostone-zc (using 磨坊组汉化(Windmill Group) fan translation for Silksong content currently)
 
 ### Special Thanks
 * The Monster Train 2 modding community for their support

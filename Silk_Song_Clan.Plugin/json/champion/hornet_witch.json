@@ -4,7 +4,8 @@
         {
             "id": "HornetWitch2",
             "titles": {
-                "english": "Witch"
+                "english": "Witch",
+                "chinese": "巫妪纹章"
             },
             "bonus_damage": 8,
             "bonus_hp": 8,
@@ -25,7 +26,8 @@
             "id": "HornetWitchStrikeTrigger",
             "trigger": "on_attacking",
             "descriptions": {
-                "english": "Apply [meleeweakness] [effect0.status0.power]."
+                "english": "Apply [meleeweakness] [effect0.status0.power].",
+                "chinese": "施加[meleeweakness] [effect0.status0.power]。"
             },
             "effects": [
                 "@HornetWitchStrikeEffect"

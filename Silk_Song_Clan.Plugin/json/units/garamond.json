@@ -4,7 +4,8 @@
     {
       "id": "SpawnGaramond",
       "names": {
-        "english": "Garamond"
+        "english": "Garamond",
+        "chinese": "加蒙德"
       },
       "card_art": "@GaramondCardArt",
       "cost": 2,
@@ -31,10 +32,12 @@
     {
       "id": "GaramondLanceAbility",
       "names": {
-        "english": "Lance"
+        "english": "Lance",
+        "chinese": "长矛"
       },
       "descriptions": {
-        "english": "Attack."
+        "english": "Attack.",
+        "chinese": "立即攻击。"
       },
       "is_an_ability": true,
       "cooldown": 2,
@@ -52,6 +55,7 @@
       "id": "Garamond",
       "names": {
         "english": "Garamond",
+        "chinese": "加蒙德",
         "french": "Garamond"
       },
       "character_art": "@GaramondCharacterArt",
@@ -76,7 +80,7 @@
     {
       "id": "GaramondSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain an Ability to \"Attack\" and +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushealth][health] permanently."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain an Ability to \"Attack\" and +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] permanently."
       },
       "trigger": "on_spawn",
       "effects": [

@@ -4,10 +4,8 @@
         {
             "id": "HornetWanderer",
             "titles": {
-                "english": "Wanderer"
-            },
-            "descriptions": {
-                "english": "[multistrike] [status0.power]"
+                "english": "Wanderer",
+                "chinese": "漫游者纹章"
             },
             "bonus_damage": 3,
             "bonus_hp": 3,

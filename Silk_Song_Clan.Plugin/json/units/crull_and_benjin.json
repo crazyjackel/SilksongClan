@@ -5,6 +5,7 @@
       "id": "SpawnCrullAndBenjin",
       "names": {
         "english": "Crull and Benjin",
+        "chinese": "克鲁尔 & 本金",
         "french": "Crull and Benjin"
       },
       "card_art": "@CrullAndBenjinCardArt",
@@ -35,6 +36,7 @@
       "id": "CrullAndBenjin",
       "names": {
         "english": "Crull and Benjin",
+        "chinese": "克鲁尔 & 本金",
         "french": "Crull and Benjin"
       },
       "character_art": "@CrullAndBenjinCharacterArt",
@@ -56,7 +58,8 @@
     {
       "id": "CrullHungerTrigger",
       "descriptions": {
-        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]"
+        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+        "chinese": "获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
       },
       "trigger": "on_food_spawn",
       "effects": [
@@ -88,7 +91,7 @@
     {
       "id": "CrullHungerUpgrade",
       "bonus_damage": 3,
-      "bonus_health": 3
+      "bonus_hp": 3
     }
   ],
   "effects": [

@@ -4,7 +4,8 @@
         {
             "id": "HornetReaper",
             "titles": {
-                "english": "Reaper"
+                "english": "Reaper",
+                "chinese": "收割者纹章"
             },
             "bonus_damage": 7,
             "bonus_hp": 4,

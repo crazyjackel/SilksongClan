@@ -45,7 +45,8 @@
             "id": "HornetHunter1Trigger",
             "trigger": "@Silksong",
             "descriptions": {
-                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] permanently."
+                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] permanently.",
+                "chinese": "永久获得 +[effect0.upgrade0.bonusdamage][attack]。"
             },
             "effects": ["@HornetHunter1Effect"]
         },
@@ -53,7 +54,8 @@
             "id": "HornetHunter2Trigger",
             "trigger": "@Silksong",
             "descriptions": {
-                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently."
+                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently.",
+                "chinese": "永久获得 +[effect0.upgrade0.bonusdamage][attack]，+[effect0.upgrade0.bonushp][health]。"
             },
             "effects": ["@HornetHunter2Effect"]
         },
@@ -61,7 +63,8 @@
             "id": "HornetHunter3Trigger",
             "trigger": "@Silksong",
             "descriptions": {
-                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently."
+                "english": "Gain +[effect0.upgrade0.bonusdamage][attack] and +[effect0.upgrade0.bonushp][health] permanently.",
+                "chinese": "永久获得 +[effect0.upgrade0.bonusdamage][attack]，+[effect0.upgrade0.bonushp][health]。"
             },
             "effects": ["@HornetHunter3Effect"]
         }
@@ -84,7 +87,8 @@
         {
             "id": "HornetHunter1",
             "titles": {
-                "english": "Hunter"
+                "english": "Hunter",
+                "chinese": "猎人纹章"
             },
             "bonus_damage": 8,
             "bonus_hp": 12,
@@ -102,7 +106,8 @@
         {
             "id": "HornetHunter2",
             "titles": {
-                "english": "Hunter II"
+                "english": "Hunter II",
+                "chinese": "猎人纹章 II"
             },
             "bonus_damage": 16,
             "bonus_hp": 24,
@@ -121,7 +126,8 @@
         {
             "id": "HornetHunter3",
             "titles": {
-                "english": "Hunter III"
+                "english": "Hunter III",
+                "chinese": "猎人纹章 III"
             },
             "bonus_damage": 30,
             "bonus_hp": 48,

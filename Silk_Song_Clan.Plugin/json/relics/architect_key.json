@@ -5,10 +5,12 @@
             "id": "ArchitectKey",
             "type": "collectable",
             "names": {
-                "english": "Architect's Key"
+                "english": "Architect's Key",
+                "chinese": "建筑师的钥匙"
             },
             "descriptions": {
-                "english": "Stewards can equip an additional piece of Equipment."
+                "english": "Stewards can equip an additional piece of Equipment.",
+                "chinese": "乘务员单位可以额外穿戴一件装备。"
             },
             "icon": "@ArchitectKeyIcon",
             "icon_small": "@ArchitectKeyIcon",

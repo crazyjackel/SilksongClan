@@ -5,6 +5,7 @@
       "id": "SpawnVog",
       "names": {
         "english": "Vog",
+        "chinese": "沃葛",
         "french": "Vog"
       },
       "card_art": "@VogCardArt",
@@ -35,6 +36,7 @@
       "id": "Vog",
       "names": {
         "english": "Vog",
+        "chinese": "沃葛",
         "french": "Vog"
       },
       "character_art": "@VogCharacterArt",
@@ -56,7 +58,8 @@
     {
       "id": "VogHarvestTrigger",
       "descriptions": {
-        "english": "If a Flea Died, Add a random Flea to Hand."
+        "english": "If a Flea Died, Add a random Flea to Hand.",
+        "chinese": "蚤民单位死亡时，将一个随机蚤民单位加入你的手牌。"
       },
       "trigger": "on_any_unit_death_on_floor",
       "effects": [

@@ -5,6 +5,7 @@
       "id": "SpawnPavo",
       "names": {
         "english": "Pavo",
+        "chinese": "帕沃",
         "french": "Pavo"
       },
       "card_art": "@PavoCardArt",
@@ -35,6 +36,7 @@
       "id": "Pavo",
       "names": {
         "english": "Pavo",
+        "chinese": "帕沃",
         "french": "Pavo"
       },
       "character_art": "@PavoCharacterArt",
@@ -62,7 +64,8 @@
     {
       "id": "PavoSilksongTrigger",
       "descriptions": {
-        "english": "Gain [conduit] [effect0.status0.power]."
+        "english": "Gain [conduit] [effect0.status0.power].",
+        "chinese": "获得[conduit] [effect0.status0.power]。"
       },
       "trigger": "@Silksong",
       "effects": [

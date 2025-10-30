@@ -4,10 +4,8 @@
         {
             "id": "HornetShaman",
             "titles": {
-                "english": "Shaman"
-            },
-            "descriptions": {
-                "english": "[conduit] [status0.power]"
+                "english": "Shaman",
+                "chinese": "萨满纹章"
             },
             "bonus_damage": 6,
             "bonus_hp": 14,

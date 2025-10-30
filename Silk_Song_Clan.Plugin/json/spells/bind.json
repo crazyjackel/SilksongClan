@@ -4,7 +4,8 @@
     {
       "id": "Bind",
       "names": {
-        "english": "Bind"
+        "english": "Bind",
+        "chinese": "束缚"
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Bind]. Restore [effect2.power] health."
@@ -42,7 +43,12 @@
       "target_mode": "self",
       "param_int": -6,
       "should_test": true,
-      "should_fail_to_cast_if_test_fails": true
+      "should_fail_to_cast_if_test_fails": true,
+      "additional_tooltips": [
+        {
+          "id": "@SilkChannelTooltip"
+        }
+      ]
     },
     {
       "id": "BindBindEffect",

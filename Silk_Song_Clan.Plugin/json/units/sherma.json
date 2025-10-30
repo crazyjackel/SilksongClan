@@ -5,6 +5,7 @@
       "id": "SpawnSherma",
       "names": {
         "english": "Sherma",
+        "chinese": "谢尔玛",
         "french": "Sherma"
       },
       "card_art": "@ShermaCardArt",
@@ -24,7 +25,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Gate, gate, gate! Nicest gate I've met! Gate, gate, gate! Greatest miracle yet! Ha ha ha!"
+          "english": "Gate, gate, gate! Nicest gate I've met! Gate, gate, gate! Greatest miracle yet! Ha ha ha!",
+          "chinese": "门，门，门！最漂亮的大门！<br>门，门，门！伟大奇迹如神！哈哈哈！"
         }
       ]
     }
@@ -34,6 +36,7 @@
       "id": "Sherma",
       "names": {
         "english": "Sherma",
+        "chinese": "谢尔玛",
         "french": "Sherma"
       },
       "character_art": "@ShermaCharacterArt",
@@ -56,7 +59,8 @@
       "id": "ShermaResolveTrigger",
       "trigger": "post_combat",
       "descriptions": {
-        "english": "Give Friendly Units [Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]."
+        "english": "Give Friendly Units [Silk_Song_Clan.Plugin_Protection] [effect0.status0.power].",
+        "chinese": "友方单位获得[Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]。"
       },
       "effects": [
         {

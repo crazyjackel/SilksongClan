@@ -5,6 +5,7 @@
       "id": "SpawnPebb",
       "names": {
         "english": "Pebb",
+        "chinese": "佩珀",
         "french": "Pebb"
       },
       "card_art": "@PebbCardArt",
@@ -31,10 +32,11 @@
     {
       "id": "PebbAbilityTrigger",
       "names": {
-        "english": "Purchase Wormway Key"
+        "english": "Purchase Wormway Key",
+        "chinese": "购买蠕虫隧道钥匙"
       },
       "descriptions": {
-        "english": "Spend 500 gold. Gain a Relic giving Rare Units +10/+10."
+        "english": "Spend [effect0.powerabs] [coin]. Gain a Artifact giving Rare Units +10/+10."
       },
       "is_an_ability": true,
       "cooldown": 5,
@@ -55,6 +57,7 @@
       "id": "Pebb",
       "names": {
         "english": "Pebb",
+        "chinese": "佩珀",
         "french": "Pebb"
       },
       "character_art": "@PebbCharacterArt",

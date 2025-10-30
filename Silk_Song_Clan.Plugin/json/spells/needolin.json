@@ -4,10 +4,12 @@
     {
       "id": "Needolin",
       "names": {
-        "english": "Needolin"
+        "english": "Needolin",
+        "chinese": "丝之琴"
       },
       "descriptions": {
-        "english": "Give the Front Enemy Unit Dazed 1."
+        "english": "Give the Front Enemy Unit [dazed] [effect0.status0.power].",
+        "chinese": "对前排敌方单位施加[dazed] [effect0.status0.power]。"
       },
       "cost": 2,
       "card_type": "spell",

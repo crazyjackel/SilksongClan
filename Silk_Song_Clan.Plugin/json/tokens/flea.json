@@ -4,7 +4,8 @@
         {
             "id": "SpawnFlea",
             "names": {
-                "english": "Flea"
+                "english": "Flea",
+                "chinese": "小蚤"
             },
             "card_art": "@FleaCardArt",
             "cost": 1,
@@ -26,10 +27,12 @@
         {
             "id": "FleaPetAbility",
             "names": {
-                "english": "Pet"
+                "english": "Pet",
+                "chinese": "摸摸"
             },
             "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushealth][health]"
+                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。战斗开始时处于冷却中。"
             },
             "is_an_ability": true,
             "targetless": true,
@@ -46,7 +49,8 @@
         {
             "id": "Flea",
             "names": {
-                "english": "Flea"
+                "english": "Flea",
+                "chinese": "小蚤"
             },
             "character_art": "@FleaCharacterArt",
             "size": 1,

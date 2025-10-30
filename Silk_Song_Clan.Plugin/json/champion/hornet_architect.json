@@ -4,10 +4,12 @@
         {
             "id": "HornetArchitect",
             "titles": {
-                "english": "Architect"
+                "english": "Architect",
+                "chinese": "建筑师纹章"
             },
             "descriptions": {
-                "english": "Can equip up to two additional equipment."
+                "english": "Can equip up to two additional equipment.",
+                "chinese": "可以额外穿戴两件装备。"
             },
             "show_description_on_cards": true,
             "bonus_damage": 4,

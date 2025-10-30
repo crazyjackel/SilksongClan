@@ -4,10 +4,11 @@
     {
       "id": "CrossStitch",
       "names": {
-        "english": "Cross Stitch"
+        "english": "Cross Stitch",
+        "chinese": "十字绣反击"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a Unit [damageshield] [effect1.status0.power] and [spikes] [effect2.status0.power]."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a friendly unit [damageshield] [effect1.status0.power] and [spikes] [effect2.status0.power]."
       },
       "cost": 0,
       "card_type": "spell",

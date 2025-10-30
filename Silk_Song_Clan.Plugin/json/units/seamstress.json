@@ -5,6 +5,7 @@
       "id": "SpawnSeamstress",
       "names": {
         "english": "Seamstress",
+        "chinese": "裁缝女士",
         "french": "Seamstress"
       },
       "card_art": "@SeamstressCardArt",
@@ -34,6 +35,7 @@
       "id": "Seamstress",
       "names": {
         "english": "Seamstress",
+        "chinese": "裁缝女士",
         "french": "Seamstress"
       },
       "character_art": "@SeamstressCharacterArt",
@@ -56,7 +58,7 @@
       "id": "SeamstressSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Pinstress Subtype: Gain \"[conduit]: [effect1.upgrade.status0.power]\""
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Pinstress Subtype: Gain \"[conduit] [effect1.upgrade.status0.power]\"."
       },
       "effects": [
         {

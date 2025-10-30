@@ -5,6 +5,7 @@
       "id": "SpawnPinmasterPlinney",
       "names": {
         "english": "Pinmaster Plinney",
+        "chinese": "针匠大师 普林尼",
         "french": "Pinmaster Plinney"
       },
       "card_art": "@PinmasterPlinneyCardArt",
@@ -31,10 +32,12 @@
     {
       "id": "PinmasterAbilityTrigger",
       "names": {
-        "english": "Sharpen"
+        "english": "Sharpen",
+        "chinese": "磨砺"
       },
       "descriptions": {
-        "english": "Spend 30 gold. Give [Silk_Song_Clan.Plugin_PermanentImbue] [effect1.status0.power]."
+        "english": "Spend [effect0.powerabs] [coin]. Give a friendly unit [Silk_Song_Clan.Plugin_PermanentImbue] [effect1.status0.power].",
+        "chinese": "花费 [effect0.powerabs][coin]。使一个友方单位[Silk_Song_Clan.Plugin_PermanentImbue] [effect1.status0.power]。"
       },
       "is_an_ability": true,
       "cooldown": 5,
@@ -55,6 +58,7 @@
       "id": "PinmasterPlinney",
       "names": {
         "english": "Pinmaster Plinney",
+        "chinese": "针匠大师 普林尼",
         "french": "Pinmaster Plinney"
       },
       "character_art": "@PinmasterPlinneyCharacterArt",

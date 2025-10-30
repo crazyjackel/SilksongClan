@@ -24,7 +24,8 @@
         {
             "id": "SilkTooltip",
             "titles": {
-                "english": "Silk"
+                "english": "Silk",
+                "chinese": "灵丝"
             },
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Silk] is a resource that can be used to cast spells and gain benefits."

@@ -5,6 +5,7 @@
       "id": "SpawnBellHermit",
       "names": {
         "english": "Bell Hermit",
+        "chinese": "钟底隐士",
         "french": "Bell Hermit"
       },
       "card_art": "@BellHermitCardArt",
@@ -35,6 +36,7 @@
       "id": "BellHermit",
       "names": {
         "english": "Bell Hermit",
+        "chinese": "钟底隐士",
         "french": "Bell Hermit"
       },
       "character_art": "@BellHermitCharacterArt",

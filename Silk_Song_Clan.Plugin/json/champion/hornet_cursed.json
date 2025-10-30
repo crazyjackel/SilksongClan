@@ -4,10 +4,12 @@
         {
             "id": "HornetCursed",
             "titles": {
-                "english": "Cursed"
+                "english": "Cursed",
+                "chinese": "被诅咒"
             },
             "descriptions": {
-                "english": "Cannot Equip Equipment."
+                "english": "Cannot Equip Equipment.",
+                "chinese": "无法穿戴装备。"
             },
             "show_description_on_cards": true,
             "bonus_damage": -8,
