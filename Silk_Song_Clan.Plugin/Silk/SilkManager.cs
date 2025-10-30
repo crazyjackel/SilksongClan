@@ -8,6 +8,7 @@ using TrainworksReloaded.Core.Enum;
 using TrainworksReloaded.Core;
 using System.Collections;
 using UnityEngine;
+using TrainworksReloaded.Base.Enums;
 
 namespace Silk_Song_Clan.Plugin
 {
@@ -18,6 +19,10 @@ namespace Silk_Song_Clan.Plugin
         private SaveManager? saveManager = null;
         private RelicManager? relicManager = null;
         private CardManager? cardManager = null;
+        private StatusEffectManager? statusEffectManager = null;
+        private RoomManager? roomManager = null;
+
+        public static bool IsFullSilk { get; private set; } = false;
         public SilkManager()
         {
         }
@@ -56,7 +61,7 @@ namespace Silk_Song_Clan.Plugin
         }
 
 
-        public void RewardSilk(int amount)
+        public IEnumerator RewardSilk(int amount)
         {
             Plugin.Logger.LogInfo("Rewarding Silk: " + amount);
             var silkSaveData = GetSilkSaveData() ?? new SilkSaveData
@@ -66,6 +71,63 @@ namespace Silk_Song_Clan.Plugin
             var newSilk = Mathf.Clamp(silkSaveData.Silk + amount, 0, GetMaxSilk());
             silkSaveData.Silk = newSilk;
             SaveSilkSaveData(silkSaveData);
+            if (newSilk == GetMaxSilk())
+            {
+                SilkManager.IsFullSilk = true;
+                yield return TriggerFullSilk();
+            }
+            else if (SilkManager.IsFullSilk)
+            {
+                SilkManager.IsFullSilk = false;
+                yield return TriggerFullSilkLost();
+            }
+        }
+        public IEnumerator TriggerFullSilk()
+        {
+            if (statusEffectManager != null && roomManager != null)
+            {
+                StatusEffectState.InputTriggerParams inputParams = new StatusEffectState.InputTriggerParams();
+                StatusEffectState.OutputTriggerParams outputParams = new StatusEffectState.OutputTriggerParams();
+                for (int i = 0; i < roomManager.GetNumRooms(); i++)
+                {
+                    var room = roomManager.GetRoom(i);
+                    if (room != null)
+                    {
+                        var characters = new List<CharacterState>();
+                        room.AddCharactersToList(characters, Team.Type.Monsters, false, true);
+                        room.AddCharactersToList(characters, Team.Type.Heroes, false, true);
+                        foreach (var character in characters)
+                        {
+                            inputParams.associatedCharacter = character;
+                            yield return statusEffectManager.TriggerStatusEffectOnUnit(StatusEffectTriggers.OnFullSilk, character, inputParams, outputParams, true);
+                        }
+                    }
+                }
+            }
+        }
+
+        public IEnumerator TriggerFullSilkLost()
+        {
+            if (statusEffectManager != null && roomManager != null)
+            {
+                StatusEffectState.InputTriggerParams inputParams = new StatusEffectState.InputTriggerParams();
+                StatusEffectState.OutputTriggerParams outputParams = new StatusEffectState.OutputTriggerParams();
+                for (int i = 0; i < roomManager.GetNumRooms(); i++)
+                {
+                    var room = roomManager.GetRoom(i);
+                    if (room != null)
+                    {
+                        var characters = new List<CharacterState>();
+                        room.AddCharactersToList(characters, Team.Type.Monsters, false, true);
+                        room.AddCharactersToList(characters, Team.Type.Heroes, false, true);
+                        foreach (var character in characters)
+                        {
+                            inputParams.associatedCharacter = character;
+                            yield return statusEffectManager.TriggerStatusEffectOnUnit(StatusEffectTriggers.OnFullSilkLost, character, inputParams, outputParams, true);
+                        }
+                    }
+                }
+            }
         }
 
         public SilkSaveData? GetSilkSaveData()
@@ -114,6 +176,14 @@ namespace Silk_Song_Clan.Plugin
             {
                 this.cardManager = cardManager;
             }
+            if (provider is StatusEffectManager statusEffectManager)
+            {
+                this.statusEffectManager = statusEffectManager;
+            }
+            if (provider is RoomManager roomManager)
+            {
+                this.roomManager = roomManager;
+            }
         }
 
         public void ProviderRemoved(IProvider provider)
@@ -129,6 +199,14 @@ namespace Silk_Song_Clan.Plugin
             if (provider is CardManager cardManager && this.cardManager != null)
             {
                 this.cardManager = null;
+            }
+            if (provider is StatusEffectManager _)
+            {
+                this.statusEffectManager = null;
+            }
+            if (provider is RoomManager _)
+            {
+                this.roomManager = null;
             }
         }
 

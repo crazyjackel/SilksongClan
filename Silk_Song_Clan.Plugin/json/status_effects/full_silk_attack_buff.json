@@ -1,0 +1,46 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "status_effects": [
+        {
+            "id": "FullSilkAttackBuff",
+            "class_name": "@StatusEffectExtraAttackFullSilk",
+            "hidden": true,
+            "names": {
+                "english": "Hunter Bonus"
+            },
+            "stackable_names": {
+                "english": "Hunter Bonus {0}"
+            },
+            "card_tooltips": {
+                "english": "Gain +[codeint0] attack if at Max Silk."
+             },
+            "character_tooltips": {
+                "english": "Gain +[codeint0] attack if at Max Silk."
+            },
+            "notifications": {
+                "english": "Hunter Bonus"
+            },
+            "replacement_texts": {
+                "english": "<b>Hunter Bonus</b>"
+            },
+            "is_stackable": true,
+            "is_propagatable": false,
+            "display_category": "positive",
+            "trigger_stage": "@OnFullSilk",
+            "additional_trigger_stages": ["@OnFullSilkLost"],
+            "icon": "@FullSilkAttackBuff"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "FullSilkAttackBuff",
+            "path": "textures/StatusFullSilkAttackBuff.png"
+        }
+    ],
+    "atlas_icons": [
+        {
+            "id": "FullSilkAttackBuff",
+            "path": "textures/StatusFullSilkAttackBuffTooltip.png"
+        }
+    ]
+}

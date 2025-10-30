@@ -16,7 +16,7 @@ namespace Silk_Song_Clan.Plugin
         {
             var container = Railend.GetContainer();
             var silkManager = container.GetInstance<SilkManager>();
-            silkManager.RewardSilk(1);
+            yield return silkManager.RewardSilk(1);
             yield break;
         }
     }

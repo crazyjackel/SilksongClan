@@ -88,14 +88,14 @@
             },
             "bonus_damage": 8,
             "bonus_hp": 12,
-            "descriptions": {
-                "english": "Deals 25% more Damage if at Max Silk."
-            },
             "trigger_upgrades": [
                 "@HornetHunter1Trigger"
             ],
-            "trait_upgrades": [
-                "@HornetHunter1Trait"
+            "status_effect_upgrades": [
+                {
+                    "status": "@FullSilkAttackBuff",
+                    "count": 30
+                }
             ],
             "show_description_on_cards": true
         },
@@ -106,15 +106,15 @@
             },
             "bonus_damage": 16,
             "bonus_hp": 24,
-            "descriptions": {
-                "english": "Deals 50% more Damage if at Max Silk."
-            },
             "remove_upgrades": ["@HornetHunter1"],
             "trigger_upgrades": [
                 "@HornetHunter2Trigger"
             ],
-            "trait_upgrades": [
-                "@HornetHunter2Trait"
+            "status_effect_upgrades": [
+                {
+                    "status": "@FullSilkAttackBuff",
+                    "count": 60
+                }
             ],
             "show_description_on_cards": true
         },
@@ -125,15 +125,15 @@
             },
             "bonus_damage": 30,
             "bonus_hp": 48,
-            "descriptions": {
-                "english": "Deals 100% more Damage if at Max Silk."
-            },
             "remove_upgrades": ["@HornetHunter2"],
             "trigger_upgrades": [
                 "@HornetHunter3Trigger"
             ],
-            "trait_upgrades": [
-                "@HornetHunter3Trait"
+            "status_effect_upgrades": [
+                {
+                    "status": "@FullSilkAttackBuff",
+                    "count": 120
+                }
             ],
             "show_description_on_cards": true
         }

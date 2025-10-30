@@ -35,7 +35,7 @@ namespace Silk_Song_Clan.Plugin
             
             if (silkManager != null)
             {
-                silkManager.RewardSilk(silkAmount);
+                yield return silkManager.RewardSilk(silkAmount);
                 if (silkAmount < 0)
                 {
                     yield return HandleSilksongTrigger(coreGameManagers.GetHeroManager(), coreGameManagers.GetMonsterManager(), coreGameManagers.GetCombatManager());

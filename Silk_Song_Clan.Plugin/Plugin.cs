@@ -149,9 +149,13 @@ namespace Silk_Song_Clan.Plugin
                         "json/status_effects/protection.json",
                         "json/status_effects/permanent_imbue.json",
                         "json/status_effects/permanent_protection.json",
+                        "json/status_effects/full_silk_attack_buff.json",
 
                         //Tracked Values
                         "json/tracked_values/silk.json",
+
+                        //Status Effects Types
+                        "json/status_effect_types/full_silk.json",
 
                         //Text
                         "json/text/silk.json",
@@ -172,6 +176,7 @@ namespace Silk_Song_Clan.Plugin
                     var manager = c.GetInstance<IRegister<CharacterTriggerData.Trigger>>();
                     var triggerManager = c.GetInstance<IRegister<CardTriggerType>>();
                     var trackedValueManager = c.GetInstance<IRegister<CardStatistics.TrackedValueType>>();
+                    var statusEffectTriggerStageManager = c.GetInstance<IRegister<StatusEffectData.TriggerStage>>();
 
                     CharacterTriggerData.Trigger GetTrigger(string id)
                     {
@@ -192,6 +197,14 @@ namespace Silk_Song_Clan.Plugin
                     }
 
                     TrackedValues.Silk = GetTrackedValueType("Silk");
+
+                    StatusEffectData.TriggerStage GetStatusEffectTriggerStage(string id)
+                    {
+                        return statusEffectTriggerStageManager.GetValueOrDefault(MyPluginInfo.PLUGIN_GUID.GetId(TemplateConstants.StatusEffectTriggerStageEnum, id));
+                    }
+
+                    StatusEffectTriggers.OnFullSilk = GetStatusEffectTriggerStage("OnFullSilk");
+                    StatusEffectTriggers.OnFullSilkLost = GetStatusEffectTriggerStage("OnFullSilkLost");
                 }
             );
 
