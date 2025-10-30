@@ -63,7 +63,6 @@ namespace Silk_Song_Clan.Plugin
 
         public IEnumerator RewardSilk(int amount)
         {
-            Plugin.Logger.LogInfo("Rewarding Silk: " + amount);
             var silkSaveData = GetSilkSaveData() ?? new SilkSaveData
             {
                 Silk = 0
@@ -74,11 +73,13 @@ namespace Silk_Song_Clan.Plugin
             if (newSilk == GetMaxSilk())
             {
                 SilkManager.IsFullSilk = true;
+                Plugin.Logger.LogInfo("Triggering Full Silk");
                 yield return TriggerFullSilk();
             }
             else if (SilkManager.IsFullSilk)
             {
                 SilkManager.IsFullSilk = false;
+                Plugin.Logger.LogInfo("Triggering Full Silk Lost");
                 yield return TriggerFullSilkLost();
             }
         }

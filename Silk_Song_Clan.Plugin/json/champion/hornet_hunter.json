@@ -72,17 +72,17 @@
     "upgrades": [
         {
             "id": "HornetHunter1Upgrade",
-            "bonus_damage": 1
+            "bonus_damage": 3
         },
         {
             "id": "HornetHunter2Upgrade",
-            "bonus_damage": 1,
-            "bonus_hp": 1
+            "bonus_damage": 3,
+            "bonus_hp": 2
         },
         {
             "id": "HornetHunter3Upgrade",
-            "bonus_damage": 2,
-            "bonus_hp": 2
+            "bonus_damage": 5,
+            "bonus_hp": 3
         },
         {
             "id": "HornetHunter1",

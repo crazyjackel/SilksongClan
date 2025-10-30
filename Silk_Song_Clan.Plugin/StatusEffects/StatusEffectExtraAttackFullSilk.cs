@@ -21,6 +21,7 @@ namespace Silk_Song_Clan.Plugin
             ExtraAttackAmount += numStacksAdded;
             if (SilkManager.IsFullSilk)
             {
+                Plugin.Logger.LogInfo("Applying buff to attacker: " + numStacksAdded);
                 character.BuffDamage(numStacksAdded, fromStatusEffect: true);
             }
             base.OnStacksAdded(character, numStacksAdded, addStatusEffectParams, coreGameManagers);
@@ -31,6 +32,7 @@ namespace Silk_Song_Clan.Plugin
             ExtraAttackAmount -= numStacksRemoved;
             if (SilkManager.IsFullSilk)
             {
+                Plugin.Logger.LogInfo("Removing buff from attacker: " + numStacksRemoved);
                 character.DebuffDamage(numStacksRemoved, fromStatusEffect: true);
             }
             base.OnStacksRemoved(character, numStacksRemoved, coreGameManagers);
@@ -44,11 +46,13 @@ namespace Silk_Song_Clan.Plugin
         {
             if(SilkManager.IsFullSilk && !ApplyingBuffToAttacker)
             {
+                Plugin.Logger.LogInfo("Applying buff to attacker: " + ExtraAttackAmount);
                 inputTriggerParams.associatedCharacter.BuffDamage(ExtraAttackAmount, fromStatusEffect: true);
                 ApplyingBuffToAttacker = true;
             }
             else if (!SilkManager.IsFullSilk && ApplyingBuffToAttacker)
             {
+                Plugin.Logger.LogInfo("Removing buff from attacker: " + ExtraAttackAmount);
                 inputTriggerParams.associatedCharacter.DebuffDamage(ExtraAttackAmount, fromStatusEffect: true);
                 ApplyingBuffToAttacker = false;
             }
