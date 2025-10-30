@@ -65,7 +65,10 @@
       "id": "SilkSoarBindEffect",
       "name": "@CardEffectBind",
       "target_mode": "last_targeted_characters",
-      "target_team": "monsters"
+      "target_team": "monsters",
+      "additional_tooltips": [
+        "@BindBindEffectTooltip"
+      ]
     }
   ],
   "sprites": [
