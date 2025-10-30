@@ -36,6 +36,19 @@
             "param_upgrade": "@WarriorStoneUpgrade"
         }
     ],
+    "upgrade_masks": [
+        {
+            "id": "WarriorStoneFilter",
+            "card_type": "monster",
+            "excluded_status": [
+                {
+                    "status": "@Warrior",
+                    "count": 1
+                }
+            ],
+            "excluded_status_operator": "or"
+        }
+    ],
     "upgrades": [
         {
             "id": "WarriorStoneUpgrade",
@@ -50,6 +63,9 @@
                     "status": "@Warrior",
                     "count": 1
                 }
+            ],
+            "filters": [
+                "@WarriorStoneFilter"
             ],
             "use_upgrade_hightlight_tags": true
         }

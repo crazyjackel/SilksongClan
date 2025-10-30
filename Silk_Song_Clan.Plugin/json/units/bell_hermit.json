@@ -43,20 +43,13 @@
       "size": 2,
       "health": 16,
       "attack_damage": 16,
-      "starting_status_effects": [
-        {
-          "status": "duality",
-          "count": 1
-        }
-      ],
       "subtypes": [
         "@Snail",
         "SubtypesData_BannerUnit"
       ],
       "triggers": [
-        {
-          "id": "@BellHermitSpawnTrigger"
-        }
+        "@BellHermitSilksongTrigger",
+        "@BellHermitSpawnTrigger"
       ]
     }
   ],
@@ -64,7 +57,7 @@
     {
       "id": "BellHermitSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain \"<b>Silksong</b>: Friendly Units get [Silk_Song_Clan.Plugin_PermanentImbue] [effect1.upgrade.charactertrigger0.effect0.status0.power]\"."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain [duality]."
       },
       "trigger": "on_spawn",
       "effects": [
@@ -72,7 +65,7 @@
           "id": "@BellHermitComboEffect"
         },
         {
-          "id": "@BellHermitSpawnEffect"
+          "id": "@BellHermitDualityEffect"
         }
       ]
     },
@@ -89,14 +82,6 @@
       ]
     }
   ],
-  "upgrades": [
-    {
-      "id": "BellHermitImbueUpgrade",
-      "trigger_upgrades": [
-        "@BellHermitSilksongTrigger"
-      ]
-    }
-  ],
   "upgrade_masks": [
     {
       "id": "BellHermitComboSnailMask",
@@ -107,6 +92,17 @@
     }
   ],
   "effects": [
+    {
+      "id": "BellHermitDualityEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "duality",
+          "count": 1
+        }
+      ]
+    },
     {
       "id": "SpawnBellHermitEffect",
       "name": "CardEffectSpawnMonster",
@@ -123,13 +119,6 @@
       "additional_tooltips": [
         "@ComboTooltip"
       ]
-    },
-    {
-      "id": "BellHermitSpawnEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "self",
-      "target_team": "monsters",
-      "param_upgrade": "@BellHermitImbueUpgrade"
     },
     {
       "id": "BellHermitImbueEffect",

@@ -29,6 +29,28 @@
           "english": "A nurturing snail that provides protective shields to allies through the Silksong connection."
         }
       ]
+    },
+    {
+      "id": "CaretakerGuidance",
+      "names": {
+        "english": "Guidance",
+        "chinese": "指引",
+        "french": "Guidance"
+      },
+      "descriptions": {
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a friendly unit [damageshield] [effect1.status0.power]"
+      },
+      "is_an_ability": true,
+      "cooldown": 2,
+      "targets_room": true,
+      "effects": [
+        {
+          "id": "@CaretakerChannelSilkEffect"
+        },
+        {
+          "id": "@CaretakerProtectionEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -43,26 +65,21 @@
       "size": 2,
       "health": 16,
       "attack_damage": 12,
-      "subtypes": ["@Snail", "SubtypesData_BannerUnit"],
-      "triggers": [
-        {
-          "id": "@CaretakerSpawnTrigger"
-        }
+      "subtypes": [
+        "@Snail",
+        "SubtypesData_BannerUnit"
       ],
-      "starting_status_effects": [
-        {
-          "status": "duality",
-          "count": 1
-        }
+      "ability": "@CaretakerGuidance",
+      "triggers": [
+        "@CaretakerSpawnTrigger"
       ]
-
     }
   ],
   "character_triggers": [
     {
       "id": "CaretakerSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain \"<b>Silksong</b>: Front Unit gets [damageshield] [effect1.upgrade.charactertrigger0.effect0.status0.power] and [spellshield] [effect1.upgrade.charactertrigger0.effect0.status1.power]\"."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain [duality]."
       },
       "trigger": "on_spawn",
       "effects": [
@@ -70,7 +87,7 @@
           "id": "@CaretakerComboEffect"
         },
         {
-          "id": "@CaretakerSpawnEffect"
+          "id": "@CaretakerDualityEffect"
         }
       ]
     },
@@ -84,14 +101,6 @@
         {
           "id": "@CaretakerShieldStatusEffect"
         }
-      ]
-    }
-  ],
-  "upgrades": [
-    {
-      "id": "CaretakerShieldUpgrade",
-      "trigger_upgrades": [
-        "@CaretakerSilksongTrigger"
       ]
     }
   ],
@@ -123,24 +132,36 @@
       ]
     },
     {
-      "id": "CaretakerSpawnEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "id": "CaretakerDualityEffect",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "self",
-      "target_team": "monsters",
-      "param_upgrade": "@CaretakerShieldUpgrade"
+      "param_status_effects": [
+        {
+          "status": "duality",
+          "count": 1
+        }
+      ]
     },
     {
-      "id": "CaretakerShieldStatusEffect",
+      "id": "CaretakerChannelSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": -2,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true,
+      "additional_tooltips": [
+        "@SilkTooltip",
+        "@SilkChannelTooltip"
+      ]
+    },
+    {
+      "id": "CaretakerProtectionEffect",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "front_in_room",
-      "target_team": "monsters",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
       "param_status_effects": [
         {
           "status": "damage shield",
-          "count": 1
-        },
-        {
-          "status": "spell shield",
           "count": 1
         }
       ]

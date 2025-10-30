@@ -8,8 +8,8 @@
                 "english": "Acrobat Stone"
             },
             "descriptions": {
-                "english": "Gain '[incant]: Gain [effect0.upgrade0.status0.power] [effect0.upgrade0.status0.status] and [effect0.upgrade0.status1.power] [effect0.upgrade0.status1.status].'",
-                "chinese": "升级一个单位，使其获得'[incant]: 获得[effect0.upgrade0.status0.status] [effect0.upgrade0.status0.power] 和[effect0.upgrade0.status1.status] [effect0.upgrade0.status1.power]。'"
+                "english": "Gain '[incant]: Gain [Silk_Song_Clan.Plugin_Imbue] [effect0.upgrade0.charactertrigger0.effect0.status0.power] and [Silk_Song_Clan.Plugin_Protection] [effect0.upgrade0.charactertrigger0.effect1.status0.power].'",
+                "chinese": "升级一个单位，使其获得'[incant]: 获得[Silk_Song_Clan.Plugin_Imbue] [effect0.upgrade0.charactertrigger0.effect0.status0.power] 和[Silk_Song_Clan.Plugin_Protection] [effect0.upgrade0.charactertrigger0.effect1.status0.power]。'"
             },
             "relic_effects": [
                 "@AcrobatStoneEnhancer"
@@ -43,8 +43,6 @@
                 "english": "Acrobat Stone"
             },
             "icon": "@AcrobatStoneIcon",
-            "bonus_damage": 3,
-            "bonus_hp": 3,
             "trigger_upgrades": [
                 "@AcrobatStoneSpellTrigger"
             ],
@@ -55,8 +53,8 @@
         {
             "id": "AcrobatStoneSpellTrigger",
             "descriptions": {
-                "english": "Gain [Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power] and [Silk_Song_Clan.Plugin_Protection] [effect0.status1.power].",
-                "chinese": "获得[Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power] 和[Silk_Song_Clan.Plugin_Protection] [effect0.status1.power]。"
+                "english": "Gain [Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power] and [Silk_Song_Clan.Plugin_Protection] [effect1.status0.power].",
+                "chinese": "获得[Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power] 和[Silk_Song_Clan.Plugin_Protection] [effect1.status0.power]。"
             },
             "trigger": "card_spell_played",
             "effects": ["@AcrobatStoneGainImbueEffect", "@AcrobatStoneGainProtectionEffect"]
@@ -71,7 +69,7 @@
             "param_status_effects": [
                 {
                     "status": "@Imbue",
-                    "count": 1
+                    "count": 3
                 }
             ]
         },
@@ -83,7 +81,7 @@
             "param_status_effects": [
                 {
                     "status": "@Protection",
-                    "count": 1
+                    "count": 3
                 }
             ]
         }

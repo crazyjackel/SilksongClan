@@ -43,16 +43,9 @@
       "health": 16,
       "attack_damage": 8,
       "subtypes": ["@Snail", "SubtypesData_BannerUnit"],
-      "starting_status_effects": [
-        {
-          "status": "duality",
-          "count": 1
-        }
-      ],
       "triggers": [
-        {
-          "id": "@ChapelMaidSpawnTrigger"
-        }
+        "@ChapelMaidSilksongTrigger",
+        "@ChapelMaidSpawnTrigger"
       ]
     }
   ],
@@ -60,7 +53,7 @@
     {
       "id": "ChapelMaidSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain \"<b>Silksong</b>: Friendly Units get [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.upgrade.charactertrigger0.effect0.status0.power]\"."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain [duality]."
       },
       "trigger": "on_spawn",
       "effects": [
@@ -68,7 +61,7 @@
           "id": "@ChapelMaidComboEffect"
         },
         {
-          "id": "@ChapelMaidSpawnEffect"
+          "id": "@ChapelMaidDualityEffect"
         }
       ]
     },
@@ -85,14 +78,6 @@
       ]
     }
   ],
-  "upgrades": [
-    {
-      "id": "ChapelMaidProtectionUpgrade",
-      "trigger_upgrades": [
-        "@ChapelMaidSilksongTrigger"
-      ]
-    }
-  ],
   "upgrade_masks": [
     {
       "id": "ChapelMaidComboSnailMask",
@@ -103,6 +88,17 @@
     }
   ],
   "effects": [
+    {
+      "id": "ChapelMaidDualityEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "duality",
+          "count": 1
+        }
+      ]
+    },
     {
       "id": "SpawnChapelMaidEffect",
       "name": "CardEffectSpawnMonster",
@@ -119,13 +115,6 @@
       "additional_tooltips": [
         "@ComboTooltip"
       ]
-    },
-    {
-      "id": "ChapelMaidSpawnEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "self",
-      "target_team": "monsters",
-      "param_upgrade": "@ChapelMaidProtectionUpgrade"
     },
     {
       "id": "ChapelMaidProtectionStatusEffect",

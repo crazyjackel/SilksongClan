@@ -14,7 +14,6 @@
       "rarity": "common",
       "class": "@Silksong",
       "pools": [
-        "MegaPool",
         "UnitsAllBanner"
       ],
       "targets_room": true,
@@ -84,8 +83,8 @@
     {
       "id": "ShakraApplyWeaknessEffect",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "last_attacker_character",
-      "target_team": "monsters",
+      "target_mode": "last_attacked_character",
+      "target_team": "heroes",
       "param_status_effects": [
         {
           "status": "melee weakness",

@@ -35,6 +35,7 @@
     "upgrade_masks": [
         {
             "id": "SimpleKeyMask",
+            "card_type": "monster",
             "required_rarities": ["rare", "champion"]
         }
     ],
