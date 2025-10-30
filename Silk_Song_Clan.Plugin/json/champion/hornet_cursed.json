@@ -11,7 +11,7 @@
                 "english": "Cannot Equip Equipment.",
                 "chinese": "无法穿戴装备。"
             },
-            "show_description_on_cards": true,
+            "show_description_on_cards": false,
             "bonus_damage": -8,
             "bonus_hp": -8,
             "bonus_equipment": -1,

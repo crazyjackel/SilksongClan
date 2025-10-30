@@ -41,7 +41,7 @@
       "card_art": "@AlchemistZylotolAbilityCardArt",
       "is_an_ability": true,
       "cooldown": 2,
-      "targets_room": false,
+      "targets_room": true,
       "targetless": false,
       "effects": [
         {

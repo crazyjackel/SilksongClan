@@ -4,5 +4,6 @@ namespace Silk_Song_Clan.Plugin
     public class SilkSaveData
     {
         public int Silk { get; set; }
+        public bool IsFullSilk { get; set; } = false;
     }
 }

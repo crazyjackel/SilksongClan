@@ -4,7 +4,6 @@
         {
             "id": "FullSilkAttackBuff",
             "class_name": "@StatusEffectExtraAttackFullSilk",
-            "hidden": true,
             "names": {
                 "english": "Hunter Bonus"
             },
