@@ -45,7 +45,7 @@
       "subtypes": ["@Flea", "SubtypesData_BannerUnit"],
       "triggers": [
         {
-          "id": "@GrishkinSpawnTrigger"
+          "id": "@GrishkinShiftTrigger"
         }
       ]
     }
@@ -53,6 +53,7 @@
   "upgrade_masks": [
     {
       "id": "GrishkinUpgradeMask",
+      "card_type": "monster",
       "required_subtypes": ["@Flea"]
     }
   ],
@@ -67,8 +68,8 @@
     },
     {
       "id": "GrishkinBuffFleasUpgrade",
-      "bonus_damage": 3,
-      "bonus_hp": 3
+      "bonus_damage": 1,
+      "bonus_hp": 1
     }
   ],
   "character_triggers": [
@@ -90,7 +91,7 @@
     {
       "id": "GrishkinShiftTrigger",
       "descriptions": {
-        "english": "Give Friendly Fleas +[effect0.upgrade.bonusdamage] [attack] and +[effect0.upgrade.bonushealth] [health]."
+        "english": "Give Friendly Fleas +[effect0.upgrade.bonusdamage] [attack] and +[effect0.upgrade.bonushp] [health]."
       },
       "trigger": "on_shift",
       "effects": [
