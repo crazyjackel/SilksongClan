@@ -48,7 +48,7 @@
       ],
       "triggers": [
         {
-          "id": "@VargaSpawnTrigger"
+          "id": "@VargaRallyTrigger"
         }
       ]
     }
@@ -72,6 +72,9 @@
     {
       "id": "VargaRallyTrigger",
       "trigger": "card_monster_played",
+      "descriptions": {
+        "english": "Reduce all Friendly Unit Cooldowns by 1."
+      },
       "effects": [
         {
           "id": "@VargaReduceCooldownsEffect"

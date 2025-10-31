@@ -22,7 +22,6 @@ namespace Silk_Song_Clan.Plugin
         private StatusEffectManager? statusEffectManager = null;
         private RoomManager? roomManager = null;
 
-        public static bool IsFullSilk { get; private set; } = false;
         public SilkManager()
         {
         }
@@ -69,19 +68,20 @@ namespace Silk_Song_Clan.Plugin
             };
             var newSilk = Mathf.Clamp(silkSaveData.Silk + amount, 0, GetMaxSilk());
             silkSaveData.Silk = newSilk;
-            SaveSilkSaveData(silkSaveData);
-            if (newSilk == GetMaxSilk())
+            var isFullSilk = newSilk == GetMaxSilk();
+            if (!silkSaveData.IsFullSilk && isFullSilk)
             {
-                SilkManager.IsFullSilk = true;
+                silkSaveData.IsFullSilk = true;
                 Plugin.Logger.LogInfo("Triggering Full Silk");
                 yield return TriggerFullSilk();
             }
-            else if (SilkManager.IsFullSilk)
+            else if (silkSaveData.IsFullSilk && !isFullSilk)
             {
-                SilkManager.IsFullSilk = false;
+                silkSaveData.IsFullSilk = false;
                 Plugin.Logger.LogInfo("Triggering Full Silk Lost");
                 yield return TriggerFullSilkLost();
             }
+            SaveSilkSaveData(silkSaveData);
         }
         public IEnumerator TriggerFullSilk()
         {

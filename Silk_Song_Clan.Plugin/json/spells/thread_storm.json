@@ -68,7 +68,7 @@
       "id": "ThreadStormDamageEffect",
       "name": "CardEffectDamage",
       "target_mode": "front_in_room",
-      "target_team": "monsters",
+      "target_team": "heroes",
       "param_int": 1
     }
   ],

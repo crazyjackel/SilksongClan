@@ -49,6 +49,7 @@
     "upgrades": [
         {
             "id": "SimpleKeyUpgrade",
+            "is_unique": true,
             "bonus_damage": 10,
             "bonus_health": 10,
             "filters": ["@SimpleKeyMask"]

@@ -78,6 +78,13 @@ namespace Silk_Song_Clan.Plugin
             }
 
             int statusEffectStacks = character.GetStatusEffectStacks(statusId);
+            // Remove all stacks of this status effect
+            character.RemoveStatusEffect(statusId, statusEffectStacks);
+            if(inputTriggerParams.attacked != null)
+            {
+                yield break;
+            }
+            
 
             // If triggered from taking damage, don't apply any buffs
             Plugin.Logger.LogInfo("AcrobaticState: Damage: " + inputTriggerParams.damage + " Attacked: " + inputTriggerParams.attacked);

@@ -16,27 +16,6 @@ namespace Silk_Song_Clan.Plugin
     {
         public bool ApplyingBuffToAttacker { get; set; } = false;
         public int ExtraAttackAmount { get; set; } = 0;
-        public override void OnStacksAdded(CharacterState character, int numStacksAdded, CharacterState.AddStatusEffectParams addStatusEffectParams, ICoreGameManagers coreGameManagers)
-        {
-            ExtraAttackAmount += numStacksAdded;
-            if (SilkManager.IsFullSilk)
-            {
-                Plugin.Logger.LogInfo("Applying buff to attacker: " + numStacksAdded);
-                character.BuffDamage(numStacksAdded, fromStatusEffect: true);
-            }
-            base.OnStacksAdded(character, numStacksAdded, addStatusEffectParams, coreGameManagers);
-        }
-
-        public override void OnStacksRemoved(CharacterState character, int numStacksRemoved, ICoreGameManagers coreGameManagers)
-        {
-            ExtraAttackAmount -= numStacksRemoved;
-            if (SilkManager.IsFullSilk)
-            {
-                Plugin.Logger.LogInfo("Removing buff from attacker: " + numStacksRemoved);
-                character.DebuffDamage(numStacksRemoved, fromStatusEffect: true);
-            }
-            base.OnStacksRemoved(character, numStacksRemoved, coreGameManagers);
-        }
         public override bool TestTrigger(StatusEffectState.InputTriggerParams inputTriggerParams, StatusEffectState.OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
         {
             CharacterTriggerData.Trigger triggerType = inputTriggerParams.triggerType;
@@ -44,13 +23,15 @@ namespace Silk_Song_Clan.Plugin
         }
         protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
         {
-            if(SilkManager.IsFullSilk && !ApplyingBuffToAttacker)
+            var silkManager = Railend.GetContainer().GetInstance<SilkManager>();
+            var isFullSilk = silkManager.GetCurrentSilk() == silkManager.GetMaxSilk();
+            if (isFullSilk && !ApplyingBuffToAttacker)
             {
                 Plugin.Logger.LogInfo("Applying buff to attacker: " + ExtraAttackAmount);
                 inputTriggerParams.associatedCharacter.BuffDamage(ExtraAttackAmount, fromStatusEffect: true);
                 ApplyingBuffToAttacker = true;
             }
-            else if (!SilkManager.IsFullSilk && ApplyingBuffToAttacker)
+            else if (!isFullSilk && ApplyingBuffToAttacker)
             {
                 Plugin.Logger.LogInfo("Removing buff from attacker: " + ExtraAttackAmount);
                 inputTriggerParams.associatedCharacter.DebuffDamage(ExtraAttackAmount, fromStatusEffect: true);
