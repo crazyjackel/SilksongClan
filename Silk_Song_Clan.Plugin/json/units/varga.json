@@ -58,7 +58,7 @@
       "id": "VargaSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Fleamaster Mooshka: Gain \"[rally]: Reduce all Unit Cooldowns by 1.\""
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Fleamaster Mooshka: Gain \"[rally]: Reduce all Friendly Unit [cooldown] by 1.\""
       },
       "effects": [
         {
@@ -73,7 +73,7 @@
       "id": "VargaRallyTrigger",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Reduce all Friendly Unit Cooldowns by 1."
+        "english": "Reduce all Friendly Unit [cooldown] by 1."
       },
       "effects": [
         {
