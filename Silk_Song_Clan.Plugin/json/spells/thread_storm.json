@@ -8,7 +8,7 @@
         "chinese": "灵丝风暴"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage to the front unit, five times."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage to the front unit, three times."
       },
       "cost": 1,
       "card_type": "spell",
@@ -43,7 +43,7 @@
     {
       "id": "ThreadStormScaleEffectApplications",
       "name": "CardTraitScalingAddEffectApplications",
-      "param_int": 5,
+      "param_int": 3,
       "param_tracked_value": "any_character"
     },
     {

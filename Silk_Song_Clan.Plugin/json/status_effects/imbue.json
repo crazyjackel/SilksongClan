@@ -27,7 +27,6 @@
             "trigger_stage": "on_post_room_combat",
             "additional_trigger_stages": ["on_hit"],
             "is_stackable": true,
-            "remove_stack_at_end_of_turn": false,
             "param_int": 1,
             "param_int_2": 0,
             "param_str": "damage",

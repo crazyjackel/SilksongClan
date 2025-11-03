@@ -8,7 +8,7 @@
         "chinese": "攀附抓握"
       },
       "descriptions": {
-        "english": "Retreat. [Silk_Song_Clan.Plugin_Combo]: Advance."
+        "english": "Retreat. Gain a card that can advance a unit."
       },
       "cost": 1,
       "unlock_level": 2,
@@ -24,10 +24,7 @@
           "id": "@ClingGripRetreatEffect"
         },
         {
-          "id": "@ClingGripComboEffect"
-        },
-        {
-          "id": "@ClingGripAdvanceEffect"
+          "id": "@ClingGripGainCardEffect"
         }
       ],
       "lore_tooltips": [
@@ -35,11 +32,36 @@
           "english": "A defensive grip that can become an offensive advance when combined with other techniques."
         }
       ]
+    },
+    {
+      "id": "ClingGripAdvanceEffect",
+      "names": {
+        "english": "Advance",
+        "chinese": "进击"
+      },
+      "descriptions": {
+        "english": "Advance."
+      },
+      "cost": 0,
+      "card_type": "spell",
+      "rarity": "common",
+      "class": "@Silksong",
+      "card_art": "@ClingGripCardArt",
+      "targets_room": true,
+      "traits": [
+        "@ClingGripEphemeralTrait"
+      ],
+      "effects": [
+        {
+          "id": "@ClingGripAdvanceEffect"
+        }
+      ]
     }
   ],
-  "upgrade_masks": [
+  "traits": [
     {
-      "id": "ClingGripUpgradeMask"
+      "id": "ClingGripEphemeralTrait",
+      "name": "CardTraitEphemeral"
     }
   ],
   "effects": [
@@ -53,19 +75,17 @@
     {
       "id": "ClingGripAdvanceEffect",
       "name": "CardEffectFloorRearrange",
-      "target_mode": "last_targeted_characters",
+      "target_mode": "drop_target_character",
       "target_team": "both",
       "param_int": 0
     },
     {
-      "id": "ClingGripComboEffect",
-      "name": "@CardEffectTestLastCard",
-      "should_test": true,
-      "should_cancel_subsequent_effects_if_test_fails": true,
-      "param_card_filter": "@ClingGripUpgradeMask",
-      "additional_tooltips": [
-        "@ComboPreviousTooltip"
-      ]
+      "id": "ClingGripGainCardEffect",
+      "name": "CardEffectAddBattleCard",
+      "target_mode": "self",
+      "param_int": 3,
+      "param_int_2": 1,
+      "param_card": "@ClingGripAdvanceEffect"
     }
   ],
   "sprites": [
