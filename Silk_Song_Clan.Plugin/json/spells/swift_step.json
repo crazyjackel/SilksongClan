@@ -69,7 +69,7 @@
       ]
     },
     {
-      "id": "SwiftStepComboEffect",
+      "id": "SwiftStepAmbushEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "last_targeted_characters",
       "param_status_effects": [

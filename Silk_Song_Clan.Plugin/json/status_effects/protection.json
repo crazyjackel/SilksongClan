@@ -22,10 +22,9 @@
             "replacement_texts": {
                 "english": "<b>Protection</b>"
             },
-            "remove_when_triggered": true,
             "display_category": "positive",
             "trigger_stage": "on_post_room_combat",
-            "additional_trigger_stages": ["on_hit"],
+            "additional_trigger_stages": ["on_attacked"],
             "is_stackable": true,
             "param_int": 1,
             "param_int_2": 0,

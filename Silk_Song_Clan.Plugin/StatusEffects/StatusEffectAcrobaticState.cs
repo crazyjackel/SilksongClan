@@ -22,6 +22,13 @@ namespace Silk_Song_Clan.Plugin
             MaxHP = 1
         }
 
+        public override int GetTriggerOrder()
+        {
+            return 4;
+        }
+
+        private bool inPreviewMode = false;
+
         public Lazy<CardUpgradeData?> UpgradeData { get; set; }
 
         public UnitUpgradeLifetime UpgradeLifetime => (UnitUpgradeLifetime)this.GetParamInt();
@@ -30,6 +37,56 @@ namespace Silk_Song_Clan.Plugin
         public StatusEffectAcrobaticState()
         {
             UpgradeData = new Lazy<CardUpgradeData?>(() => LoadUpgradeData());
+        }
+
+        protected override void CopyStateForPreviewInternal(StatusEffectState dest, List<IRoomStateModifier> characterRoomStateModifiers)
+        {
+            if (dest is StatusEffectAcrobaticState destAcrobaticState)
+            {
+                destAcrobaticState.inPreviewMode = true;
+            }
+            base.CopyStateForPreviewInternal(dest, characterRoomStateModifiers);
+        }
+
+        protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
+        {
+            var statusId = base.GetStatusId();
+            var character = inputTriggerParams.associatedCharacter ?? inputTriggerParams.attacked;
+            if (character == null)
+            {
+                Plugin.Logger.LogInfo($"{(inPreviewMode ? "Preview" : "Game")} AcrobaticState: Character is null");
+                yield break;
+            }
+
+            if(inputTriggerParams.attacked != null && inputTriggerParams.damage == 0)
+            {
+                Plugin.Logger.LogInfo($"{(inPreviewMode ? "Preview" : "Game")} AcrobaticState: 0 damage doesn't trigger removal");
+                yield break;
+            }
+
+            int statusEffectStacks = character.GetStatusEffectStacks(statusId);
+            character.RemoveStatusEffect(statusId, statusEffectStacks);
+
+            // If triggered from taking damage or being attacked, don't apply any buffs
+            if (inputTriggerParams.damage > 0 || inputTriggerParams.attacked != null)
+            {
+                Plugin.Logger.LogInfo($"{(inPreviewMode ? "Preview" : "Game")} AcrobaticState: effect triggered from taking damage or being attacked");
+                yield break;
+            }
+
+            switch (UpgradeLifetime)
+            {
+                case UnitUpgradeLifetime.Permanent:
+                    Plugin.Logger.LogInfo($"{(inPreviewMode ? "Preview" : "Game")} AcrobaticState: Permanent effect triggered");
+                    yield return ApplyPermanentEffect(character, statusEffectStacks);
+                    break;
+
+                case UnitUpgradeLifetime.TemporaryUntilEndOfBattle:
+                case UnitUpgradeLifetime.TemporaryUntilUnitDeath:
+                    Plugin.Logger.LogInfo($"{(inPreviewMode ? "Preview" : "Game")} AcrobaticState: Temporary effect triggered");
+                    yield return ApplyTemporaryEffect(character, statusEffectStacks);
+                    break;
+            }
         }
 
         private StatBuffType? GetStatBuffType()
@@ -67,50 +124,14 @@ namespace Silk_Song_Clan.Plugin
             return upgrade;
         }
 
-        protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams, ICoreGameManagers coreGameManagers)
-        {                
-            var statusId = base.GetStatusId();
-            var character = inputTriggerParams.associatedCharacter;
-            if (character == null)
-            {
-                Plugin.Logger.LogError("AcrobaticState: Character is null");
-                yield break;
-            }
-
-            int statusEffectStacks = character.GetStatusEffectStacks(statusId);
-            // Remove all stacks of this status effect
-            character.RemoveStatusEffect(statusId, statusEffectStacks);
-            if(inputTriggerParams.attacked != null)
-            {
-                yield break;
-            }
-            
-
-            // If triggered from taking damage, don't apply any buffs
-            Plugin.Logger.LogInfo("AcrobaticState: Damage: " + inputTriggerParams.damage + " Attacked: " + inputTriggerParams.attacked);
-            if (inputTriggerParams.damage > 0 || inputTriggerParams.attacked != null)
-            {
-                yield break;
-            }
-
-            switch (UpgradeLifetime)
-            {
-                case UnitUpgradeLifetime.Permanent:
-                    Plugin.Logger.LogInfo("AcrobaticState: Permanent");
-                    yield return ApplyPermanentEffect(character, statusEffectStacks);
-                    break;
-
-                case UnitUpgradeLifetime.TemporaryUntilEndOfBattle:
-                case UnitUpgradeLifetime.TemporaryUntilUnitDeath:
-                    Plugin.Logger.LogInfo("AcrobaticState: Temporary");
-                    yield return ApplyTemporaryEffect(character, statusEffectStacks);
-                    break;
-            }
-        }
-
         private IEnumerator ApplyPermanentEffect(CharacterState character, int stacks)
         {
             var spawner = character.GetSpawnerCard();
+            if (spawner == null)
+            {
+                yield break;
+            }
+
             var modifiers = spawner.GetCardStateModifiers();
 
             switch (PermanentEffect)
@@ -146,6 +167,10 @@ namespace Silk_Song_Clan.Plugin
 
             var cardUpgradeState = new CardUpgradeState();
             cardUpgradeState.Setup(upgrade);
+            if (!inPreviewMode)
+            {
+                yield break;
+            }
 
             for (int i = 0; i < stacks; i++)
             {
@@ -161,24 +186,13 @@ namespace Silk_Song_Clan.Plugin
                 yield break;
             }
 
-            yield return ApplyTemporaryStatBuff(character, statBuffType.Value, stacks);
-        }
-
-        private IEnumerator ApplyTemporaryStatBuff(CharacterState character, StatBuffType statBuffType, int stacks)
-        {
-            CardState? spawnerCard = character.GetSpawnerCard();
-            switch (statBuffType)
+            var spawnerCard = character.GetSpawnerCard();
+            if (spawnerCard == null)
             {
-                case StatBuffType.MaxHP:
-                    spawnerCard?.GetTemporaryCardStateModifiers().IncrementAdditionalHP(stacks);
-                    yield return character.BuffMaxHP(stacks, false, null, true);
-                    break;
-
-                case StatBuffType.Damage:
-                    spawnerCard?.GetTemporaryCardStateModifiers().IncrementAdditionalDamage(stacks);
-                    character.BuffDamage(stacks, null, false);
-                    break;
+                yield break;
             }
+
+            yield return ApplyStatBuffWithModifiers(character, spawnerCard.GetTemporaryCardStateModifiers(), statBuffType.Value, stacks);
         }
 
         private IEnumerator ApplyStatBuffWithModifiers(CharacterState character, CardStateModifiers modifiers, StatBuffType statBuffType, int stacks)
@@ -187,12 +201,18 @@ namespace Silk_Song_Clan.Plugin
             {
                 case StatBuffType.Damage:
                     character.BuffDamage(stacks, null, false);
-                    modifiers.IncrementAdditionalDamage(stacks);
+                    if (!inPreviewMode)
+                    {
+                        modifiers.IncrementAdditionalDamage(stacks);
+                    }
                     break;
 
                 case StatBuffType.MaxHP:
                     yield return character.BuffMaxHP(stacks, false, null, true);
-                    modifiers.IncrementAdditionalHP(stacks);
+                    if (!inPreviewMode)
+                    {
+                        modifiers.IncrementAdditionalHP(stacks);
+                    }
                     break;
             }
         }

@@ -57,7 +57,7 @@
   "character_triggers": [
     {
       "id": "ShermaResolveTrigger",
-      "trigger": "post_combat",
+      "trigger": "pre_combat",
       "descriptions": {
         "english": "Give Friendly Units [Silk_Song_Clan.Plugin_Protection] [effect0.status0.power].",
         "chinese": "友方单位获得[Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]。"
