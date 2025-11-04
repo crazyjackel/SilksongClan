@@ -16,7 +16,7 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "card_art": "@ClawlineCardArt",
-      "targetless": false,
+      "targetless": true,
       "targets_room": true,
       "pools": [
         "MegaPool"

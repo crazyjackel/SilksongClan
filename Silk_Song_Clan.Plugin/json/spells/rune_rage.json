@@ -15,7 +15,7 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "card_art": "@RuneRageCardArt",
-      "targetless": false,
+      "targetless": true,
       "targets_room": true,
       "pools": [
         "MegaPool"
