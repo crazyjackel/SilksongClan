@@ -19,6 +19,11 @@ namespace Silk_Song_Clan.Plugin
         }
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers, ISystemManagers sysManagers)
         {
+            var saveManager = coreGameManagers.GetSaveManager();
+            if(saveManager.PreviewMode)
+            {
+                yield break;
+            }
             var relic = cardEffectState.GetParamStr().ToId(MyPluginInfo.PLUGIN_GUID, TemplateConstants.RelicData);
             var container = Railend.GetContainer();
             var relicDataRegister = container.GetInstance<IRegister<RelicData>>();

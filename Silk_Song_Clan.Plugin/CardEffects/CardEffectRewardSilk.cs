@@ -9,6 +9,7 @@ namespace Silk_Song_Clan.Plugin
 {
     public class CardEffectRewardSilk : CardEffectBase
     {
+        public override bool CanApplyInPreviewMode => true;
         public override PropDescriptions CreateEditorInspectorDescriptions()
         {
             PropDescriptions propDescriptions = new PropDescriptions();
@@ -29,6 +30,11 @@ namespace Silk_Song_Clan.Plugin
         }
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers, ISystemManagers sysManagers)
         {
+            var saveManager = coreGameManagers.GetSaveManager();
+            if(saveManager.PreviewMode)
+            {
+                yield break;
+            }
             var silkAmount = cardEffectState.GetParamInt();
             var container = Railend.GetContainer();
             var silkManager = container.GetInstance<SilkManager>();

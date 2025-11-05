@@ -72,17 +72,17 @@
     "upgrades": [
         {
             "id": "HornetHunter1Upgrade",
-            "bonus_damage": 3
+            "bonus_damage": 5
         },
         {
             "id": "HornetHunter2Upgrade",
-            "bonus_damage": 3,
-            "bonus_hp": 2
+            "bonus_damage": 5,
+            "bonus_hp": 3
         },
         {
             "id": "HornetHunter3Upgrade",
-            "bonus_damage": 5,
-            "bonus_hp": 3
+            "bonus_damage": 7,
+            "bonus_hp": 5
         },
         {
             "id": "HornetHunter1",
@@ -94,12 +94,6 @@
             "bonus_hp": 12,
             "trigger_upgrades": [
                 "@HornetHunter1Trigger"
-            ],
-            "status_effect_upgrades": [
-                {
-                    "status": "@FullSilkAttackBuff",
-                    "count": 30
-                }
             ],
             "show_description_on_cards": true
         },
@@ -115,12 +109,6 @@
             "trigger_upgrades": [
                 "@HornetHunter2Trigger"
             ],
-            "status_effect_upgrades": [
-                {
-                    "status": "@FullSilkAttackBuff",
-                    "count": 60
-                }
-            ],
             "show_description_on_cards": true
         },
         {
@@ -134,12 +122,6 @@
             "remove_upgrades": ["@HornetHunter2"],
             "trigger_upgrades": [
                 "@HornetHunter3Trigger"
-            ],
-            "status_effect_upgrades": [
-                {
-                    "status": "@FullSilkAttackBuff",
-                    "count": 120
-                }
             ],
             "show_description_on_cards": true
         }

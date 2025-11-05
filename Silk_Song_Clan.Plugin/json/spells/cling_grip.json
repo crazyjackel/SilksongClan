@@ -48,6 +48,7 @@
       "class": "@Silksong",
       "card_art": "@ClingGripCardArt",
       "targets_room": true,
+      "linked_mastery_card": "@ClingGrip",
       "traits": [
         "@ClingGripEphemeralTrait"
       ],
