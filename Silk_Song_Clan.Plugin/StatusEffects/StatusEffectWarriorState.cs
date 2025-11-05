@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TrainworksReloaded.Core.Interfaces;
 using TrainworksReloaded.Core;
@@ -20,7 +21,23 @@ namespace Silk_Song_Clan.Plugin
             {
                 yield break;
             }
-            yield return silkManager.RewardSilk(1);
+            
+            int silkGainAmount = 1;
+
+            // Check for relic effects that modify warrior silk gain
+            var relicManager = coreGameManagers.GetRelicManager();
+            if (relicManager != null)
+            {
+                var relicEffects = new List<IModifyWarriorSilkGainEffect>();
+                relicEffects = relicManager.GetRelicEffects(relicEffects).OrderBy(a => a.ApplyOrder).ToList();
+                foreach (var relicEffect in relicEffects)
+                {
+                    silkGainAmount += relicEffect.GetSilkGainAmount();
+                    silkGainAmount *= relicEffect.GetSilkGainMultiplier();
+                }
+            }
+
+            yield return silkManager.RewardSilk(silkGainAmount);
             yield break;
         }
     }

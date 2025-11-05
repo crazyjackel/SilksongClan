@@ -1,0 +1,53 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "ConjoinedHeart",
+            "type": "collectable",
+            "names": {
+                "english": "Conjoined Heart",
+                "chinese": "连心"
+            },
+            "descriptions": {
+                "english": "Warrior Status Effect generates Double [silk].",
+                "chinese": "[Warrior]状态效果生成双倍[silk]。"
+            },
+            "icon": "@ConjoinedHeartIcon",
+            "icon_small": "@ConjoinedHeartIcon",
+            "lore_tooltips": [
+                {
+                    "english": "Two hearts beating as one. The bond between warriors strengthens their connection to silk."
+                }
+            ],
+            "relic_effects": [
+                "@ConjoinedHeartEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "uncommon",
+                        "pools": [
+                            "MegaRelicPool"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "ConjoinedHeartEffect",
+            "name": "@RelicEffectAdditionalWarriorSilk",
+            "param_int": 0,
+            "param_int2": 2
+        }
+    ],
+    "sprites": [
+        {
+            "id": "ConjoinedHeartIcon",
+            "path": "textures/ConjoinedHeartIcon.png"
+        }
+    ]
+}
+

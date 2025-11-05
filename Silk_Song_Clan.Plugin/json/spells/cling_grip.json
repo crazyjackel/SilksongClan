@@ -86,7 +86,15 @@
       "target_mode": "self",
       "param_int": 3,
       "param_int_2": 1,
-      "param_card": "@ClingGripAdvanceEffect"
+      "param_card_pool": "@ClingGripPool"
+    }
+  ],
+  "card_pools": [
+    {
+      "id": "ClingGripPool",
+      "cards": [
+        "@ClingGripAdvanceEffect"
+      ]
     }
   ],
   "sprites": [

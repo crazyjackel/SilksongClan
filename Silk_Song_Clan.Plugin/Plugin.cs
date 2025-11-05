@@ -65,6 +65,8 @@ namespace Silk_Song_Clan.Plugin
                         //Relics
                         "json/relics/architect_key.json",
                         "json/relics/wormway_key.json",
+                        "json/relics/conjoined_heart.json",
+                        "json/relics/craw_memento.json",
 
                         //Triggers
                         "json/triggers/silksong.json",
