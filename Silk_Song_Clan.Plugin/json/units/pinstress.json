@@ -39,8 +39,8 @@
       },
       "character_art": "@PinstressCharacterArt",
       "size": 3,
-      "health": 20,
-      "attack_damage": 40,
+      "health": 25,
+      "attack_damage": 45,
       "subtypes": [
         "@Pinstress",
         "SubtypesData_BannerUnit"

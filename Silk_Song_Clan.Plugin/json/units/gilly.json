@@ -40,8 +40,8 @@
       },
       "character_art": "@GillyCharacterArt",
       "size": 2,
-      "health": 10,
-      "attack_damage": 20,
+      "health": 15,
+      "attack_damage": 25,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"
