@@ -38,7 +38,7 @@
         "english": "Add a random Equipment to Hand."
       },
       "is_an_ability": true,
-      "cooldown": 1,
+      "cooldown": 2,
       "initial_cooldown": 0,
       "targetless": true,
       "effects": [
@@ -63,6 +63,12 @@
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "valor",
+          "count": 6
+        }
       ],
       "triggers": [
         {
@@ -156,12 +162,12 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 1.5,
+              "y": 0.8,
               "z": 0
             },
             "scale": {
-              "x": 1,
-              "y": 1,
+              "x": 1.2,
+              "y": 1.2,
               "z": 1
             }
           }

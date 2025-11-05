@@ -70,25 +70,33 @@
         }
       ],
       "triggers": [
-        {
-          "id": "@GaramondSpawnTrigger"
-        }
+        "@GaramondUpgradeSpawnTrigger",
+        "@GaramondSpawnTrigger"
       ]
     }
   ],
   "character_triggers": [
     {
+      "id": "GaramondUpgradeSpawnTrigger",
+      "descriptions": {
+        "english": "Gain [effect0.upgrade.bonusdamage][attack] and [effect0.upgrade.bonushp][health] permanently."
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        {
+          "id": "@GaramondAddDamageAndHPUpgrade"
+        }
+      ]
+    },
+    {
       "id": "GaramondSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain an Ability to \"Attack\" and +[effect1.upgrade.bonusdamage][attack] and +[effect1.upgrade.bonushp][health] permanently."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain an Ability to \"Attack\"."
       },
       "trigger": "on_spawn",
       "effects": [
         {
           "id": "@GaramondSpawnEffectCombo"
-        },
-        {
-          "id": "@GaramondSpawnEffect"
         },
         {
           "id": "@GaramondAbilitySpawnEffect"
@@ -126,7 +134,7 @@
       ]
     },
     {
-      "id": "GaramondSpawnEffect",
+      "id": "GaramondAddDamageAndHPUpgrade",
       "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
