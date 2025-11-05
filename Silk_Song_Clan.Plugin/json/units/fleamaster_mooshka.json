@@ -57,7 +57,7 @@
         "english": "Add a random Flea to Hand.",
         "chinese": "将一个随机蚤民单位加入你的手牌。"
       },
-      "trigger": "on_team_turn_begin",
+      "trigger": "pre_combat",
       "effects": [
         {
           "id": "@FleamasterAddFleaEffect"

@@ -59,7 +59,7 @@
       "param_status_effects": [
         {
           "status": "damage shield",
-          "count": 2
+          "count": 3
         }
       ]
     },
@@ -71,7 +71,7 @@
       "param_status_effects": [
         {
           "status": "spikes",
-          "count": 6
+          "count": 8
         }
       ]
     }
