@@ -14,6 +14,8 @@
       "unlock_level": 7,
       "card_art": "@SylphsongCardArt",
       "card_type": "spell",
+      "targetless": true,
+      "targets_room": true,
       "rarity": "rare",
       "class": "@Silksong",
       "pools": [
