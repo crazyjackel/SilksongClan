@@ -1,0 +1,50 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "CrawMemento",
+            "type": "collectable",
+            "names": {
+                "english": "Craw Memento",
+                "chinese": "爬虫的纪念品"
+            },
+            "descriptions": {
+                "english": "Gain [effect0.power] [coin] whenever you activate an ability.",
+                "chinese": "每当你激活一个能力时，获得5[coin]。"
+            },
+            "icon": "@CrawMementoIcon",
+            "icon_small": "@CrawMementoIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A memento from Craw, the merchant. Their spirit of commerce lives on."
+                }
+            ],
+            "relic_effects": [
+                "@CrawMementoEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "common"
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "CrawMementoEffect",
+            "name": "RelicEffectGoldOnTrigger",
+            "param_int": 5,
+            "param_trigger": "on_own_ability_activated"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "CrawMementoIcon",
+            "path": "textures/CrawMementoIcon.png"
+        }
+    ]
+}
+
