@@ -65,6 +65,7 @@ namespace Silk_Song_Clan.Plugin
             }
 
             int statusEffectStacks = character.GetStatusEffectStacks(statusId);
+            Plugin.Logger.LogInfo($"{(inPreviewMode ? "Preview" : "Game")} AcrobaticState: Removing {statusEffectStacks} stacks of {statusId}");
             character.RemoveStatusEffect(statusId, statusEffectStacks);
 
             // If triggered from taking damage or being attacked, don't apply any buffs

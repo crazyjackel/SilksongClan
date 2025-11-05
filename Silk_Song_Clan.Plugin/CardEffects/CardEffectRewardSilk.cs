@@ -9,6 +9,7 @@ namespace Silk_Song_Clan.Plugin
 {
     public class CardEffectRewardSilk : CardEffectBase
     {
+        public override bool CanApplyInPreviewMode => false;
         public override PropDescriptions CreateEditorInspectorDescriptions()
         {
             PropDescriptions propDescriptions = new PropDescriptions();
