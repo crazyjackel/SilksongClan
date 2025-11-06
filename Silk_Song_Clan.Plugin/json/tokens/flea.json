@@ -75,7 +75,8 @@
         {
             "id": "FleaPetUpgrade",
             "bonus_damage": 1,
-            "bonus_hp": 1
+            "bonus_hp": 1,
+            "filters": ["@FleaPetUpgradeMask"]
         }
     ],
     "effects": [

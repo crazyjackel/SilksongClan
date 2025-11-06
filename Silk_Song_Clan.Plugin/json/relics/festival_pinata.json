@@ -1,0 +1,87 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "FestivalPinata",
+            "type": "collectable",
+            "names": {
+                "english": "Festival Pinata",
+                "chinese": "节日彩罐"
+            },
+            "descriptions": {
+                "english": "Fleas get \"Spawn: Reduce Cooldowns by 1\".",
+                "chinese": "蚤民单位获得\"召唤：冷却时间-1\"。"
+            },
+            "icon": "@FestivalPinataIcon",
+            "icon_small": "@FestivalPinataIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A colorful container filled with surprises. Breaking it open brings joy to all fleas nearby."
+                }
+            ],
+            "relic_effects": [
+                "@FestivalPinataEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "uncommon",
+                        "pools": ["MegaRelicPool"]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "FestivalPinataEffect",
+            "name": "RelicEffectAddTempUpgrade",
+            "param_upgrade": "@FestivalPinataUpgrade"
+        }
+    ],
+    "upgrade_masks": [
+        {
+            "id": "FestivalPinataMask",
+            "card_type": "monster",
+            "required_subtypes": ["@Flea"]
+        }
+    ],
+    "effects": [
+        {
+            "id": "FestivalPinataFleaSpawnEffect",
+            "name": "CardEffectAdjustAbilityCooldown",
+            "target_mode": "room",
+            "target_team": "monsters",
+            "param_int": -1
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "FestivalPinataTrigger",
+            "trigger": "on_spawn",
+            "descriptions": {
+                "english": "Reduce the cooldown of all units by 1.",
+                "chinese": "减少所有蚤民单位的冷却时间 1。"
+            },
+            "effects": [
+                "@FestivalPinataFleaSpawnEffect"
+            ]
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "FestivalPinataUpgrade",
+            "is_unique": true,
+            "trigger_upgrades": ["@FestivalPinataTrigger"],
+            "filters": ["@FestivalPinataMask"]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "FestivalPinataIcon",
+            "path": "textures/FestivalPinataIcon.png"
+        }
+    ]
+}
+
