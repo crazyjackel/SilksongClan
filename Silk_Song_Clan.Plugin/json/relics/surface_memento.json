@@ -1,0 +1,51 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "SurfaceMemento",
+            "type": "collectable",
+            "names": {
+                "english": "Surface Memento",
+                "chinese": "表面的纪念品"
+            },
+            "descriptions": {
+                "english": "[Silk_Song_Clan.Plugin_Silksong] triggers an additional time.",
+                "chinese": "[Silk_Song_Clan.Plugin_Silksong]触发额外一次。"
+            },
+            "icon": "@SurfaceMementoIcon",
+            "icon_small": "@SurfaceMementoIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A memento from the Surface. The echo of silk resonates twice as strongly."
+                }
+            ],
+            "relic_effects": [
+                "@SurfaceMementoEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "rare",
+                        "pools": ["MegaRelicPool"]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "SurfaceMementoEffect",
+            "name": "RelicEffectModifyTriggerCount",
+            "param_trigger": "@Silksong",
+            "param_int": 1
+        }
+    ],
+    "sprites": [
+        {
+            "id": "SurfaceMementoIcon",
+            "path": "textures/SurfaceMementoIcon.png"
+        }
+    ]
+}
+
