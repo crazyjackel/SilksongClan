@@ -4,13 +4,15 @@
         {
             "id": "Silksong",
             "names": {
-                "english": "Silksong"
+                "english": "Silksong",
+                "chinese": "丝之忆"
             },
             "descriptions": {
                 "english": "Triggers whenever a card is played that costs Silk."
             },
             "notifications": {
-                "english": "Silksong"
+                "english": "Silksong",
+                "chinese": "丝之忆"
             },
             "sprite": "@Silksong"
         }

@@ -4,7 +4,8 @@
     {
       "id": "PaleNales",
       "names": {
-        "english": "Pale Nales"
+        "english": "Pale Nails",
+        "chinese": "苍白之爪"
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Add [effect1.power] Pale Nales to Hand."

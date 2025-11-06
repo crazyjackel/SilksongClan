@@ -32,7 +32,8 @@
     {
       "id": "KrattAbility",
       "names": {
-        "english": "Send to Hot Spring"
+        "english": "Send to Hot Spring",
+        "chinese": "送到温泉"
       },
       "descriptions": {
         "english": "Fleas get +[effect1.upgrade.bonusdamage] [attack] and +[effect1.upgrade.bonushp] [health] and [damageshield] [effect1.upgrade.status0.power].",

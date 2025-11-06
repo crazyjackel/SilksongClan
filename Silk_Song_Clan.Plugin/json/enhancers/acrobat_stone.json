@@ -5,7 +5,8 @@
             "id": "AcrobatStone",
             "type": "enhancer",
             "names": {
-                "english": "Acrobat Stone"
+                "english": "Acrobat Stone",
+                "chinese": "杂技石"
             },
             "descriptions": {
                 "english": "Gain '[incant]: Gain [Silk_Song_Clan.Plugin_Imbue] [effect0.upgrade0.charactertrigger0.effect0.status0.power] and [Silk_Song_Clan.Plugin_Protection] [effect0.upgrade0.charactertrigger0.effect1.status0.power].'",
@@ -40,7 +41,8 @@
         {
             "id": "AcrobatStoneUpgrade",
             "titles": {
-                "english": "Acrobat Stone"
+                "english": "Acrobat Stone",
+                "chinese": "杂技石"
             },
             "icon": "@AcrobatStoneIcon",
             "trigger_upgrades": [

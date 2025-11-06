@@ -5,7 +5,8 @@
             "id": "WarriorStone",
             "type": "enhancer",
             "names": {
-                "english": "Warrior Stone"
+                "english": "Warrior Stone",
+                "chinese": "战士石"
             },
             "descriptions": {
                 "english": "Upgrade a unit with +[effect0.upgrade0.bonusdamage][attack], +[effect0.upgrade0.bonushp][health], and [Silk_Song_Clan.Plugin_Warrior].",
@@ -53,7 +54,8 @@
         {
             "id": "WarriorStoneUpgrade",
             "titles": {
-                "english": "Warrior Stone"
+                "english": "Warrior Stone",
+                "chinese": "战士石"
             },
             "icon": "@WarriorStoneIcon",
             "bonus_damage": 5,

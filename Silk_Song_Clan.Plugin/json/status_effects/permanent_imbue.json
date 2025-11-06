@@ -5,10 +5,12 @@
             "id": "PermanentImbue",
             "class_name": "@StatusEffectAcrobaticState",
             "names": {
-                "english": "Permanent Imbue"
+                "english": "Permanent Imbue",
+                "chinese": "永久线轴"
             },
             "stackable_names": {
-                "english": "Permanent Imbue {0}"
+                "english": "Permanent Imbue {0}",
+                "chinese": "永久线轴 {0}"
             },
             "card_tooltips": {
                 "english": "At the start of each turn, permanently gain extra attack equal to your current stacks of [Silk_Song_Clan.Plugin_PermanentImbue]. All stacks are lost if the unit takes damage or at the start of your turn."
@@ -17,10 +19,12 @@
                 "english": "At the start of the turn, this unit gains +[codeint0] attack permanently. This effect is lost if the unit takes damage."
             },
             "notifications": {
-                "english": "Permanently Imbued"
+                "english": "Permanently Imbued",
+                "chinese": "获得永久线轴"
             },
             "replacement_texts": {
-                "english": "<b>Permanent Imbue</b>"
+                "english": "<b>Permanent Imbue</b>",
+                "chinese": "<b>永久线轴</b>"
             },
             "display_category": "positive",
             "trigger_stage": "on_post_room_combat",

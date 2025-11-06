@@ -4,7 +4,8 @@
         {
             "id": "NailStrike",
             "names": {
-                "english": "Nail Strike"
+                "english": "Nail Strike",
+                "chinese": "针击"
             },
             "descriptions": {
                 "english": "Deal damage equal to [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. ",

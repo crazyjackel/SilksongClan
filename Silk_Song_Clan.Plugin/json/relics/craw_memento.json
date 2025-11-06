@@ -6,11 +6,11 @@
             "type": "collectable",
             "names": {
                 "english": "Craw Memento",
-                "chinese": "爬虫的纪念品"
+                "chinese": "喙鸦信物"
             },
             "descriptions": {
                 "english": "Gain [effect0.power] [coin] whenever you activate an ability.",
-                "chinese": "每当你激活一个能力时，获得5[coin]。"
+                "chinese": "在使用一种能力之后，获得 [effect0.power][coin]。"
             },
             "icon": "@CrawMementoIcon",
             "icon_small": "@CrawMementoIcon",

@@ -5,10 +5,12 @@
             "id": "FullSilkAttackBuff",
             "class_name": "@StatusEffectExtraAttackFullSilk",
             "names": {
-                "english": "Hunter Bonus"
+                "english": "Hunter Bonus",
+                "chinese": "猎人加成"
             },
             "stackable_names": {
-                "english": "Hunter Bonus {0}"
+                "english": "Hunter Bonus {0}",
+                "chinese": "猎人加成 {0}"
             },
             "card_tooltips": {
                 "english": "Gain +[codeint0] attack if at Max Silk."
@@ -17,10 +19,12 @@
                 "english": "Gain +[codeint0] attack if at Max Silk."
             },
             "notifications": {
-                "english": "Hunter Bonus"
+                "english": "Hunter Bonus",
+                "chinese": "猎人加成"
             },
             "replacement_texts": {
-                "english": "<b>Hunter Bonus</b>"
+                "english": "<b>Hunter Bonus</b>",
+                "chinese": "<b>猎人加成</b>"
             },
             "is_stackable": true,
             "is_propagatable": false,

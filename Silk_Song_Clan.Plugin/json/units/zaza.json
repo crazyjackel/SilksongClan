@@ -32,7 +32,8 @@
     {
       "id": "ZazaHumbleSteedAbility",
       "names": {
-        "english": "Humble Steed"
+        "english": "Humble Steed",
+        "chinese": "卑微的坐骑"
       },
       "descriptions": {
         "english": "Add a random Equipment to Hand."
