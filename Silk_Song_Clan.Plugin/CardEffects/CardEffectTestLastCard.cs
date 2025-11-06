@@ -3,6 +3,7 @@ using TrainworksReloaded.Base;
 using TrainworksReloaded.Base.Extensions;
 using TrainworksReloaded.Core.Interfaces;
 using System.Collections;
+using Silk_Song_Song_Clan.Plugin;
 namespace Silk_Song_Clan.Plugin
 {
     public class CardEffectTestLastCard : CardEffectBase
@@ -14,6 +15,12 @@ namespace Silk_Song_Clan.Plugin
         }   
         public override bool TestEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams, ICoreGameManagers coreGameManagers)
         {
+            var relicmanager = coreGameManagers.GetRelicManager();
+            if(relicmanager.GetRelicEffect<RelicEffectComboActive>() != null)
+            {
+                Plugin.Logger.LogInfo("Combo active");
+                return true;
+            }
             var cardManager = coreGameManagers.GetCardManager();
             var cardsPlayedThisTurn = (List<CardState>)AccessTools.Field(typeof(CardManager), "cardsPlayedThisTurn").GetValue(cardManager);
             var cardsPlayedThisTurnCount = cardsPlayedThisTurn.Count;
