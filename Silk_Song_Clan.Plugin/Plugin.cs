@@ -70,6 +70,8 @@ namespace Silk_Song_Clan.Plugin
                         "json/relics/festival_pinata.json",
                         "json/relics/grey_memento.json",
                         "json/relics/guardian_memento.json",
+                        "json/relics/hunter_memento.json",
+                        "json/relics/hero_memento.json",
 
                         //Triggers
                         "json/triggers/silksong.json",

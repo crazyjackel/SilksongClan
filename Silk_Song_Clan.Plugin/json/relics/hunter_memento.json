@@ -1,0 +1,88 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "HunterMemento",
+            "type": "collectable",
+            "names": {
+                "english": "Hunter's Memento",
+                "chinese": "猎手的纪念品"
+            },
+            "descriptions": {
+                "english": "[Silk_Song_Clan.Plugin_Protection] and [Silk_Song_Clan.Plugin_Imbue] gain an extra stack.",
+                "chinese": "[Silk_Song_Clan.Plugin_Protection]和[Silk_Song_Clan.Plugin_Imbue]获得额外一层。"
+            },
+            "icon": "@HunterMementoIcon",
+            "icon_small": "@HunterMementoIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A memento from the Hunter. Their keen eye ensures every buff is maximized."
+                }
+            ],
+            "relic_effects": [
+                "@HunterMementoProtectionEffect",
+                "@HunterMementoImbueEffect",
+                "@HunterMementoPermanentProtectionEffect",
+                "@HunterMementoPermanentImbueEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "uncommon",
+                        "pools": ["MegaRelicPool"]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "HunterMementoProtectionEffect",
+            "name": "RelicEffectAddStatusEffectOnStatusApplied",
+            "param_status_effects": [
+                {
+                    "status": "@Protection",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "HunterMementoImbueEffect",
+            "name": "RelicEffectAddStatusEffectOnStatusApplied",
+            "param_status_effects": [
+                {
+                    "status": "@Imbue",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "HunterMementoPermanentProtectionEffect",
+            "name": "RelicEffectAddStatusEffectOnStatusApplied",
+            "param_status_effects": [
+                {
+                    "status": "@PermanentProtection",
+                    "count": 1
+                }
+            ]
+        },
+        {
+            "id": "HunterMementoPermanentImbueEffect",
+            "name": "RelicEffectAddStatusEffectOnStatusApplied",
+            "param_status_effects": [
+                {
+                    "status": "@PermanentImbue",
+                    "count": 1
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "HunterMementoIcon",
+            "path": "textures/HunterMementoIcon.png"
+        }
+    ]
+}
+
