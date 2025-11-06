@@ -36,7 +36,7 @@
     "relic_effects": [
         {
             "id": "HeroMementoEffect",
-            "name": "@RelicEffectAlwaysActiveCombo"
+            "name": "@RelicEffectComboActive"
         }
     ],
     "sprites": [
