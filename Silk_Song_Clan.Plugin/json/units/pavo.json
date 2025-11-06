@@ -40,8 +40,8 @@
       },
       "character_art": "@PavoCharacterArt",
       "size": 2,
-      "health": 15,
-      "attack_damage": 6,
+      "health": 25,
+      "attack_damage": 3,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"

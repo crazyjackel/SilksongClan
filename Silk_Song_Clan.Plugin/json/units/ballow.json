@@ -41,7 +41,7 @@
       "character_art": "@BallowCharacterArt",
       "size": 2,
       "health": 15,
-      "attack_damage": 5,
+      "attack_damage": 10,
       "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "triggers": [
         {

@@ -39,7 +39,7 @@
       },
       "character_art": "@RelicSeekerScroungeCharacterArt",
       "size": 2,
-      "health": 16,
+      "health": 24,
       "attack_damage": 24,
       "subtypes": [
         "@Bug",
