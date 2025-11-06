@@ -68,6 +68,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/relics/conjoined_heart.json",
                         "json/relics/craw_memento.json",
                         "json/relics/festival_pinata.json",
+                        "json/relics/grey_memento.json",
 
                         //Triggers
                         "json/triggers/silksong.json",
