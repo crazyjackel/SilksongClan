@@ -32,7 +32,8 @@
     {
       "id": "AlchemistZylotolAbility",
       "names": {
-        "english": "Inject"
+        "english": "Inject",
+        "chinese": "注入"
       },
       "descriptions": {
         "english": "Gain [effect0.status0.power] [damageshield]. If you have [effect1.status0.power] or more [damageshield], Gain [effect1.status1.power] [Silk_Song_Clan.Plugin_PermanentImbue].",

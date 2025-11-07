@@ -5,10 +5,12 @@
             "id": "Imbue",
             "class_name": "@StatusEffectAcrobaticState",
             "names": {
-                "english": "Imbue"
+                "english": "Imbue",
+                "chinese": "线轴"
             },
             "stackable_names": {
-                "english": "Imbue {0}"
+                "english": "Imbue {0}",
+                "chinese": "线轴 {0}"
             },
             "card_tooltips": {
                 "english": "At the start of each turn, gain extra attack equal to your current stacks of [Silk_Song_Clan.Plugin_Imbue]. All stacks are lost if the unit takes damage or at the start of your turn."
@@ -17,10 +19,12 @@
                 "english": "At the start of the turn, this unit gains +[codeint0] attack. This effect is lost if the unit takes damage."
             },
             "notifications": {
-                "english": "Imbued"
+                "english": "Imbued",
+                "chinese": "获得线轴"
             },
             "replacement_texts": {
-                "english": "<b>Imbue</b>"
+                "english": "<b>Imbue</b>",
+                "chinese": "<b>线轴</b>"
             },
             "display_category": "positive",
             "trigger_stage": "on_post_room_combat",

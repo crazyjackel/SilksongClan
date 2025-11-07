@@ -6,7 +6,7 @@
             "type": "collectable",
             "names": {
                 "english": "Grey Memento",
-                "chinese": "灰色的纪念品"
+                "chinese": "灰色信物"
             },
             "descriptions": {
                 "english": "Champion units get +2 [Silk_Song_Clan.Plugin_PermanentImbue] and +2 [Silk_Song_Clan.Plugin_PermanentProtection] at the start of each turn.",

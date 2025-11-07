@@ -5,10 +5,12 @@
             "id": "PermanentProtection",
             "class_name": "@StatusEffectAcrobaticState",
             "names": {
-                "english": "Permanent Protection"
+                "english": "Permanent Protection",
+                "chinese": "永久面具"
             },
             "stackable_names": {
-                "english": "Permanent Protection {0}"
+                "english": "Permanent Protection {0}",
+                "chinese": "永久面具 {0}"
             },
             "card_tooltips": {
                 "english": "At the start of each turn, permanently gain extra max health equal to your current stacks of [Silk_Song_Clan.Plugin_PermanentProtection]. All stacks are lost if the unit takes damage or at the start of your turn."
@@ -17,10 +19,12 @@
                 "english": "At the start of the turn, this unit gains +[codeint0] max health permanently. This effect is lost if the unit takes damage."
             },
             "notifications": {
-                "english": "Permanently Protected"
+                "english": "Permanently Protected",
+                "chinese": "获得永久面具"
             },
             "replacement_texts": {
-                "english": "<b>Permanent Protection</b>"
+                "english": "<b>Permanent Protection</b>",
+                "chinese": "<b>永久面具</b>"
             },
             "display_category": "positive",
             "trigger_stage": "on_post_room_combat",

@@ -6,7 +6,7 @@
             "type": "collectable",
             "names": {
                 "english": "Hunter's Memento",
-                "chinese": "猎手的纪念品"
+                "chinese": "猎人的信物"
             },
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Protection] and [Silk_Song_Clan.Plugin_Imbue] gain an extra stack.",

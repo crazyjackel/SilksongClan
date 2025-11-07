@@ -79,7 +79,8 @@
     {
       "id": "GaramondUpgradeSpawnTrigger",
       "descriptions": {
-        "english": "Gain [effect0.upgrade.bonusdamage][attack] and [effect0.upgrade.bonushp][health] permanently."
+        "english": "Gain +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health] permanently.",
+        "chinese": "永久获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
       },
       "trigger": "on_spawn",
       "effects": [

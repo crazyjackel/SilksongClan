@@ -4,7 +4,8 @@
         {
             "id": "Snail",
             "names": {
-                "english": "Snail"
+                "english": "Snail",
+                "chinese": "蜗牛"
             }
         }
     ]

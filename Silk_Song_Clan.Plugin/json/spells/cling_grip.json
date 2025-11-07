@@ -8,7 +8,8 @@
         "chinese": "攀附抓握"
       },
       "descriptions": {
-        "english": "Retreat. Add \"Advance\" to Hand."
+        "english": "[retreat]. Add \"Advance\" to Hand.",
+        "chinese": "[retreat]。将一张<b>前进</b>卡牌加入你的手牌。"
       },
       "cost": 1,
       "unlock_level": 2,
@@ -37,10 +38,11 @@
       "id": "ClingGripAdvanceEffect",
       "names": {
         "english": "Advance",
-        "chinese": "进击"
+        "chinese": "前进"
       },
       "descriptions": {
-        "english": "Advance."
+        "english": "[advance].",
+        "chinese": "[advance]。"
       },
       "cost": 0,
       "card_type": "spell",

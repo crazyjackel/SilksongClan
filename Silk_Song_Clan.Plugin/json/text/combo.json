@@ -4,7 +4,8 @@
         {
             "key": "Combo",
             "texts": {
-                "english": "<b>Combo</b>"
+                "english": "<b>Combo</b>",
+                "chinese": "<b>连招</b>"
             }
         }
     ],
@@ -12,7 +13,8 @@
         {
             "id": "ComboTooltip",
             "titles": {
-                "english": "Combo"
+                "english": "Combo",
+                "chinese": "连招"
             },
             "descriptions": {
                 "english": "Gain additional effects if the previous card played was a specific type."
@@ -21,7 +23,8 @@
         {
             "id": "ComboPreviousTooltip",
             "titles": {
-                "english": "Combo"
+                "english": "Combo",
+                "chinese": "连招"
             },
             "descriptions": {
                 "english": "Gain additional effects if a previous card was played."

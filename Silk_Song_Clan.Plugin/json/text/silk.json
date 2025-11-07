@@ -34,7 +34,8 @@
         {
             "id": "SilkChannelTooltip",
             "titles": {
-                "english": "Channel"
+                "english": "Channel",
+                "chinese": "灌注"
             },
             "descriptions": {
                 "english": "This spell channels [Silk_Song_Clan.Plugin_Silk] to gain benefits."
@@ -43,7 +44,8 @@
         {
             "id": "FullSilkDamageTooltip",
             "titles": {
-                "english": "Full Silk"
+                "english": "Full Silk",
+                "chinese": "满灵丝"
             },
             "descriptions": {
                 "english": "If at Max Silk, deal {0}x more Damage."
@@ -52,7 +54,8 @@
         {
             "id": "FullSilkDamageTooltipMax",
             "titles": {
-                "english": "Full Silk"
+                "english": "Full Silk",
+                "chinese": "满灵丝"
             },
             "descriptions": {
                 "english": "Deal {0}x more Damage."

@@ -4,7 +4,8 @@
         {
             "key": "Bind",
             "texts": {
-                "english": "<b>Bind</b>"
+                "english": "<b>Bind</b>",
+                "chinese": "<b>聚结</b>"
             }
         }
     ],
@@ -12,7 +13,8 @@
         {
             "id": "BindBindEffectTooltip",
             "titles": {
-                "english": "Bind"
+                "english": "Bind",
+                "chinese": "聚结"
             },
             "descriptions": {
                 "english": "Trigger the [Silk_Song_Clan.Plugin_Imbue] and [Silk_Song_Clan.Plugin_Protection] status effects."
