@@ -90,18 +90,6 @@
           "id": "@CaretakerDualityEffect"
         }
       ]
-    },
-    {
-      "id": "CaretakerSilksongTrigger",
-      "descriptions": {
-        "english": "Front Unit gets [damageshield] [effect0.status0.power] and [spellshield] [effect0.status1.power]."
-      },
-      "trigger": "@Silksong",
-      "effects": [
-        {
-          "id": "@CaretakerShieldStatusEffect"
-        }
-      ]
     }
   ],
   "upgrade_masks": [
