@@ -6,7 +6,7 @@
             "type": "collectable",
             "names": {
                 "english": "Surface Memento",
-                "chinese": "表面的纪念品"
+                "chinese": "地表信物"
             },
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Silksong] triggers an additional time.",

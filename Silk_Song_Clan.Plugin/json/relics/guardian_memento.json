@@ -6,7 +6,7 @@
             "type": "collectable",
             "names": {
                 "english": "Guardian's Memento",
-                "chinese": "守护者的纪念品"
+                "chinese": "守护者的信物"
             },
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Protection] and [Silk_Song_Clan.Plugin_Imbue] are not removed from being hit.",
