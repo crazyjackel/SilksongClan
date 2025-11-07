@@ -41,8 +41,8 @@
       },
       "character_art": "@YarnabyCharacterArt",
       "size": 1,
-      "health": 8,
-      "attack_damage": 8,
+      "health": 12,
+      "attack_damage": 10,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"
@@ -55,7 +55,7 @@
       ],
       "triggers": [
         {
-          "id": "@YarnabyHungerTrigger"
+          "id": "@YarnabyStrikeTrigger"
         },
         {
           "id": "@YarnabySpawnTrigger"
@@ -65,10 +65,24 @@
   ],
   "character_triggers": [
     {
+      "id": "YarnabySpawnTrigger",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Crull and Benjin: Gain \"<b>Hunger</b>: Front friendly unit gets [lifesteal] [effect1.upgrade.charactertrigger0.effect0.status0.power].\""
+      },
+      "effects": [
+        {
+          "id": "@YarnabySpawnEffectCombo"
+        },
+        {
+          "id": "@YarnabyGainHungerTrigger"
+        }
+      ]
+    },
+    {
       "id": "YarnabyHungerTrigger",
       "descriptions": {
-        "english": "Gain [lifesteal] [effect0.status0.power].",
-        "chinese": "获得[lifesteal] [effect0.status0.power]。"
+        "english": "Front Friendly Unit gets [lifesteal] [effect0.status0.power]."
       },
       "trigger": "on_food_spawn",
       "effects": [
@@ -78,36 +92,24 @@
       ]
     },
     {
-      "id": "YarnabySpawnTrigger",
-      "trigger": "on_spawn",
-      "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Crull and Benjin: [strike]: Front Friendly Unit gets [lifesteal] [effect1.upgrade.charactertrigger0.effect0.status0.power]."
-      },
-      "effects": [
-        {
-          "id": "@YarnabySpawnEffectCombo"
-        },
-        {
-          "id": "@YarnabySpawnEffect"
-        }
-      ]
-    },
-    {
       "id": "YarnabyStrikeTrigger",
-      "trigger": "on_hit",
+      "descriptions": {
+        "english": "Add a random uncommon or rare Morsel to Hand."
+      },
+      "trigger": "on_kill",
       "effects": [
         {
-          "id": "@YarnabyStrikeEffect"
+          "id": "@YarnabyStrikeMorselEffect"
         }
       ]
     }
   ],
   "upgrades": [
     {
-      "id": "YarnabyComboUpgrade",
+      "id": "YarnabyHungerUpgrade",
       "trigger_upgrades": [
         {
-          "id": "@YarnabyStrikeTrigger"
+          "id": "@YarnabyHungerTrigger"
         }
       ]
     }
@@ -118,17 +120,6 @@
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@Yarnaby"
-    },
-    {
-      "id": "YarnabyHungerEffect",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "self",
-      "param_status_effects": [
-        {
-          "status": "lifesteal",
-          "count": 1
-        }
-      ]
     },
     {
       "id": "YarnabySpawnEffectCombo",
@@ -142,14 +133,14 @@
       ]
     },
     {
-      "id": "YarnabySpawnEffect",
+      "id": "YarnabyGainHungerTrigger",
       "name": "CardEffectAddTempCardUpgradeToUnits",
       "target_mode": "self",
       "target_team": "monsters",
-      "param_upgrade": "@YarnabyComboUpgrade"
+      "param_upgrade": "@YarnabyHungerUpgrade"
     },
     {
-      "id": "YarnabyStrikeEffect",
+      "id": "YarnabyHungerEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "front_in_room",
       "target_team": "monsters",
@@ -159,6 +150,13 @@
           "count": 1
         }
       ]
+    },
+    {
+      "id": "YarnabyStrikeMorselEffect",
+      "name": "CardEffectAddBattleCard",
+      "param_card_pool": "@MorselPool",
+      "param_int": 3,
+      "param_int_2": 1
     }
   ],
   "sprites": [

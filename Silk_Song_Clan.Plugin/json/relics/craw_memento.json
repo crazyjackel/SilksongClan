@@ -26,7 +26,8 @@
                 {
                     "collectable": {
                         "class": "@Silksong",
-                        "rarity": "common"
+                        "rarity": "common",
+                        "pools": ["MegaRelicPool"]
                     }
                 }
             ]

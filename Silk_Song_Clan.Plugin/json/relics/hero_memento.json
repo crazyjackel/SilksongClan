@@ -1,0 +1,49 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "HeroMemento",
+            "type": "collectable",
+            "names": {
+                "english": "Hero's Memento",
+                "chinese": "英雄的纪念品"
+            },
+            "descriptions": {
+                "english": "Combos are always active.",
+                "chinese": "连击总是激活。"
+            },
+            "icon": "@HeroMementoIcon",
+            "icon_small": "@HeroMementoIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A keepsake from a great hero. Their legacy lives on in every perfectly executed combo."
+                }
+            ],
+            "relic_effects": [
+                "@HeroMementoEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "rare",
+                        "pools": ["MegaRelicPool"]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "HeroMementoEffect",
+            "name": "@RelicEffectComboActive"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "HeroMementoIcon",
+            "path": "textures/HeroMementoIcon.png"
+        }
+    ]
+}
+

@@ -64,6 +64,13 @@ namespace Silk_Song_Clan.Plugin
                 yield break;
             }
 
+            var relicmanager = coreGameManagers.GetRelicManager();
+            if(relicManager.GetRelicEffect<RelicEffectAcrobatNotRemoved>() != null && (inputTriggerParams.damage > 0 || inputTriggerParams.attacked != null))
+            {
+                Plugin.Logger.LogInfo($"{(inPreviewMode ? "Preview" : "Game")} AcrobaticState: Acrobat not removed on hit");
+                yield break;
+            }
+
             int statusEffectStacks = character.GetStatusEffectStacks(statusId);
             Plugin.Logger.LogInfo($"{(inPreviewMode ? "Preview" : "Game")} AcrobaticState: Removing {statusEffectStacks} stacks of {statusId}");
             character.RemoveStatusEffect(statusId, statusEffectStacks);

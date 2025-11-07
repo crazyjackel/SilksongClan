@@ -1,0 +1,107 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "GreyMemento",
+            "type": "collectable",
+            "names": {
+                "english": "Grey Memento",
+                "chinese": "灰色的纪念品"
+            },
+            "descriptions": {
+                "english": "Champion units get +2 [Silk_Song_Clan.Plugin_PermanentImbue] and +2 [Silk_Song_Clan.Plugin_PermanentProtection] at the start of each turn.",
+                "chinese": "勇者单位在每回合开始时获得+2 [Silk_Song_Clan.Plugin_PermanentImbue]和+2 [Silk_Song_Clan.Plugin_PermanentProtection]。"
+            },
+            "icon": "@GreyMementoIcon",
+            "icon_small": "@GreyMementoIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A memento from Grey. Their wisdom grants champions lasting protection."
+                }
+            ],
+            "relic_effects": [
+                "@GreyMementoEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "rare",
+                        "pools": ["MegaRelicPool"]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "GreyMementoEffect",
+            "name": "RelicEffectAddTempUpgrade",
+            "param_upgrade": "@GreyMementoUpgrade"
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "GreyMementoUpgrade",
+            "is_unique": true,
+            "trigger_upgrades": [
+                "@GreyMementoTrigger"
+            ],
+            "filters": [
+                "@GreyMementoMask"
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "GreyMementoTrigger",
+            "trigger": "pre_combat",
+            "descriptions": {
+                "english": "Gain +[effect0.status0.power][Silk_Song_Clan.Plugin_PermanentImbue] and +[effect1.status0.power][Silk_Song_Clan.Plugin_PermanentProtection]."
+            },
+            "effects": [
+                "@GreyMementoImbueEffect",
+                "@GreyMementoProtectionEffect"
+            ]
+        }
+    ],
+    "upgrade_masks": [
+        {
+            "id": "GreyMementoMask",
+            "card_type": "monster",
+            "required_rarities": [
+                "champion"
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "GreyMementoImbueEffect",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "param_status_effects": [
+                {
+                    "status": "@PermanentImbue",
+                    "count": 2
+                }
+            ]
+        },
+        {
+            "id": "GreyMementoProtectionEffect",
+            "name": "CardEffectAddStatusEffect",
+            "target_mode": "self",
+            "param_status_effects": [
+                {
+                    "status": "@PermanentProtection",
+                    "count": 2
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "GreyMementoIcon",
+            "path": "textures/GreyMementoIcon.png"
+        }
+    ]
+}

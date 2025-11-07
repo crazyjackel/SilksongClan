@@ -49,7 +49,8 @@
         {
             "id": "HugeFleaPetUpgrade",
             "bonus_damage": 3,
-            "bonus_hp": 3
+            "bonus_hp": 3,
+            "filters": ["@HugeFleaPetUpgradeMask"]
         }
     ],
     "upgrade_masks": [

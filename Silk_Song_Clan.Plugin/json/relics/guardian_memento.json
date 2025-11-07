@@ -1,0 +1,49 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "GuardianMemento",
+            "type": "collectable",
+            "names": {
+                "english": "Guardian's Memento",
+                "chinese": "守护者的纪念品"
+            },
+            "descriptions": {
+                "english": "[Silk_Song_Clan.Plugin_Protection] and [Silk_Song_Clan.Plugin_Imbue] are not removed from being hit.",
+                "chinese": "[Silk_Song_Clan.Plugin_Protection]和[Silk_Song_Clan.Plugin_Imbue]在受到攻击时不会被移除。"
+            },
+            "icon": "@GuardianMementoIcon",
+            "icon_small": "@GuardianMementoIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A keepsake from a great guardian. Their protective nature shields your units from harm."
+                }
+            ],
+            "relic_effects": [
+                "@GuardianMementoEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "rare",
+                        "pools": ["MegaRelicPool"]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "GuardianMementoEffect",
+            "name": "@RelicEffectAcrobatNotRemoved"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "GuardianMementoIcon",
+            "path": "textures/GuardianMementoIcon.png"
+        }
+    ]
+}
+

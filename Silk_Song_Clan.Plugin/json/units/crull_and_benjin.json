@@ -29,6 +29,24 @@
           "english": "A duo of bugs that grow stronger when hungry and work together with Yarnaby for protection."
         }
       ]
+    },
+    {
+      "id": "CrullAndBenjinFeastAbility",
+      "names": {
+        "english": "Feast"
+      },
+      "descriptions": {
+        "english": "Add 2 random uncommon or rare Morsels to Hand."
+      },
+      "is_an_ability": true,
+      "cooldown": 2,
+      "initial_cooldown": 0,
+      "targetless": true,
+      "effects": [
+        {
+          "id": "@CrullAndBenjinAddMorselsEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -44,10 +62,8 @@
       "health": 8,
       "attack_damage": 8,
       "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
+      "ability": "@CrullAndBenjinFeastAbility",
       "triggers": [
-        {
-          "id": "@CrullHungerTrigger"
-        },
         {
           "id": "@CrullAndBenjinComboYarnabyTrigger"
         }
@@ -56,22 +72,9 @@
   ],
   "character_triggers": [
     {
-      "id": "CrullHungerTrigger",
-      "descriptions": {
-        "english": "Apply +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
-        "chinese": "获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
-      },
-      "trigger": "on_food_spawn",
-      "effects": [
-        {
-          "id": "@CrullAndBenjinHungerEffect"
-        }
-      ]
-    },
-    {
       "id": "CrullAndBenjinComboYarnabyTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Yarnaby: Spend [effect1.powerabs] [coin]. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect2.status0.power]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Yarnaby: Gain \"<b>Hunger</b>: +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonushp][health].\""
       },
       "trigger": "on_spawn",
       "effects": [
@@ -79,10 +82,19 @@
           "id": "@CrullAndBenjinYarnabyEffect"
         },
         {
-          "id": "@CrullAndBenjinSpendGoldEffect"
-        },
+          "id": "@CrullAndBenjinGainHungerTrigger"
+        }
+      ]
+    },
+    {
+      "id": "CrullAndBenjinHungerTrigger",
+      "descriptions": {
+        "english": "+[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]."
+      },
+      "trigger": "on_food_spawn",
+      "effects": [
         {
-          "id": "@CrullAndBenjinProtectionEffect"
+          "id": "@CrullAndBenjinHungerEffect"
         }
       ]
     }
@@ -92,6 +104,14 @@
       "id": "CrullHungerUpgrade",
       "bonus_damage": 3,
       "bonus_hp": 3
+    },
+    {
+      "id": "CrullAndBenjinHungerUpgrade",
+      "trigger_upgrades": [
+        {
+          "id": "@CrullAndBenjinHungerTrigger"
+        }
+      ]
     }
   ],
   "effects": [
@@ -109,6 +129,13 @@
       "param_upgrade": "@CrullHungerUpgrade"
     },
     {
+      "id": "CrullAndBenjinAddMorselsEffect",
+      "name": "CardEffectAddBattleCard",
+      "param_card_pool": "@MorselPool",
+      "param_int": 3,
+      "param_int_2": 2
+    },
+    {
       "id": "CrullAndBenjinYarnabyEffect",
       "name": "@CardEffectTestLastCardName",
       "should_test": true,
@@ -116,24 +143,11 @@
       "param_str": "@SpawnYarnaby"
     },
     {
-      "id": "CrullAndBenjinSpendGoldEffect",
-      "name": "CardEffectRewardGold",
-      "param_int": -30,
-      "should_test": true,
-      "should_cancel_subsequent_effects_if_test_fails": true,
-      "param_str": "@SpawnYarnaby"
-    },
-    {
-      "id": "CrullAndBenjinProtectionEffect",
-      "name": "CardEffectAddStatusEffect",
-      "target_mode": "room",
+      "id": "CrullAndBenjinGainHungerTrigger",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
       "target_team": "monsters",
-      "param_status_effects": [
-        {
-          "status": "@PermanentProtection",
-          "count": 10
-        }
-      ]
+      "param_upgrade": "@CrullAndBenjinHungerUpgrade"
     }
   ],
   "sprites": [
@@ -165,12 +179,12 @@
           "transform": {
             "position": {
               "x": 0,
-              "y": 1.5,
+              "y": 0.8,
               "z": 0
             },
             "scale": {
-              "x": 1,
-              "y": 1,
+              "x": 1.3,
+              "y": 1.3,
               "z": 1
             }
           }
