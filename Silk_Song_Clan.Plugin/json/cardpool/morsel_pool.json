@@ -1,0 +1,29 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+    "card_pools": [
+        {
+            "id": "MorselPool",
+            "cards": [
+                "ShadowMorsel",
+                "ShadowMorsel",
+                "ShadowMorsel",
+                "ShadowMorsel",
+                "ShadowMorsel",
+                "MoltenMorsel",
+                "MoltenMorsel",
+                "MoltenMorsel",
+                "MoltenMorsel",
+                "MoltenMorsel",
+                "MorselJeweler",
+                "MorselJeweler",
+                "MorselJeweler",
+                "MorselJeweler",
+                "VoidExcavator",
+                "VoidExcavator",
+                "VoidExcavator",
+                "MorselMiner",
+                "MorselMiner"
+            ]
+        }
+    ]
+}
