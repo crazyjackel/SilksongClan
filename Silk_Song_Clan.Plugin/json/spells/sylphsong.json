@@ -10,7 +10,7 @@
       "descriptions": {
         "english": "Set Silk to Max."
       },
-      "cost": 2,
+      "cost": 1,
       "unlock_level": 7,
       "card_art": "@SylphsongCardArt",
       "card_type": "spell",
@@ -46,7 +46,7 @@
     {
       "id": "SylphsongSetSilkEffect",
       "name": "@CardEffectRewardSilk",
-      "target_mode": "self",
+      "target_mode": "room",
       "param_int": 99,
       "additional_tooltips": [
         "@SilkTooltip"
