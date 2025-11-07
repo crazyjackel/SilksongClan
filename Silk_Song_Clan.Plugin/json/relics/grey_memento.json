@@ -9,7 +9,7 @@
                 "chinese": "灰色信物"
             },
             "descriptions": {
-                "english": "Champion units get +2 [Silk_Song_Clan.Plugin_PermanentImbue] and +2 [Silk_Song_Clan.Plugin_PermanentProtection] at the start of each turn.",
+                "english": "Champion units get [Silk_Song_Clan.Plugin_PermanentImbue] 2 and [Silk_Song_Clan.Plugin_PermanentProtection] 2 at the start of each turn.",
                 "chinese": "勇者单位在每回合开始时获得+2 [Silk_Song_Clan.Plugin_PermanentImbue]和+2 [Silk_Song_Clan.Plugin_PermanentProtection]。"
             },
             "icon": "@GreyMementoIcon",

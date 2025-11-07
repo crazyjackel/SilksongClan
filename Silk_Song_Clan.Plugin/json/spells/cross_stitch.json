@@ -8,7 +8,8 @@
         "chinese": "十字绣反击"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a friendly unit [damageshield] [effect1.status0.power] and [spikes] [effect2.status0.power]."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a friendly unit [damageshield] [effect1.status0.power] and [spikes] [effect2.status0.power].",
+        "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。使一个友方单位获得[damageshield] [effect1.status0.power] 和[spikes] [effect2.status0.power]。"
       },
       "cost": 0,
       "card_type": "spell",

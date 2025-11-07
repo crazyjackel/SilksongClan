@@ -38,7 +38,8 @@
         "french": "Guidance"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a friendly unit [damageshield] [effect1.status0.power]."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a friendly unit [damageshield] [effect1.status0.power].",
+        "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。使一个单位获得[damageshield] [effect1.status0.power]。"
       },
       "is_an_ability": true,
       "cooldown": 2,

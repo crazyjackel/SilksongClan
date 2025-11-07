@@ -54,7 +54,7 @@
       "id": "NuuHarvestTrigger",
       "descriptions": {
         "english": "Add an uncommon or rare Morsel unit to your hand.",
-        "chinese": "将一个稀有度为罕见或稀有的食物单位加入你的手牌。"
+        "chinese": "将 1 个高级或稀有[snack]单位加入你的手牌。"
       },
       "trigger": "on_any_unit_death_on_floor",
       "effects": [
