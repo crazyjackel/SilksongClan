@@ -33,7 +33,8 @@
     {
       "id": "CrullAndBenjinFeastAbility",
       "names": {
-        "english": "Feast"
+        "english": "Feast",
+        "chinese": "盛宴"
       },
       "descriptions": {
         "english": "Add 2 random uncommon or rare Morsels to Hand."
