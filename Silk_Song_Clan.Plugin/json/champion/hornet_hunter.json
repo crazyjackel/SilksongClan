@@ -26,21 +26,21 @@
             "name": "CardEffectAddCardUpgradeToUnits",
             "target_mode": "self",
             "param_upgrade": "@HornetHunter1Upgrade",
-            "param_int_2": 2
+            "param_int_3": 2
         },
         {
             "id": "HornetHunter2Effect",
             "name": "CardEffectAddCardUpgradeToUnits",
             "target_mode": "self",
             "param_upgrade": "@HornetHunter2Upgrade",
-            "param_int_2": 2
+            "param_int_3": 2
         },
         {
             "id": "HornetHunter3Effect",
             "name": "CardEffectAddCardUpgradeToUnits",
             "target_mode": "self",
             "param_upgrade": "@HornetHunter3Upgrade",
-            "param_int_2": 2
+            "param_int_3": 2
         }
     ],
     "character_triggers": [
