@@ -16,6 +16,7 @@
       "class": "@Silksong",
       "card_art": "@PaleNaleCardArt",
       "targetless": true,
+      "hide_in_logbook": true,
       "traits": [
         "@PaleNaleConsumeTrait",
         "@PaleNaleScaleSilk"

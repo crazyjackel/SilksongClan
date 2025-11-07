@@ -46,14 +46,7 @@
         "@Bug",
         "SubtypesData_BannerUnit"
       ],
-      "triggers": [
-        {
-          "id": "@NuuHarvestTrigger"
-        },
-        {
-          "id": "@NuuHungerTrigger"
-        }
-      ]
+      "triggers": [ "@NuuHungerTrigger", "@NuuHarvestTrigger" ]
     }
   ],
   "character_triggers": [
