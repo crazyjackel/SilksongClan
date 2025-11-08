@@ -39,11 +39,17 @@
       },
       "character_art": "@PinstressCharacterArt",
       "size": 3,
-      "health": 25,
-      "attack_damage": 45,
+      "health": 40,
+      "attack_damage": 25,
       "subtypes": [
         "@Pinstress",
         "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "mageblade",
+          "count": 2
+        }
       ],
       "triggers": [
         {

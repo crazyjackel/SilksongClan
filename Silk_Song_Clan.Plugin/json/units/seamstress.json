@@ -45,6 +45,12 @@
         "@Pinstress",
         "SubtypesData_BannerUnit"
       ],
+      "starting_status_effects": [
+        {
+          "status": "mageblade",
+          "count": 2
+        }
+      ],
       "triggers": [
         {
           "id": "@SeamstressSpawnTrigger"
