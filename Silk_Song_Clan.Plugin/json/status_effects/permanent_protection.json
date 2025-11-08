@@ -13,10 +13,10 @@
                 "chinese": "永久面具 {0}"
             },
             "card_tooltips": {
-                "english": "Start of turn: Permanently gain +[codeint0] [health]. Lost if damaged."
+                "english": "At the start of each turn, permanently gain +[codeint0] [health]. Lost if damaged."
             },
             "character_tooltips": {
-                "english": "Start of turn: Permanently +[codeint0] [health]. Lost if damaged."
+                "english": "At the start of each turn, permanently gain +[codeint0] [health]. Lost if damaged."
             },
             "notifications": {
                 "english": "Permanently Protected",

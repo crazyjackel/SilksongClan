@@ -13,10 +13,10 @@
                 "chinese": "线轴 {0}"
             },
             "card_tooltips": {
-                "english": "Start of turn: Gain +[codeint0] [attack]. Lost if damaged."
+                "english": "At the start of each turn, gain +[codeint0] [attack]. Lost if damaged."
             },
             "character_tooltips": {
-                "english": "Start of turn: +[codeint0] [attack]. Lost if damaged."
+                "english": "At the start of each turn, gain +[codeint0] [attack]. Lost if damaged."
             },
             "notifications": {
                 "english": "Imbued",
@@ -44,7 +44,7 @@
                 "chinese": "线轴"
             },
             "descriptions": {
-                "english": "Start of turn: Gain +[codeint0] [attack]. Lost if damaged."
+                "english": "At the start of each turn, gain [attack] equal to stacks of [Silk_Song_Clan.Plugin_Imbue]. Lost if damaged."
             }
         }
     ],

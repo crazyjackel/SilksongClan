@@ -13,10 +13,10 @@
                 "chinese": "面具 {0}"
             },
             "card_tooltips": {
-                "english": "Start of turn: Gain +[codeint0] [health]. Lost if damaged."
+                "english": "At the start of each turn, gain +[codeint0] [health]. Lost if damaged."
             },
             "character_tooltips": {
-                "english": "Start of turn: +[codeint0] [health]. Lost if damaged."
+                "english": "At the start of each turn, gain +[codeint0] [health]. Lost if damaged."
             },
             "notifications": {
                 "english": "Protected",
@@ -44,7 +44,7 @@
                 "chinese": "面具"
             },
             "descriptions": {
-                "english": "Start of turn: Gain +[stacks] max health. Lost if damaged."
+                "english": "At the start of each turn, gain [health] equal to stacks of [Silk_Song_Clan.Plugin_Protection]. Lost if damaged."
             }
         }
     ],
