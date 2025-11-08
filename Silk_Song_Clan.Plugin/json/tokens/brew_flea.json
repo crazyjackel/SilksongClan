@@ -23,25 +23,6 @@
                     "english": "A quick flea that brews up power for the swarm with its enhanced abilities."
                 }
             ]
-        },
-        {
-            "id": "BrewFleaPetAbility",
-            "names": {
-                "english": "Pet Faster",
-                "chinese": "摸摸"
-            },
-            "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
-                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
-            },
-            "is_an_ability": true,
-            "targetless": true,
-            "cooldown": 1,
-            "effects": [
-                {
-                    "id": "@BrewFleaPetEffect"
-                }
-            ]
         }
     ],
     "characters": [
@@ -64,15 +45,41 @@
                     "count": 1
                 }
             ],
-            "ability": "@BrewFleaPetAbility"
+            "triggers": [
+                {
+                    "id": "@BrewFleaShiftTrigger"
+                },
+                {
+                    "id": "@BrewFleaStrikeTrigger"
+                }
+            ]
         }
     ],
-    "upgrade_masks": [
+    "character_triggers": [
         {
-            "id": "BrewFleaPetUpgradeMask",
-            "card_type": "monster",
-            "required_subtypes": [
-                "@Flea"
+            "id": "BrewFleaShiftTrigger",
+            "descriptions": {
+                "english": "Friendly Units get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
+            },
+            "trigger": "on_shift",
+            "effects": [
+                {
+                    "id": "@BrewFleaPetEffect"
+                }
+            ]
+        },
+        {
+            "id": "BrewFleaStrikeTrigger",
+            "descriptions": {
+                "english": "[advance].",
+                "chinese": "[advance]。"
+            },
+            "trigger": "on_hit",
+            "effects": [
+                {
+                    "id": "@BrewFleaAdvanceEffect"
+                }
             ]
         }
     ],
@@ -80,8 +87,7 @@
         {
             "id": "BrewFleaPetUpgrade",
             "bonus_damage": 1,
-            "bonus_hp": 1,
-            "filters": ["@BrewFleaPetUpgradeMask"]
+            "bonus_hp": 1
         }
     ],
     "effects": [
@@ -93,11 +99,17 @@
         },
         {
             "id": "BrewFleaPetEffect",
-            "name": "@CardEffectAddCardUpgradeToUnitsFilter",
+            "name": "CardEffectAddCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@BrewFleaPetUpgrade",
-            "param_card_filter": "@BrewFleaPetUpgradeMask"
+            "param_upgrade": "@BrewFleaPetUpgrade"
+        },
+        {
+            "id": "BrewFleaAdvanceEffect",
+            "name": "CardEffectFloorRearrange",
+            "target_mode": "self",
+            "target_team": "monsters",
+            "param_int": 0
         }
     ],
     "sprites": [

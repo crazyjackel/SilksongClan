@@ -67,7 +67,27 @@
         "@Bug",
         "SubtypesData_BannerUnit"
       ],
-      "ability": "@PebbAbilityTrigger"
+      "ability": "@PebbAbilityTrigger",
+      "triggers": [
+        {
+          "id": "@PebbHarvestTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "PebbHarvestTrigger",
+      "descriptions": {
+        "english": "Gain [effect0.power] [coin].",
+        "chinese": "获得 [effect0.power][coin]。"
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        {
+          "id": "@PebbHarvestEffect"
+        }
+      ]
     }
   ],
   "effects": [
@@ -89,6 +109,12 @@
       "id": "PebbCreateRelicEffect",
       "name": "@CardEffectAddRelic",
       "param_str": "@WormwayKey"
+    },
+    {
+      "id": "PebbHarvestEffect",
+      "name": "CardEffectRewardGold",
+      "target_mode": "self",
+      "param_int": 5
     }
   ],
   "sprites": [

@@ -23,26 +23,6 @@
                     "english": "A flea with a protective bell that provides damage shields to the swarm."
                 }
             ]
-        },
-        {
-            "id": "BellFleaPetAbility",
-            "names": {
-                "english": "Pet",
-                "chinese": "摸摸"
-            },
-            "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
-                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。战斗开始时处于冷却中。"
-            },
-            "is_an_ability": true,
-            "targetless": true,
-            "initial_cooldown": 1,
-            "cooldown": 2,
-            "effects": [
-                {
-                    "id": "@BellFleaPetEffect"
-                }
-            ]
         }
     ],
     "characters": [
@@ -65,24 +45,33 @@
                     "count": 2
                 }
             ],
-            "ability": "@BellFleaPetAbility"
+            "triggers": [
+                {
+                    "id": "@BellFleaShiftTrigger"
+                }
+            ]
+        }
+    ],
+    "character_triggers": [
+        {
+            "id": "BellFleaShiftTrigger",
+            "descriptions": {
+                "english": "Friendly Units get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
+            },
+            "trigger": "on_shift",
+            "effects": [
+                {
+                    "id": "@BellFleaPetEffect"
+                }
+            ]
         }
     ],
     "upgrades": [
         {
             "id": "BellFleaPetUpgrade",
             "bonus_damage": 1,
-            "bonus_hp": 1,
-            "filters": ["@BellFleaPetUpgradeMask"]
-        }
-    ],
-    "upgrade_masks": [
-        {
-            "id": "BellFleaPetUpgradeMask",
-            "card_type": "monster",
-            "required_subtypes": [
-                "@Flea"
-            ]
+            "bonus_hp": 1
         }
     ],
     "effects": [
@@ -94,11 +83,10 @@
         },
         {
             "id": "BellFleaPetEffect",
-            "name": "@CardEffectAddCardUpgradeToUnitsFilter",
+            "name": "CardEffectAddCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@BellFleaPetUpgrade",
-            "param_card_filter": "@BellFleaPetUpgradeMask"
+            "param_upgrade": "@BellFleaPetUpgrade"
         }
     ],
     "sprites": [

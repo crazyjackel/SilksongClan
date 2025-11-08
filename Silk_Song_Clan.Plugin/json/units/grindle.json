@@ -28,6 +28,24 @@
           "english": "A small bug that generates gold with each strike."
         }
       ]
+    },
+    {
+      "id": "GrindleRetreatAbility",
+      "names": {
+        "english": "Retreat"
+      },
+      "descriptions": {
+        "english": "[retreat]."
+      },
+      "is_an_ability": true,
+      "cooldown": 2,
+      "initial_cooldown": 0,
+      "targetless": true,
+      "effects": [
+        {
+          "id": "@GrindleRetreatEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -43,6 +61,7 @@
       "health": 5,
       "attack_damage": 5,
       "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
+      "ability": "@GrindleRetreatAbility",
       "triggers": [
         {
           "id": "@GrindleStrikeTrigger"
@@ -77,6 +96,13 @@
       "name": "CardEffectRewardGold",
       "target_mode": "self",
       "param_int": 10
+    },
+    {
+      "id": "GrindleRetreatEffect",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_int": 1
     }
   ],
   "sprites": [

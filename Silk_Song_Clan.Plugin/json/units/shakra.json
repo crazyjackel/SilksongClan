@@ -40,7 +40,7 @@
       "character_art": "@ShakraCharacterArt",
       "size": 2,
       "health": 30,
-      "attack_damage": 30,
+      "attack_damage": 35,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"
@@ -62,13 +62,16 @@
     {
       "id": "ShakraStrikeTrigger",
       "descriptions": {
-        "english": "Apply [meleeweakness] [effect0.status0.power].",
-        "chinese": "施加[meleeweakness] [effect0.status0.power]。"
+        "english": "Apply [meleeweakness] [effect0.status0.power] and [advance].",
+        "chinese": "施加[meleeweakness] [effect0.status0.power]并[advance]。"
       },
       "trigger": "on_attacking",
       "effects": [
         {
           "id": "@ShakraApplyWeaknessEffect"
+        },
+        {
+          "id": "@ShakraAdvanceEffect"
         }
       ]
     }
@@ -91,6 +94,13 @@
           "count": 1
         }
       ]
+    },
+    {
+      "id": "ShakraAdvanceEffect",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_int": 0
     }
   ],
   "sprites": [

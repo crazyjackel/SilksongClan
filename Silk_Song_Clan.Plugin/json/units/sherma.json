@@ -29,6 +29,24 @@
           "chinese": "门，门，门！最漂亮的大门！<br>门，门，门！伟大奇迹如神！哈哈哈！"
         }
       ]
+    },
+    {
+      "id": "ShermaRetreatAbility",
+      "names": {
+        "english": "Caretake"
+      },
+      "descriptions": {
+        "english": "[retreat] a friendly unit."
+      },
+      "is_an_ability": true,
+      "cooldown": 2,
+      "initial_cooldown": 0,
+      "targetless": false,
+      "effects": [
+        {
+          "id": "@ShermaRetreatEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -40,13 +58,14 @@
         "french": "Sherma"
       },
       "character_art": "@ShermaCharacterArt",
-      "size": 2,
+      "size": 1,
       "health": 10,
       "attack_damage": 0,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"
       ],
+      "ability": "@ShermaRetreatAbility",
       "triggers": [
         {
           "id": "@ShermaResolveTrigger"
@@ -87,6 +106,13 @@
           "count": 6
         }
       ]
+    },
+    {
+      "id": "ShermaRetreatEffect",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_int": 1
     }
   ],
   "sprites": [

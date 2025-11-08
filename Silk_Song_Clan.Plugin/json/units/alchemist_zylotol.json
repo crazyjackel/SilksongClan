@@ -36,14 +36,17 @@
         "chinese": "注入"
       },
       "descriptions": {
-        "english": "Gain [effect0.status0.power] [damageshield]. If you have [effect1.status0.power] or more [damageshield], Gain [effect1.status1.power] [Silk_Song_Clan.Plugin_PermanentImbue].",
-        "chinese": "获得[damageshield] [effect0.status0.power]。如果有[damageshield] [effect1.status0.power]，则获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect1.status1.power]。"
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.status0.power] [damageshield] and [effect2.status0.power] [Silk_Song_Clan.Plugin_PermanentImbue].",
+        "chinese": "消耗 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。获得[damageshield] [effect1.status0.power]和[Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power]。"
       },
       "is_an_ability": true,
       "cooldown": 2,
       "targets_room": true,
       "targetless": false,
       "effects": [
+        {
+          "id": "@AlchemistChannelSilkEffect"
+        },
         {
           "id": "@AlchemistInjectEffect"
         },
@@ -77,28 +80,36 @@
       "param_character": "@AlchemistZylotol"
     },
     {
+      "id": "AlchemistChannelSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": -2,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true,
+      "additional_tooltips": [
+        "@SilkTooltip",
+        "@SilkChannelTooltip"
+      ]
+    },
+    {
       "id": "AlchemistInjectEffect",
       "name": "CardEffectAddStatusEffect",
       "target_mode": "self",
       "param_status_effects": [
         {
           "status": "damage shield",
-          "count": 1
+          "count": 2
         }
       ]
     },
     {
       "id": "AlchemistInjectImbueEffect",
-      "name": "CardEffectAddStatusEffectOnStatusThreshold",
+      "name": "CardEffectAddStatusEffect",
       "target_mode": "self",
       "param_status_effects": [
         {
-          "status": "damage shield",
-          "count": 5
-        },
-        {
           "status": "@PermanentImbue",
-          "count": 10
+          "count": 5
         }
       ]
     }

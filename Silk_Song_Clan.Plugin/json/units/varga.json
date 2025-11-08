@@ -28,6 +28,27 @@
           "english": "A rallying flea that speeds up the cooldowns of all units when working with the Fleamaster."
         }
       ]
+    },
+    {
+      "id": "VargaChannelAbility",
+      "names": {
+        "english": "Wrangle"
+      },
+      "descriptions": {
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Add a random Flea to Hand."
+      },
+      "is_an_ability": true,
+      "cooldown": 4,
+      "initial_cooldown": 0,
+      "targetless": true,
+      "effects": [
+        {
+          "id": "@VargaChannelSilkEffect"
+        },
+        {
+          "id": "@VargaAddFleaEffect"
+        }
+      ]
     }
   ],
   "characters": [
@@ -46,6 +67,7 @@
         "@Flea",
         "SubtypesData_BannerUnit"
       ],
+      "ability": "@VargaChannelAbility",
       "triggers": [
         {
           "id": "@VargaRallyTrigger"
@@ -120,6 +142,25 @@
       "target_team": "monsters",
       "param_int": -1,
       "param_bool": false
+    },
+    {
+      "id": "VargaChannelSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": -2,
+      "should_test": true,
+      "should_fail_to_cast_if_test_fails": true,
+      "additional_tooltips": [
+        "@SilkTooltip",
+        "@SilkChannelTooltip"
+      ]
+    },
+    {
+      "id": "VargaAddFleaEffect",
+      "name": "CardEffectAddBattleCard",
+      "param_card_pool": "@FleaPool",
+      "param_int": 3,
+      "param_int_2": 1
     }
   ],
   "sprites": [

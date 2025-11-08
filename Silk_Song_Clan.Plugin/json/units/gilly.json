@@ -50,6 +50,10 @@
         {
           "status": "stealth",
           "count": 2
+        },
+        {
+          "status": "trample",
+          "count": 1
         }
       ],
       "triggers": [
