@@ -9,8 +9,8 @@
                 "chinese": "皮纳塔"
             },
             "descriptions": {
-                "english": "Fleas get \"Spawn: Reduce Cooldowns by 1\".",
-                "chinese": "蚤民单位获得\"召唤：冷却时间-1\"。"
+                "english": "Fleas get \"[summon]: [advance].\"",
+                "chinese": "蚤民单位获得\"[summon]: [advance]。\""
             },
             "icon": "@FestivalPinataIcon",
             "icon_small": "@FestivalPinataIcon",
@@ -50,10 +50,10 @@
     "effects": [
         {
             "id": "FestivalPinataFleaSpawnEffect",
-            "name": "CardEffectAdjustAbilityCooldown",
-            "target_mode": "room",
+            "name": "CardEffectFloorRearrange",
+            "target_mode": "self",
             "target_team": "monsters",
-            "param_int": -1
+            "param_int": 0
         }
     ],
     "character_triggers": [
@@ -61,8 +61,8 @@
             "id": "FestivalPinataTrigger",
             "trigger": "on_spawn",
             "descriptions": {
-                "english": "Reduce the cooldown of all units by 1.",
-                "chinese": "减少所有蚤民单位的冷却时间 1。"
+                "english": "[advance].",
+                "chinese": "[advance]。"
             },
             "effects": [
                 "@FestivalPinataFleaSpawnEffect"

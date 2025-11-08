@@ -9,8 +9,8 @@
                 "chinese": "连体之心"
             },
             "descriptions": {
-                "english": "Warrior Status Effect generates Double [silk].",
-                "chinese": "[Warrior]状态效果生成双倍[silk]。"
+                "english": "[Silk_Song_Clan.Plugin_Warrior] generates Double [silk].",
+                "chinese": "[Silk_Song_Clan.Plugin_Warrior]生成双倍[silk]。"
             },
             "icon": "@ConjoinedHeartIcon",
             "icon_small": "@ConjoinedHeartIcon",
