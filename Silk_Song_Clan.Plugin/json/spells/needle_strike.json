@@ -22,21 +22,11 @@
         "MegaPool"
       ],
       "effects": [
-        {
-          "id": "@NeedleStrikeDamageEffect"
-        },
-        {
-          "id": "@NeedleStrikeGainSilkEffect"
-        },
-        {
-          "id": "@NeedleStrikeComboEffect"
-        },
-        {
-          "id": "@NeedleStrikeRepeatDamageEffect"
-        },
-        {
-          "id": "@NeedleStrikeRepeatGainSilkEffect"
-        }
+        "@NeedleStrikeDamageEffect",
+        "@NeedleStrikeGainSilkEffect",
+        "@NeedleStrikeComboEffect",
+        "@NeedleStrikeDamageEffect",
+        "@NeedleStrikeGainSilkEffect"
       ],
       "traits": [
         "@NeedleStrikeScaleSilk"
@@ -46,12 +36,6 @@
           "english": "A precise strike that pierces through all enemies with silk-enhanced power."
         }
       ]
-    }
-  ],
-  "upgrade_masks": [
-    {
-      "id": "NeedleStrikeUnitMask",
-      "card_type": "monster"
     }
   ],
   "traits": [
@@ -85,24 +69,8 @@
       "target_mode": "self",
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
-      "param_card_filter": "@NeedleStrikeUnitMask",
       "additional_tooltips": [
         "@ComboPreviousTooltip"
-      ]
-    },
-    {
-      "id": "NeedleStrikeRepeatDamageEffect",
-      "name": "CardEffectDamage",
-      "target_mode": "room",
-      "target_team": "heroes",
-      "param_int": 0
-    },
-    {
-      "id": "NeedleStrikeRepeatGainSilkEffect",
-      "name": "@CardEffectRewardSilk",
-      "param_int": 1,
-      "additional_tooltips": [
-        "@SilkTooltip"
       ]
     }
   ],
