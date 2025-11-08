@@ -58,8 +58,8 @@
     {
       "id": "SprintmasterResolveTrigger",
       "descriptions": {
-        "english": "Reduce all friendly units [cooldown] by [effect0.powerabs].",
-        "chinese": "所有友方单位的[cooldown]缩短 [effect0.powerabs]。"
+        "english": "Reduce friendly units' [cooldown] by [effect0.powerabs].",
+        "chinese": "友方单位的[cooldown]缩短 [effect0.powerabs]。"
       },
       "trigger": "end_turn_pre_hand_discard",
       "effects": [

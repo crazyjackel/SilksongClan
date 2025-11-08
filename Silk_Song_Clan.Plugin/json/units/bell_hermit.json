@@ -56,7 +56,7 @@
     {
       "id": "BellHermitSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain [duality]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Apply [duality]."
       },
       "trigger": "on_spawn",
       "effects": [
@@ -71,7 +71,7 @@
     {
       "id": "BellHermitSilksongTrigger",
       "descriptions": {
-        "english": "Friendly Units get [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power]."
+        "english": "Apply [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] to friendly units."
       },
       "trigger": "@Silksong",
       "effects": [

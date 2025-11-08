@@ -46,12 +46,8 @@
                 }
             ],
             "triggers": [
-                {
-                    "id": "@BrewFleaShiftTrigger"
-                },
-                {
-                    "id": "@BrewFleaStrikeTrigger"
-                }
+                "@BrewFleaStrikeTrigger",
+                "@BrewFleaShiftTrigger"
             ]
         }
     ],
@@ -75,7 +71,7 @@
                 "english": "[advance].",
                 "chinese": "[advance]。"
             },
-            "trigger": "on_hit",
+            "trigger": "on_attacking",
             "effects": [
                 {
                     "id": "@BrewFleaAdvanceEffect"

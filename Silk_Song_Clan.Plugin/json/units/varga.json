@@ -95,7 +95,7 @@
       "id": "VargaRallyTrigger",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Reduce all Friendly Unit [cooldown] by 1."
+        "english": "Reduce friendly units' [cooldown] by 1."
       },
       "effects": [
         {

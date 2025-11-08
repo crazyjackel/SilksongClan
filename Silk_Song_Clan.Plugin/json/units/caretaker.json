@@ -38,7 +38,8 @@
         "french": "Guidance"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a friendly unit [damageshield] [effect1.status0.power]."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Apply [damageshield] [effect1.status0.power] to a friendly unit.",
+        "chinese": "消耗 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。为友方单位应用 [damageshield] [effect1.status0.power]。"
       },
       "is_an_ability": true,
       "cooldown": 2,
@@ -79,7 +80,8 @@
     {
       "id": "CaretakerSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain [duality]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Apply [duality].",
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]与蜗牛子类型：应用 [duality]。"
       },
       "trigger": "on_spawn",
       "effects": [

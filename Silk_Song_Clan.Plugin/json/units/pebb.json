@@ -35,7 +35,7 @@
         "chinese": "购买蠕虫隧道钥匙"
       },
       "descriptions": {
-        "english": "Spend [effect0.powerabs] [coin]. Gain a Artifact giving Rare Units +10/+10."
+        "english": "Spend [effect0.powerabs] [coin]. Gain an Artifact that increases Max [Silk_Song_Clan.Plugin_Silk] by 4."
       },
       "is_an_ability": true,
       "cooldown": 5,

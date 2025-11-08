@@ -92,7 +92,8 @@
     {
       "id": "GaramondSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain an Ability to \"Attack\"."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain  \"[ability]: Attack.\".",
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]与扎扎：获得 \"[ability]: 攻击。\"。"
       },
       "trigger": "on_spawn",
       "effects": [

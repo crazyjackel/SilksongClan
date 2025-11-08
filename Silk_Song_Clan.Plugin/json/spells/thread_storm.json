@@ -69,7 +69,7 @@
       "name": "CardEffectDamage",
       "target_mode": "front_in_room",
       "target_team": "heroes",
-      "param_int": 10
+      "param_int": 12
     }
   ],
   "sprites": [

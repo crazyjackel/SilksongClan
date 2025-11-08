@@ -8,8 +8,8 @@
         "chinese": "飞针穿梭"
       },
       "descriptions": {
-        "english": "Deal damage to the front enemy unit equal to 3x [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. [advance] the friendly unit at the back of the room to the front.",
-        "chinese": "对前排敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 3 倍。获得 [effect1.power][Silk_Song_Clan.Plugin_Silk]。将后排友方单位[advance]到前排。"
+        "english": "Deal 3x [Silk_Song_Clan.Plugin_Silk] damage to front enemy. [advance] the backmost friendly. Gain [effect2.power] [Silk_Song_Clan.Plugin_Silk].",
+        "chinese": "对前排敌方造成 3x [Silk_Song_Clan.Plugin_Silk] 伤害。[advance]最后排友方。获得 [effect2.power][Silk_Song_Clan.Plugin_Silk]。"
       },
       "cost": 1,
       "card_type": "spell",
@@ -26,10 +26,10 @@
           "id": "@ClawlineDamageEffect"
         },
         {
-          "id": "@ClawlineGainSilkEffect"
+          "id": "@ClawlineAdvanceEffect"
         },
         {
-          "id": "@ClawlineAdvanceEffect"
+          "id": "@ClawlineGainSilkEffect"
         }
       ],
       "traits": [

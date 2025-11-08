@@ -8,7 +8,8 @@
         "chinese": "锐丝突击"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Target friendly unit attacks and [advance]."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [advance] Attack with a friendly unit",
+        "chinese": "消耗 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。[advance]攻击友方单位"
       },
       "cost": 0,
       "card_type": "spell",

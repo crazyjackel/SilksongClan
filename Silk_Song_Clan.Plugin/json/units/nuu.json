@@ -66,8 +66,8 @@
     {
       "id": "NuuHungerTrigger",
       "descriptions": {
-        "english": "Gain [effect0.status0.power] [Silk_Song_Clan.Plugin_PermanentImbue] and [effect1.status0.power] [Silk_Song_Clan.Plugin_PermanentProtection].",
-        "chinese": "获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] 和[Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]。"
+        "english": "Apply [effect0.status0.power] [Silk_Song_Clan.Plugin_PermanentImbue] and [effect1.status0.power] [Silk_Song_Clan.Plugin_PermanentProtection] to friendly units.",
+        "chinese": "为友方单位应用 [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] 和 [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]。"
       },
       "trigger": "on_food_spawn",
       "effects": [

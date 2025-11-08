@@ -56,7 +56,8 @@
     {
       "id": "TwelfthArchitectCelebrateTrigger",
       "descriptions": {
-        "english": "Spend [effect0.powerabs] [coin]. Gain a Artifact giving Friendly Units [valor] 1 whenever they move."
+        "english": "Spend [effect0.powerabs] [coin]. Gain an <b>Artifact</b>: Units gain [valor] 1 on move.",
+        "chinese": "花费 [effect0.powerabs][coin]。获得一个 <b>Artifact</b>：单位在移动时获得 [valor] 1。"
       },
       "trigger": "on_encounter_complete",
       "effects": [

@@ -36,8 +36,8 @@
         "chinese": "注入"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.status0.power] [damageshield] and [effect2.status0.power] [Silk_Song_Clan.Plugin_PermanentImbue].",
-        "chinese": "消耗 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。获得[damageshield] [effect1.status0.power]和[Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power]。"
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Apply [effect1.status0.power] [damageshield] and [effect2.status0.power] [Silk_Song_Clan.Plugin_PermanentImbue] to a friendly unit.",
+        "chinese": "消耗 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。为友方单位应用 [damageshield] [effect1.status0.power]和[Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power]。"
       },
       "is_an_ability": true,
       "cooldown": 2,
@@ -94,7 +94,8 @@
     {
       "id": "AlchemistInjectEffect",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "self",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
       "param_status_effects": [
         {
           "status": "damage shield",
@@ -105,7 +106,7 @@
     {
       "id": "AlchemistInjectImbueEffect",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "self",
+      "target_mode": "last_targeted_characters",
       "param_status_effects": [
         {
           "status": "@PermanentImbue",
