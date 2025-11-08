@@ -22,6 +22,11 @@
         {
           "id": "@SpawnLumbleTheLuckyEffect"
         }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "care to test your luck with a game of dice?"
+        }
       ]
     }
   ],

@@ -69,75 +69,74 @@ Certain cards gain additional abilities when played after specific card types:
 
 ## Champion: Hornet
 
-Hornet, the princess-protector of Hallownest, serves as the champion for the Silksong Clan. She starts with 24 attack and 16 health, embodying the agile, needle-wielding warrior from the games.
+Hornet, the princess-protector of Hallownest, serves as the champion for the Silksong Clan. She starts with 20 attack and 12 health, embodying the agile, needle-wielding warrior from the games.
 
 ### Upgrade Paths
 
-**Hunter Path**: Focuses on silk-based power scaling
-- **Hunter I**: Gains 25% more attack if at max silk
-- **Hunter II**: Gains 50% more attack if at max silk  
-- **Hunter III**: Gains 100% more attack if at max silk
+**Hunter Path**: Focuses on silk-based power scaling and permanent stat growth
+- **Hunter I**: +15/+20 stats. Silksong: Gain +5 attack permanently
+- **Hunter II**: +30/+30 stats. Silksong: Gain +5 attack and +3 health permanently
+- **Hunter III**: +45/+45 stats. Silksong: Gain +7 attack and +5 health permanently
 
 **Cursed Path**: High risk, high reward
 - **Cursed**: Cannot equip equipment, reduced max silk, but gains powerful abilities
-- **Witch II**: Multistrike with melee weakness application
+- **Witch**: +30/+30 stats, Multistrike. On attacking: Apply Melee Weakness 1
 
 **Reaper Path**: Direct damage
-- **Reaper**: Trample damage carries over to back units
+- **Reaper**: +30/+10 stats, Trample damage carries over to back units
 
 **Wanderer Path**: Multiple attacks
-- **Wanderer**: Multistrike for multiple attacks per turn
+- **Wanderer**: +10/+10 stats, Multistrike for multiple attacks per turn
 
 **Beast Path**: Lifesteal combat
-- **Beast**: Gains lifesteal when expending silk
+- **Beast**: +25/+10 stats. Silksong: Gain Lifesteal 2
 
 **Architect Path**: Equipment mastery
-- **Architect**: Can equip two additional equipment pieces
+- **Architect**: +10/+20 stats, Valor 8. Can equip two additional equipment pieces
 
 **Shaman Path**: Spell power
-- **Shaman**: Gains Conduit 10 for spell enhancement
+- **Shaman**: +30/+30 stats, Conduit 10 for spell enhancement
 
 ## Units
 
 ### Snail Units
-- **Chapel Maid**: Provides permanent protection to all friendly units when combined with other Snails
-- **Caretaker**: Gives damage shield and spell shield to the front unit when combined with other Snails
-- **Bell Hermit**: Grants permanent imbue to friendly units when combined with other Snails
+- **Chapel Maid**: Combo Snail: Apply Duality. Silksong: Friendly Units get 3 Permanent Protection
+- **Caretaker**: Combo Snail: Apply Duality. Ability 2 (Guidance): Channel 2 Silk. Apply Damage Shield 1 to a friendly unit
+- **Bell Hermit**: Combo Snail: Apply Duality. Silksong: Friendly Units get 3 Permanent Imbue
 
 ### Bug Units
-- **Garamond**: Warrior bug with lance ability and combo synergy with Zaza
-- **Zaza**: Humble steed that adds random equipment when combined with Garamond
-- **Sherma**: Endless unit that provides protection to friendly units
-- **Flick the Fixer**: Can spend gold to give friendly units permanent protection
-- **Ballow**: Equipped units give friendly units imbue
-- **Pavo**: Gains conduit when silk is spent
-- **Gilly**: Gains stealth when silk is spent
-- **Shakra**: Warrior bug that applies melee weakness to enemies
-- **Pebb**: Can spend gold to gain relics that boost rare units
-- **Grindle**: Gains gold when striking enemies
-- **Sprintmaster Swift**: Reduces all unit cooldowns when resolving
-- **Alchemist Zylotol**: Gains damage shields and permanent imbue through injection ability
-- **Green Prince**: Adds frozen copies to hand when silk is spent
-- **Yarnaby**: Gains lifesteal through hunger and shares it with allies when combined with Crull and Benjin
-- **Lumble the Lucky**: Gains gold on incant and provides damage shield on extinguish
-- **Pinmaster Plinney**: Can spend gold to give permanent imbue
-- **Crull and Benjin**: Gains power through hunger and provides protection when combined with Yarnaby
-- **Relic Seeker Scrounge**: Removes equipment to gain gold
-- **Nuu**: Gains permanent imbue and protection through harvest and hunger
+- **Garamond**: Warrior bug with lance ability and combo synergy with Zaza. Combo with Zaza: Gain +10/+10 permanently and Ability 2 (Lance): Attack
+- **Zaza**: Humble steed with Valor 6. Combo with Garamond: Gain Ability (Humble Steed): Add a random Equipment to Hand
+- **Sherma**: Endless unit that provides protection to friendly units. Resolve: Give Friendly Units 6 Protection. Ability 2 (Caretake): Retreat a friendly unit
+- **Flick the Fixer**: Can spend 20 gold to give friendly units 2 Permanent Protection and 2 Permanent Imbue
+- **Ballow**: Equipped units give friendly units 7 Imbue
+- **Pavo**: Conduit 5. Silksong: Gain Conduit 6
+- **Gilly**: Stealth 2, Trample. Silksong: Gain Stealth 2
+- **Shakra**: Warrior bug that applies melee weakness to enemies. Strike: Apply Melee Weakness 1 and Advance
+- **Pebb**: Can spend 500 gold to gain an Artifact that increases Max Silk by 4. Harvest: Gain 5 gold
+- **Grindle**: Ability 2 (Retreat): Retreat. Strike: Gain 10 gold
+- **Sprintmaster Swift**: Quick. Resolve: Reduce all Friendly Unit Cooldowns by 1
+- **Alchemist Zylotol**: Ability 2 (Inject): Channel 2 Silk. Apply Damage Shield 2 and Permanent Imbue 5 to a friendly unit
+- **Green Prince**: Warrior. Silksong: Add an Ephemeral Copy with Fragile to your hand
+- **Yarnaby**: Lifesteal 3. Combo Crull and Benjin: Hunger: Front friendly unit gets Lifesteal 1. Strike: Add a random uncommon or rare Morsel to Hand
+- **Lumble the Lucky**: Incant: Gain 5 gold. Extinguish: Units get Permanent Protection 3
+- **Pinmaster Plinney**: Ability 5 (Sharpen): Spend 30 gold. Give a friendly unit 8 Permanent Imbue
+- **Crull and Benjin**: Ability 2 (Feast): Add 2 random uncommon or rare Morsels to Hand. Combo Yarnaby: Hunger: +3/+3
+- **Relic Seeker Scrounge**: Equipped: Remove the Equipment. Gain 20 gold. Silksong: Gain 20 gold
+- **Nuu**: Lifesteal 2. Harvest: Add an uncommon or rare Morsel to Hand. Hunger: Gain 2 Permanent Imbue and 2 Permanent Protection
+- **Twelfth Architect**: Steward. Celebrate: Spend 100 Gold. Gain an Artifact: Units gain Valor 1 on move
 
 ### Flea Units
-- **Fleamaster Mooshka**: Key component for assembling "Fleatopia" - adds random fleas to hand
-- **Grishkin**: Gains power when combined with other Fleas
-- **Varga**: Reduces unit cooldowns when rallying with other Fleas
-- **Kratt**: Can sacrifice fleas to empower the entire flea swarm
-- **Vog**: Adds random fleas to hand when other fleas die
+- **Fleamaster Mooshka**: Resolve: Add a random Flea to Hand - Key component for assembling "Fleatopia"
+- **Grishkin**: Combo Flea: Shift: Fleas get +1/+1 - A small but mighty flea that grows stronger when working with the Fleamaster
+- **Varga**: Combo Fleamaster Mooshka: Rally: Reduce all Friendly Unit Cooldowns by 1. Ability 4 (Wrangle): Channel 2 Silk. Add a random Flea to Hand
+- **Kratt**: Ability 1 (Send to Hot Spring): Sacrifice a Flea. Gain 2 Silk. Fleas get +5/+5 and Damage Shield 1
+- **Vog**: Harvest: If a Flea Died, Add a random Flea to Hand - A flea that can summon more fleas when others fall in battle
 
 ### Pinstress Units
-- **Pinstress**: Master weaver who gains magical energy with each strike when working with another Pinstress
-- **Seamstress**: Skilled weaver who channels magical energy through her work with the Pinstress
+- **Pinstress**: Combo Pinstress: Strike: Gain Conduit 2 - A master weaver who gains magical energy with each strike when working with another Pinstress
+- **Seamstress**: Combo Pinstress: Gain Conduit 16 - A skilled weaver who channels magical energy through her work with the Pinstress
 
-### Steward Units
-- **Twelfth Architect**: Can spend gold to gain relics that allow stewards to equip additional equipment
 
 ## Spells
 
@@ -149,16 +148,16 @@ The Silksong Clan features a diverse array of spells that utilize silk energy an
 ### Common Spells
 - **Swift Step** (1 cost): Give a Unit Protection 10 - A quick defensive maneuver that shields allies from harm
 - **Cling Grip** (1 cost): Retreat. Combo: Advance - A defensive grip that can become an offensive advance when combined with other techniques
-- **Bind** (0 cost, 6 Silk): Channel 6 Silk. Bind. Restore 60 health - A binding technique that restores health.
+- **Bind** (0 cost, 6 Silk): Channel 6 Silk. Bind. Retreat. Restore 60 health - A binding technique that restores health and retreats the target
 
 ### Uncommon Spells
-- **Needle Strike** (2 cost): Deal damage to all enemies equal to Silk. Gain 1 Silk - A precise strike that pierces through all enemies with silk-enhanced power
-- **Clawline** (1 cost): Deal damage to the front unit equal to 2x Silk. Gain 1 Silk - A focused strike that channels silk energy into a devastating claw attack
+- **Needle Strike** (2 cost): Deal damage to all enemies equal to Silk. Gain 1 Silk. Combo with Unit: Repeat - A precise strike that pierces through all enemies with silk-enhanced power, repeating if comboed with a unit
+- **Clawline** (1 cost): Deal 3x Silk damage to front enemy. Advance the backmost friendly. Gain 1 Silk - A focused strike that channels silk energy into a devastating claw attack
 - **Needolin** (2 cost): Give the Front Enemy Unit Dazed 1 - A disorienting needle strike that confuses the enemy
 
 ### Rare Spells
-- **Silk Soar** (1 cost): Ascend. Combo: Bind - A graceful ascent that can bind enemies when combined with other techniques
-- **Sylphsong** (2 cost, Consume): Set Silk to Max - A powerful song that restores silk to its maximum capacity
+- **Silk Soar** (1 cost): Ascend. Combo with Unit: Draw a card - A graceful ascent that draws a card when comboed with a unit
+- **Sylphsong** (0 cost, Consume): Set Silk to Max - A powerful song that restores silk to its maximum capacity
 - **Elegy of the Deep** (3 cost): Give front friendly unit Dazed 1, Permanent Protection 10, Permanent Imbue 10 - A haunting melody that empowers allies with ancient magic
 
 
