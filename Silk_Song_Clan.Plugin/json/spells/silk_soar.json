@@ -8,7 +8,7 @@
         "chinese": "灵丝腾跃"
       },
       "descriptions": {
-        "english": "Ascend. [Silk_Song_Clan.Plugin_Combo]: Bind."
+        "english": "[ascend]. [Silk_Song_Clan.Plugin_Combo] with Unit: Draw a card."
       },
       "cost": 1,
       "unlock_level": 6,
@@ -27,7 +27,7 @@
           "id": "@SilkSoarComboEffect"
         },
         {
-          "id": "@SilkSoarBindEffect"
+          "id": "@SilkSoarDrawCardEffect"
         }
       ],
       "lore_tooltips": [
@@ -35,11 +35,6 @@
           "english": "A graceful ascent that can bind enemies when combined with other techniques."
         }
       ]
-    }
-  ],
-  "upgrade_masks": [
-    {
-      "id": "SilkSoarUpgradeMask"
     }
   ],
   "effects": [
@@ -62,13 +57,10 @@
       ]
     },
     {
-      "id": "SilkSoarBindEffect",
-      "name": "@CardEffectBind",
-      "target_mode": "last_targeted_characters",
-      "target_team": "monsters",
-      "additional_tooltips": [
-        "@BindBindEffectTooltip"
-      ]
+      "id": "SilkSoarDrawCardEffect",
+      "name": "CardEffectDraw",
+      "target_mode": "self",
+      "param_int": 1
     }
   ],
   "sprites": [
