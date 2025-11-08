@@ -36,7 +36,11 @@
     "relic_effects": [
         {
             "id": "GuardianMementoEffect",
-            "name": "@RelicEffectAcrobatNotRemoved"
+            "name": "@RelicEffectAcrobatNotRemoved",
+            "additional_tooltips": [
+                "@ProtectionTooltip",
+                "@ImbueTooltip"
+            ]
         }
     ],
     "sprites": [

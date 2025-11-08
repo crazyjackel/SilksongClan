@@ -28,6 +28,18 @@
             "icon": "@Warrior"
         }
     ],
+    "additional_tooltips": [
+        {
+            "id": "WarriorTooltip",
+            "titles": {
+                "english": "Warrior",
+                "chinese": "战士"
+            },
+            "descriptions": {
+                "english": "On hitting an enemy, gain 1 [Silk_Song_Clan.Plugin_Silk]."
+            }
+        }
+    ],
     "sprites": [
         {
             "id": "Warrior",

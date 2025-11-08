@@ -13,10 +13,10 @@
                 "chinese": "面具 {0}"
             },
             "card_tooltips": {
-                "english": "At the start of each turn, gain extra max health equal to your current stacks of [Silk_Song_Clan.Plugin_Protection]. All stacks are lost if the unit takes damage or at the start of your turn."
+                "english": "Start of turn: Gain +[codeint0] [health]. Lost if damaged."
             },
             "character_tooltips": {
-                "english": "At the start of the turn, this unit gains +[codeint0] max health. This effect is lost if the unit takes damage."
+                "english": "Start of turn: +[codeint0] [health]. Lost if damaged."
             },
             "notifications": {
                 "english": "Protected",
@@ -34,6 +34,18 @@
             "param_int_2": 0,
             "param_str": "max_hp",
             "icon": "@Protection"
+        }
+    ],
+    "additional_tooltips": [
+        {
+            "id": "ProtectionTooltip",
+            "titles": {
+                "english": "Protection",
+                "chinese": "面具"
+            },
+            "descriptions": {
+                "english": "Start of turn: Gain +[stacks] max health. Lost if damaged."
+            }
         }
     ],
     "sprites": [

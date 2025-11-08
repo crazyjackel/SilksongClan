@@ -9,8 +9,8 @@
                 "chinese": "连体之心"
             },
             "descriptions": {
-                "english": "[Silk_Song_Clan.Plugin_Warrior] generates Double [silk].",
-                "chinese": "[Silk_Song_Clan.Plugin_Warrior]生成双倍[silk]。"
+                "english": "[Silk_Song_Clan.Plugin_Warrior] generates Double [Silk_Song_Clan.Plugin_Silk].",
+                "chinese": "[Silk_Song_Clan.Plugin_Warrior]生成双倍[Silk_Song_Clan.Plugin_Silk]。"
             },
             "icon": "@ConjoinedHeartIcon",
             "icon_small": "@ConjoinedHeartIcon",
@@ -40,7 +40,11 @@
             "id": "ConjoinedHeartEffect",
             "name": "@RelicEffectAdditionalWarriorSilk",
             "param_int": 0,
-            "param_int2": 2
+            "param_int2": 2,
+            "additional_tooltips": [
+                "@SilkTooltip",
+                "@WarriorTooltip"
+            ]
         }
     ],
     "sprites": [
