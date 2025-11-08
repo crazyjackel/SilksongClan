@@ -1,12 +1,12 @@
 Relic Name,Effect
-Architect's Key,Stewards can equip an additional equipment
-Wormway's Key,Rare Units get +10/+10
+Architect's Key,Whenever a unit is moved it gains Valor 1.
+Wormway's Key,Increase the maximum amount of Silk by 4.
 Festival Pinata,"Fleas get ""Spawn: Reduce Cooldowns by 1"""
 Hero's Memento,Combos are always active.
-Craw Memento,Gain 5 Gold whenever you activate an ability
-Conjoined Heart,Warrior generates double silk.
+Craw Memento,Gain 10 Gold whenever you activate an ability
+Conjoined Heart,Warrior Status Effect generates Double Silk.
 Guardian's Memento,Protection and Imbue are not removed from being hit.
-Hunter's Memento,Protection and Imbue gained an extra stack.
-Surface Memento,Silksong triggers twice.
-Grey Memento,Champions get +1 Permanent Protection and +1 Permanent Imbue at the beginning of the turn.
-Sprintmaster Memento,"Whenever you activate an ability, draw an extra card next turn."
+Hunter's Memento,Protection and Imbue gain an extra stack.
+Surface Memento,Silksong triggers an additional time.
+Grey Memento,Champions get +2 Permanent Protection and +2 Permanent Imbue at the start of each turn.
+Sprintmaster Memento,Whenever you activate an ability draw an extra card next turn.

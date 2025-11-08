@@ -37,7 +37,7 @@
         {
             "id": "CrawMementoEffect",
             "name": "RelicEffectGoldOnTrigger",
-            "param_int": 5,
+            "param_int": 10,
             "param_trigger": "on_own_ability_activated"
         }
     ],

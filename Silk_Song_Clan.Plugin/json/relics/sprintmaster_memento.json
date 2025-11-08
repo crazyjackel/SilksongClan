@@ -1,0 +1,52 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "SprintmasterMemento",
+            "type": "collectable",
+            "names": {
+                "english": "Sprintmaster Memento",
+                "chinese": "疾跑大师信物"
+            },
+            "descriptions": {
+                "english": "Whenever you activate an ability, draw an extra card next turn.",
+                "chinese": "在使用一种能力之后，下回合额外抽一张牌。"
+            },
+            "icon": "@SprintmasterMementoIcon",
+            "icon_small": "@SprintmasterMementoIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A memento from the Sprintmaster. Their swift actions inspire you to draw more cards."
+                }
+            ],
+            "relic_effects": [
+                "@SprintmasterMementoEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "uncommon",
+                        "pools": ["MegaRelicPool"]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "SprintmasterMementoEffect",
+            "name": "@RelicEffectDrawAdditionalNextTurnOnTrigger",
+            "param_int": 1,
+            "param_trigger": "on_own_ability_activated",
+            "param_source_team": "monsters"
+        }
+    ],
+    "sprites": [
+        {
+            "id": "SprintmasterMementoIcon",
+            "path": "textures/SprintmasterMementoIcon.png"
+        }
+    ]
+}
+
