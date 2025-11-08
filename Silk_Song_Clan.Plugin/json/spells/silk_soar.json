@@ -37,6 +37,12 @@
       ]
     }
   ],
+  "upgrade_masks": [
+    {
+      "id": "SilkSoarUpgradeMask",
+      "card_type": "monster"
+    }
+  ],
   "effects": [
     {
       "id": "SilkSoarAscendEffect",
