@@ -9,8 +9,8 @@
                 "chinese": "建筑师的钥匙"
             },
             "descriptions": {
-                "english": "Stewards can equip an additional piece of Equipment.",
-                "chinese": "乘务员单位可以额外穿戴一件装备。"
+                "english": "Whenever a unit is moved, it gains [valor] [effect0.status0.power].",
+                "chinese": "每当一个单位移动时，它获得[valor] [effect0.status0.power]。"
             },
             "icon": "@ArchitectKeyIcon",
             "icon_small": "@ArchitectKeyIcon",
@@ -35,8 +35,13 @@
     "relic_effects": [
         {
             "id": "ArchitectKeyEffect",
-            "name": "RelicEffectAddEquipmentLimit",
-            "param_subtype": "SubtypesData_TrainSteward"
+            "name": "RelicEffectAddStatusEffectOnUnitMoved",
+            "param_status_effects": [
+                {
+                    "status": "valor",
+                    "count": 1
+                }
+            ]
         }
     ],
     "sprites": [
