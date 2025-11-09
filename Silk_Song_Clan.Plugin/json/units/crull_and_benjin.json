@@ -26,7 +26,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Us moorbugs gotta eat, don't we?"
+          "english": "Us moorbugs gotta eat, don't we?",
+          "chinese": "咱们住荒地的也得搞口饭吃啊，你说是不是？"
         }
       ]
     },
@@ -37,7 +38,8 @@
         "chinese": "盛宴"
       },
       "descriptions": {
-        "english": "Add 2 random uncommon or rare Morsels to Hand."
+        "english": "Add 2 random uncommon or rare Morsels to Hand.",
+        "chinese": "将 2 个高级或稀有[snack]单位加入你的手牌。"
       },
       "is_an_ability": true,
       "cooldown": 2,

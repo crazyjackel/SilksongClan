@@ -25,7 +25,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Guurroooo! Scoundrel! Fiend! Who dares wake brave Garmond from his well needed kip!"
+          "english": "Guurroooo! Scoundrel! Fiend! Who dares wake brave Garmond from his well needed kip!",
+          "chinese": "咕噜噜——！恶棍！混账！是谁胆敢让勇敢的加蒙德从他来之不易的小憩中惊醒？"
         }
       ]
     },
@@ -92,7 +93,7 @@
     {
       "id": "GaramondSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain  \"[ability]: Attack.\".",
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain  \"[ability]: Attack.\"",
         "chinese": "[Silk_Song_Clan.Plugin_Combo]与扎扎：获得 \"[ability]: 攻击。\"。"
       },
       "trigger": "on_spawn",

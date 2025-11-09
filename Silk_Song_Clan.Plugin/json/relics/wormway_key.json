@@ -11,12 +11,13 @@
             "icon": "@WormwayKeyIcon",
             "icon_small": "@WormwayKeyIcon",
             "descriptions": {
-                "english": "Increase the maximum amount of Silk by [effect0.power].",
+                "english": "Increase the maximum amount of [Silk_Song_Clan.Plugin_Silk] by [effect0.power].",
                 "chinese": "增加最大丝绸数量 by [effect0.power]。"
             },
             "lore_tooltips": [
                 {
-                    "english": "Rusted key of common design. Can be used to open a variety of locks."
+                    "english": "Rusted key of common design. Can be used to open a variety of locks.",
+                    "chinese": "造型普通的生锈钥匙。可用于打开简单的锁具。"
                 }
             ],
             "relic_effects": [

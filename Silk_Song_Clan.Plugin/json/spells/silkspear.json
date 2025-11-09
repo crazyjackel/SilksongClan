@@ -8,7 +8,8 @@
         "chinese": "丝之矛"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage.",
+        "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。造成 [effect1.power] 点伤害。"
       },
       "cost": 1,
       "card_type": "spell",

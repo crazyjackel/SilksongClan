@@ -25,7 +25,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Is hard work, learning so much from creatures, but for Nuu is very fulfilling. Now go and hunt, and prey, miss grown-up!"
+          "english": "Is hard work, learning so much from creatures, but for Nuu is very fulfilling. Now go and hunt, and prey, miss grown-up!",
+          "chinese": "研究生物很辛苦，但是努努超满足！快去打猎吧大姐姐！"
         }
       ]
     }
@@ -54,7 +55,7 @@
       "id": "NuuHarvestTrigger",
       "descriptions": {
         "english": "Add an uncommon or rare Morsel unit to your hand.",
-        "chinese": "将一个稀有度为罕见或稀有的食物单位加入你的手牌。"
+        "chinese": "将 1 个高级或稀有[snack]单位加入你的手牌。"
       },
       "trigger": "on_any_unit_death_on_floor",
       "effects": [
@@ -67,7 +68,7 @@
       "id": "NuuHungerTrigger",
       "descriptions": {
         "english": "Apply [effect0.status0.power] [Silk_Song_Clan.Plugin_PermanentImbue] and [effect1.status0.power] [Silk_Song_Clan.Plugin_PermanentProtection]",
-        "chinese": "为友方单位应用 [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] 和 [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]。"
+        "chinese": "获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] 和[Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]。"
       },
       "trigger": "on_food_spawn",
       "effects": [

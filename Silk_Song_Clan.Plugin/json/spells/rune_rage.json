@@ -8,7 +8,8 @@
         "chinese": "符文之怒"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give Friendly Units [rage] [effect1.status0.power] and Enemies [frostbite] [effect2.status0.power]."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give Friendly Units [rage] [effect1.status0.power] and Enemies [frostbite] [effect2.status0.power].",
+        "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。所有友方单位获得[rage] [effect1.status0.power]。对所有敌方单位施加[frostbite] [effect2.status0.power]。"
       },
       "cost": 1,
       "card_type": "spell",

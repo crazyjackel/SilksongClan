@@ -56,7 +56,7 @@
             "id": "BrewFleaShiftTrigger",
             "descriptions": {
                 "english": "Friendly Units get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
-                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
+                "chinese": "友方单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
             },
             "trigger": "on_shift",
             "effects": [
