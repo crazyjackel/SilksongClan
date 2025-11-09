@@ -16,6 +16,8 @@
       "rarity": "uncommon",
       "card_art": "@NeedolinCardArt",
       "class": "@Silksong",
+      "targets_room": true,
+      "targetless": true,
       "pools": [
         "MegaPool"
       ],

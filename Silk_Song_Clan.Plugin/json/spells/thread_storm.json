@@ -15,7 +15,7 @@
       "rarity": "common",
       "class": "@Silksong",
       "card_art": "@ThreadStormCardArt",
-      "targetless": false,
+      "targetless": true,
       "targets_room": true,
       "pools": [
         "MegaPool"
