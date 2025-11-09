@@ -8,8 +8,8 @@
         "chinese": "锐丝突击"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Target friendly unit attacks.",
-        "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。使一个友方单位立即发动攻击。"
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [advance]. Attack with a friendly unit.",
+        "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。[advance]。使一个友方单位立即发动攻击。"
       },
       "cost": 0,
       "card_type": "spell",
@@ -27,6 +27,9 @@
         },
         {
           "id": "@SharpDartStrikeEffect"
+        },
+        {
+          "id": "@SharpDartAdvanceEffect"
         }
       ],
       "lore_tooltips": [
@@ -41,7 +44,7 @@
       "id": "SharpDartChannelSilkEffect",
       "name": "@CardEffectRewardSilk",
       "target_mode": "self",
-      "param_int": -5,
+      "param_int": -4,
       "should_test": true,
       "should_fail_to_cast_if_test_fails": true,
       "additional_tooltips": [
@@ -54,6 +57,13 @@
       "name": "CardEffectAttackWithUnit",
       "target_mode": "drop_target_character",
       "target_team": "monsters"
+    },
+    {
+      "id": "SharpDartAdvanceEffect",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "last_targeted_characters",
+      "target_team": "monsters",
+      "param_int": 0
     }
   ],
   "sprites": [

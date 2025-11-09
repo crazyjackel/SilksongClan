@@ -25,7 +25,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": " Talk to the boss!"
+          "english": "Holler when you're ready, miss. The upgrades are done. That bell's ready as it'll ever be."
         }
       ]
     }
@@ -54,8 +54,8 @@
     {
       "id": "BallowEquippedTrigger",
       "descriptions": {
-        "english": "Give Friendly Units [Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power].",
-        "chinese": "友方单位获得[Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power]。"
+        "english": "Apply [Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power] to friendly units.",
+        "chinese": "为友方单位应用 [Silk_Song_Clan.Plugin_Imbue] [effect0.status0.power]。"
       },
       "trigger": "on_equipment_added_to_ally",
       "effects": [

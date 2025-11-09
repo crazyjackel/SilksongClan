@@ -13,10 +13,10 @@
                 "chinese": "线轴 {0}"
             },
             "card_tooltips": {
-                "english": "At the start of each turn, gain extra attack equal to your current stacks of [Silk_Song_Clan.Plugin_Imbue]. All stacks are lost if the unit takes damage or at the start of your turn."
+                "english": "At the start of each turn, gain +[codeint0] [attack]. Lost if damaged."
             },
             "character_tooltips": {
-                "english": "At the start of the turn, this unit gains +[codeint0] attack. This effect is lost if the unit takes damage."
+                "english": "At the start of each turn, gain +[codeint0] [attack]. Lost if damaged."
             },
             "notifications": {
                 "english": "Imbued",
@@ -34,6 +34,18 @@
             "param_int_2": 0,
             "param_str": "damage",
             "icon": "@Imbue"
+        }
+    ],
+    "additional_tooltips": [
+        {
+            "id": "ImbueTooltip",
+            "titles": {
+                "english": "Imbue",
+                "chinese": "线轴"
+            },
+            "descriptions": {
+                "english": "At the start of each turn, gain [attack] equal to stacks of [Silk_Song_Clan.Plugin_Imbue]. Lost if damaged."
+            }
         }
     ],
     "sprites": [

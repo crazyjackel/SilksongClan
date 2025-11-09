@@ -35,8 +35,8 @@
             "character_art": "@HornetCharacterArt",
             "chatter": "@CTR_Hornet",
             "size": 2,
-            "attack_damage": 24,
-            "health": 16,
+            "attack_damage": 20,
+            "health": 12,
             "starting_status_effects": [
                 {
                     "status": "@Warrior",

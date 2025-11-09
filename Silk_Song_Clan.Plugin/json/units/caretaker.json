@@ -26,7 +26,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A nurturing snail that provides protective shields to allies through the Silksong connection."
+          "english": "Remarkable idea you're speakin' there, bellringer, a world cut free. Not a wish I've had much cause to hope one, serious like... but I ain't so surprised to hear you speak it."
         }
       ]
     },
@@ -38,7 +38,7 @@
         "french": "Guidance"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Give a friendly unit [damageshield] [effect1.status0.power].",
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Apply [damageshield] [effect1.status0.power] to a friendly unit.",
         "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。使一个单位获得[damageshield] [effect1.status0.power]。"
       },
       "is_an_ability": true,
@@ -80,7 +80,8 @@
     {
       "id": "CaretakerSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain [duality]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Apply [duality].",
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]与蜗牛子类型：应用 [duality]。"
       },
       "trigger": "on_spawn",
       "effects": [

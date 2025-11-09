@@ -22,6 +22,11 @@
         {
           "id": "@SpawnLumbleTheLuckyEffect"
         }
+      ],
+      "lore_tooltips": [
+        {
+          "english": "care to test your luck with a game of dice?"
+        }
       ]
     }
   ],
@@ -63,8 +68,8 @@
       "id": "LumbleTheLuckyExtinguishTrigger",
       "trigger": "on_death",
       "descriptions": {
-        "english": "Friendly Units gain [damageshield] [effect0.status0.power].",
-        "chinese": "友方单位获得[damageshield] [effect0.status0.power]。"
+        "english": "Apply [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power] to friendly units.",
+        "chinese": "为友方单位应用 [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]。"
       },
       "effects": [
         "@LumbleTheLuckyExtinguishEffect"
@@ -91,8 +96,8 @@
       "target_team": "monsters",
       "param_status_effects": [
         {
-          "status": "damage shield",
-          "count": 1
+          "status": "@PermanentProtection",
+          "count": 3
         }
       ]
     }

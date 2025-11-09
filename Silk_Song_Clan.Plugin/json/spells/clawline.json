@@ -8,8 +8,8 @@
         "chinese": "飞针穿梭"
       },
       "descriptions": {
-        "english": "Deal damage to the front enemy unit equal to 2x [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. ",
-        "chinese": "对前排敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 2 倍。获得 [effect1.power][Silk_Song_Clan.Plugin_Silk]。"
+        "english": "Deal 3x [Silk_Song_Clan.Plugin_Silk] damage to front enemy. [advance] the backmost friendly. Gain [effect2.power] [Silk_Song_Clan.Plugin_Silk].",
+        "chinese": "对前排敌方造成 3x [Silk_Song_Clan.Plugin_Silk] 伤害。[advance]最后排友方。获得 [effect2.power][Silk_Song_Clan.Plugin_Silk]。"
       },
       "cost": 1,
       "card_type": "spell",
@@ -24,6 +24,9 @@
       "effects": [
         {
           "id": "@ClawlineDamageEffect"
+        },
+        {
+          "id": "@ClawlineAdvanceEffect"
         },
         {
           "id": "@ClawlineGainSilkEffect"
@@ -45,7 +48,7 @@
       "name": "CardTraitScalingAddDamage",
       "param_tracked_value": "@Silk",
       "param_int": 1,
-      "param_float": 2.00
+      "param_float": 3.00
     }
   ],
   "effects": [
@@ -62,6 +65,13 @@
       "name": "CardEffectDamage",
       "target_mode": "front_in_room",
       "target_team": "heroes",
+      "param_int": 0
+    },
+    {
+      "id": "ClawlineAdvanceEffect",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "back_in_room",
+      "target_team": "monsters",
       "param_int": 0
     }
   ],

@@ -25,7 +25,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A wise snail that empowers allies through the Silksong connection."
+          "english": "Hnff... So the slave comes seeking? I've heard it. Wishing on a world cut free, yes? Along with my nephew up there. Sounds he's sunk as simple as you."
         }
       ]
     }
@@ -56,7 +56,7 @@
     {
       "id": "BellHermitSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain [duality]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Apply [duality]."
       },
       "trigger": "on_spawn",
       "effects": [
@@ -71,7 +71,7 @@
     {
       "id": "BellHermitSilksongTrigger",
       "descriptions": {
-        "english": "Friendly Units get [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power]."
+        "english": "Apply [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] to friendly units."
       },
       "trigger": "@Silksong",
       "effects": [

@@ -23,26 +23,6 @@
                     "english": "A small, agile creature that works together with other fleas to create powerful swarms."
                 }
             ]
-        },
-        {
-            "id": "FleaPetAbility",
-            "names": {
-                "english": "Pet",
-                "chinese": "摸摸"
-            },
-            "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
-                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。战斗开始时处于冷却中。"
-            },
-            "is_an_ability": true,
-            "targetless": true,
-            "initial_cooldown": 1,
-            "cooldown": 2,
-            "effects": [
-                {
-                    "id": "@FleaPetEffect"
-                }
-            ]
         }
     ],
     "characters": [
@@ -59,15 +39,25 @@
             "subtypes": [
                 "@Flea"
             ],
-            "ability": "@FleaPetAbility"
+            "triggers": [
+                {
+                    "id": "@FleaShiftTrigger"
+                }
+            ]
         }
     ],
-    "upgrade_masks": [
+    "character_triggers": [
         {
-            "id": "FleaPetUpgradeMask",
-            "card_type": "monster",
-            "required_subtypes": [
-                "@Flea"
+            "id": "FleaShiftTrigger",
+            "descriptions": {
+                "english": "Friendly Units get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
+            },
+            "trigger": "on_shift",
+            "effects": [
+                {
+                    "id": "@FleaPetEffect"
+                }
             ]
         }
     ],
@@ -75,8 +65,7 @@
         {
             "id": "FleaPetUpgrade",
             "bonus_damage": 1,
-            "bonus_hp": 1,
-            "filters": ["@FleaPetUpgradeMask"]
+            "bonus_hp": 1
         }
     ],
     "effects": [
@@ -88,11 +77,10 @@
         },
         {
             "id": "FleaPetEffect",
-            "name": "@CardEffectAddCardUpgradeToUnitsFilter",
+            "name": "CardEffectAddCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@FleaPetUpgrade",
-            "param_card_filter": "@FleaPetUpgradeMask"
+            "param_upgrade": "@FleaPetUpgrade"
         }
     ],
     "sprites": [

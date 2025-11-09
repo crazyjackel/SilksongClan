@@ -24,7 +24,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A skilled craftsman who can fix anything for the right price."
+          "english": "Aye, aye. You're a sharp bug! A wishwall. It's past time this old camp had one. As the resident fixer, I've taken it upon myself to sort it out."
         }
       ]
     },
@@ -35,8 +35,8 @@
         "chinese": "修好它"
       },
       "descriptions": {
-        "english": "Spend [effect0.powerabs] [coin]. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power].",
-        "chinese": "花费 [effect0.powerabs][coin]。友方单位获得[Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]。"
+        "english": "Spend [effect0.powerabs] [coin]. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power] and [Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power].",
+        "chinese": "花费 [effect0.powerabs][coin]。友方单位获得[Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]和[Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power]。"
       },
       "initial_cooldown": 0,
       "is_an_ability": true,
@@ -48,6 +48,9 @@
         },
         {
           "id": "@FlickTheFixerProtectionEffect"
+        },
+        {
+          "id": "@FlickTheFixerImbueEffect"
         }
       ]
     }
@@ -81,7 +84,7 @@
     {
       "id": "FlickTheFixerSpendGoldEffect",
       "name": "CardEffectRewardGold",
-      "param_int": -10,
+      "param_int": -20,
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true
     },
@@ -90,10 +93,21 @@
       "name": "CardEffectAddStatusEffect",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_int_2": 10,
       "param_status_effects": [
         {
           "status": "@PermanentProtection",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "FlickTheFixerImbueEffect",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "@PermanentImbue",
           "count": 2
         }
       ]

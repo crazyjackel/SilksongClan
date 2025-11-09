@@ -24,7 +24,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A master builder who can create relics that enhance steward equipment capabilities."
+          "english": "Do you ask-need our service? We shall create, as is our d-d-directive. To serve, for Pharloom eternal."
         }
       ]
     }
@@ -38,7 +38,7 @@
         "french": "Twelfth Architect"
       },
       "character_art": "@TwelfthArchitectCharacterArt",
-      "size": 3,
+      "size": 4,
       "health": 45,
       "attack_damage": 25,
       "subtypes": [
@@ -56,7 +56,8 @@
     {
       "id": "TwelfthArchitectCelebrateTrigger",
       "descriptions": {
-        "english": "Spend [effect0.powerabs] [coin]. Gain a Artifact allowing Stewards to Equip an additional Equipment."
+        "english": "Spend [effect0.powerabs] [coin]. Gain an <b>Artifact</b>: Units gain [valor] 1 on move.",
+        "chinese": "花费 [effect0.powerabs][coin]。获得一个 <b>Artifact</b>：单位在移动时获得 [valor] 1。"
       },
       "trigger": "on_encounter_complete",
       "effects": [

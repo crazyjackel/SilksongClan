@@ -23,21 +23,16 @@
                     "english": "A larger flea that provides significant power boosts to the entire swarm."
                 }
             ]
-        },
+        }
+    ],
+    "character_triggers": [
         {
-            "id": "HugeFleaPetAbility",
-            "names": {
-                "english": "Pet Bigger",
-                "chinese": "摸摸"
-            },
+            "id": "HugeFleaShiftTrigger",
             "descriptions": {
-                "english": "Fleas get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
-                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。战斗开始时处于冷却中。"
+                "english": "Friendly Units get +[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+                "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
             },
-            "is_an_ability": true,
-            "targetless": true,
-            "initial_cooldown": 1,
-            "cooldown": 2,
+            "trigger": "on_shift",
             "effects": [
                 {
                     "id": "@HugeFleaPetEffect"
@@ -49,17 +44,7 @@
         {
             "id": "HugeFleaPetUpgrade",
             "bonus_damage": 3,
-            "bonus_hp": 3,
-            "filters": ["@HugeFleaPetUpgradeMask"]
-        }
-    ],
-    "upgrade_masks": [
-        {
-            "id": "HugeFleaPetUpgradeMask",
-            "card_type": "monster",
-            "required_subtypes": [
-                "@Flea"
-            ]
+            "bonus_hp": 3
         }
     ],
     "characters": [
@@ -76,7 +61,11 @@
             "subtypes": [
                 "@Flea"
             ],
-            "ability": "@HugeFleaPetAbility"
+            "triggers": [
+                {
+                    "id": "@HugeFleaShiftTrigger"
+                }
+            ]
         }
     ],
     "effects": [
@@ -88,11 +77,10 @@
         },
         {
             "id": "HugeFleaPetEffect",
-            "name": "@CardEffectAddCardUpgradeToUnitsFilter",
+            "name": "CardEffectAddCardUpgradeToUnits",
             "target_mode": "room",
             "target_team": "monsters",
-            "param_upgrade": "@HugeFleaPetUpgrade",
-            "param_card_filter": "@HugeFleaPetUpgradeMask"
+            "param_upgrade": "@HugeFleaPetUpgrade"
         }
     ],
     "sprites": [

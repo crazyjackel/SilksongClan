@@ -11,8 +11,8 @@
             "icon": "@WormwayKeyIcon",
             "icon_small": "@WormwayKeyIcon",
             "descriptions": {
-                "english": "Rare and Champion Units gain +10 [attack] and +10 [health].",
-                "chinese": "稀有和勇者单位获得 +10[attack]，+10[health]。"
+                "english": "Increase the maximum amount of Silk by [effect0.power].",
+                "chinese": "增加最大丝绸数量 by [effect0.power]。"
             },
             "lore_tooltips": [
                 {
@@ -20,7 +20,7 @@
                 }
             ],
             "relic_effects": [
-                "@SimpleKeyEffect"
+                "@SimpleKeyMaxSilkEffect"
             ],
             "extensions": [
                 {
@@ -32,27 +32,11 @@
             ]
         }
     ],
-    "upgrade_masks": [
-        {
-            "id": "SimpleKeyMask",
-            "card_type": "monster",
-            "required_rarities": ["rare", "champion"]
-        }
-    ],
     "relic_effects": [
         {
-            "id": "SimpleKeyEffect",
-            "name": "RelicEffectAddTempUpgrade",
-            "param_upgrade": "@SimpleKeyUpgrade"
-        }
-    ],
-    "upgrades": [
-        {
-            "id": "SimpleKeyUpgrade",
-            "is_unique": true,
-            "bonus_damage": 10,
-            "bonus_health": 10,
-            "filters": ["@SimpleKeyMask"]
+            "id": "SimpleKeyMaxSilkEffect",
+            "name": "@RelicEffectAddMaxSilk",
+            "param_int": 4
         }
     ],
     "sprites": [

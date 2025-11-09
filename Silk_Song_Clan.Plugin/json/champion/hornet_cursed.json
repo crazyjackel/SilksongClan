@@ -12,8 +12,8 @@
                 "chinese": "无法穿戴装备。"
             },
             "show_description_on_cards": false,
-            "bonus_damage": -8,
-            "bonus_hp": -8,
+            "bonus_damage": -4,
+            "bonus_hp": -4,
             "bonus_equipment": -1,
             "status_effect_upgrades": [
                 {

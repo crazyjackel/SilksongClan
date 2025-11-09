@@ -8,8 +8,8 @@
         "chinese": "缚丝"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Bind]. Restore [effect2.power] health.",
-        "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。[Silk_Song_Clan.Plugin_Bind]。使一个友方单位恢复 [effect2.power] 点生命值。"
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Bind]. [retreat]. Restore [effect3.power] health.",
+        "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。[Silk_Song_Clan.Plugin_Bind]。[retreat]。使一个友方单位恢复 [effect3.power] 点生命值。"
       },
       "cost": 0,
       "card_type": "spell",
@@ -25,6 +25,9 @@
         },
         {
           "id": "@BindBindEffect"
+        },
+        {
+          "id": "@BindRetreatEffect"
         },
         {
           "id": "@BindHealEffect"
@@ -61,6 +64,13 @@
           "id": "@BindBindEffectTooltip"
         }
       ]
+    },
+    {
+      "id": "BindRetreatEffect",
+      "name": "CardEffectFloorRearrange",
+      "target_mode": "drop_target_character",
+      "target_team": "monsters",
+      "param_int": 1
     },
     {
       "id": "BindHealEffect",

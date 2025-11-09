@@ -8,8 +8,8 @@
         "chinese": "丝之琴"
       },
       "descriptions": {
-        "english": "Give the Front Enemy Unit [dazed] [effect0.status0.power].",
-        "chinese": "对前排敌方单位施加[dazed] [effect0.status0.power]。"
+        "english": "Apply [dazed] [effect0.status0.power] to the front enemy unit.",
+        "chinese": "为前排敌方单位应用 [dazed] [effect0.status0.power]。"
       },
       "cost": 2,
       "card_type": "spell",

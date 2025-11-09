@@ -25,7 +25,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A devoted snail that provides protection to allies through the Silksong connection."
+          "english": "Up with you! Up! I won't have you dying on my floor!"
         }
       ]
     }
@@ -53,7 +53,8 @@
     {
       "id": "ChapelMaidSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Gain [duality]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Apply [duality].",
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]与蜗牛子类型：应用 [duality]。"
       },
       "trigger": "on_spawn",
       "effects": [
@@ -68,7 +69,8 @@
     {
       "id": "ChapelMaidSilksongTrigger",
       "descriptions": {
-        "english": "Friendly Units get [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]."
+        "english": "Apply [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power] to friendly units.",
+        "chinese": "为友方单位应用 [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]。"
       },
       "trigger": "@Silksong",
       "effects": [

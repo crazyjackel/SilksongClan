@@ -24,7 +24,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A small bug with the power to create powerful relics for rare units."
+          "english": "O-oh! Traveller! Won't you stop and make trade with an old pilgrim? Surely something here will aid you in your great journey!"
         }
       ]
     },
@@ -35,7 +35,7 @@
         "chinese": "购买蠕虫隧道钥匙"
       },
       "descriptions": {
-        "english": "Spend [effect0.powerabs] [coin]. Gain a Artifact giving Rare Units +10/+10."
+        "english": "Spend [effect0.powerabs] [coin]. Gain an Artifact that increases Max [Silk_Song_Clan.Plugin_Silk] by 4."
       },
       "is_an_ability": true,
       "cooldown": 5,
@@ -67,7 +67,27 @@
         "@Bug",
         "SubtypesData_BannerUnit"
       ],
-      "ability": "@PebbAbilityTrigger"
+      "ability": "@PebbAbilityTrigger",
+      "triggers": [
+        {
+          "id": "@PebbHarvestTrigger"
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "PebbHarvestTrigger",
+      "descriptions": {
+        "english": "Gain [effect0.power] [coin].",
+        "chinese": "获得 [effect0.power][coin]。"
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        {
+          "id": "@PebbHarvestEffect"
+        }
+      ]
     }
   ],
   "effects": [
@@ -89,6 +109,12 @@
       "id": "PebbCreateRelicEffect",
       "name": "@CardEffectAddRelic",
       "param_str": "@WormwayKey"
+    },
+    {
+      "id": "PebbHarvestEffect",
+      "name": "CardEffectRewardGold",
+      "target_mode": "self",
+      "param_int": 5
     }
   ],
   "sprites": [

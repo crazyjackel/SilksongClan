@@ -25,7 +25,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A flea that can sacrifice others to empower the entire flea swarm."
+          "english": "Poor little Kratt did not mean to steal a look! This old carriage needs constant care. I was only doing repairs! I had no intent to intrude! And I barely saw a thing!"
         }
       ]
     },
@@ -36,8 +36,8 @@
         "chinese": "送到温泉"
       },
       "descriptions": {
-        "english": "Fleas get +[effect1.upgrade.bonusdamage] [attack] and +[effect1.upgrade.bonushp] [health] and [damageshield] [effect1.upgrade.status0.power].",
-        "chinese": "蚤民单位获得 +[effect1.upgrade.bonusdamage][attack]，+[effect1.upgrade.bonushp][health] 和[damageshield] [effect1.upgrade.status0.power]。战斗开始时处于冷却中。"
+        "english": "Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. Friendly Units get +[effect2.upgrade.bonusdamage] [attack] and +[effect2.upgrade.bonushp] [health] and [damageshield] [effect2.upgrade.status0.power].",
+        "chinese": "获得 [effect0.power][Silk_Song_Clan.Plugin_Silk]。友方单位获得 +[effect2.upgrade.bonusdamage][attack]，+[effect2.upgrade.bonushp][health] 和[damageshield] [effect2.upgrade.status0.power]。战斗开始时处于冷却中。"
       },
       "initial_cooldown": 1,
       "cooldown": 1,
@@ -46,6 +46,9 @@
       "effects": [
         {
           "id": "@KrattSacrificeEffect"
+        },
+        {
+          "id": "@KrattGainSilkEffect"
         },
         {
           "id": "@KrattHotSpringEffect"
@@ -108,12 +111,20 @@
       "param_subtype": "@Flea"
     },
     {
+      "id": "KrattGainSilkEffect",
+      "name": "@CardEffectRewardSilk",
+      "target_mode": "self",
+      "param_int": 2,
+      "additional_tooltips": [
+        "@SilkTooltip"
+      ]
+    },
+    {
       "id": "KrattHotSpringEffect",
-      "name": "@CardEffectAddCardUpgradeToUnitsFilter",
+      "name": "CardEffectAddCardUpgradeToUnits",
       "target_mode": "room",
       "target_team": "monsters",
-      "param_upgrade": "@KrattHotSpringUpgrade",
-      "param_card_filter": "@KrattUpgradeMask"
+      "param_upgrade": "@KrattHotSpringUpgrade"
     }
   ],
   "sprites": [

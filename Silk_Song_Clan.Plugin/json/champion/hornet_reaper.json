@@ -7,8 +7,8 @@
                 "english": "Reaper",
                 "chinese": "收割者纹章"
             },
-            "bonus_damage": 7,
-            "bonus_hp": 4,
+            "bonus_damage": 30,
+            "bonus_hp": 10,
             "status_effect_upgrades": [
                 {
                     "status": "trample",

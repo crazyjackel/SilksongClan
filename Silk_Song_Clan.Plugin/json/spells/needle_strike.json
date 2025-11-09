@@ -8,8 +8,8 @@
         "chinese": "针刺"
       },
       "descriptions": {
-        "english": "Deal damage to all enemies equal to [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. ",
-        "chinese": "对所有敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 1 倍。获得 [effect1.power][Silk_Song_Clan.Plugin_Silk]。"
+        "english": "Deal damage to all enemies equal to [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Combo] with Unit: Repeat.",
+        "chinese": "对所有敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 1 倍。获得 [effect1.power][Silk_Song_Clan.Plugin_Silk]。[Silk_Song_Clan.Plugin_Combo]与单位：重复。"
       },
       "cost": 2,
       "card_type": "spell",
@@ -22,12 +22,11 @@
         "MegaPool"
       ],
       "effects": [
-        {
-          "id": "@NeedleStrikeDamageEffect"
-        },
-        {
-          "id": "@NeedleStrikeGainSilkEffect"
-        }
+        "@NeedleStrikeDamageEffect",
+        "@NeedleStrikeGainSilkEffect",
+        "@NeedleStrikeComboEffect",
+        "@NeedleStrikeDamageEffect",
+        "@NeedleStrikeGainSilkEffect"
       ],
       "traits": [
         "@NeedleStrikeScaleSilk"
@@ -63,6 +62,16 @@
       "target_mode": "room",
       "target_team": "heroes",
       "param_int": 0
+    },
+    {
+      "id": "NeedleStrikeComboEffect",
+      "name": "@CardEffectTestLastCard",
+      "target_mode": "self",
+      "should_test": true,
+      "should_cancel_subsequent_effects_if_test_fails": true,
+      "additional_tooltips": [
+        "@ComboPreviousTooltip"
+      ]
     }
   ],
   "sprites": [

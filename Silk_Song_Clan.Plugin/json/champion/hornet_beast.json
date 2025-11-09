@@ -7,8 +7,8 @@
                 "english": "Beast",
                 "chinese": "野兽纹章"
             },
-            "bonus_damage": 0,
-            "bonus_hp": 2,
+            "bonus_damage": 25,
+            "bonus_hp": 10,
             "trigger_upgrades": [
                 "@BeastStrikeTrigger"
             ]
@@ -35,7 +35,7 @@
             "param_status_effects": [
                 {
                     "status": "lifesteal",
-                    "count": 1
+                    "count": 2
                 }
             ]
         }

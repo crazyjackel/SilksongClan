@@ -24,7 +24,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A resourceful bug that can dismantle equipment for gold."
+          "english": "What? What, what? Who is it? What've you got? What do you want?"
         }
       ]
     }
@@ -48,6 +48,9 @@
       "triggers": [
         {
           "id": "@RelicSeekerScroungeEquippedTrigger"
+        },
+        {
+          "id": "@RelicSeekerScroungeSilksongTrigger"
         }
       ]
     }
@@ -68,6 +71,19 @@
           "id": "@RelicSeekerScroungeGainGoldEffect"
         }
       ]
+    },
+    {
+      "id": "RelicSeekerScroungeSilksongTrigger",
+      "descriptions": {
+        "english": "Gain [effect0.power] [coin].",
+        "chinese": "获得 [effect0.power][coin]。"
+      },
+      "trigger": "@Silksong",
+      "effects": [
+        {
+          "id": "@RelicSeekerScroungeSilksongGoldEffect"
+        }
+      ]
     }
   ],
   "effects": [
@@ -84,6 +100,12 @@
     },
     {
       "id": "RelicSeekerScroungeGainGoldEffect",
+      "name": "CardEffectRewardGold",
+      "target_mode": "self",
+      "param_int": 20
+    },
+    {
+      "id": "RelicSeekerScroungeSilksongGoldEffect",
       "name": "CardEffectRewardGold",
       "target_mode": "self",
       "param_int": 20

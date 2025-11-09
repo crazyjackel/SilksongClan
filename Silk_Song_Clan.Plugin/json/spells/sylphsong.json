@@ -10,7 +10,7 @@
       "descriptions": {
         "english": "Set [Silk_Song_Clan.Plugin_Silk] to Max."
       },
-      "cost": 1,
+      "cost": 0,
       "unlock_level": 7,
       "card_art": "@SylphsongCardArt",
       "card_type": "spell",

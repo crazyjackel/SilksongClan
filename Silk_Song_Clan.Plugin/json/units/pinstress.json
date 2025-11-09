@@ -24,7 +24,7 @@
       ],
       "lore_tooltips": [
         {
-          "english": "A master weaver who gains magical energy with each strike when working with another Pinstress."
+          "english": "The black quakes... Pharloom's finale arrives. So let's stop the yapping, aye! How's 'bout we begin? "
         }
       ]
     }
@@ -39,11 +39,17 @@
       },
       "character_art": "@PinstressCharacterArt",
       "size": 3,
-      "health": 25,
-      "attack_damage": 45,
+      "health": 40,
+      "attack_damage": 25,
       "subtypes": [
         "@Pinstress",
         "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "mageblade",
+          "count": 2
+        }
       ],
       "triggers": [
         {
