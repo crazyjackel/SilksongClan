@@ -38,7 +38,7 @@
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Apply [effect1.status0.power] [damageshield] and [effect2.status0.power] [Silk_Song_Clan.Plugin_PermanentImbue] to a friendly unit.",
-        "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。使一个友方单位获得[damageshield] [effect1.status0.power] 和[Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power]。"
+        "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。使一个友方单位获得[damageshield] [effect1.status0.power] 和[Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power]。"
       },
       "is_an_ability": true,
       "cooldown": 2,

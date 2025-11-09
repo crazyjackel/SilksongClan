@@ -38,7 +38,7 @@
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Add a random Flea to Hand.",
-        "chinese": "灌注 [effect0.powerabs] [Silk]。将一个随机蚤民单位加入你的手牌。"
+        "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。将一个随机蚤民单位加入你的手牌。"
       },
       "is_an_ability": true,
       "cooldown": 4,

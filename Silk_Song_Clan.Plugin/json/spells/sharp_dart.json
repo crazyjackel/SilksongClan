@@ -9,7 +9,7 @@
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [advance]. Attack with a friendly unit.",
-        "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。[advance]。使一个友方单位立即发动攻击。"
+        "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。[advance]。使一个友方单位立即发动攻击。"
       },
       "cost": 0,
       "card_type": "spell",

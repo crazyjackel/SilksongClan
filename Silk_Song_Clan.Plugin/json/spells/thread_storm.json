@@ -9,7 +9,7 @@
       },
       "descriptions": {
         "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage to the front enemy unit, three times.",
-        "chinese": "灌注 [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]。对前排敌方单位造成 [effect1.power] 点伤害，重复三次。"
+        "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。对前排敌方单位造成 [effect1.power] 点伤害，重复三次。"
       },
       "cost": 1,
       "card_type": "spell",
