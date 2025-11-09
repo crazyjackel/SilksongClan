@@ -26,7 +26,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "So this is... defeat? Can it be? Huu... A shell so fast! Wonder of Pharloom!"
+          "english": "So this is... defeat? Can it be? Huu... A shell so fast! Wonder of Pharloom!",
+          "chinese": "这就是...失败？这是真的吗？呼...居然有这么快的小虫！简直是纺都的奇迹！"
         }
       ]
     }
@@ -59,7 +60,7 @@
       "id": "SprintmasterResolveTrigger",
       "descriptions": {
         "english": "Reduce friendly units' [cooldown] by [effect0.powerabs].",
-        "chinese": "友方单位的[cooldown]缩短 [effect0.powerabs]。"
+        "chinese": "所有友方单位的[cooldown]缩短 [effect0.powerabs]。"
       },
       "trigger": "end_turn_pre_hand_discard",
       "effects": [

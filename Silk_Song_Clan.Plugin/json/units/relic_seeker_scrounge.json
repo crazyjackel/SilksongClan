@@ -24,7 +24,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "What? What, what? Who is it? What've you got? What do you want?"
+          "english": "What? What, what? Who is it? What've you got? What do you want?",
+          "chinese": "什么？什么，什么？是谁？你有什么？你想要什么？"
         }
       ]
     }

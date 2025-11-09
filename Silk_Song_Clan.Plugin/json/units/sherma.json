@@ -32,10 +32,12 @@
     {
       "id": "ShermaRetreatAbility",
       "names": {
-        "english": "Caretake"
+        "english": "Caretake",
+        "chinese": "看护"
       },
       "descriptions": {
-        "english": "[retreat] a friendly unit."
+        "english": "[retreat] a friendly unit.",
+        "chinese": "[retreat]一个友方单位。"
       },
       "is_an_ability": true,
       "cooldown": 2,

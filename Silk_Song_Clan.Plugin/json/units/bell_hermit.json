@@ -25,7 +25,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Hnff... So the slave comes seeking? I've heard it. Wishing on a world cut free, yes? Along with my nephew up there. Sounds he's sunk as simple as you."
+          "english": "Hnff... So the slave comes seeking? I've heard it. Wishing on a world cut free, yes? Along with my nephew up there. Sounds he's sunk as simple as you.",
+          "chinese": "哼...奴隶是有求而来的？我都听说了。想要一个没有束缚的自由世界，是吗？还和我上面的侄子一起？听起来他沦落得和你一样蠢了。"
         }
       ]
     }
@@ -71,7 +72,8 @@
     {
       "id": "BellHermitSilksongTrigger",
       "descriptions": {
-        "english": "Apply [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] to friendly units."
+        "english": "Apply [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] to friendly units.",
+        "chinese": "友方单位获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power]。"
       },
       "trigger": "@Silksong",
       "effects": [

@@ -24,7 +24,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Aye, aye. You're a sharp bug! A wishwall. It's past time this old camp had one. As the resident fixer, I've taken it upon myself to sort it out."
+          "english": "Aye, aye. You're a sharp bug! A wishwall. It's past time this old camp had one. As the resident fixer, I've taken it upon myself to sort it out.",
+          "chinese": "哎，对啦。你真眼尖！这是一块许愿墙。这老旧营地里早该有一块啦。作为营地的常驻修理虫，我自觉该解决这个问题。"
         }
       ]
     },
@@ -36,7 +37,7 @@
       },
       "descriptions": {
         "english": "Spend [effect0.powerabs] [coin]. Friendly Units gain [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power] and [Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power].",
-        "chinese": "花费 [effect0.powerabs][coin]。友方单位获得[Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]和[Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power]。"
+        "chinese": "花费 [effect0.powerabs][coin]。友方单位获得[Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power] 和[Silk_Song_Clan.Plugin_PermanentImbue] [effect2.status0.power]。"
       },
       "initial_cooldown": 0,
       "is_an_ability": true,

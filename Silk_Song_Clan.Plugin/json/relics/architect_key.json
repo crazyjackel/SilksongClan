@@ -16,7 +16,8 @@
             "icon_small": "@ArchitectKeyIcon",
             "lore_tooltips": [
                 {
-                    "english": "Rotary key of the Architects. Opens their Chapel in the Underworks."
+                    "english": "Rotary key of the Architects. Opens their Chapel in the Underworks.",
+                    "chinese": "建筑师的旋转钥匙。用于打开他们在下层工厂的教堂。"
                 }
             ],
             "relic_effects": [

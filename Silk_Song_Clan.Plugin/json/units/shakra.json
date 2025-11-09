@@ -24,7 +24,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Poshanka! Edges sharp and senses keeen! In my land, that is the way warriors great each other. For though you are a child barely hatched, you are also a warrior. Your stance, your weapon, your movements all proclaim it so."
+          "english": "Poshanka! Edges sharp and senses keeen! In my land, that is the way warriors great each other. For though you are a child barely hatched, you are also a warrior. Your stance, your weapon, your movements all proclaim it so.",
+          "chinese": "啵尚咔！刃当锋锐目当明！<br>在我的部落，战士们都这么打招呼。虽然你看着像个刚破卵的娃娃，但架势、武器、动作都像个战士。"
         }
       ]
     }
@@ -63,7 +64,7 @@
       "id": "ShakraStrikeTrigger",
       "descriptions": {
         "english": "Apply [meleeweakness] [effect0.status0.power] and [advance].",
-        "chinese": "施加[meleeweakness] [effect0.status0.power]并[advance]。"
+        "chinese": "施加[meleeweakness] [effect0.status0.power]。[advance]。"
       },
       "trigger": "on_attacking",
       "effects": [

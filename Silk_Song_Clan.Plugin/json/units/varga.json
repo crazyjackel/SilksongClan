@@ -25,17 +25,20 @@
       ],
       "lore_tooltips": [
         {
-          "english": "The Fleamaster though, is always want to move on. We will be drag away somewhere much worse soon, I think."
+          "english": "The Fleamaster though, is always want to move on. We will be drag away somewhere much worse soon, I think.",
+          "chinese": "不过蚤大师总是想继续赶路。不久以后，我们就要被拽到更更糟糕的地方了，我猜。"
         }
       ]
     },
     {
       "id": "VargaChannelAbility",
       "names": {
-        "english": "Wrangle"
+        "english": "Wrangle",
+        "chinese": "争论"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Add a random Flea to Hand."
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Add a random Flea to Hand.",
+        "chinese": "灌注 [effect0.powerabs] [Silk]。将一个随机蚤民单位加入你的手牌。"
       },
       "is_an_ability": true,
       "cooldown": 4,

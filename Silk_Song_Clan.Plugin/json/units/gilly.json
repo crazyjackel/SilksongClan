@@ -25,7 +25,8 @@
       ],
       "lore_tooltips": [
         {
-          "english": "Upon the last wish of my father, I've taken up the study of these wild caves. These fields still display life and growth, even as the lands around erode to dust. "
+          "english": "Upon the last wish of my father, I've taken up the study of these wild caves. These fields still display life and growth, even as the lands around erode to dust. ",
+          "chinese": "我继承了父亲的遗志，正在调查这些洞穴。<br>即使附近的土地被腐蚀成灰，这片荒野依旧生机勃勃。"
         }
       ]
     }
