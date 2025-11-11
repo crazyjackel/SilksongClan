@@ -94,6 +94,8 @@ namespace Silk_Song_Clan.Plugin
                         //Enhancers
                         "json/enhancers/acrobat_stone.json",
                         "json/enhancers/warrior_stone.json",
+                        "json/enhancers/flea_stone.json",
+                        "json/enhancers/snail_stone.json",
 
                         //Tokens
                         "json/tokens/flea.json",

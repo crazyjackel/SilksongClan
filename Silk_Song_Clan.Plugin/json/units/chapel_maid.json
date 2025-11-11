@@ -14,7 +14,6 @@
       "rarity": "uncommon",
       "class": "@Silksong",
       "pools": [
-        "MegaPool",
         "UnitsAllBanner"
       ],
       "targets_room": true,
@@ -41,8 +40,14 @@
       },
       "character_art": "@ChapelMaidCharacterArt",
       "size": 2,
-      "health": 16,
+      "health": 8,
       "attack_damage": 8,
+      "starting_status_effects": [
+        {
+          "status": "armor",
+          "count": 16
+        }
+      ],
       "subtypes": ["@Snail", "SubtypesData_BannerUnit"],
       "triggers": [
         "@ChapelMaidSilksongTrigger",

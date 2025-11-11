@@ -7,18 +7,12 @@
                 "english": "Architect",
                 "chinese": "建筑师纹章"
             },
-            "descriptions": {
-                "english": "Can equip up to two additional equipment.",
-                "chinese": "可以额外穿戴两件装备。"
-            },
-            "show_description_on_cards": true,
             "bonus_damage": 10,
             "bonus_hp": 20,
-            "bonus_equipment": 2,
             "status_effect_upgrades": [
                 {
                     "status": "valor",
-                    "count": 8
+                    "count": 12
                 }
             ]
         }

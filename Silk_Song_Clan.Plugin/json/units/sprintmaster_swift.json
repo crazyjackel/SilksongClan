@@ -43,10 +43,16 @@
       "character_art": "@SprintmasterSwiftCharacterArt",
       "size": 2,
       "health": 15,
-      "attack_damage": 40,
+      "attack_damage": 35,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "ambush",
+          "count": 1
+        }
       ],
       "triggers": [
         {

@@ -42,8 +42,8 @@
       },
       "character_art": "@YarnabyCharacterArt",
       "size": 1,
-      "health": 12,
-      "attack_damage": 10,
+      "health": 15,
+      "attack_damage": 17,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"

@@ -7,7 +7,7 @@
         "english": "Lumble the Lucky",
         "chinese": "兰布尔 幸运儿"
       },
-      "cost": 2,
+      "cost": 1,
       "rarity": "rare",
       "traits": [],
       "class": "@Silksong",
@@ -39,8 +39,8 @@
         "chinese": "兰布尔 幸运儿",
         "french": "Lumble the Lucky"
       },
-      "attack_damage": 10,
-      "health": 25,
+      "attack_damage": 25,
+      "health": 15,
       "size": 2,
       "subtypes": [
         "@Bug",
@@ -56,7 +56,7 @@
   "character_triggers": [
     {
       "id": "LumbleTheLuckyIncantTrigger",
-      "trigger": "card_spell_played",
+      "trigger": "on_shift",
       "descriptions": {
         "english": "Gain [effect0.power] [coin].",
         "chinese": "获得 [effect0.power][coin]。"
@@ -88,7 +88,7 @@
       "id": "LumbleTheLuckyIncantEffect",
       "name": "CardEffectRewardGold",
       "target_mode": "self",
-      "param_int": 5
+      "param_int": 10
     },
     {
       "id": "LumbleTheLuckyExtinguishEffect",
@@ -98,7 +98,7 @@
       "param_status_effects": [
         {
           "status": "@PermanentProtection",
-          "count": 3
+          "count": 5
         }
       ]
     }

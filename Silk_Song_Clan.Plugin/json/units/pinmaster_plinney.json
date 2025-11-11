@@ -40,7 +40,7 @@
         "chinese": "花费 [effect0.powerabs][coin]。使一个友方单位[Silk_Song_Clan.Plugin_PermanentImbue] [effect1.status0.power]。"
       },
       "is_an_ability": true,
-      "cooldown": 5,
+      "cooldown": 4,
       "initial_cooldown": 0,
       "targetless": false,
       "effects": [
@@ -63,8 +63,8 @@
       },
       "character_art": "@PinmasterPlinneyCharacterArt",
       "size": 2,
-      "health": 12,
-      "attack_damage": 12,
+      "health": 16,
+      "attack_damage": 16,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"

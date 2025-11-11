@@ -111,7 +111,7 @@
       "param_status_effects": [
         {
           "status": "@PermanentImbue",
-          "count": 5
+          "count": 10
         }
       ]
     }

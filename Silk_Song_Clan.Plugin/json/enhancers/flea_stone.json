@@ -1,0 +1,115 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "FleaStone",
+            "type": "enhancer",
+            "names": {
+                "english": "Flea Stone",
+                "chinese": "跳蚤石"
+            },
+            "descriptions": {
+                "english": "Gain '[Silk_Song_Clan.Plugin_Combo] with Unit: draw a card.'",
+                "chinese": "获得'[Silk_Song_Clan.Plugin_Combo]与单位：抽一张牌。'"
+            },
+            "relic_effects": [
+                "@FleaStoneEnhancer"
+            ],
+            "icon": "@FleaStoneIcon",
+            "extensions": [
+                {
+                    "enhancer": {
+                        "class": "@Silksong",
+                        "pools": [
+                            "SpellUpgradePoolCommon"
+                        ],
+                        "rarity": "common"
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "FleaStoneEnhancer",
+            "name": "RelicEffectCardUpgrade",
+            "param_card_type": "spell",
+            "param_upgrade": "@FleaStoneUpgrade"
+        }
+    ],
+    "upgrade_masks": [
+        {
+            "id": "FleaStoneSpellMask",
+            "card_type": "monster"
+        },
+        {
+            "id": "FleaTargetMask",
+            "card_type": "spell",
+            "card_target_mode": ["single", "targetless"]
+        }
+    ],
+    "upgrades": [
+        {
+            "id": "FleaStoneUpgrade",
+            "titles": {
+                "english": "Flea Stone",
+                "chinese": "跳蚤石"
+            },
+            "icon": "@FleaStoneIcon",
+            "filters": [
+                "@FleaTargetMask"
+            ],
+            "card_trigger_upgrades": [
+                "@FleaStoneComboTrigger"
+            ],
+            "use_upgrade_hightlight_tags": true
+        }
+    ],
+    "card_triggers": [
+        {
+            "id": "FleaStoneComboTrigger",
+            "trigger": "on_cast",
+            "descriptions": {
+                "english": "[Silk_Song_Clan.Plugin_Combo] with Unit: draw a card.",
+                "chinese": "[Silk_Song_Clan.Plugin_Combo]与单位：抽一张牌。"
+            },
+            "effects": [
+                "@FleaStoneComboEffect",
+                "@FleaStoneRetreatEffect"
+            ]
+        }
+    ],
+    "effects": [
+        {
+            "id": "FleaStoneComboEffect",
+            "name": "@CardEffectTestLastCard",
+            "target_mode": "self",
+            "should_test": true,
+            "should_cancel_subsequent_effects_if_test_fails": true,
+            "param_card_filter": "@FleaStoneUnitMask",
+            "additional_tooltips": [
+                "@ComboPreviousTooltip"
+            ]
+        },
+        {
+            "id": "FleaStoneRetreatEffect",
+            "name": "CardEffectFloorRearrange",
+            "target_mode": "front_in_room",
+            "target_team": "monsters",
+            "param_int": 1
+        }
+    ],
+    "sprites": [
+        {
+            "id": "FleaStoneIcon",
+            "path": "textures/FleaStoneIcon.png"
+        }
+    ],
+    "atlas_icons": [
+        {
+            "id": "FleaStoneIcon",
+            "path": "textures/FleaStoneIcon.png"
+        }
+    ]
+}
+

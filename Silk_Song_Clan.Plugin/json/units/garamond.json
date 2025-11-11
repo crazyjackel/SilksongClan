@@ -114,8 +114,8 @@
     },
     {
       "id": "GaramondComboUpgrade",
-      "bonus_damage": 10,
-      "bonus_hp": 10
+      "bonus_damage": 15,
+      "bonus_hp": 15
     }
   ],
   "effects": [

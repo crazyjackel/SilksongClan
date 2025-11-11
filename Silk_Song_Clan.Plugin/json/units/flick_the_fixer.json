@@ -66,8 +66,8 @@
       },
       "character_art": "@FlickTheFixerCharacterArt",
       "size": 2,
-      "health": 20,
-      "attack_damage": 5,
+      "health": 15,
+      "attack_damage": 10,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"

@@ -42,7 +42,7 @@
       "character_art": "@FleamasterMooshkaCharacterArt",
       "size": 2,
       "health": 16,
-      "attack_damage": 8,
+      "attack_damage": 12,
       "subtypes": ["@Flea", "SubtypesData_BannerUnit"],
       "triggers": [
         {

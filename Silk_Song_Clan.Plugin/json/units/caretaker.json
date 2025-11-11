@@ -15,7 +15,6 @@
       "class": "@Silksong",
       "unlock_level": 6,
       "pools": [
-        "MegaPool",
         "UnitsAllBanner"
       ],
       "targets_room": true,
@@ -67,6 +66,12 @@
       "size": 2,
       "health": 16,
       "attack_damage": 12,
+      "starting_status_effects": [
+        {
+          "status": "armor",
+          "count": 8
+        }
+      ],
       "subtypes": [
         "@Snail",
         "SubtypesData_BannerUnit"

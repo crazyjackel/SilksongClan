@@ -41,8 +41,8 @@
       },
       "character_art": "@PavoCharacterArt",
       "size": 2,
-      "health": 25,
-      "attack_damage": 3,
+      "health": 20,
+      "attack_damage": 6,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"
@@ -89,7 +89,7 @@
       "param_status_effects": [
         {
           "status": "conduit",
-          "count": 6
+          "count": 8
         }
       ]
     }

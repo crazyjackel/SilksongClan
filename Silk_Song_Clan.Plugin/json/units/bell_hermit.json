@@ -41,11 +41,17 @@
       },
       "character_art": "@BellHermitCharacterArt",
       "size": 2,
-      "health": 16,
+      "health": 8,
       "attack_damage": 16,
       "subtypes": [
         "@Snail",
         "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "armor",
+          "count": 8
+        }
       ],
       "triggers": [
         "@BellHermitSilksongTrigger",
