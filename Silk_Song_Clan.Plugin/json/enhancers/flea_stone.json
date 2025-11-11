@@ -6,7 +6,7 @@
             "type": "enhancer",
             "names": {
                 "english": "Flea Stone",
-                "chinese": "跳蚤石"
+                "chinese": "蚤民石"
             },
             "descriptions": {
                 "english": "Gain '[Silk_Song_Clan.Plugin_Combo] with Unit: draw a card.'",
@@ -48,7 +48,7 @@
             "id": "FleaStoneUpgrade",
             "titles": {
                 "english": "Flea Stone",
-                "chinese": "跳蚤石"
+                "chinese": "蚤民石"
             },
             "icon": "@FleaStoneIcon",
             "card_trigger_upgrades": [
