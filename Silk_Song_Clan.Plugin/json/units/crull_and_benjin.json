@@ -142,7 +142,7 @@
       "name": "@CardEffectTestLastCardName",
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
-      "param_card_data": "@SpawnYarnaby",
+      "param_card": "@SpawnYarnaby",
       "additional_tooltips": [
         "@ComboTooltip"
       ]

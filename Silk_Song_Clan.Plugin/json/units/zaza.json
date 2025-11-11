@@ -113,7 +113,7 @@
       "id": "ZazaSpawnEffectCombo",
       "name": "@CardEffectTestLastCardName",
       "target_mode": "self",
-      "param_card_data": "@SpawnGaramond",
+      "param_card": "@SpawnGaramond",
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
       "additional_tooltips": [

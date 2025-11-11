@@ -126,7 +126,7 @@
       "id": "YarnabySpawnEffectCombo",
       "name": "@CardEffectTestLastCardName",
       "target_mode": "self",
-      "param_card_data": "@SpawnCrullAndBenjin",
+      "param_card": "@SpawnCrullAndBenjin",
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
       "additional_tooltips": [
