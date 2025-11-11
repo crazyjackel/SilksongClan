@@ -39,13 +39,8 @@
     ],
     "upgrade_masks": [
         {
-            "id": "FleaStoneSpellMask",
+            "id": "FleaStoneUnitMask",
             "card_type": "monster"
-        },
-        {
-            "id": "FleaTargetMask",
-            "card_type": "spell",
-            "card_target_mode": ["single", "targetless"]
         }
     ],
     "upgrades": [
@@ -56,9 +51,6 @@
                 "chinese": "跳蚤石"
             },
             "icon": "@FleaStoneIcon",
-            "filters": [
-                "@FleaTargetMask"
-            ],
             "card_trigger_upgrades": [
                 "@FleaStoneComboTrigger"
             ],
@@ -75,7 +67,7 @@
             },
             "effects": [
                 "@FleaStoneComboEffect",
-                "@FleaStoneRetreatEffect"
+                "@FleaStoneDrawCardEffect"
             ]
         }
     ],
@@ -92,10 +84,9 @@
             ]
         },
         {
-            "id": "FleaStoneRetreatEffect",
-            "name": "CardEffectFloorRearrange",
-            "target_mode": "front_in_room",
-            "target_team": "monsters",
+            "id": "FleaStoneDrawCardEffect",
+            "name": "CardEffectDraw",
+            "target_mode": "self",
             "param_int": 1
         }
     ],

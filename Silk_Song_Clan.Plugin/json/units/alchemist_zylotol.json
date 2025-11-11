@@ -84,7 +84,7 @@
       "id": "AlchemistChannelSilkEffect",
       "name": "@CardEffectRewardSilk",
       "target_mode": "self",
-      "param_int": -2,
+      "param_int": -3,
       "should_test": true,
       "should_fail_to_cast_if_test_fails": true,
       "additional_tooltips": [

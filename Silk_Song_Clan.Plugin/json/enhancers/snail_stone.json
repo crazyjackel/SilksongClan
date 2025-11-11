@@ -9,8 +9,8 @@
                 "chinese": "蜗牛石"
             },
             "descriptions": {
-                "english": "Upgrade a silk-based spell with +[effect0.upgrade0.bonusdamage] [magicpower] and gain [juice].",
-                "chinese": "升级一个丝之法术，使其获得+[effect0.upgrade0.bonusdamage] [magicpower]，并获得 [juice]。"
+                "english": "Upgrade a spell with [consume] and [juice3].",
+                "chinese": "升级一个法术，使其获得[consume]和[juice3]。"
             },
             "relic_effects": [
                 "@SnailStoneEnhancer"
@@ -37,13 +37,6 @@
             "param_upgrade": "@SnailStoneUpgrade"
         }
     ],
-    "upgrade_masks": [
-        {
-            "id": "SnailStoneSpellMask",
-            "card_type": "spell",
-            "required_effects": ["@CardEffectRewardSilk"]
-        }
-    ],
     "upgrades": [
         {
             "id": "SnailStoneUpgrade",
@@ -51,21 +44,22 @@
                 "english": "Snail Stone",
                 "chinese": "蜗牛石"
             },
-            "filters": [
-                "@SnailStoneSpellMask"
-            ],
             "icon": "@SnailStoneIcon",
-            "bonus_damage": 20,
             "trait_upgrades": [
-                "@SnailStoneDoubleStackTrait"
+                "@SnailStoneConsumeTrait",
+                "@SnailStoneJuiceTrait"
             ],
             "use_upgrade_hightlight_tags": true
         }
     ],
     "traits": [
         {
-            "id": "SnailStoneDoubleStackTrait",
-            "name": "CardTraitJuice"
+            "id": "SnailStoneConsumeTrait",
+            "name": "CardTraitExhaustState"
+        },
+        {
+            "id": "SnailStoneJuiceTrait",
+            "name": "CardTraitJuice3"
         }
     ],
     "sprites": [
