@@ -80,21 +80,6 @@
   ],
   "character_triggers": [
     {
-      "id": "VargaSpawnTrigger",
-      "trigger": "on_spawn",
-      "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Fleamaster Mooshka: Gain \"[rally]: Reduce all Friendly Unit [cooldown] by 1.\""
-      },
-      "effects": [
-        {
-          "id": "@VargaComboEffect"
-        },
-        {
-          "id": "@VargaSpawnEffect"
-        }
-      ]
-    },
-    {
       "id": "VargaRallyTrigger",
       "trigger": "card_monster_played",
       "descriptions": {
@@ -107,36 +92,12 @@
       ]
     }
   ],
-  "upgrades": [
-    {
-      "id": "VargaComboUpgrade",
-      "trigger_upgrades": ["@VargaRallyTrigger"]
-    }
-  ],
   "effects": [
     {
       "id": "SpawnVargaEffect",
       "name": "CardEffectSpawnMonster",
       "target_mode": "drop_target_character",
       "param_character": "@Varga"
-    },
-    {
-      "id": "VargaComboEffect",
-      "name": "@CardEffectTestLastCardName",
-      "param_str": "@SpawnFleamasterMooshka",
-      "target_mode": "self",
-      "should_test": true,
-      "should_cancel_subsequent_effects_if_test_fails": true,
-      "additional_tooltips": [
-        "@ComboTooltip"
-      ]
-    },
-    {
-      "id": "VargaSpawnEffect",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "self",
-      "target_team": "monsters",
-      "param_upgrade": "@VargaComboUpgrade"
     },
     {
       "id": "VargaReduceCooldownsEffect",

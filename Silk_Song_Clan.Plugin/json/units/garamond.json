@@ -43,7 +43,7 @@
       "is_an_ability": true,
       "cooldown": 2,
       "targets_room": false,
-      "targetless": false,
+      "targetless": true,
       "effects": [
         {
           "id": "@GaramondLanceEffect"
@@ -61,8 +61,8 @@
       },
       "character_art": "@GaramondCharacterArt",
       "size": 2,
-      "health": 30,
-      "attack_damage": 30,
+      "health": 24,
+      "attack_damage": 36,
       "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "starting_status_effects": [
         {
@@ -114,8 +114,8 @@
     },
     {
       "id": "GaramondComboUpgrade",
-      "bonus_damage": 15,
-      "bonus_hp": 15
+      "bonus_damage": 12,
+      "bonus_hp": 12
     }
   ],
   "effects": [
@@ -129,7 +129,7 @@
       "id": "GaramondSpawnEffectCombo",
       "name": "@CardEffectTestLastCardName",
       "target_mode": "self",
-      "param_str": "@SpawnZaza",
+      "param_card": "@SpawnZaza",
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
       "additional_tooltips": [

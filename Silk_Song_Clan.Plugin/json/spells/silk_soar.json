@@ -48,7 +48,7 @@
       "id": "SilkSoarAscendEffect",
       "name": "CardEffectBump",
       "target_mode": "drop_target_character",
-      "target_team": "monsters",
+      "target_team": "both",
       "param_int": 1
     },
     {

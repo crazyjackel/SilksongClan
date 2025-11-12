@@ -31,11 +31,10 @@ namespace Silk_Song_Clan.Plugin
                 return false;
             }
             var lastCard = cardsPlayedThisTurn[cardsPlayedThisTurnCount - 2]; // Since we want the second to last card, we subtract 2 from the count
-            var cardName = cardEffectState.GetParamStr();
-            var fullCardName = cardName.ToId(MyPluginInfo.PLUGIN_GUID, TemplateConstants.Card);
-            Plugin.Logger.LogInfo("Testing last card name: " + lastCard.GetAssetName());
-            Plugin.Logger.LogInfo("Card name: " + fullCardName);
-            var result = lastCard.GetID() == fullCardName;
+            var cardName = cardEffectState.GetParamCardData();
+            Plugin.Logger.LogInfo("Testing last card name: " + cardName.GetID());
+            Plugin.Logger.LogInfo("Card name: " + cardName.GetName());
+            var result = lastCard.GetCardDataID() == cardName.GetID();
             Plugin.Logger.LogInfo("Result: " + result);
             return result;
         }
