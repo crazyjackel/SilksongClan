@@ -7,8 +7,8 @@
                 "english": "Architect",
                 "chinese": "建筑师纹章"
             },
-            "bonus_damage": 10,
-            "bonus_hp": 20,
+            "bonus_damage": 15,
+            "bonus_hp": 5,
             "status_effect_upgrades": [
                 {
                     "status": "valor",

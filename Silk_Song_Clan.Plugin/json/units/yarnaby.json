@@ -30,6 +30,26 @@
           "chinese": "嗡嗡！好样的！终于有虫识得我的才华了！"
         }
       ]
+    },
+    {
+      "id": "YarnabyAbility",
+      "names": {
+        "english": "Operate",
+        "chinese": "刺击"
+      },
+      "descriptions": {
+        "english": "Deal [effect0.power] damage. Apply [lifesteal] [effect1.status0.power].",
+        "chinese": "造成 [effect0.power] 点伤害。获得[lifesteal] [effect1.status0.power]。"
+      },
+      "is_an_ability": true,
+      "cooldown": 2,
+      "initial_cooldown": 0,
+      "targetless": false,
+      "targets_room": true,
+      "effects": [
+        "@YarnabyAbilityDamageEffect",
+        "@YarnabyAbilityLifestealEffect"
+      ]
     }
   ],
   "characters": [
@@ -42,7 +62,7 @@
       },
       "character_art": "@YarnabyCharacterArt",
       "size": 1,
-      "health": 15,
+      "health": 16,
       "attack_damage": 17,
       "subtypes": [
         "@Bug",
@@ -57,41 +77,12 @@
       "triggers": [
         {
           "id": "@YarnabyStrikeTrigger"
-        },
-        {
-          "id": "@YarnabySpawnTrigger"
         }
-      ]
+      ],
+      "ability": "@YarnabyAbility"
     }
   ],
   "character_triggers": [
-    {
-      "id": "YarnabySpawnTrigger",
-      "trigger": "on_spawn",
-      "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Crull and Benjin: Gain \"<b>Hunger</b>: Front friendly unit gets [lifesteal] [effect1.upgrade.charactertrigger0.effect0.status0.power].\""
-      },
-      "effects": [
-        {
-          "id": "@YarnabySpawnEffectCombo"
-        },
-        {
-          "id": "@YarnabyGainHungerTrigger"
-        }
-      ]
-    },
-    {
-      "id": "YarnabyHungerTrigger",
-      "descriptions": {
-        "english": "Front Friendly Unit gets [lifesteal] [effect0.status0.power]."
-      },
-      "trigger": "on_food_spawn",
-      "effects": [
-        {
-          "id": "@YarnabyHungerEffect"
-        }
-      ]
-    },
     {
       "id": "YarnabyStrikeTrigger",
       "descriptions": {
@@ -105,16 +96,6 @@
       ]
     }
   ],
-  "upgrades": [
-    {
-      "id": "YarnabyHungerUpgrade",
-      "trigger_upgrades": [
-        {
-          "id": "@YarnabyHungerTrigger"
-        }
-      ]
-    }
-  ],
   "effects": [
     {
       "id": "SpawnYarnabyEffect",
@@ -123,27 +104,16 @@
       "param_character": "@Yarnaby"
     },
     {
-      "id": "YarnabySpawnEffectCombo",
-      "name": "@CardEffectTestLastCardName",
-      "target_mode": "self",
-      "param_card": "@SpawnCrullAndBenjin",
-      "should_test": true,
-      "should_cancel_subsequent_effects_if_test_fails": true,
-      "additional_tooltips": [
-        "@ComboTooltip"
-      ]
+      "id": "YarnabyAbilityDamageEffect",
+      "name": "CardEffectDamage",
+      "target_mode": "drop_target_character",
+      "target_team": "both",
+      "param_int": 15
     },
     {
-      "id": "YarnabyGainHungerTrigger",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "self",
-      "target_team": "monsters",
-      "param_upgrade": "@YarnabyHungerUpgrade"
-    },
-    {
-      "id": "YarnabyHungerEffect",
+      "id": "YarnabyAbilityLifestealEffect",
       "name": "CardEffectAddStatusEffect",
-      "target_mode": "front_in_room",
+      "target_mode": "last_targeted_characters",
       "target_team": "monsters",
       "param_status_effects": [
         {

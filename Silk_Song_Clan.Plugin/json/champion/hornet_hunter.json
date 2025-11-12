@@ -94,7 +94,7 @@
                 "chinese": "猎人纹章"
             },
             "bonus_damage": 15,
-            "bonus_hp": 20,
+            "bonus_hp": 5,
             "trigger_upgrades": [
                 "@HornetHunter1Trigger"
             ],
@@ -107,7 +107,7 @@
                 "chinese": "猎人纹章 II"
             },
             "bonus_damage": 30,
-            "bonus_hp": 30,
+            "bonus_hp": 12,
             "remove_upgrades": ["@HornetHunter1"],
             "trigger_upgrades": [
                 "@HornetHunter2Trigger"
@@ -121,7 +121,7 @@
                 "chinese": "猎人纹章 III"
             },
             "bonus_damage": 45,
-            "bonus_hp": 45,
+            "bonus_hp": 20,
             "remove_upgrades": ["@HornetHunter2"],
             "trigger_upgrades": [
                 "@HornetHunter3Trigger"

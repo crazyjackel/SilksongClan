@@ -8,7 +8,7 @@
                 "chinese": "酿蚤"
             },
             "card_art": "@BrewFleaCardArt",
-            "cost": 1,
+            "cost": 0,  
             "card_type": "monster",
             "rarity": "common",
             "class": "@Silksong",
