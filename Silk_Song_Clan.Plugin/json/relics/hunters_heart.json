@@ -9,7 +9,7 @@
                 "chinese": "猎人之心"
             },
             "descriptions": {
-                "english": "[lifesteal] also grants [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status1.power].",
+                "english": "[lifesteal] also grants [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power].",
                 "chinese": "[lifesteal]同时获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status1.power]。"
             },
             "icon": "@HuntersHeartIcon",
@@ -38,15 +38,13 @@
     "relic_effects": [
         {
             "id": "HuntersHeartEffect",
-            "name": "RelicEffectAddStatusEffectOnStatusApplied",
+            "name": "@RelicEffectAddStatusEffectOnOtherStatusAdded",
+            "param_str": "lifesteal",
+            "param_source_team": "monsters",
             "param_status_effects": [
                 {
-                    "status": "lifesteal",
-                    "count": 1
-                },
-                {
                     "status": "@PermanentImbue",
-                    "count": 1
+                    "count": 2
                 }
             ]
         }
