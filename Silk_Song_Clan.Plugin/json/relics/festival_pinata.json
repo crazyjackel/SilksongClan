@@ -37,6 +37,7 @@
         {
             "id": "FestivalPinataEffect",
             "name": "RelicEffectAddTempUpgrade",
+            "source_team": "monsters",
             "param_upgrade": "@FestivalPinataUpgrade"
         }
     ],

@@ -37,6 +37,7 @@
         {
             "id": "GreyMementoEffect",
             "name": "RelicEffectAddTempUpgrade",
+            "source_team": "monsters",
             "param_upgrade": "@GreyMementoUpgrade"
         }
     ],
