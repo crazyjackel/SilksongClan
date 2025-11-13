@@ -25,7 +25,6 @@
             "extensions": [
                 {
                     "collectable": {
-                        "class": "@Silksong",
                         "rarity": "common",
                         "pools": ["MegaRelicPool"]
                     }

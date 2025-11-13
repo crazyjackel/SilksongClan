@@ -8,7 +8,7 @@
                 "chinese": "漫游者纹章"
             },
             "bonus_damage": 10,
-            "bonus_hp": 10,
+            "bonus_hp": 5,
             "status_effect_upgrades": [
                 {
                     "status": "multistrike",

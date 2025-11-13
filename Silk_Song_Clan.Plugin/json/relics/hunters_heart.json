@@ -1,0 +1,59 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "HuntersHeart",
+            "type": "collectable",
+            "names": {
+                "english": "Hunter's Heart",
+                "chinese": "猎人之心"
+            },
+            "descriptions": {
+                "english": "[lifesteal] also grants [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power].",
+                "chinese": "[lifesteal]同时获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status1.power]。"
+            },
+            "icon": "@HuntersHeartIcon",
+            "icon_small": "@HuntersHeartIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A heart from a skilled hunter. Each life stolen becomes permanent power."
+                }
+            ],
+            "relic_effects": [
+                "@HuntersHeartEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "uncommon",
+                        "pools": [
+                            "MegaRelicPool"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "HuntersHeartEffect",
+            "name": "@RelicEffectAddStatusEffectOnOtherStatusAdded",
+            "param_str": "lifesteal",
+            "param_source_team": "monsters",
+            "param_status_effects": [
+                {
+                    "status": "@PermanentImbue",
+                    "count": 2
+                }
+            ]
+        }
+    ],
+    "sprites": [
+        {
+            "id": "HuntersHeartIcon",
+            "path": "textures/HuntersHeartIcon.png"
+        }
+    ]
+}
+

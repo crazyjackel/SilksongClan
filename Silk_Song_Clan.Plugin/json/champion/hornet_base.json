@@ -23,6 +23,26 @@
                     "english": "The princess-protector of Hallownest, Daughter of Three Queens, Hornet hunts with needle and silk to prevent the fate of Hallownest from coming to Pharloom.  "
                 }
             ]
+        },
+        {
+            "id": "HornetBindAbility",
+            "names": {
+                "english": "Bind",
+                "chinese": "缚丝"
+            },
+            "descriptions": {
+                "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Bind]. Restore to full health.",
+                "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。[Silk_Song_Clan.Plugin_Bind]。使一个友方单位恢复满生命值。"
+            },
+            "is_an_ability": true,
+            "cooldown": 2,
+            "initial_cooldown": 0,
+            "targetless": true,
+            "effects": [
+                "@HornetBindChannelSilkEffect",
+                "@HornetBindBindEffect",
+                "@HornetBindHealEffect"
+            ]
         }
     ],
     "characters": [
@@ -45,7 +65,8 @@
             ],
             "subtypes": [
                 "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
-            ]
+            ],
+            "ability": "@HornetBindAbility"
         }
     ],
     "sprites": [
@@ -131,6 +152,33 @@
             "target_mode": "room",
             "target_card_type": "spell",
             "param_character": "@Hornet"
+        },
+        {
+            "id": "HornetBindChannelSilkEffect",
+            "name": "@CardEffectRewardSilk",
+            "target_mode": "self",
+            "param_int": -6,
+            "should_test": true,
+            "should_fail_to_cast_if_test_fails": true,
+            "additional_tooltips": [
+                "@SilkChannelTooltip"
+            ]
+        },
+        {
+            "id": "HornetBindBindEffect",
+            "name": "@CardEffectBind",
+            "target_mode": "self",
+            "target_team": "monsters",
+            "additional_tooltips": [
+                "@BindBindEffectTooltip"
+            ]
+        },
+        {
+            "id": "HornetBindHealEffect",
+            "name": "CardEffectHeal",
+            "target_mode": "self",
+            "target_team": "monsters",
+            "param_int": 99999
         }
     ]
 }

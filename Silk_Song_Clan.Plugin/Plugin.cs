@@ -73,6 +73,10 @@ namespace Silk_Song_Clan.Plugin
                         "json/relics/hunter_memento.json",
                         "json/relics/hero_memento.json",
                         "json/relics/sprintmaster_memento.json",
+                        "json/relics/surface_memento.json",
+                        "json/relics/encrusted_heart.json",
+                        "json/relics/hunters_heart.json",
+                        "json/relics/pollen_heart.json",
 
                         //Triggers
                         "json/triggers/silksong.json",
@@ -137,7 +141,6 @@ namespace Silk_Song_Clan.Plugin
 
                         //Spells
                         "json/spells/nail_strike.json",
-                        "json/spells/bind.json",
                         "json/spells/clawline.json",
                         "json/spells/cling_grip.json",
                         "json/spells/cross_stitch.json",

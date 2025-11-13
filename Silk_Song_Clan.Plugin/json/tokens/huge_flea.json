@@ -8,7 +8,7 @@
                 "chinese": "巨大小球蚤"
             },
             "card_art": "@HugeFleaCardArt",
-            "cost": 1,
+            "cost": 0,
             "card_type": "monster",
             "rarity": "common",
             "class": "@Silksong",

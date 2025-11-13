@@ -67,27 +67,12 @@
       "ability": "@CrullAndBenjinFeastAbility",
       "triggers": [
         {
-          "id": "@CrullAndBenjinComboYarnabyTrigger"
+          "id": "@CrullAndBenjinHungerTrigger"
         }
       ]
     }
   ],
   "character_triggers": [
-    {
-      "id": "CrullAndBenjinComboYarnabyTrigger",
-      "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Yarnaby: Gain \"<b>Hunger</b>: +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack] and +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonushp][health].\""
-      },
-      "trigger": "on_spawn",
-      "effects": [
-        {
-          "id": "@CrullAndBenjinYarnabyEffect"
-        },
-        {
-          "id": "@CrullAndBenjinGainHungerTrigger"
-        }
-      ]
-    },
     {
       "id": "CrullAndBenjinHungerTrigger",
       "descriptions": {
@@ -104,8 +89,8 @@
   "upgrades": [
     {
       "id": "CrullHungerUpgrade",
-      "bonus_damage": 3,
-      "bonus_hp": 3
+      "bonus_damage": 2,
+      "bonus_hp": 2
     },
     {
       "id": "CrullAndBenjinHungerUpgrade",
@@ -136,23 +121,6 @@
       "param_card_pool": "@MorselPool",
       "param_int": 3,
       "param_int_2": 2
-    },
-    {
-      "id": "CrullAndBenjinYarnabyEffect",
-      "name": "@CardEffectTestLastCardName",
-      "should_test": true,
-      "should_cancel_subsequent_effects_if_test_fails": true,
-      "param_card": "@SpawnYarnaby",
-      "additional_tooltips": [
-        "@ComboTooltip"
-      ]
-    },
-    {
-      "id": "CrullAndBenjinGainHungerTrigger",
-      "name": "CardEffectAddTempCardUpgradeToUnits",
-      "target_mode": "self",
-      "target_team": "monsters",
-      "param_upgrade": "@CrullAndBenjinHungerUpgrade"
     }
   ],
   "sprites": [

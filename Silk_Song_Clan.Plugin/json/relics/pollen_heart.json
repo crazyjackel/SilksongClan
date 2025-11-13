@@ -1,0 +1,52 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+    "relics": [
+        {
+            "id": "PollenHeart",
+            "type": "collectable",
+            "names": {
+                "english": "Pollen Heart",
+                "chinese": "花粉之心"
+            },
+            "descriptions": {
+                "english": "Increase the maximum amount of [Silk_Song_Clan.Plugin_Silk] by [effect0.power].",
+                "chinese": "增加最大[Silk_Song_Clan.Plugin_Silk]数量 by [effect0.power]。"
+            },
+            "icon": "@PollenHeartIcon",
+            "icon_small": "@PollenHeartIcon",
+            "lore_tooltips": [
+                {
+                    "english": "A heart filled with golden pollen. The essence of growth expands your silk capacity."
+                }
+            ],
+            "relic_effects": [
+                "@PollenHeartMaxSilkEffect"
+            ],
+            "extensions": [
+                {
+                    "collectable": {
+                        "class": "@Silksong",
+                        "rarity": "rare",
+                        "pools": [
+                            "MegaRelicPool"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "relic_effects": [
+        {
+            "id": "PollenHeartMaxSilkEffect",
+            "name": "@RelicEffectAddMaxSilk",
+            "param_int": 12
+        }
+    ],
+    "sprites": [
+        {
+            "id": "PollenHeartIcon",
+            "path": "textures/PollenHeartIcon.png"
+        }
+    ]
+}
+

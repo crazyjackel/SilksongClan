@@ -8,7 +8,7 @@
                 "chinese": "小蚤"
             },
             "card_art": "@FleaCardArt",
-            "cost": 1,
+            "cost": 0,
             "card_type": "monster",
             "rarity": "common",
             "class": "@Silksong",
@@ -34,8 +34,8 @@
             },
             "character_art": "@FleaCharacterArt",
             "size": 1,
-            "health": 5,
-            "attack_damage": 5,
+            "health": 7,
+            "attack_damage": 7,
             "subtypes": [
                 "@Flea"
             ],

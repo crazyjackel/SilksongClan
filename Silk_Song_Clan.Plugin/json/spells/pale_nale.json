@@ -8,8 +8,8 @@
         "chinese": "苍白爪击"
       },
       "descriptions": {
-        "english": "Deal Damage equal to [Silk_Song_Clan.Plugin_Silk] to the front enemy, then All Enemies. Gain [effect2.power] [Silk_Song_Clan.Plugin_Silk].",
-        "chinese": "对前排敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 1 倍。然后对所有敌方单位造成同等伤害。获得 [effect2.power] [Silk_Song_Clan.Plugin_Silk]。"
+        "english": "Deal Damage equal to 2x [Silk_Song_Clan.Plugin_Silk] to the front enemy, then All Enemies. Gain [effect2.power] [Silk_Song_Clan.Plugin_Silk].",
+        "chinese": "对前排敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 2 倍。然后对所有敌方单位造成同等伤害。获得 [effect2.power] [Silk_Song_Clan.Plugin_Silk]。"
       },
       "cost": 0,
       "card_type": "spell",
@@ -50,7 +50,7 @@
       "name": "CardTraitScalingAddDamage",
       "param_tracked_value": "@Silk",
       "param_int": 1,
-      "param_float": 1.00
+      "param_float": 2.00
     }
   ],
   "effects": [

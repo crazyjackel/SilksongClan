@@ -8,7 +8,7 @@
                 "chinese": "钟蚤"
             },
             "card_art": "@BellFleaCardArt",
-            "cost": 1,
+            "cost": 0,
             "card_type": "monster",
             "rarity": "common",
             "class": "@Silksong",

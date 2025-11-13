@@ -8,8 +8,8 @@
         "chinese": "灵丝风暴"
       },
       "descriptions": {
-        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage to the front enemy unit.",
-        "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。对前排敌方单位造成 [effect1.power] 点伤害，重复三次。"
+        "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. Deal [effect1.power] damage to the front enemy unit for each [Silk_Song_Clan.Plugin_Silk] you have.",
+        "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。对前排敌方单位造成 [effect1.power] 点伤害，每有 [Silk_Song_Clan.Plugin_Silk] 层数，重复一次。"
       },
       "cost": 1,
       "card_type": "spell",
@@ -22,8 +22,7 @@
         "MegaPool"
       ],
       "traits": [
-        "@ThreadStormScaleEffectApplications",
-        "@ThreadStormAttunedTrait"
+        "@ThreadStormScaleEffectApplications"
       ],
       "effects": [
         {
@@ -44,12 +43,8 @@
     {
       "id": "ThreadStormScaleEffectApplications",
       "name": "CardTraitScalingAddEffectApplications",
-      "param_int": 3,
-      "param_tracked_value": "any_character"
-    },
-    {
-        "id": "ThreadStormAttunedTrait",
-        "name": "CardTraitStrongerMagicPower"
+      "param_int": 1,
+      "param_tracked_value": "@Silk"
     }
   ],
   "effects": [
@@ -70,7 +65,7 @@
       "name": "CardEffectDamage",
       "target_mode": "front_in_room",
       "target_team": "heroes",
-      "param_int": 12
+      "param_int": 10
     }
   ],
   "sprites": [
