@@ -6,11 +6,11 @@
             "type": "collectable",
             "names": {
                 "english": "Encrusted Heart",
-                "chinese": "结壳之心"
+                "chinese": "覆壳之心"
             },
             "descriptions": {
                 "english": "[damageshield] also grants [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power].",
-                "chinese": "[damageshield]同时获得[Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status1.power]。"
+                "chinese": "[damageshield]同时获得[Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]。"
             },
             "icon": "@EncrustedHeartIcon",
             "icon_small": "@EncrustedHeartIcon",
