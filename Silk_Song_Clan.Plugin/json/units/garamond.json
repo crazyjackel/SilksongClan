@@ -51,6 +51,21 @@
       ]
     }
   ],
+  "additional_tooltips": [
+    {
+      "id": "GaramondLanceAbilityTooltip",
+      "titles": {
+        "english": "<sprite name=\"Ability\"> Lance",
+        "chinese": "<sprite name=\"Ability\"> 长矛"
+      },
+      "descriptions": {
+        "english": "Cooldown 2<br>Attack.",
+        "chinese": "冷却2<br>立即攻击。"
+      },
+      "style": "ability",
+      "allow_secondary_placement": true
+    }
+  ],
   "characters": [
     {
       "id": "Garamond",
@@ -93,8 +108,8 @@
     {
       "id": "GaramondSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain  \"[ability]: Attack.\"",
-        "chinese": "[Silk_Song_Clan.Plugin_Combo]与扎扎：获得 \"[ability]: 攻击。\"。"
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain  \"[ability]: Lance\".",
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（扎扎）</b>: 获得[ability]：长矛。"
       },
       "trigger": "on_spawn",
       "effects": [
@@ -133,7 +148,8 @@
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
       "additional_tooltips": [
-        "@ComboTooltip"
+        "@ComboTooltip",
+        "@GaramondLanceAbilityTooltip"
       ]
     },
     {

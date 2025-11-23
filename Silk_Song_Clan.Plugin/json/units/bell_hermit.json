@@ -63,7 +63,8 @@
     {
       "id": "BellHermitSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Apply [duality]."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Snail Subtype: Apply [duality].",
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（蜗牛单位）</b>: 获得[duality]。"
       },
       "trigger": "on_spawn",
       "effects": [

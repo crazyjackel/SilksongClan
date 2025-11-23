@@ -38,7 +38,7 @@
       },
       "descriptions": {
         "english": "Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. Friendly Units get +[effect2.upgrade.bonusdamage] [attack] and +[effect2.upgrade.bonushp] [health] and [damageshield] [effect2.upgrade.status0.power].",
-        "chinese": "获得 [effect0.power][Silk_Song_Clan.Plugin_Silk]。友方单位获得 +[effect2.upgrade.bonusdamage][attack]，+[effect2.upgrade.bonushp][health] 和[damageshield] [effect2.upgrade.status0.power]。战斗开始时处于冷却中。"
+        "chinese": "获得 [effect1.power][Silk_Song_Clan.Plugin_Silk]。友方单位获得 +[effect2.upgrade.bonusdamage][attack]，+[effect2.upgrade.bonushp][health] 和[damageshield] [effect2.upgrade.status0.power]。战斗开始时处于冷却中。"
       },
       "initial_cooldown": 1,
       "cooldown": 1,

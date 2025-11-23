@@ -9,7 +9,7 @@
       },
       "descriptions": {
         "english": "Deal damage to all enemies equal to 2x [Silk_Song_Clan.Plugin_Silk]. Gain [effect1.power] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Combo] with Unit: Repeat.",
-        "chinese": "对所有敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 2 倍。获得 [effect1.power][Silk_Song_Clan.Plugin_Silk]。[Silk_Song_Clan.Plugin_Combo]与单位：重复。"
+        "chinese": "对所有敌方单位造成伤害，伤害值为 [Silk_Song_Clan.Plugin_Silk] 层数的 2 倍。获得 [effect1.power][Silk_Song_Clan.Plugin_Silk]。[Silk_Song_Clan.Plugin_Combo]<b>（单位）</b>: 重复一次。"
       },
       "cost": 2,
       "card_type": "spell",

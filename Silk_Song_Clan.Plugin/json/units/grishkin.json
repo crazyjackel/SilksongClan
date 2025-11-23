@@ -77,7 +77,8 @@
     {
       "id": "GrishkinSpawnTrigger",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Flea Subtype: Gain \"[shift]: Give Friendly Fleas +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonusdamage] [attack] and +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonushp] [health].\""
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Flea Subtype: Gain \"[shift]: Give Friendly Fleas +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonusdamage] [attack] and +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonushp] [health].\"",
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（蚤民单位）</b>: 获得'[shift]: 蚤民单位获得 +[effect1.upgrade.charactertrigger0.effect0.upgrade.bonusdamage][attack]，+[effect1.upgrade.charactertrigger0.effect0.upgrade.bonushp][health]。'"
       },
       "trigger": "on_spawn",
       "effects": [
@@ -92,7 +93,8 @@
     {
       "id": "GrishkinShiftTrigger",
       "descriptions": {
-        "english": "Give Friendly Fleas +[effect0.upgrade.bonusdamage] [attack] and +[effect0.upgrade.bonushp] [health]."
+        "english": "Give Friendly Fleas +[effect0.upgrade.bonusdamage] [attack] and +[effect0.upgrade.bonushp] [health].",
+        "chinese": "蚤民单位获得 +[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
       },
       "trigger": "on_shift",
       "effects": [

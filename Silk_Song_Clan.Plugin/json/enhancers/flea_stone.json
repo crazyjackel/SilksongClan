@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "Gain '[Silk_Song_Clan.Plugin_Combo] with Unit: draw a card.'",
-                "chinese": "获得'[Silk_Song_Clan.Plugin_Combo]与单位：抽一张牌。'"
+                "chinese": "升级一个法术，使其获得'[Combo]<b>（单位）</b>: 抽 1 张牌。'"
             },
             "relic_effects": [
                 "@FleaStoneEnhancer"
@@ -63,7 +63,7 @@
             "trigger": "on_cast",
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Combo] with Unit: draw a card.",
-                "chinese": "[Silk_Song_Clan.Plugin_Combo]与单位：抽一张牌。"
+                "chinese": "[Combo]<b>（单位）</b>: 抽 1 张牌。'"
             },
             "effects": [
                 "@FleaStoneComboEffect",
