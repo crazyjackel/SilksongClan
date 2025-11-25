@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "Whenever you activate an ability, draw an extra card next turn.",
-                "chinese": "在使用一种能力之后，下回合额外抽一张牌。"
+                "chinese": "在使用一种能力之后，下个回合抽 +1 张牌。"
             },
             "icon": "@SprintmasterMementoIcon",
             "icon_small": "@SprintmasterMementoIcon",

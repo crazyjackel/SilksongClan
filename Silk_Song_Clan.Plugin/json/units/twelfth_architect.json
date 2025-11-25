@@ -39,7 +39,7 @@
       },
       "descriptions": {
         "english": "Whenever a unit is moved, it gains [valor] 1.",
-        "chinese": "每当一个单位移动时，它获得[valor] 1。"
+        "chinese": "当单位移动时，使其获得[valor] 1。"
       },
       "style": "relic_title",
       "allow_secondary_placement": true

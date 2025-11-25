@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "Combos are always active.",
-                "chinese": "连击总是激活。"
+                "chinese": "[Silk_Song_Clan.Plugin_Combo]效果始终有效。"
             },
             "icon": "@HeroMementoIcon",
             "icon_small": "@HeroMementoIcon",

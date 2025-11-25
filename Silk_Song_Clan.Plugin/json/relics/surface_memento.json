@@ -9,8 +9,8 @@
                 "chinese": "地表信物"
             },
             "descriptions": {
-                "english": "[Silk_Song_Clan.Plugin_Silksong] triggers an additional time.",
-                "chinese": "[Silk_Song_Clan.Plugin_Silksong]触发额外一次。"
+                "english": "<b>Silksong</b> triggers an additional time.",
+                "chinese": "<b>丝之忆</b>额外触发一次。"
             },
             "icon": "@SurfaceMementoIcon",
             "icon_small": "@SurfaceMementoIcon",

@@ -70,7 +70,7 @@
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
       "additional_tooltips": [
-        "@ComboPreviousTooltip"
+        "@ComboTooltip"
       ]
     }
   ],

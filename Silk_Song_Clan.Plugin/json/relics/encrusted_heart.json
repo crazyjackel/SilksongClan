@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "[damageshield] also grants [Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power].",
-                "chinese": "[damageshield]同时获得[Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]。"
+                "chinese": "当一个友方单位获得[damageshield]时，使其额外获得[Silk_Song_Clan.Plugin_PermanentProtection] [effect0.status0.power]。"
             },
             "icon": "@EncrustedHeartIcon",
             "icon_small": "@EncrustedHeartIcon",
