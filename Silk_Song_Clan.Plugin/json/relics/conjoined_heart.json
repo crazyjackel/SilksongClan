@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Warrior] generates Double [Silk_Song_Clan.Plugin_Silk].",
-                "chinese": "[Silk_Song_Clan.Plugin_Warrior]生成双倍[Silk_Song_Clan.Plugin_Silk]。"
+                "chinese": "[Silk_Song_Clan.Plugin_Warrior]获得两倍 [Silk_Song_Clan.Plugin_Silk]。"
             },
             "icon": "@ConjoinedHeartIcon",
             "icon_small": "@ConjoinedHeartIcon",

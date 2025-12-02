@@ -9,10 +9,12 @@
                 "chinese": "战士"
             },
             "card_tooltips": {
-                "english": "On hitting an enemy, gain 1 [Silk_Song_Clan.Plugin_Silk]."
+                "english": "On hitting an enemy, gain 1 [Silk_Song_Clan.Plugin_Silk].",
+                "chinese": "单位攻击敌人时，获得 1[Silk_Song_Clan.Plugin_Silk]。"
             },
             "character_tooltips": {
-                "english": "On hitting an enemy, gains 1 [Silk_Song_Clan.Plugin_Silk]."
+                "english": "On hitting an enemy, gains 1 [Silk_Song_Clan.Plugin_Silk].",
+                "chinese": "攻击敌人时，获得 1[Silk_Song_Clan.Plugin_Silk]。"
             },
             "notifications": {
                 "english": "Warrior",
@@ -36,7 +38,8 @@
                 "chinese": "战士"
             },
             "descriptions": {
-                "english": "On hitting an enemy, gain 1 [Silk_Song_Clan.Plugin_Silk]."
+                "english": "On hitting an enemy, gain 1 [Silk_Song_Clan.Plugin_Silk].",
+                "chinese": "单位攻击敌人时，获得 1[Silk_Song_Clan.Plugin_Silk]。"
             }
         }
     ],

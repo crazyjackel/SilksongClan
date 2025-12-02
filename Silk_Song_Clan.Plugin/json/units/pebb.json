@@ -62,7 +62,7 @@
       },
       "descriptions": {
         "english": "Increase the maximum amount of [Silk_Song_Clan.Plugin_Silk] by 4.",
-        "chinese": "增加最大丝绸数量 by [effect0.power]。"
+        "chinese": "[Silk_Song_Clan.Plugin_Silk] 上限提高 4。"
       },
       "style": "relic_title",
       "allow_secondary_placement": true
