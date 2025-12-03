@@ -9,7 +9,7 @@
       },
       "descriptions": {
         "english": "[ascend]. [Silk_Song_Clan.Plugin_Combo] with Unit: Draw a card.",
-        "chinese": "[ascend]一个单位。[Silk_Song_Clan.Plugin_Combo]<b>（单位）</b>: 抽 1 张牌。"
+        "chinese": "[ascend]一个单位。[Silk_Song_Clan.Plugin_Combo]<b>（单位）</b>：抽 1 张牌。"
       },
       "cost": 1,
       "unlock_level": 6,

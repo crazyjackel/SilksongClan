@@ -65,7 +65,7 @@
       "trigger": "on_spawn",
       "descriptions": {
         "english": "[Silk_Song_Clan.Plugin_Combo] with Pinstress Subtype: Gain \"[strike]: Gain [conduit] [effect1.upgrade.charactertrigger0.effect0.status0.power].\"",
-        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（针姬单位）</b>: 获得'[strike]: 获得[conduit] [effect1.upgrade.charactertrigger0.effect0.status0.power]。'"
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（针姬单位）</b>：获得'[strike]：获得[conduit] [effect1.upgrade.charactertrigger0.effect0.status0.power]。'"
       },
       "effects": [
         {

@@ -101,7 +101,7 @@
       "trigger": "on_spawn",
       "descriptions": {
         "english": "[Silk_Song_Clan.Plugin_Combo] with Garamond: Gain \"[ability]: Humble Steed\".",
-        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（加蒙德）</b>: 获得[ability]：卑微的坐骑。"
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（加蒙德）</b>：获得[ability]：卑微的坐骑。"
       },
       "effects": [
         {

@@ -109,7 +109,7 @@
       "id": "GaramondSpawnTrigger",
       "descriptions": {
         "english": "[Silk_Song_Clan.Plugin_Combo] with Zaza: Gain  \"[ability]: Lance\".",
-        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（扎扎）</b>: 获得[ability]：长矛。"
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（扎扎）</b>：获得[ability]：长矛。"
       },
       "trigger": "on_spawn",
       "effects": [
