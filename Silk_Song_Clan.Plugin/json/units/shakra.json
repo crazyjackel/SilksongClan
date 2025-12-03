@@ -64,7 +64,7 @@
       "id": "ShakraStrikeTrigger",
       "descriptions": {
         "english": "Apply [meleeweakness] [effect0.status0.power] and [advance].",
-        "chinese": "施加[meleeweakness] [effect0.status0.power]。[advance]。"
+        "chinese": "施加[meleeweakness] [effect0.status0.power]，并[advance]。"
       },
       "trigger": "on_attacking",
       "effects": [
