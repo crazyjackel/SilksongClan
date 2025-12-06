@@ -3,10 +3,11 @@
     "huds": [
       {
         "id": "SilksongSilkHUD",
+        "name": "@SilkHud",
         "background": "@SilkHUDBackground",
         "class": "@Silksong",
         "type": "small",
-        "display": "battle_only",
+        "display": "run",
         "icons": [ "@SilkHUDIcon" ],
         "tooltip_titles": {
           "english": "Silk",

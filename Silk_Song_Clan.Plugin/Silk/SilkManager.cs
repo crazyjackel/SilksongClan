@@ -205,6 +205,7 @@ namespace Silk_Song_Clan.Plugin
             if (provider is SaveManager _)
             {
                 this.saveManager = null;
+                this.valueChangedSignal.Dispatch(new TrackedValueChangedParams() { value = 0 });
             }
             if (provider is RelicManager _)
             {
