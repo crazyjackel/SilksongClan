@@ -13,6 +13,7 @@
       "subclass_descriptions": {
         "english": "Silksong"
       },
+      "card_draft_icon": "@SilksongCardDraftIcon",
       "icons": {
         "small": "@ClanIconSmall",
         "medium": "@ClanIconMedium",
@@ -117,6 +118,10 @@
     }
   ],
   "sprites": [
+    {
+      "id": "SilksongCardDraftIcon",
+      "path": "textures/SilksongCardDraftIcon.png"
+    },
     {
       "id": "ClanIconSmall",
       "path": "textures/ClanIconSmall.png"

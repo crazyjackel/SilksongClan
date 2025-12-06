@@ -4,14 +4,15 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "crazy_MT2"
 name = "Silk_Song_Clan"
-versionNumber = "0.2.4"
+versionNumber = "0.3.0"
 description = "Hollow Knight Silksong Mod for Monster Train 2"
 websiteUrl = "https://thunderstore.io"
 containsNsfwContent = false
 
 [package.dependencies]
 BepInEx-BepInExPack = "5.4.2304"
-MT2-Trainworks_Reloaded = "0.6.1"
+MT2-Trainworks_Reloaded = "0.6.2"
+Conductor-Conductor= "0.3.0"
 
 [build]
 icon = "./icon.png"
