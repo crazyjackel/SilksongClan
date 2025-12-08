@@ -1,5 +1,7 @@
 # Silk Song Clan
 
+Support language: English | [简体中文](https://github.com/crazyjackel/SilksongClan/blob/main/README_zh.md)
+
 Hollow Knight Silksong Mod for Monster Train 2
 
 ## Table of Contents
