@@ -1,27 +1,12 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using I2.Loc;
-using Microsoft.Extensions.Configuration;
-using ShinyShoe.Logging;
-using SimpleInjector;
 using TrainworksReloaded.Base;
-using TrainworksReloaded.Base.Card;
-using TrainworksReloaded.Base.CardUpgrade;
-using TrainworksReloaded.Base.Character;
-using TrainworksReloaded.Base.Class;
-using TrainworksReloaded.Base.Effect;
-using TrainworksReloaded.Base.Localization;
-using TrainworksReloaded.Base.Prefab;
-using TrainworksReloaded.Base.Trait;
-using TrainworksReloaded.Base.Trigger;
 using TrainworksReloaded.Core;
-using TrainworksReloaded.Core.Impl;
 using TrainworksReloaded.Core.Interfaces;
 using TrainworksReloaded.Core.Extensions;
-using UnityEngine;
-using UnityEngine.AddressableAssets;
 using TrainworksReloaded.Base.Extensions;
+using Conductor.UI;
 
 namespace Silk_Song_Clan.Plugin
 {
@@ -50,6 +35,9 @@ namespace Silk_Song_Clan.Plugin
                     c.AddMergedJsonFile(
                         //Class
                         "json/class/silksong.json",
+
+                        //HUD
+                        "json/class/hud.json",
 
                         //Champions
                         "json/champion/hornet_base.json",
@@ -183,7 +171,6 @@ namespace Silk_Song_Clan.Plugin
                 builder.RegisterInstance(client);
             });
 
-
             Railend.ConfigurePostAction(
                 c =>
                 {
@@ -219,6 +206,9 @@ namespace Silk_Song_Clan.Plugin
 
                     StatusEffectTriggers.OnFullSilk = GetStatusEffectTriggerStage("OnFullSilk");
                     StatusEffectTriggers.OnFullSilkLost = GetStatusEffectTriggerStage("OnFullSilkLost");
+
+                    var hud = HudManager.GetHUD(MyPluginInfo.PLUGIN_GUID, "SilksongSilkHUD");
+                    hud?.SetTrackedValueHandler(Client.Value);
                 }
             );
 

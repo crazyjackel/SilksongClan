@@ -1,0 +1,31 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Conductor/refs/heads/main/schemas/hud.json",
+    "huds": [
+      {
+        "id": "SilksongSilkHUD",
+        "name": "@SilkHud",
+        "background": "@SilkHUDBackground",
+        "class": "@Silksong",
+        "type": "small",
+        "display": "run",
+        "icons": [ "@SilkHUDIcon" ],
+        "tooltip_titles": {
+          "english": "Silk",
+          "chinese": "灵丝"
+        },
+        "tooltip_texts": {
+          "english": "Silk is a resource that can be used to cast spells and gain benefits."
+        }
+      }
+    ],
+    "sprites": [
+      {
+        "id": "SilkHUDBackground",
+        "path": "textures/SilkHUDBackground.png"
+      },
+      {
+        "id": "SilkHUDIcon",
+        "path": "textures/SilkHUDIcon.png"
+      }
+    ]
+  }

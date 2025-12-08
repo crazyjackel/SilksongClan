@@ -1,15 +1,15 @@
-Relic Name,Effect
-Architect's Key,Whenever a unit is moved it gains Valor 1.
-Wormway's Key,Increase the maximum amount of Silk by 4.
-Festival Pinata,"Fleas get ""Summon: Advance"""
-Hero's Memento,Combos are always active.
-Craw Memento,Gain 10 Gold whenever you activate an ability
-Conjoined Heart,Warrior generates Double Silk.
-Guardian's Memento,Protection and Imbue are not removed from being hit.
-Hunter's Memento,Protection and Imbue gain an extra stack.
-Surface Memento,Silksong triggers an additional time.
-Grey Memento,Champions get +2 Permanent Protection and +2 Permanent Imbue at the start of each turn.
-Sprintmaster Memento,Whenever you activate an ability draw an extra card next turn.
-Pollen Heart,Increase Max Silk by 12. 
-Encrusted Heart,Damage Shield also grants Permanent Protection 1
-Hunter's Heart,Lifesteal also grants Permanent Imbue 1
+Relic Name,Effect,Rarity
+Architect's Key,Whenever a unit is moved it gains Valor 1.,Rare
+Wormway's Key,Increase the maximum amount of Silk by 4.,Rare
+Festival Pinata,"Fleas get ""Summon: Advance""",Uncommon
+Hero's Memento,Combos are always active.,Rare
+Craw Memento,Gain 10 Gold whenever you activate an ability,Common
+Conjoined Heart,Warrior generates Double Silk.,Uncommon
+Guardian's Memento,Protection and Imbue are not removed from being hit.,Rare
+Hunter's Memento,Protection and Imbue gain an extra stack.,Uncommon
+Surface Memento,Silksong triggers an additional time.,Rare
+Grey Memento,Champions get +2 Permanent Protection and +2 Permanent Imbue at the start of each turn.,Rare
+Sprintmaster Memento,Whenever you activate an ability draw an extra card next turn.,Uncommon
+Pollen Heart,Increase Max Silk by 12.,Rare
+Encrusted Heart,Damage Shield also grants Permanent Protection 2,Uncommon
+Hunter's Heart,Lifesteal also grants Permanent Imbue 2,Uncommon

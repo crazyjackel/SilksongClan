@@ -9,10 +9,12 @@ using TrainworksReloaded.Core;
 using System.Collections;
 using UnityEngine;
 using TrainworksReloaded.Base.Enums;
+using Conductor.UI;
+using Conductor.TrackedValues;
 
 namespace Silk_Song_Clan.Plugin
 {
-    public class SilkManager : IProvider, IClient
+    public class SilkManager : AbstractTrackedValueHandler, IProvider, IClient
     {
         public const string SilkSaveDataKeyMagic = "__silk";
         public const int BaseMaxSilk = 12;
@@ -60,12 +62,22 @@ namespace Silk_Song_Clan.Plugin
         }
 
 
+        public override int GetValue(CardStatistics.StatValueData statValueData)
+        {
+            return GetCurrentSilk();
+        }
+
+        public override void IncrementValue(CardState? card, int amount, CardStatistics.EntryDuration entryDuration = CardStatistics.EntryDuration.ThisTurn)
+        {
+            RewardSilk(amount);
+        }
         public IEnumerator RewardSilk(int amount)
         {
             var silkSaveData = GetSilkSaveData() ?? new SilkSaveData
             {
                 Silk = 0
             };
+            var previousSilk = silkSaveData.Silk;
             var newSilk = Mathf.Clamp(silkSaveData.Silk + amount, 0, GetMaxSilk());
             silkSaveData.Silk = newSilk;
             var isFullSilk = newSilk == GetMaxSilk();
@@ -82,6 +94,7 @@ namespace Silk_Song_Clan.Plugin
                 yield return TriggerFullSilkLost();
             }
             SaveSilkSaveData(silkSaveData);
+            this.valueChangedSignal.Dispatch(new TrackedValueChangedParams() { value = newSilk, previousValue = previousSilk });
         }
         public IEnumerator TriggerFullSilk()
         {
@@ -192,6 +205,7 @@ namespace Silk_Song_Clan.Plugin
             if (provider is SaveManager _)
             {
                 this.saveManager = null;
+                this.valueChangedSignal.Dispatch(new TrackedValueChangedParams() { value = 0 });
             }
             if (provider is RelicManager _)
             {
@@ -215,5 +229,6 @@ namespace Silk_Song_Clan.Plugin
         {
 
         }
+
     }
 }
