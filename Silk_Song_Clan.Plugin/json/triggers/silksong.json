@@ -8,7 +8,7 @@
                 "chinese": "丝之忆"
             },
             "descriptions": {
-                "english": "Triggers whenever a card is played that costs [Silk_Song_Clan.Plugin_Silk].",
+                "english": "Triggers whenever a card is played or an ability is activated that costs [Silk_Song_Clan.Plugin_Silk].",
                 "chinese": "在任意层灌注 [Silk_Song_Clan.Plugin_Silk] 时触发。"
             },
             "notifications": {
