@@ -36,7 +36,8 @@
         "chinese": "购买蠕虫隧道钥匙"
       },
       "descriptions": {
-        "english": "Spend [effect0.powerabs] [coin]. Gain an Artifact that increases Max [Silk_Song_Clan.Plugin_Silk] by 4."
+        "english": "Spend [effect0.powerabs] [coin]. Gain <b>Artifact</b>: Simple Key.",
+        "chinese": "花费 [effect0.powerabs][coin]。获得<b>神器</b>：简单钥匙。战斗开始时处于冷却中。"
       },
       "is_an_ability": true,
       "cooldown": 5,
@@ -50,6 +51,21 @@
           "id": "@PebbCreateRelicEffect"
         }
       ]
+    }
+  ],
+  "additional_tooltips": [
+    {
+      "id": "WormwayKeyTooltip",
+      "titles": {
+        "english": "Simple Key",
+        "chinese": "简单钥匙"
+      },
+      "descriptions": {
+        "english": "Increase the maximum amount of [Silk_Song_Clan.Plugin_Silk] by 4.",
+        "chinese": "[Silk_Song_Clan.Plugin_Silk] 上限提高 4。"
+      },
+      "style": "relic_title",
+      "allow_secondary_placement": true
     }
   ],
   "characters": [
@@ -109,7 +125,10 @@
     {
       "id": "PebbCreateRelicEffect",
       "name": "@CardEffectAddRelic",
-      "param_str": "@WormwayKey"
+      "param_str": "@WormwayKey",
+      "additional_tooltips": [
+        "@WormwayKeyTooltip"
+      ]
     },
     {
       "id": "PebbHarvestEffect",

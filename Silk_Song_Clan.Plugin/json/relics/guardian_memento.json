@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Protection] and [Silk_Song_Clan.Plugin_Imbue] are not removed from being hit.",
-                "chinese": "[Silk_Song_Clan.Plugin_Protection]和[Silk_Song_Clan.Plugin_Imbue]在受到攻击时不会被移除。"
+                "chinese": "被命中时不会移除[Silk_Song_Clan.Plugin_Imbue]，[Silk_Song_Clan.Plugin_PermanentImbue]，[Silk_Song_Clan.Plugin_Protection]或[Silk_Song_Clan.Plugin_PermanentProtection]的层数。"
             },
             "icon": "@GuardianMementoIcon",
             "icon_small": "@GuardianMementoIcon",

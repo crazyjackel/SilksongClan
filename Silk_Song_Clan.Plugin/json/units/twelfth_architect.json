@@ -30,6 +30,21 @@
       ]
     }
   ],
+  "additional_tooltips": [
+    {
+      "id": "ArchitectKeyTooltip",
+      "titles": {
+        "english": "Architect's Key",
+        "chinese": "建筑师的钥匙"
+      },
+      "descriptions": {
+        "english": "Whenever a unit is moved, it gains [valor] 1.",
+        "chinese": "当单位移动时，使其获得[valor] 1。"
+      },
+      "style": "relic_title",
+      "allow_secondary_placement": true
+    }
+  ],
   "characters": [
     {
       "id": "TwelfthArchitect",
@@ -57,8 +72,8 @@
     {
       "id": "TwelfthArchitectCelebrateTrigger",
       "descriptions": {
-        "english": "Spend [effect0.powerabs] [coin]. Gain an <b>Artifact</b>: Units gain [valor] 1 on move.",
-        "chinese": "花费 [effect0.powerabs][coin]。获得一个 <b>Artifact</b>：单位在移动时获得 [valor] 1。"
+        "english": "Spend [effect0.powerabs] [coin]. Gain <b>Artifact</b>: Architect's Key.",
+        "chinese": "花费 [effect0.powerabs][coin]。获得<b>神器</b>：建筑师的钥匙。"
       },
       "trigger": "on_encounter_complete",
       "effects": [
@@ -89,7 +104,10 @@
     {
       "id": "TwelfthArchitectCreateRelicEffect",
       "name": "@CardEffectAddRelic",
-      "param_str": "@ArchitectKey"
+      "param_str": "@ArchitectKey",
+      "additional_tooltips": [
+        "@ArchitectKeyTooltip"
+      ]
     }
   ],
   "sprites": [

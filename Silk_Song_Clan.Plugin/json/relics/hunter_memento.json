@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Protection] and [Silk_Song_Clan.Plugin_Imbue] gain an extra stack.",
-                "chinese": "[Silk_Song_Clan.Plugin_Protection]和[Silk_Song_Clan.Plugin_Imbue]获得额外一层。"
+                "chinese": "当一个单位获得[Silk_Song_Clan.Plugin_Imbue]，[Silk_Song_Clan.Plugin_PermanentImbue]，[Silk_Song_Clan.Plugin_Protection]或[Silk_Song_Clan.Plugin_PermanentProtection]时，其获得的层数 +1。"
             },
             "icon": "@HunterMementoIcon",
             "icon_small": "@HunterMementoIcon",

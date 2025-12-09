@@ -14,7 +14,8 @@
           "chinese": "灵丝"
         },
         "tooltip_texts": {
-          "english": "Silk is a resource that can be used to cast spells and gain benefits."
+          "english": "[Silk_Song_Clan.Plugin_Silk] is a resource that can be used to cast spells or abilities, and gain benefits.",
+          "chinese": "[Silk_Song_Clan.Plugin_Silk] 是用来提供一些加成和使用一些法术或能力所需的资源。默认上限：12。"
         }
       }
     ],

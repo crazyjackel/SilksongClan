@@ -76,7 +76,8 @@
     {
       "id": "CrullAndBenjinHungerTrigger",
       "descriptions": {
-        "english": "+[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health]."
+        "english": "+[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+        "chinese": "+[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
       },
       "trigger": "on_food_spawn",
       "effects": [

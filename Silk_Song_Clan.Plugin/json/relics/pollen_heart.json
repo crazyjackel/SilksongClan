@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "Increase the maximum amount of [Silk_Song_Clan.Plugin_Silk] by [effect0.power].",
-                "chinese": "增加最大[Silk_Song_Clan.Plugin_Silk]数量 by [effect0.power]。"
+                "chinese": "[Silk_Song_Clan.Plugin_Silk] 上限提高 [effect0.power]。"
             },
             "icon": "@PollenHeartIcon",
             "icon_small": "@PollenHeartIcon",

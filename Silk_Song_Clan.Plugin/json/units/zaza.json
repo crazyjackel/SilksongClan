@@ -37,7 +37,8 @@
         "chinese": "卑微的坐骑"
       },
       "descriptions": {
-        "english": "Add a random Equipment to Hand."
+        "english": "Add a random Equipment to Hand.",
+        "chinese": "将 1 张装备卡加入你的手牌。"
       },
       "is_an_ability": true,
       "cooldown": 2,
@@ -48,6 +49,21 @@
           "id": "@ZazaAddEquipmentEffect"
         }
       ]
+    }
+  ],
+  "additional_tooltips": [
+    {
+      "id": "ZazaHumbleSteedAbilityTooltip",
+      "titles": {
+        "english": "<sprite name=\"Ability\"> Humble Steed",
+        "chinese": "<sprite name=\"Ability\"> 卑微的坐骑"
+      },
+      "descriptions": {
+        "english": "Cooldown 2<br>Add a random Equipment to Hand.",
+        "chinese": "冷却2<br>将 1 张装备卡加入你的手牌。"
+      },
+      "style": "ability",
+      "allow_secondary_placement": true
     }
   ],
   "characters": [
@@ -84,7 +100,8 @@
       "id": "ZazaSpawnTrigger",
       "trigger": "on_spawn",
       "descriptions": {
-        "english": "[Silk_Song_Clan.Plugin_Combo] with Garamond: Gain \"[ability]: Add a random Equipment to Hand\"."
+        "english": "[Silk_Song_Clan.Plugin_Combo] with Garamond: Gain \"[ability]: Humble Steed\".",
+        "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（加蒙德）</b>：获得[ability]：卑微的坐骑。"
       },
       "effects": [
         {
@@ -117,7 +134,8 @@
       "should_test": true,
       "should_cancel_subsequent_effects_if_test_fails": true,
       "additional_tooltips": [
-        "@ComboTooltip"
+        "@ComboTooltip",
+        "@ZazaHumbleSteedAbilityTooltip"
       ]
     },
     {

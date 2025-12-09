@@ -13,10 +13,12 @@
                 "chinese": "猎人加成 {0}"
             },
             "card_tooltips": {
-                "english": "Gain +[codeint0] attack if at Max Silk."
+                "english": "Gain +[codeint0] [attack] if at Max Silk.",
+                "chinese": "[Silk_Song_Clan.Plugin_Silk] 到达上限时，每有一层[Silk_Song_Clan.Plugin_FullSilkAttackBuff]，单位获得 +[codeint0][attack]。"
              },
             "character_tooltips": {
-                "english": "Gain +[codeint0] attack if at Max Silk."
+                "english": "Gain +[codeint0] [attack] if at Max Silk.",
+                "chinese": "[Silk_Song_Clan.Plugin_Silk] 到达上限时，获得 +[codeint0][attack]。"
             },
             "notifications": {
                 "english": "Hunter Bonus",

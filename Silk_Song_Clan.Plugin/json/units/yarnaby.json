@@ -35,11 +35,11 @@
       "id": "YarnabyAbility",
       "names": {
         "english": "Operate",
-        "chinese": "刺击"
+        "chinese": "手术"
       },
       "descriptions": {
         "english": "Deal [effect0.power] damage. Apply [lifesteal] [effect1.status0.power].",
-        "chinese": "造成 [effect0.power] 点伤害。获得[lifesteal] [effect1.status0.power]。"
+        "chinese": "造成 [effect0.power] 点伤害。施加[lifesteal] [effect1.status0.power]。"
       },
       "is_an_ability": true,
       "cooldown": 2,
@@ -86,7 +86,8 @@
     {
       "id": "YarnabyStrikeTrigger",
       "descriptions": {
-        "english": "Add a random uncommon or rare Morsel to Hand."
+        "english": "Add a random uncommon or rare Morsel to Hand.",
+        "chinese": "将 1 个高级或稀有[snack]单位加入你的手牌。"
       },
       "trigger": "on_kill",
       "effects": [

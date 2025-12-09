@@ -8,8 +8,8 @@
         "chinese": "疾风步"
       },
       "descriptions": {
-        "english": "Give a friendly unit [Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]. Combo with Unit: Also give [quick].",
-        "chinese": "使一个友方单位获得[Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]。"
+        "english": "Give a friendly unit [Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]. [Silk_Song_Clan.Plugin_Combo] with Unit: Also give [quick].",
+        "chinese": "使一个友方单位获得[Silk_Song_Clan.Plugin_Protection] [effect0.status0.power]。[Silk_Song_Clan.Plugin_Combo]<b>（单位）</b>：并且再获得[quick]。"
       },
       "cost": 1,
       "card_type": "spell",

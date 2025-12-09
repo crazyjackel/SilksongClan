@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "Champion units get [Silk_Song_Clan.Plugin_PermanentImbue] 2 and [Silk_Song_Clan.Plugin_PermanentProtection] 2 at the start of each turn.",
-                "chinese": "勇者单位在每回合开始时获得+2 [Silk_Song_Clan.Plugin_PermanentImbue]和+2 [Silk_Song_Clan.Plugin_PermanentProtection]。"
+                "chinese": "勇者每回合获得[Silk_Song_Clan.Plugin_PermanentImbue] 2 和[Silk_Song_Clan.Plugin_PermanentProtection] 2。"
             },
             "icon": "@GreyMementoIcon",
             "icon_small": "@GreyMementoIcon",
@@ -58,7 +58,8 @@
             "id": "GreyMementoTrigger",
             "trigger": "pre_combat",
             "descriptions": {
-                "english": "Gain +[effect0.status0.power][Silk_Song_Clan.Plugin_PermanentImbue] and +[effect1.status0.power][Silk_Song_Clan.Plugin_PermanentProtection]."
+                "english": "Gain [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] and [Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power].",
+                "chinese": "获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power] 和[Silk_Song_Clan.Plugin_PermanentProtection] [effect1.status0.power]。"
             },
             "effects": [
                 "@GreyMementoImbueEffect",

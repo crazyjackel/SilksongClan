@@ -13,10 +13,12 @@
                 "chinese": "面具 {0}"
             },
             "card_tooltips": {
-                "english": "At the start of each turn, gain +[codeint0] [health]. Lost if damaged."
+                "english": "At the start of each turn, gain +[codeint0] [health]. Lost if damaged.",
+                "chinese": "回合开始时，每有一层[Silk_Song_Clan.Plugin_Protection]，单位获得 +1[health]，然后移除所有层数。单位受到伤害时移除所有层数。"
             },
             "character_tooltips": {
-                "english": "At the start of each turn, gain +[codeint0] [health]. Lost if damaged."
+                "english": "At the start of each turn, gain +[codeint0] [health]. Lost if damaged.",
+                "chinese": "回合开始时，获得 +[codeint0][health]，然后移除所有层数。受到伤害时移除所有层数。"
             },
             "notifications": {
                 "english": "Protected",
@@ -44,7 +46,8 @@
                 "chinese": "面具"
             },
             "descriptions": {
-                "english": "At the start of each turn, gain [health] equal to stacks of [Silk_Song_Clan.Plugin_Protection]. Lost if damaged."
+                "english": "At the start of each turn, gain [health] equal to stacks of [Silk_Song_Clan.Plugin_Protection]. Lost if damaged.",
+                "chinese": "回合开始时，每有一层[Silk_Song_Clan.Plugin_Protection]，单位获得 +1[health]，然后移除所有层数。单位受到伤害时移除所有层数。"
             }
         }
     ],

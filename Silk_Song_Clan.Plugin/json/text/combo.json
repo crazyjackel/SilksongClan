@@ -17,7 +17,8 @@
                 "chinese": "连招"
             },
             "descriptions": {
-                "english": "Gain additional effects if the previous card played was a specific type."
+                "english": "Gain additional effects if the previous card played was a specific type.",
+                "chinese": "如果本回合上一张打出特定类型的或特定的卡牌，则获得额外效果。"
             }
         },
         {
@@ -27,7 +28,8 @@
                 "chinese": "连招"
             },
             "descriptions": {
-                "english": "Gain additional effects if a previous card was played."
+                "english": "Gain additional effects if a previous card was played.",
+                "chinese": "如果本回合之前有打出过卡牌，则获得额外效果。"
             }
         }
     ]

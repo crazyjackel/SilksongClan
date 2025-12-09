@@ -6,11 +6,11 @@
             "type": "enhancer",
             "names": {
                 "english": "Flea Stone",
-                "chinese": "跳蚤石"
+                "chinese": "蚤民石"
             },
             "descriptions": {
                 "english": "Gain '[Silk_Song_Clan.Plugin_Combo] with Unit: draw a card.'",
-                "chinese": "获得'[Silk_Song_Clan.Plugin_Combo]与单位：抽一张牌。'"
+                "chinese": "升级一个法术，使其获得'[Silk_Song_Clan.Plugin_Combo]<b>（单位）</b>：抽 1 张牌。'"
             },
             "relic_effects": [
                 "@FleaStoneEnhancer"
@@ -48,7 +48,7 @@
             "id": "FleaStoneUpgrade",
             "titles": {
                 "english": "Flea Stone",
-                "chinese": "跳蚤石"
+                "chinese": "蚤民石"
             },
             "icon": "@FleaStoneIcon",
             "card_trigger_upgrades": [
@@ -63,7 +63,7 @@
             "trigger": "on_cast",
             "descriptions": {
                 "english": "[Silk_Song_Clan.Plugin_Combo] with Unit: draw a card.",
-                "chinese": "[Silk_Song_Clan.Plugin_Combo]与单位：抽一张牌。"
+                "chinese": "[Silk_Song_Clan.Plugin_Combo]<b>（单位）</b>：抽 1 张牌。'"
             },
             "effects": [
                 "@FleaStoneComboEffect",
@@ -80,7 +80,7 @@
             "should_cancel_subsequent_effects_if_test_fails": true,
             "param_card_filter": "@FleaStoneUnitMask",
             "additional_tooltips": [
-                "@ComboPreviousTooltip"
+                "@ComboTooltip"
             ]
         },
         {

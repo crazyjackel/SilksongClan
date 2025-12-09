@@ -8,7 +8,8 @@
         "chinese": "风灵谣"
       },
       "descriptions": {
-        "english": "Set [Silk_Song_Clan.Plugin_Silk] to Max."
+        "english": "Set [Silk_Song_Clan.Plugin_Silk] to Max.",
+        "chinese": "获得 [Silk_Song_Clan.Plugin_Silk] 直至到达上限。"
       },
       "cost": 0,
       "unlock_level": 7,

@@ -13,10 +13,12 @@
                 "chinese": "永久线轴 {0}"
             },
             "card_tooltips": {
-                "english": "At the start of each turn, permanently gain +[codeint0] [attack]. Lost if damaged."
+                "english": "At the start of each turn, permanently gain +[codeint0] [attack]. Lost if damaged.",
+                "chinese": "回合开始时，每有一层[Silk_Song_Clan.Plugin_PermanentImbue]，单位永久获得 +1[attack]，然后移除所有层数。单位受到伤害时移除所有层数。"
             },
             "character_tooltips": {
-                "english": "At the start of each turn, permanently gain +[codeint0] [attack]. Lost if damaged."
+                "english": "At the start of each turn, permanently gain +[codeint0] [attack]. Lost if damaged.",
+                "chinese": "回合开始时，永久获得 +[codeint0][attack]，然后移除所有层数。受到伤害时移除所有层数。"
             },
             "notifications": {
                 "english": "Permanently Imbued",

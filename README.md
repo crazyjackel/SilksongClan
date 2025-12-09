@@ -1,5 +1,7 @@
 # Silk Song Clan
 
+Support language: English | [简体中文](https://github.com/crazyjackel/SilksongClan/blob/main/README_zh.md)
+
 Hollow Knight Silksong Mod for Monster Train 2
 
 ## Table of Contents
@@ -169,6 +171,7 @@ Make sure you've installed all the dependencies before using the mod. This mod r
 
 * [BepInEx-BepInExPack](https://github.com/risk-of-thunder/BepInEx)
 * [MT2-Trainworks_Reloaded](https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded)
+* [Conductor](https://github.com/Monster-Train-2-Modding-Group/Conductor)
 
 For each dependency, follow the installation instructions listed there.
 
