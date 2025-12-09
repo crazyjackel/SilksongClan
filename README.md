@@ -171,6 +171,7 @@ Make sure you've installed all the dependencies before using the mod. This mod r
 
 * [BepInEx-BepInExPack](https://github.com/risk-of-thunder/BepInEx)
 * [MT2-Trainworks_Reloaded](https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded)
+* [Conductor](https://github.com/Monster-Train-2-Modding-Group/Conductor)
 
 For each dependency, follow the installation instructions listed there.
 

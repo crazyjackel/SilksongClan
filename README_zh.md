@@ -181,13 +181,14 @@
   - **苍白爪击**（0 费，消耗）: 对前排敌方单位造成伤害，伤害值为灵丝层数的 2 倍。然后对所有敌方单位造成同等伤害。获得 3 灵丝。
 
 ## 安装
-建议使用模组管理器来安装本模组。或者，执行下面的手动安装说明。
+建议使用模组管理器来安装本模组，因为它会自动安装好所有前置。或者，执行下面的手动安装说明。
 
 ### 前置
 确保在使用模组之前安装了所有的前置。本模组需要：
 
 * [BepInEx-BepInExPack](https://github.com/risk-of-thunder/BepInEx)
 * [MT2-Trainworks_Reloaded](https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded)
+* [自制效果与关键词的库](https://github.com/Monster-Train-2-Modding-Group/Conductor)
 
 对于每个前置，请按照每个前置自己的安装说明进行安装。
 
