@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "Whenever a unit is moved, it gains [valor] [effect0.status0.power].",
-                "chinese": "每当一个单位移动时，它获得[valor] [effect0.status0.power]。"
+                "chinese": "当单位移动时，使其获得[valor] [effect0.status0.power]。"
             },
             "icon": "@ArchitectKeyIcon",
             "icon_small": "@ArchitectKeyIcon",

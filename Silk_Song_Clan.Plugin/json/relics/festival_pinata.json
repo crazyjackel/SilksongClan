@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "Fleas get \"[summon]: [advance].\"",
-                "chinese": "蚤民单位获得\"[summon]: [advance]。\""
+                "chinese": "蚤民单位获得'[summon]：[advance]。'"
             },
             "icon": "@FestivalPinataIcon",
             "icon_small": "@FestivalPinataIcon",

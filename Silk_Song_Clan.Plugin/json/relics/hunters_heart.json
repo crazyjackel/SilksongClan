@@ -10,7 +10,7 @@
             },
             "descriptions": {
                 "english": "[lifesteal] also grants [Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power].",
-                "chinese": "[lifesteal]同时获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status1.power]。"
+                "chinese": "当一个友方单位获得[lifesteal]时，使其额外获得[Silk_Song_Clan.Plugin_PermanentImbue] [effect0.status0.power]。"
             },
             "icon": "@HuntersHeartIcon",
             "icon_small": "@HuntersHeartIcon",

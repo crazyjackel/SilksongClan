@@ -32,7 +32,7 @@
             },
             "descriptions": {
                 "english": "Channel [effect0.powerabs] [Silk_Song_Clan.Plugin_Silk]. [Silk_Song_Clan.Plugin_Bind]. Restore to full health.",
-                "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。[Silk_Song_Clan.Plugin_Bind]。使一个友方单位恢复满生命值。"
+                "chinese": "灌注 [effect0.powerabs][Silk_Song_Clan.Plugin_Silk]。[Silk_Song_Clan.Plugin_Bind]。恢复所有生命值。"
             },
             "is_an_ability": true,
             "cooldown": 2,

@@ -28,7 +28,8 @@
                 "chinese": "灵丝"
             },
             "descriptions": {
-                "english": "[Silk_Song_Clan.Plugin_Silk] is a resource that can be used to cast spells and gain benefits."
+                "english": "[Silk_Song_Clan.Plugin_Silk] is a resource that can be used to cast spells or abilities, and gain benefits.",
+                "chinese": "[Silk_Song_Clan.Plugin_Silk] 是用来提供一些加成和使用一些法术或能力所需的资源。默认上限：12。"
             }
         },
         {
@@ -38,7 +39,8 @@
                 "chinese": "灌注"
             },
             "descriptions": {
-                "english": "This spell channels [Silk_Song_Clan.Plugin_Silk] to gain benefits."
+                "english": "This spell or ability channels [Silk_Song_Clan.Plugin_Silk] to gain benefits.",
+                "chinese": "此法术或能力需要花费一定层数的 [Silk_Song_Clan.Plugin_Silk] 才能使用。"
             }
         },
         {
@@ -48,7 +50,8 @@
                 "chinese": "满灵丝"
             },
             "descriptions": {
-                "english": "If at Max Silk, deal {0}x more Damage."
+                "english": "If at Max Silk, deal {0}x more Damage.",
+                "chinese": "[Silk_Song_Clan.Plugin_Silk] 到达上限时，额外造成 {0} 倍伤害。"
             }
         },
         {
@@ -58,7 +61,8 @@
                 "chinese": "满灵丝"
             },
             "descriptions": {
-                "english": "Deal {0}x more Damage."
+                "english": "Deal {0}x more Damage.",
+                "chinese": "[Silk_Song_Clan.Plugin_Silk] 到达上限时，额外造成 {0} 倍伤害。"
             }
         }
     ]

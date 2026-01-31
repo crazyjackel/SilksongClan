@@ -83,7 +83,8 @@
       "id": "VargaRallyTrigger",
       "trigger": "card_monster_played",
       "descriptions": {
-        "english": "Reduce friendly units' [cooldown] by 1."
+        "english": "Reduce friendly units' [cooldown] by 1.",
+        "chinese": "所有友方单位的[cooldown]缩短 1。"
       },
       "effects": [
         {

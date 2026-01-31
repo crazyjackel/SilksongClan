@@ -17,7 +17,8 @@
                 "chinese": "聚结"
             },
             "descriptions": {
-                "english": "Trigger the [Silk_Song_Clan.Plugin_Imbue] and [Silk_Song_Clan.Plugin_Protection] status effects."
+                "english": "Trigger the [Silk_Song_Clan.Plugin_Imbue] and [Silk_Song_Clan.Plugin_Protection] status effects.",
+                "chinese": "触发[Silk_Song_Clan.Plugin_Imbue]，[Silk_Song_Clan.Plugin_PermanentImbue]，[Silk_Song_Clan.Plugin_Protection]和[Silk_Song_Clan.Plugin_PermanentProtection]的效果。"
             }
         }
     ]
