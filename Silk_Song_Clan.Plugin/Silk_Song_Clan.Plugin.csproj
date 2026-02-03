@@ -15,8 +15,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
-    <PackageReference Include="TrainworksReloaded.Base" Version="0.6.2" />
-    <PackageReference Include="Conductor" Version="0.3.0" />
+    <PackageReference Include="TrainworksReloaded.Base" Version="0.7.0" />
+    <PackageReference Include="Conductor" Version="0.4.0" />
   </ItemGroup>
 
   <ItemGroup>
